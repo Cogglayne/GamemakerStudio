@@ -1,0 +1,11 @@
+instance_destroy(self);
+
+
+
+
+
+
+
+
+
+

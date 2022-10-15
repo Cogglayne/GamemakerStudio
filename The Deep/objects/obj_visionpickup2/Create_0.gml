@@ -1,0 +1,7 @@
+text = "Totem of Cautiousness";
+
+
+
+
+
+

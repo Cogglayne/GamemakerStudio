@@ -1,0 +1,1 @@
+text = "Watch out for monsters left and right"

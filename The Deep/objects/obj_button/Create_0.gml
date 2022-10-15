@@ -1,0 +1,10 @@
+width = 1000;
+height = 200;
+text = "";  
+hover = 0;
+color = draw_set_color(merge_color(#ffd700,#ffe302,hover));
+shouldBeYellow = false;
+error = false;
+soundHasBeenPlayed = false;
+var targetRoom;
+var soundToPlay;

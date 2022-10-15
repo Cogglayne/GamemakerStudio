@@ -1,0 +1,1 @@
+text = "Swimmer Right Pollutant"

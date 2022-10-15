@@ -1,0 +1,2 @@
+text = "Next";
+targetRoom = InstructionsPageTwo

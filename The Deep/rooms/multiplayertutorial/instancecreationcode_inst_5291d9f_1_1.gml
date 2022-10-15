@@ -1,0 +1,1 @@
+text = "Watch out for mines above and below"

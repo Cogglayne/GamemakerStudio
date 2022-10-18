@@ -1,3 +1,4 @@
+// draws pollutant sprites depending on how many pollutants are left
 function drawLives(){
 switch(numPollutants){
 		case 1:
@@ -54,6 +55,7 @@ switch(numPollutants){
 		break;
 	}
 }
+// draws a circle incrementally
 function drawPie(x ,y ,value, max, colour, radius, transparency){
 	if (value > 0) { // no point even running if there is nothing to display (also stops /0
     var i, len, tx, ty;

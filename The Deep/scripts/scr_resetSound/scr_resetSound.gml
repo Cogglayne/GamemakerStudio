@@ -107,3 +107,32 @@ audio_stop_sound(snd_win)
 audio_stop_sound(snd_TheDeep)	
 audio_stop_sound(snd_instructionsPagesix)
 }
+function stopTrainerSounds(){
+// text
+audio_stop_sound(snd_anglerTutorialActive)	
+audio_stop_sound(snd_anglerTutorialTrial)	
+audio_stop_sound(snd_evolvedMonsterTutorialOneActive)	
+audio_stop_sound(snd_evolvedMonsterTutorialTrialOne)	
+audio_stop_sound(snd_evolvedMonsterTutorialTrialTwo)	
+audio_stop_sound(snd_evolvedMonsterTutorialTwoActive)	
+audio_stop_sound(snd_mineTutorialActive)	
+audio_stop_sound(snd_mineTutorialTrial)	
+audio_stop_sound(snd_monsterTutorialActive)	
+audio_stop_sound(snd_monsterTutorialTrial)	
+audio_stop_sound(snd_probeTutorialActive)
+audio_stop_sound(snd_probeTutorialTrial)
+
+// text two
+audio_stop_sound(snd_anglerActivated)	
+audio_stop_sound(snd_enemyActive)	
+audio_stop_sound(snd_monsterRight)	
+audio_stop_sound(snd_monsterLeft)	
+audio_stop_sound(snd_mineUp)	
+audio_stop_sound(snd_mineDown)	
+audio_stop_sound(snd_monsterEvolvedCollision)	
+audio_stop_sound(snd_monsterEvolvedTutorialCollision)	
+audio_stop_sound(snd_monsterTutorialMistake)	
+audio_stop_sound(snd_mineTutorialMistake)	
+audio_stop_sound(snd_evolvedMonsterTutorialMistake)	
+audio_stop_sound(snd_probeSecondLaunch)	
+}

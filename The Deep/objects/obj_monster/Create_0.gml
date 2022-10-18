@@ -1,10 +1,14 @@
+// movement
 if(obj_microtransactions.enemiesSlowed || obj_disabilities.poorReactivity){
 hsp = 4;
 }else{
 hsp = 6;//6
 }
+// tutorial status
 tutorialEnemy = false;
+// text
 text = "[Monster Roars]";
+//sound
 monsterEmmiter = audio_emitter_create();
 audioMaxDistanceToBeHeard = 500;
 audioStartsToDropAt = 250;

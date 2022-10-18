@@ -1,6 +1,9 @@
+// increments the timer
 if(obj_microtransactions.timerDelay == false && room!=Tutorial){
 	timer++;
-	switch(timer){
+	// text to speek for timer if the option is activated
+	if(obj_disabilities.executiveFunctioning){
+		switch(timer){
 		case 10:
 		audio_play_sound(snd_tenSeconds,1,0)
 		break;
@@ -31,6 +34,7 @@ if(obj_microtransactions.timerDelay == false && room!=Tutorial){
 		case 100:
 		audio_play_sound(snd_oneHundredSeconds,1,0)
 		break;
+	}
 	}
 }
 alarm[0] = 60;

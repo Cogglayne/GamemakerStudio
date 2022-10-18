@@ -1,3 +1,4 @@
+// movement
 if(obj_microtransactions.enemiesSlowed || obj_disabilities.poorReactivity){
 hsp = 5;
 vsp = 1;
@@ -5,8 +6,11 @@ vsp = 1;
 hsp = 6;//6
 vsp = 2;//2
 }
+// tutorial status
 tutorialEnemy = false;
+// text
 text = "[Evolved Monster Bellows]";
+// sound
 evolvedMonsterEmmiter = audio_emitter_create();
 audioMaxDistanceToBeHeard = 600;
 audioStartsToDropAt = 300;

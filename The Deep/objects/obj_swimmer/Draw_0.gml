@@ -1,5 +1,6 @@
 	draw_set_halign(fa_center)
 	draw_set_valign(fa_middle)
+	// draws text for the swimmer
 	if(obj_disabilities.dyscalculia){
 	drawLives()
 	}else if(!obj_disabilities.dyscalculia){
@@ -9,13 +10,13 @@
 	}
 	if(obj_disabilities.ADHD){
 	if(room == Tutorial){
-	text = "Move Using the arrow keys"
+	text = "\n\n Move Using the arrow keys"
 	}else{
 	text = "Collect the pollutants"
 	}
 	}else if(!obj_disabilities.ADHD){
 	if(room == Tutorial){
-	text = "Move Using the arrow keys"
+	text = "\n\n Move Using the arrow keys"
 	}else{
 	text = ""
 	}
@@ -32,6 +33,7 @@
 	draw_text_transformed_colour(x, y-200, text, .5, .5, image_angle, c_red, c_red, c_red, c_red, 2);
 	}	
 	draw_self();
+	// draws the swimmers depending on the swimmer's state and direction
 	switch(currentState){
 		case IDOL:
 		if(swimmerSkin){

@@ -1,3 +1,4 @@
+// sound
 if(state = 0){
 	audio_play_sound_on(evolvedMonsterEmmiter,snd_evolvedMonster,1,1)
 	state = 1
@@ -8,6 +9,7 @@ audio_emitter_pitch(evolvedMonsterEmmiter, 0.8)
 }else if (vsp < 0 && hsp < 0){
 audio_emitter_pitch(evolvedMonsterEmmiter, 1.2)
 }
+// movement
 if(instance_exists(obj_trainer)){
 if(obj_trainer.evolvedMonsterTutorialOneActive || obj_trainer.evolvedMonsterTutorialTwoActive){
 x+=hsp;
@@ -18,6 +20,7 @@ y+=vsp;
 x+=hsp;
 y+=vsp;
 }
+// collisions
 tutorialMonsterEvolvedCollision(obj_tutorialMonsterBarrier)
 monsterEvolvedCollision(obj_monsterBarrier);
 if(instance_exists(obj_swimmerMonsterBarrier)){

@@ -1,3 +1,5 @@
+// if single player is active and right hand controls are active
+// destroys or creates the swimmer's light
 if (singleplayer == true){
 if(obj_disabilities.rightHandControls){
 audio_play_sound(snd_light,1,0)

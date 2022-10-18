@@ -90,7 +90,11 @@ draw_text_transformed(0,1000," For the puzzle drag the pollutants to their dispo
 draw_text_transformed(0,1100," automatically stop being dragged when releasing left click",1,1,0);
 }
 if (room == InstructionsPageSix){
-draw_text_transformed(0,0," Blind Mode is activated and deactivated by the blind mode button in options",1,1,0);
+draw_text_transformed(0,0,"Blind Mode is deactivated and activated by the blind mode button in options",1,1,0);
+draw_text_transformed(0,100,"ADHD is deactivated and activated by the ADHD button in options",1,1,0);
+draw_text_transformed(0,200,"Dyscalculia is deactivated and activated by the Dyscalculia button in options. ",1,1,0);
+draw_text_transformed(0,300,"Executive Functioning is deactivated and activated by the Executive Functioning button in options.",1,1,0);
+draw_text_transformed(0,400,"Dyslexia is deactivated and activated by the Dyslexia button in options. ",1,1,0);
 }
 if(draw_get_font() == ft_dyslexia){
 	if (room == Credits){

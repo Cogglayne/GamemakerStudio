@@ -15,7 +15,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_instructionsPagesix.mp3",
-  "duration": 4.205667,
+  "duration": 24.084833,
   "parent": {
     "name": "Room Text",
     "path": "folders/Sounds/Room Text.yy",

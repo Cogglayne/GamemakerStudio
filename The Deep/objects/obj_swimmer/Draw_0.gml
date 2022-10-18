@@ -8,18 +8,28 @@
 	}
 	}
 	if(obj_disabilities.ADHD){
+	if(room == Tutorial){
+	text = "Move Using the arrow keys"
+	}else{
 	text = "Collect the pollutants"
+	}
 	}else if(!obj_disabilities.ADHD){
+	if(room == Tutorial){
+	text = "Move Using the arrow keys"
+	}else{
 	text = ""
 	}
+	}
+	
 	if(singleplayer){
 	//drawPie(x ,y-100 ,timer, 100, c_white, 20, 1)
-	if(room!=Tutorial){
+	if(room==Tutorial){
+	draw_text_transformed_colour(x, y-200, text, .5, .5, image_angle, c_white, c_white, c_white, c_white, 1);
+	}
+	}
+	if (room!=Tutorial){
 	draw_text_transformed_colour(x, y-100, string(timer), .5, .5, image_angle, c_white, c_white, c_white, c_white, 1);
 	draw_text_transformed_colour(x, y-200, text, .5, .5, image_angle, c_red, c_red, c_red, c_red, 2);
-	}
-	}else{
-	draw_text_transformed_colour(x, y-200, text, .5, .5, image_angle, c_white, c_white, c_white, c_white, 1);
 	}	
 	draw_self();
 	switch(currentState){

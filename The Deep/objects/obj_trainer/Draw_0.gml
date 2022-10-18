@@ -27,7 +27,13 @@ text = "Left click in a evolved monster's direction\n to deploy a barrier to red
 if(probeTutorialTrial){
 text = "Now you try\n remember hit control to spawn the probe that will go towards the mouse to give you vision in a direction"		
 }else{
-text = "Hit control to spawn a probe that will go towards the mouse to give you vision in direction"
+text = "Hit control to spawn a probe that will go towards the mouse to give you vision in direction\n probes are an integral part of survival down here"
+}
+}else if (anglerTutorialActive){
+if(anglerTutorialTrial){
+text = "Now you try\n remember hit shift to turn off your light and hide"		
+}else{
+text = "Hit shift when the angler gets close to turn off your light and hide\n swim away while the angler cannot see you"
 }
 }
 

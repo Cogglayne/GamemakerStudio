@@ -95,8 +95,21 @@ if(probeTutorialActive && probeTutorialTrial){
 }
 }
 
-
-if(evolvedMonsterTutorialOneCleared && evolvedMonsterTutorialTwoCleared && monsterTutorialCleared && mineTutorialCleared && probeTutorialCleared){
+//
+if(anglerTutorialActive && !anglerTutorialTrial){
+	sprite_index = spr_blackswimmerIdleLeft
+	if (point_distance(x, y, 4300, 1800) > 1) {
+    x = 4300;
+    y = 1800;
+}
+if(point_distance(x,y,obj_horrorTutorial.x,obj_horrorTutorial.y) <= 900){
+instance_destroy(obj_trainerLight)
+}
+}
+if(anglerTutorialActive && anglerTutorialTrial){
+	sprite_index = spr_blackswimmerIdleLeft
+}
+if(evolvedMonsterTutorialOneCleared && evolvedMonsterTutorialTwoCleared && monsterTutorialCleared && mineTutorialCleared && probeTutorialCleared && anglerTutorialCleared){
 room_goto(TutorialClear)
 }
 

@@ -32,8 +32,15 @@ function monsterTutorialCollision(object){
 	}
 hsp = -hsp;
 if(instance_exists(obj_trainer)){
-	obj_trainer.textTwo = ""	
+	show_debug_message(string(obj_trainer.firstBounce) + "before")
+	if(instance_exists(obj_swimmerMonsterBarrier) && !obj_trainer.firstBounce){
+	obj_trainer.textTwo = "Make sure you deploy the barriers in the monter's path\n out in the field you can only deploy one at a time\ try again"	
 	instance_destroy(obj_swimmerMonsterBarrier)
+	}else{
+	obj_trainer.textTwo = "Deploy the barrier to redirect the monster to the right"	
+	}
+	obj_trainer.firstBounce = false;
+	show_debug_message(string(obj_trainer.firstBounce) + "after")
 }
 image_xscale = -image_xscale;
 }
@@ -49,7 +56,7 @@ if(instance_exists(obj_trainer)){
 	obj_trainer.textTwo = "Make sure you deploy the barriers in the monter's path\n out in the field you can only deploy one at a time\ try again"	
 	instance_destroy(obj_swimmerMonsterBarrier)
 	}else{
-	obj_trainer.textTwo = "Deploy the barrier to redirect the monster"	
+	obj_trainer.textTwo = "Deploy the barrier to redirect the monster to the left"	
 	}
 }
 image_xscale = -image_xscale;
@@ -81,6 +88,7 @@ if(instance_exists(obj_trainer)){
 	obj_trainer.numHits++;
 	if(obj_trainer.monsterTutorialCleared){
 	instance_destroy(obj_monster)
+	obj_trainer.firstBounce = true;
 	obj_trainer.numHits = 0;
 	}
 	}
@@ -92,6 +100,15 @@ function mineTutorialCollision(object){
 	while (!place_meeting(x,y+sign(vsp),object)){
 		y += sign(vsp);
 	}
+if(instance_exists(obj_trainer) && !obj_trainer.firstBounce){
+	if(instance_exists(obj_swimmerMineBarrier)){
+	obj_trainer.textTwo = "Make sure you deploy the barrier in the mine's path\n out in the field you can only deploy one at a time\ try again"	
+	instance_destroy(obj_swimmerMineBarrier)
+	}else{
+	obj_trainer.textTwo = "Deploy the barrier to redirect the mine up"	
+	}
+	obj_trainer.firstBounce = false;
+}
 vsp = -vsp;
 }
 }
@@ -105,7 +122,7 @@ function mineCollision(object){
 	obj_trainer.textTwo = "Make sure you deploy the barrier in the mine's path\n out in the field you can only deploy one at a time\ try again"	
 	instance_destroy(obj_swimmerMineBarrier)
 	}else{
-	obj_trainer.textTwo = "Deploy the barrier to redirect the mine"	
+	obj_trainer.textTwo = "Deploy the barrier to redirect the mine down"	
 	}
 	}
 vsp = -vsp;
@@ -133,6 +150,7 @@ if(instance_exists(obj_trainer)){
 	obj_trainer.numHits++;
 	if(obj_trainer.mineTutorialCleared){
 	instance_destroy(obj_mine)
+	obj_trainer.firstBounce = true;
 	obj_trainer.numHits = 0;
 	}
 	}
@@ -149,11 +167,11 @@ function tutorialMonsterEvolvedCollision(object){
 	}
 	if(instance_exists(obj_trainer)){
 	if(instance_exists(obj_swimmerMineBarrier) || instance_exists(obj_swimmerMonsterBarrier)){
-	obj_trainer.textTwo = "Make sure you deploy the barrier in the mine's path\n out in the field you can only deploy one at a time\ try again"	
+	obj_trainer.textTwo = "Make sure you deploy the barrier in the evolved monster's path\n out in the field you can only deploy one at a time\ try again"	
 	instance_destroy(obj_swimmerMineBarrier)
 	instance_destroy(obj_swimmerMineBarrier)
 	}else{
-	obj_trainer.textTwo = "Deploy the barrier to redirect the evolved monster"	
+	obj_trainer.textTwo = "Deploy the barrier to redirect the evolved monster left and up"	
 	}
 	}
 hsp = -hsp;
@@ -166,6 +184,16 @@ function monsterEvolvedCollision(object){
 	while (!place_meeting(x+sign(hsp),y,object)){
 		x += sign(hsp);
 	}
+if(instance_exists(obj_trainer)){
+if((instance_exists(obj_swimmerMineBarrier) || instance_exists(obj_swimmerMonsterBarrier)) && !obj_trainer.firstBounce){
+	obj_trainer.textTwo = "Make sure you deploy the barrier in the evolved monster's path\n out in the field you can only deploy one at a time\ try again"	
+	instance_destroy(obj_swimmerMineBarrier)
+	instance_destroy(obj_swimmerMineBarrier)
+	}else{
+	obj_trainer.textTwo = "Deploy the barrier to redirect the evolved monster right and down"	
+	}
+	obj_trainer.firstBounce = false;
+}
 hsp = -hsp;
 vsp = -vsp;
 image_xscale = -image_xscale;
@@ -198,6 +226,7 @@ if(instance_exists(obj_trainer)){
 	if(obj_trainer.evolvedMonsterTutorialOneCleared){
 	obj_monsterEvolved.x = 224;
 	obj_monsterEvolved.y = 224
+	obj_trainer.firstBounce = true;
 	obj_trainer.numHits = 0;
 	}
 	}

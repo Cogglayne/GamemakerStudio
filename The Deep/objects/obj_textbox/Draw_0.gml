@@ -8,7 +8,7 @@ if (room == MainMenu){
 	draw_text_transformed(2130,400,"Deep",4,4,0);
 }
 if (room == TutorialClear){
-draw_text_transformed(1900,0,"Tutorial Passed",2,2,0);	
+draw_text_transformed(2000,0,"Tutorial Passed",2,2,0);	
 }
 if (room == TutorialFailed){
 draw_text_transformed(1800,0,"Tutorial Not Passed",2,2,0);	
@@ -245,6 +245,9 @@ draw_text_transformed(0,1300,"The number of pollutants remaining is spoken aloud
 draw_text_transformed(0,1400,"disposal units indicate their color(s) when the player hovers over them with the mouse during the puzzle. I also made the",1,1,0)
 draw_text_transformed(0,1500,"totems say their name when the swimmer gets close to them, that way the player knows which totem is which. Finally I added",1,1,0)
 draw_text_transformed(0,1600,"text to speek for the puzzle text to give blind players an idea of what the puzzle solution is.",1,1,0)
+}
+if(room == GradingPageFive){
+draw_text_transformed(1500,0,"Tutorial and Learning Disabilities",2,2,0);
 }
 if (room == BestTimes){
 	draw_text_transformed(2200,0,"Best Times",1,1,0);

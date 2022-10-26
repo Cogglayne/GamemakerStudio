@@ -5,7 +5,7 @@ mineTutorialActive = false;
 mineTutorialTrial = false;
 // monster tutorial
 monsterTutorialCleared = false;
-monsterTutorialActive = true;//
+monsterTutorialActive = false;
 monsterTutorialTrial = false;
 // evolved monster tutorial
 evolvedMonsterTutorialOneCleared = false;

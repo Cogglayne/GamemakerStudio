@@ -13,7 +13,27 @@ soundHasBeenPlayed = false;
 var click = hover && mouse_check_button_pressed(mb_left);
 hover = lerp(hover,hove,0.1)
 if(click && text = "Quit"){
-	game_end();
+game_end();
+}else if(click && text = "Monster Tutorial"){
+obj_trainer.monsterTutorialActive = true;
+room_goto(targetRoom);	
+}else if(click && text = "Mine Tutorial"){
+obj_trainer.mineTutorialActive = true;
+room_goto(targetRoom);	
+}else if(click && text = "Evolved Monster Tutorial Two"){
+obj_trainer.evolvedMonsterTutorialTwoActive = true;
+room_goto(targetRoom);		
+}else if(click && text = "Evolved Monster Tutorial One"){
+obj_trainer.evolvedMonsterTutorialOneActive = true;
+room_goto(targetRoom);		
+}else if(click && text = "Angler Tutorial"){
+obj_trainer.anglerTutorialActive = true;
+room_goto(targetRoom);	
+}else if(click && text = "Probe Tutorial"){
+obj_trainer.probeTutorialActive = true;
+room_goto(targetRoom);
+}else if(click && text = "Replay Tutorial"){
+room_goto_previous()	
 }else if(click && text = "Buy a Light Cosmetic for $10"){
 obj_microtransactions.lightCosmeticBought = true;	
 }else if(click && text = "Buy a Swimmer Cosmetic for $10"){
@@ -108,5 +128,5 @@ obj_disabilities.executiveFunctioning = true
 obj_disabilities.executiveFunctioning = false
 }
 }else if (click){
-	room_goto(targetRoom);
+room_goto(targetRoom);
 }

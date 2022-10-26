@@ -140,7 +140,7 @@ if(anglerTutorialActive && anglerTutorialTrial){
 	sprite_index = spr_blackswimmerIdleLeft
 }
 // checks if all the tutorials have been completed
-if(evolvedMonsterTutorialOneCleared && evolvedMonsterTutorialTwoCleared && monsterTutorialCleared && mineTutorialCleared && probeTutorialCleared && anglerTutorialCleared){
+if(evolvedMonsterTutorialOneCleared || evolvedMonsterTutorialTwoCleared || monsterTutorialCleared || mineTutorialCleared || probeTutorialCleared || anglerTutorialCleared){
 room_goto(TutorialClear)
 }
 

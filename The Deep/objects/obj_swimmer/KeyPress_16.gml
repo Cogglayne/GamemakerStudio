@@ -9,23 +9,20 @@ instance_destroy(obj_light)
 	// angler tutorial
 	if(instance_exists(obj_trainer)){
 	if(obj_trainer.anglerTutorialActive){
+	obj_trainer.numHits++;
 	obj_trainer.anglerTutorialTrial = true;
-	if(obj_trainer.anglerTutorialTrial && obj_trainer.numHits == 0){
+	if(obj_trainer.anglerTutorialTrial && obj_trainer.numHits == 1){
 	if(obj_disabilities.blindMode){
 	audio_play_sound(snd_anglerActivated,1,0)
 	}
 	obj_trainer.textTwo = "Excellent Work, This time the danger is real\n make sure to swim away from the angler when your light is off"
 	obj_horrorTutorial.tutorialEnemy = false;
 	}
-	if(obj_trainer.anglerTutorialTrial && obj_trainer.numHits == 1){
+	if(obj_trainer.anglerTutorialTrial && obj_trainer.numHits == 2){
 	obj_trainer.anglerTutorialCleared = true	
-	obj_trainer.anglerTutorialActive = false;
-	obj_trainer.anglerTutorialTrial = false;
-	}
-	obj_trainer.numHits++;
-	if(obj_trainer.anglerTutorialCleared){
 	instance_destroy(obj_horrorTutorial)
 	obj_trainer.numHits = 0;
+	room_goto(TutorialClear)
 	}
 	}
 }

@@ -28,7 +28,7 @@ audio_stop_sound(snd_swimming)
 // shows death text
 obj_levelTracker.textShouldBeShowing = true;
 if (obj_levelTracker.swimmerOneSinglePlayer == true){
-if(room == Tutorial){
+if(room == TutorialMonsterEvolvedOne || room == TutorialMonsterEvolvedTwo){
 room_goto(TutorialFailed)
 }
 // stops sounds

@@ -1,4 +1,4 @@
-text = "Evolved Monster Tutorial One"
-soundToPlay = snd_evolvedMonsterTutorialOne
-targetRoom = TutorialMonsterEvolvedOne
+text = "Evolved Monster Tutorial Two";
+targetRoom = TutorialMonsterEvolvedTwo
+soundToPlay = snd_evolvedMonsterTutorialTwo 
 width = 1100;

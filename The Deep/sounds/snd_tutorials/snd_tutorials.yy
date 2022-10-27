@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "snd_tutorial",
+  "name": "snd_tutorials",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -14,8 +14,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_tutorial.mp3",
-  "duration": 1.170459,
+  "soundFile": "snd_tutorials.mp3",
+  "duration": 0.862,
   "parent": {
     "name": "Buttons",
     "path": "folders/Sounds/Buttons.yy",

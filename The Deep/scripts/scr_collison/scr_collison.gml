@@ -45,7 +45,7 @@ if(instance_exists(obj_trainer)){
 	stopTrainerSounds()
 	audio_play_sound(snd_mineUp,1,0)
 	}
-	obj_trainer.textTwo = "Deploy the barrier to redirect the mine down"	
+	obj_trainer.textTwo = "Deploy the barrier to redirect the mine up"	
 	}
 	obj_trainer.firstBounce = false;
 }
@@ -70,7 +70,7 @@ function mineCollision(object){
 	stopTrainerSounds()
 	audio_play_sound(snd_mineDown,1,0)
 	}
-	obj_trainer.textTwo = "Deploy the barrier to redirect the mine up"	
+	obj_trainer.textTwo = "Deploy the barrier to redirect the mine down"	
 	}
 	}
 vsp = -vsp;
@@ -196,7 +196,8 @@ audio_play_sound(snd_barrierDestruction,1,0)
 if(instance_exists(obj_trainer)){
 	if(obj_trainer.monsterTutorialActive){
 	obj_trainer.monsterTutorialTrial = true;
-	if(obj_trainer.monsterTutorialTrial && obj_trainer.numHits == 1){
+	obj_trainer.numHits++;
+	if(obj_trainer.monsterTutorialTrial && obj_trainer.numHits == 2){
 	if(obj_disabilities.blindMode){
 	stopTrainerSounds()
 	audio_play_sound(snd_enemyActive,1,0)
@@ -204,18 +205,13 @@ if(instance_exists(obj_trainer)){
 	obj_trainer.textTwo = "Excellent Work, This time the danger is real"
 	obj_monster.tutorialEnemy = false;
 	}
-	if(obj_trainer.monsterTutorialTrial && obj_trainer.numHits == 2){
+	if(obj_trainer.monsterTutorialTrial && obj_trainer.numHits == 3){
 	obj_trainer.monsterTutorialCleared = true	
-	obj_trainer.monsterTutorialActive = false;
-	obj_trainer.monsterTutorialTrial = false;
-	obj_trainer.mineTutorialActive = true;
-	obj_trainer.textTwo = ""
-	}
-	obj_trainer.numHits++;
-	if(obj_trainer.monsterTutorialCleared){
 	instance_destroy(obj_monster)
 	obj_trainer.firstBounce = true;
 	obj_trainer.numHits = 0;
+	obj_trainer.textTwo = ""
+	room_goto(TutorialClear);
 	}
 	}
 }
@@ -228,8 +224,9 @@ function swimmerMineBarrierCollision(object){
 	}
 if(instance_exists(obj_trainer)){
 	if(obj_trainer.mineTutorialActive){
+	obj_trainer.numHits++;
 	obj_trainer.mineTutorialTrial = true;
-	if(obj_trainer.mineTutorialTrial && obj_trainer.numHits == 1){
+	if(obj_trainer.mineTutorialTrial && obj_trainer.numHits == 2){
 	if(obj_disabilities.blindMode){
 	stopTrainerSounds()
 	audio_play_sound(snd_enemyActive,1,0)
@@ -237,18 +234,13 @@ if(instance_exists(obj_trainer)){
 	obj_trainer.textTwo = "Excellent Work, This time the danger is real"
 	obj_mine.tutorialEnemy = false;
 	}
-	if(obj_trainer.mineTutorialTrial && obj_trainer.numHits == 2){
+	if(obj_trainer.mineTutorialTrial && obj_trainer.numHits == 3){
 	obj_trainer.mineTutorialCleared = true	
-	obj_trainer.mineTutorialActive = false;
-	obj_trainer.monsterTutorialTrial = false;
-	obj_trainer.evolvedMonsterTutorialOneActive = true;
-	obj_trainer.textTwo = ""
-	}
-	obj_trainer.numHits++;
-	if(obj_trainer.mineTutorialCleared){
 	instance_destroy(obj_mine)
 	obj_trainer.firstBounce = true;
 	obj_trainer.numHits = 0;
+	obj_trainer.textTwo = ""
+	room_goto(TutorialClear);
 	}
 	}
 }
@@ -267,8 +259,9 @@ vsp = -vsp;
 if(object == obj_swimmerMineBarrier){
 if(instance_exists(obj_trainer)){
 	if(obj_trainer.evolvedMonsterTutorialOneActive){
+	obj_trainer.numHits++;
 	obj_trainer.evolvedMonsterTutorialTrialOne = true;
-	if(obj_trainer.evolvedMonsterTutorialTrialOne && obj_trainer.numHits == 1){
+	if(obj_trainer.evolvedMonsterTutorialTrialOne && obj_trainer.numHits == 2){
 	if(obj_disabilities.blindMode){
 	stopTrainerSounds()
 	audio_play_sound(snd_enemyActive,1,0)
@@ -276,20 +269,13 @@ if(instance_exists(obj_trainer)){
 	obj_trainer.textTwo = "Excellent Work, This time the danger is real"
 	obj_monsterEvolved.tutorialEnemy = false;
 	}
-	if(obj_trainer.evolvedMonsterTutorialTrialOne && obj_trainer.numHits == 2){
+	if(obj_trainer.evolvedMonsterTutorialTrialOne && obj_trainer.numHits == 3){
 	obj_trainer.evolvedMonsterTutorialOneCleared = true	
-	obj_trainer.evolvedMonsterTutorialOneActive = false;
-	obj_trainer.evolvedMonsterTutorialTrialOne = false;
-	obj_trainer.evolvedMonsterTutorialTwoActive = true;
-	obj_monsterEvolved.tutorialEnemy = true;
-	obj_trainer.textTwo = ""
-	}
-	obj_trainer.numHits++;
-	if(obj_trainer.evolvedMonsterTutorialOneCleared){
-	obj_monsterEvolved.x = 224;
-	obj_monsterEvolved.y = 224
+	instance_destroy(obj_monsterEvolved)
 	obj_trainer.firstBounce = true;
 	obj_trainer.numHits = 0;
+	obj_trainer.textTwo = ""
+	room_goto(TutorialClear);
 	}
 	}
 }
@@ -299,9 +285,9 @@ audio_play_sound(snd_barrierDestruction,1,0)
 if(object == obj_swimmerMonsterBarrier){
 	if(instance_exists(obj_trainer)){
 	if(obj_trainer.evolvedMonsterTutorialTwoActive){
-
+	obj_trainer.numHits++;
 	obj_trainer.evolvedMonsterTutorialTrialTwo = true;
-	if(obj_trainer.evolvedMonsterTutorialTrialTwo && obj_trainer.numHits == 1){
+	if(obj_trainer.evolvedMonsterTutorialTrialTwo && obj_trainer.numHits == 2){
 	if(obj_disabilities.blindMode){
 	stopTrainerSounds()
 	audio_play_sound(snd_enemyActive,1,0)
@@ -309,17 +295,13 @@ if(object == obj_swimmerMonsterBarrier){
 	obj_trainer.textTwo = "Excellent Work, This time the danger is real"
 	obj_monsterEvolved.tutorialEnemy = false;
 	}
-	if(obj_trainer.evolvedMonsterTutorialTrialTwo && obj_trainer.numHits == 2){
+	if(obj_trainer.evolvedMonsterTutorialTrialTwo && obj_trainer.numHits == 3){
 	obj_trainer.evolvedMonsterTutorialTwoCleared = true	
-	obj_trainer.evolvedMonsterTutorialTwoActive = false;
-	obj_trainer.evolvedMonsterTutorialTrialTwo = false;
-	obj_trainer.probeTutorialActive = true;
-	obj_trainer.textTwo = ""
-	}
-	obj_trainer.numHits++;
-	if(obj_trainer.evolvedMonsterTutorialTwoCleared){
 	instance_destroy(obj_monsterEvolved)
+	obj_trainer.firstBounce = true;
 	obj_trainer.numHits = 0;
+	obj_trainer.textTwo = ""
+	room_goto(TutorialClear);
 	}
 	}
 }

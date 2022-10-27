@@ -1,4 +1,4 @@
 text = "Mine Tutorial";
-targetRoom = snd_mineTutorial
-soundToPlay = TutorialMine
+targetRoom = TutorialMine
+soundToPlay = snd_mineTutorial
 width = 1100;

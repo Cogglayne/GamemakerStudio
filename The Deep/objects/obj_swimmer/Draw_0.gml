@@ -4,18 +4,18 @@
 	if(obj_disabilities.dyscalculia){
 	drawLives()
 	}else if(!obj_disabilities.dyscalculia){
-	if(room!=Tutorial){
+	if(room!=TutorialAngler && room!=TutorialMine && room != TutorialMonster && room!= TutorialProbe && room !=TutorialMonsterEvolvedOne && room !=TutorialMonsterEvolvedTwo){
 	draw_text_transformed_colour(x, y+100, string(numPollutants), .5, .5, image_angle, c_white, c_white, c_white, c_white, 1);
 	}
 	}
 	if(obj_disabilities.ADHD){
-	if(room == Tutorial){
+	if(room==TutorialAngler || room==TutorialMine || room == TutorialMonster || room== TutorialProbe || room ==TutorialMonsterEvolvedOne || room ==TutorialMonsterEvolvedTwo){
 	text = "\n\n Move Using the arrow keys"
 	}else{
 	text = "Collect the pollutants"
 	}
 	}else if(!obj_disabilities.ADHD){
-	if(room == Tutorial){
+	if(room==TutorialAngler || room==TutorialMine || room == TutorialMonster || room== TutorialProbe || room ==TutorialMonsterEvolvedOne || room ==TutorialMonsterEvolvedTwo){
 	text = "\n\n Move Using the arrow keys"
 	}else{
 	text = ""
@@ -24,11 +24,11 @@
 	
 	if(singleplayer){
 	//drawPie(x ,y-100 ,timer, 100, c_white, 20, 1)
-	if(room==Tutorial){
+	if(room==TutorialAngler || room==TutorialMine || room == TutorialMonster || room== TutorialProbe || room ==TutorialMonsterEvolvedOne || room ==TutorialMonsterEvolvedTwo){
 	draw_text_transformed_colour(x, y-200, text, .5, .5, image_angle, c_white, c_white, c_white, c_white, 1);
 	}
 	}
-	if (room!=Tutorial){
+	if (room!=TutorialAngler && room!=TutorialMine && room != TutorialMonster && room!= TutorialProbe && room !=TutorialMonsterEvolvedOne && room !=TutorialMonsterEvolvedTwo){
 	draw_text_transformed_colour(x, y-100, string(timer), .5, .5, image_angle, c_white, c_white, c_white, c_white, 1);
 	draw_text_transformed_colour(x, y-200, text, .5, .5, image_angle, c_red, c_red, c_red, c_red, 2);
 	}	

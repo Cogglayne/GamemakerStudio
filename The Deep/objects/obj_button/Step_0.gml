@@ -16,24 +16,104 @@ if(click && text = "Quit"){
 game_end();
 }else if(click && text = "Monster Tutorial"){
 obj_trainer.monsterTutorialActive = true;
+obj_trainer.monsterTutorialTrial = false;
+obj_trainer.tutorialRoom = TutorialMonster;
 room_goto(targetRoom);	
 }else if(click && text = "Mine Tutorial"){
 obj_trainer.mineTutorialActive = true;
+obj_trainer.mineTutorialTrial = false;
+obj_trainer.tutorialRoom = TutorialMine;
 room_goto(targetRoom);	
 }else if(click && text = "Evolved Monster Tutorial Two"){
 obj_trainer.evolvedMonsterTutorialTwoActive = true;
+obj_trainer.evolvedMonsterTutorialTrialTwo = false;
+obj_trainer.tutorialRoom = TutorialMonsterEvolvedTwo;
 room_goto(targetRoom);		
 }else if(click && text = "Evolved Monster Tutorial One"){
 obj_trainer.evolvedMonsterTutorialOneActive = true;
+obj_trainer.evolvedMonsterTutorialTrialOne = false;
+obj_trainer.tutorialRoom = TutorialMonsterEvolvedOne;
 room_goto(targetRoom);		
 }else if(click && text = "Angler Tutorial"){
 obj_trainer.anglerTutorialActive = true;
+obj_trainer.anglerTutorialTrial = false;
+obj_trainer.tutorialRoom = TutorialAngler;
 room_goto(targetRoom);	
 }else if(click && text = "Probe Tutorial"){
 obj_trainer.probeTutorialActive = true;
+obj_trainer.probeTutorialTrial = false;
+obj_trainer.tutorialRoom = TutorialProbe;
 room_goto(targetRoom);
 }else if(click && text = "Replay Tutorial"){
-room_goto_previous()	
+switch(obj_trainer.tutorialRoom){
+	case TutorialAngler:
+	obj_trainer.anglerTutorialTrial = false;
+	break;
+	case TutorialMonster:
+	obj_trainer.monsterTutorialTrial = false;
+	break;
+	case TutorialMine:
+	obj_trainer.mineTutorialTrial = false;
+	break;
+	case TutorialProbe:
+	obj_trainer.probeTutorialTrial = false;
+	break;
+	case TutorialMonsterEvolvedOne:
+	obj_trainer.evolvedMonsterTutorialTrialOne = false;
+	break;
+	case TutorialMonsterEvolvedTwo:
+	obj_trainer.evolvedMonsterTutorialTrialTwo = false;
+	break;
+}
+room_goto(obj_trainer.tutorialRoom)
+}else if(click && text = "Next Tutorial"){
+switch(obj_trainer.tutorialRoom){
+	case TutorialAngler:
+	obj_trainer.anglerTutorialActive = false;
+	obj_trainer.anglerTutorialTrial = false;
+	room_goto(Tutorial)
+	break;
+	case TutorialMonster:
+	obj_trainer.monsterTutorialActive = false;
+	obj_trainer.monsterTutorialTrial = false;
+	obj_trainer.mineTutorialActive = true;
+	obj_trainer.mineTutorialTrial = false;
+	obj_trainer.tutorialRoom = TutorialMine;
+	room_goto(TutorialMine)
+	break;
+	case TutorialMine:
+	obj_trainer.mineTutorialActive = false;
+	obj_trainer.mineTutorialTrial = false;
+	obj_trainer.evolvedMonsterTutorialOneActive = true;
+	obj_trainer.evolvedMonsterTutorialTrialOne = false;
+	obj_trainer.tutorialRoom = TutorialMonsterEvolvedOne;
+	room_goto(TutorialMonsterEvolvedOne)
+	break;
+	case TutorialProbe:
+	obj_trainer.probeTutorialActive = false;
+	obj_trainer.probeTutorialTrial = false;
+	obj_trainer.anglerTutorialActive = true;
+	obj_trainer.anglerTutorialTrial = false;
+	obj_trainer.tutorialRoom = TutorialAngler;
+	room_goto(TutorialAngler)
+	break;
+	case TutorialMonsterEvolvedOne:
+	obj_trainer.evolvedMonsterTutorialOneActive = false;
+	obj_trainer.evolvedMonsterTutorialTrialOne = false;
+	obj_trainer.evolvedMonsterTutorialTwoActive = true;
+	obj_trainer.evolvedMonsterTutorialTrialTwo = false;
+	obj_trainer.tutorialRoom = TutorialMonsterEvolvedTwo;
+	room_goto(TutorialMonsterEvolvedTwo)
+	break;
+	case TutorialMonsterEvolvedTwo:
+	obj_trainer.evolvedMonsterTutorialTwoActive = false;
+	obj_trainer.evolvedMonsterTutorialTrialTwo = false;
+	obj_trainer.probeTutorialActive = true;
+	obj_trainer.probeTutorialTrial = false;
+	obj_trainer.tutorialRoom = TutorialAngler;
+	room_goto(TutorialProbe)
+	break;
+}
 }else if(click && text = "Buy a Light Cosmetic for $10"){
 obj_microtransactions.lightCosmeticBought = true;	
 }else if(click && text = "Buy a Swimmer Cosmetic for $10"){

@@ -1,22 +1,18 @@
 if(instance_exists(obj_trainer)){
 	if(obj_trainer.probeTutorialActive){
+	obj_trainer.numHits++;
 	obj_trainer.probeTutorialTrial = true;
-	if(obj_trainer.probeTutorialTrial && obj_trainer.numHits == 1){
+	if(obj_trainer.probeTutorialTrial && obj_trainer.numHits == 2){
 	if(obj_disabilities.blindMode){
 	audio_play_sound(snd_probeSecondLaunch,1,0)
 	}
 	obj_trainer.textTwo = "Excellent Work, Launch another probe"
 	}
-	if(obj_trainer.probeTutorialTrial && obj_trainer.numHits == 2){
+	if(obj_trainer.probeTutorialTrial && obj_trainer.numHits == 3){
 	obj_trainer.probeTutorialCleared = true	
-	obj_trainer.probeTutorialActive = false;
-	obj_trainer.probeTutorialTrial = false;
-	obj_trainer.anglerTutorialActive = true;
-	obj_trainer.textTwo = ""
-	}
-	obj_trainer.numHits++;
-	if(obj_trainer.probeTutorialCleared){
 	obj_trainer.numHits = 0;
+	obj_trainer.textTwo = ""
+	room_goto(TutorialClear)
 	}
 	}
 }

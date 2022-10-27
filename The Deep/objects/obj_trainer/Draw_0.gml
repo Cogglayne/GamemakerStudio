@@ -1,6 +1,9 @@
 draw_self()
 // Text to speech depending on which tutorial is active and
 // which portion of the tutorial is active
+if(room == TutorialClear || room == TutorialFailed || room == Tutorial){
+text = ""
+}else{
 if(mineTutorialActive){
 if(mineTutorialTrial){
 text = "Now you try\n remember right click in a mine's direction\n to deploy a barrier to redirect it"
@@ -36,6 +39,7 @@ if(anglerTutorialTrial){
 text = "Now you try\n remember hit shift to turn off your light and hide"		
 }else{
 text = "Hit shift when the angler gets close to turn off your light and hide\n swim away while the angler cannot see you"
+}
 }
 }
 // aligns text in the center

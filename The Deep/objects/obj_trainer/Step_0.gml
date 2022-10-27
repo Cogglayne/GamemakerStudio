@@ -48,10 +48,10 @@ if (mineTutorialActive && mineTutorialTrial){
 // evolved monster tutorial
 if(evolvedMonsterTutorialOneActive && !evolvedMonsterTutorialTrialOne){
 	sprite_index = spr_blackswimmerIdleLeft
-	if (point_distance(x, y, 1700, 850) > 1) {
+	if (point_distance(x, y, 1900, 850) > 1) {
 	stopTrainerSounds()
 	playSound(snd_evolvedMonsterTutorialOneActive)
-    x = 1700;
+    x = 1900;
     y = 850;
 }
 	if (obj_swimmer.numMineBarriers <1){
@@ -139,12 +139,6 @@ instance_destroy(obj_trainerLight)
 if(anglerTutorialActive && anglerTutorialTrial){
 	sprite_index = spr_blackswimmerIdleLeft
 }
-// checks if all the tutorials have been completed
-if(evolvedMonsterTutorialOneCleared || evolvedMonsterTutorialTwoCleared || monsterTutorialCleared || mineTutorialCleared || probeTutorialCleared || anglerTutorialCleared){
-room_goto(TutorialClear)
-}
-
-
 
 
 

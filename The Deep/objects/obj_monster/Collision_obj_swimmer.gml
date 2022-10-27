@@ -22,7 +22,7 @@ audio_play_sound(snd_playerdie,1,0)
 audio_stop_sound(snd_swimming)
 obj_levelTracker.textShouldBeShowing = true;
 if (obj_levelTracker.swimmerOneSinglePlayer == true){
-if(room == Tutorial){
+if(room == TutorialMonster){
 room_goto(TutorialFailed)
 }
 resetSound()

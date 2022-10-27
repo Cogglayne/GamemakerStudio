@@ -1,2 +1,2 @@
-text = "Quit"
-soundToPlay = snd_quit
+text = "Replay Tutorial"
+soundToPlay = snd_replayTutorial;

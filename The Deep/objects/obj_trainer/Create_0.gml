@@ -1,4 +1,4 @@
-instance_create_layer(x,y,"Instances", obj_trainerLight);
+tutorialRoom = Tutorial;
 // mine tutorial
 mineTutorialCleared = false;
 mineTutorialActive = false;

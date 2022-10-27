@@ -1,3 +1,3 @@
-text = "Tutorial"
+text = "Tutorials"
 targetRoom = Tutorial
-soundToPlay = snd_tutorial
+soundToPlay = snd_tutorials

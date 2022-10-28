@@ -19,7 +19,7 @@ instance_destroy(obj_light)
 	obj_horrorTutorial.tutorialEnemy = false;
 	}
 	if(obj_trainer.anglerTutorialTrial && obj_trainer.numHits == 2){
-	obj_trainer.anglerTutorialCleared = true	
+	obj_levelTracker.anglerTutorialCleared = true	
 	instance_destroy(obj_horrorTutorial)
 	obj_trainer.numHits = 0;
 	room_goto(TutorialClear)

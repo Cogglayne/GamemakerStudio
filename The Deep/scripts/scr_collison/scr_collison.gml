@@ -33,6 +33,7 @@ function mineTutorialCollision(object){
 		y += sign(vsp);
 	}
 if(instance_exists(obj_trainer)){
+	if(obj_trainer.mineTutorialActive){
 	if(instance_exists(obj_swimmerMineBarrier) && !obj_trainer.firstBounce){
 	if(obj_disabilities.blindMode){
 	stopTrainerSounds()
@@ -48,6 +49,7 @@ if(instance_exists(obj_trainer)){
 	obj_trainer.textTwo = "Deploy the barrier to redirect the mine up"	
 	}
 	obj_trainer.firstBounce = false;
+	}
 }
 vsp = -vsp;
 }
@@ -58,6 +60,7 @@ function mineCollision(object){
 		y += sign(vsp);
 	}
 	if(instance_exists(obj_trainer)){
+	if(obj_trainer.mineTutorialActive){
 	if(instance_exists(obj_swimmerMineBarrier)){
 	if(obj_disabilities.blindMode){
 	stopTrainerSounds()
@@ -73,6 +76,7 @@ function mineCollision(object){
 	obj_trainer.textTwo = "Deploy the barrier to redirect the mine down"	
 	}
 	}
+	}
 vsp = -vsp;
 }
 }
@@ -83,6 +87,7 @@ function monsterTutorialCollision(object){
 	}
 hsp = -hsp;
 if(instance_exists(obj_trainer)){
+	if(obj_trainer.monsterTutorialActive){
 	if(instance_exists(obj_swimmerMonsterBarrier) && !obj_trainer.firstBounce){
 	if(obj_disabilities.blindMode){
 	stopTrainerSounds()
@@ -98,6 +103,7 @@ if(instance_exists(obj_trainer)){
 	obj_trainer.textTwo = "Deploy the barrier to redirect the monster to the right"	
 	}
 	obj_trainer.firstBounce = false;
+	}
 }
 image_xscale = -image_xscale;
 }
@@ -109,6 +115,7 @@ function monsterCollision(object){
 	}
 hsp = -hsp;
 if(instance_exists(obj_trainer)){
+	if(obj_trainer.monsterTutorialActive){
 	if(instance_exists(obj_swimmerMonsterBarrier)){
 	if(obj_disabilities.blindMode){
 	stopTrainerSounds()
@@ -122,6 +129,7 @@ if(instance_exists(obj_trainer)){
 	audio_play_sound(snd_monsterLeft,1,0)
 	}
 	obj_trainer.textTwo = "Deploy the barrier to redirect the monster to the left"	
+	}
 	}
 }
 image_xscale = -image_xscale;
@@ -206,7 +214,7 @@ if(instance_exists(obj_trainer)){
 	obj_monster.tutorialEnemy = false;
 	}
 	if(obj_trainer.monsterTutorialTrial && obj_trainer.numHits == 3){
-	obj_trainer.monsterTutorialCleared = true	
+	obj_levelTracker.monsterTutorialCleared = true	
 	instance_destroy(obj_monster)
 	obj_trainer.firstBounce = true;
 	obj_trainer.numHits = 0;
@@ -235,7 +243,7 @@ if(instance_exists(obj_trainer)){
 	obj_mine.tutorialEnemy = false;
 	}
 	if(obj_trainer.mineTutorialTrial && obj_trainer.numHits == 3){
-	obj_trainer.mineTutorialCleared = true	
+	obj_levelTracker.mineTutorialCleared = true	
 	instance_destroy(obj_mine)
 	obj_trainer.firstBounce = true;
 	obj_trainer.numHits = 0;
@@ -270,7 +278,7 @@ if(instance_exists(obj_trainer)){
 	obj_monsterEvolved.tutorialEnemy = false;
 	}
 	if(obj_trainer.evolvedMonsterTutorialTrialOne && obj_trainer.numHits == 3){
-	obj_trainer.evolvedMonsterTutorialOneCleared = true	
+	obj_levelTracker.evolvedMonsterTutorialOneCleared = true	
 	instance_destroy(obj_monsterEvolved)
 	obj_trainer.firstBounce = true;
 	obj_trainer.numHits = 0;
@@ -296,7 +304,7 @@ if(object == obj_swimmerMonsterBarrier){
 	obj_monsterEvolved.tutorialEnemy = false;
 	}
 	if(obj_trainer.evolvedMonsterTutorialTrialTwo && obj_trainer.numHits == 3){
-	obj_trainer.evolvedMonsterTutorialTwoCleared = true	
+	obj_levelTracker.evolvedMonsterTutorialTwoCleared = true	
 	instance_destroy(obj_monsterEvolved)
 	obj_trainer.firstBounce = true;
 	obj_trainer.numHits = 0;

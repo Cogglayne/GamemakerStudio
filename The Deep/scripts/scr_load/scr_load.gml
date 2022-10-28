@@ -21,6 +21,13 @@ obj_disabilities.ADHD = ini_read_real("Save1","ADHD",0);
 obj_disabilities.dyscalculia = ini_read_real("Save1","dyscalculia",0);
 obj_disabilities.executiveFunctioning = ini_read_real("Save1","executiveFunctioning",0);
 obj_disabilities.dyslexia = ini_read_real("Save1","dyslexia",0);
+obj_levelTracker.evolvedMonsterTutorialOneCleared = ini_read_real("Save1","evolvedMonsterTutorialOneCleared",0)
+obj_levelTracker.evolvedMonsterTutorialTwoCleared = ini_read_real("Save1","evolvedMonsterTutorialTwoCleared",0);
+obj_levelTracker.mineTutorialCleared = ini_read_real("Save1","mineTutorialCleared",0)
+obj_levelTracker.monsterTutorialCleared = ini_read_real("Save1","monsterTutorialCleared",0);
+obj_levelTracker.probeTutorialCleared = ini_read_real("Save1","probeTutorialCleared",0)
+obj_levelTracker.anglerTutorialCleared = ini_read_real("Save1","anglerTutorialCleared",0)
+obj_levelTracker.movementTutorialCleared = ini_read_real("Save1","movementTutorialCleared",0)
 ini_close()
 }else{
 }

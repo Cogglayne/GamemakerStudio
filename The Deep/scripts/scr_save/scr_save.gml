@@ -21,5 +21,12 @@ ini_write_real("Save1","ADHD",obj_disabilities.ADHD);
 ini_write_real("Save1","dyscalculia",obj_disabilities.dyscalculia);
 ini_write_real("Save1","executiveFunctioning",obj_disabilities.executiveFunctioning);
 ini_write_real("Save1","dyslexia",obj_disabilities.dyslexia);
+ini_write_real("Save1","evolvedMonsterTutorialOneCleared",obj_levelTracker.evolvedMonsterTutorialOneCleared);
+ini_write_real("Save1","evolvedMonsterTutorialTwoCleared",obj_levelTracker.evolvedMonsterTutorialTwoCleared);
+ini_write_real("Save1","mineTutorialCleared",obj_levelTracker.mineTutorialCleared);
+ini_write_real("Save1","monsterTutorialCleared",obj_levelTracker.monsterTutorialCleared);
+ini_write_real("Save1","probeTutorialCleared",obj_levelTracker.probeTutorialCleared);
+ini_write_real("Save1","anglerTutorialCleared",obj_levelTracker.anglerTutorialCleared);
+ini_write_real("Save1","movementTutorialCleared",obj_levelTracker.movementTutorialCleared);
 ini_close();
 }

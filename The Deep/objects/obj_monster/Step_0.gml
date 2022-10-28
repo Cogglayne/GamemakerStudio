@@ -20,7 +20,7 @@ swimmerTwoMonsterBarrierCollision(obj_swimmerTwoMonsterBarrier);
 }
 // movement
 if(instance_exists(obj_trainer)){
-if(obj_trainer.monsterTutorialActive){
+if(obj_trainer.monsterTutorialActive || obj_trainer.movementTutorialActive){
 x-=hsp;
 }else{
 }

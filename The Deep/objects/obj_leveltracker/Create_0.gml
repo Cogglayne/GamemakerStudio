@@ -7,9 +7,16 @@ levelFourMediumChallengeModeClear = false;
 levelFourMediumTime = 100;
 levelFourHardChallengeModeClear = false;
 levelFourHardTime = 100;
+evolvedMonsterTutorialOneCleared = false;
+evolvedMonsterTutorialTwoCleared = false;
+mineTutorialCleared = false;
+monsterTutorialCleared = false;
+probeTutorialCleared = false;
+anglerTutorialCleared = false;
+movementTutorialCleared = false;
 load();
 levelDiffuclty = ""
-
+tutorialRoom = Tutorial;
 leftFishFound = false;
 rightFishFound = false;
 swimmerOneMVSpeed = 0;

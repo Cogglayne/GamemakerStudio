@@ -1,7 +1,38 @@
 
 // sets the trainers location depending on which tutorial is 
 // active and which part of the tutorial is active
-
+// movement tutorial
+if(movementTutorialActive && !movementTutorialTrial){
+if (point_distance(x,  y, 1280, 736) > 1 && shouldBeMovingOne) {
+sprite_index = spr_blackswimmerSwimmingRight
+x+=5;
+}
+if(point_distance(x,  y, 1280, 736) < 1 ){
+shouldBeMovingOne = false;
+shouldBeMovingTwo = true;
+}
+if (point_distance(x,  y, 1280, 416) > 1 && shouldBeMovingTwo) {
+sprite_index = spr_blackswimmerSwimmingUpRight
+y-=5;
+}
+if(point_distance(x,  y, 1280, 416) < 1 ){
+shouldBeMovingTwo = false;
+shouldBeMovingThree = true;
+}
+if (point_distance(x,  y, 5000, 416) > 1 && shouldBeMovingThree) {
+sprite_index = spr_blackswimmerSwimmingRight
+x+=5;
+}
+}
+if(movementTutorialActive && movementTutorialTrial){
+	sprite_index = spr_blackswimmerIdleRight;
+	if (point_distance(x,  y, 650, 500) > 1) {
+	stopTrainerSounds()
+	playSound(snd_movementTutorialTrial)
+    x = 650;
+    y = 1200;
+}
+}
 // monster tutorial
 if(monsterTutorialActive && !monsterTutorialTrial){
 	if (point_distance(x, y, 500, 992) > 1) {

@@ -35,10 +35,12 @@ draw_circle(wave.x,wave.y+9525,8,false)
 }
 }
 }
+if(instance_exists(obj_bubble)){
 var bubbles = instance_nearest(obj_swimmer.x,obj_swimmer.y,obj_bubble)
 if(point_distance(obj_swimmer.x,obj_swimmer.y,bubbles.x,bubbles.y+50) <= bubbles.audioMaxDistanceToBeHeard){
 draw_set_color(#520089)
 draw_circle(bubbles.x,bubbles.y+60,8,false)
+}
 }
 if(instance_exists(obj_whale)){
 if(point_distance(obj_swimmer.x,obj_swimmer.y,obj_whale.x,obj_whale.y) <= obj_whale.audioMaxDistanceToBeHeard){

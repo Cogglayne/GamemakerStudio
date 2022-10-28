@@ -1,26 +1,28 @@
-tutorialRoom = Tutorial;
+instance_create_layer(x,y,"Instances", obj_trainerLight);
+// movement tutorial
+movementTutorialActive = false;
+movementTutorialTrial = false;
+shouldBeMovingOne = true;
+shouldBeMovingTwo = false;
+shouldBeMovingThree = false;
+shouldBeSwimmingRight = true;
+shouldBeSwimmingLeft = false;
 // mine tutorial
-mineTutorialCleared = false;
 mineTutorialActive = false;
 mineTutorialTrial = false;
 // monster tutorial
-monsterTutorialCleared = false;
 monsterTutorialActive = false;
 monsterTutorialTrial = false;
 // evolved monster tutorial
-evolvedMonsterTutorialOneCleared = false;
-evolvedMonsterTutorialTwoCleared = false;
 evolvedMonsterTutorialOneActive = false;
 evolvedMonsterTutorialTwoActive = false;
 evolvedMonsterTutorialTrialOne = false;
 evolvedMonsterTutorialTrialTwo = false;
 // probe tutorial
 probeTutorialActive = false;
-probeTutorialCleared = false;
 probeTutorialTrial = false;
 // angler tutorial
 anglerTutorialActive = false;
-anglerTutorialCleared = false;
 anglerTutorialTrial = false;
 // tutorial support
 firstBounce = true;

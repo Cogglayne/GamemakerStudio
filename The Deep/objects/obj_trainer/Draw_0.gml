@@ -10,6 +10,12 @@ text = "Now you try\n remember right click in a mine's direction\n to deploy a b
 }else{
 text = "Right click in a mine's direction\n to deploy a barrier to redirect it"
 }
+}else if (movementTutorialActive){
+if(movementTutorialTrial){
+text = "Now you try\n remember to use the arrow keys to move from one side to the end of the other\n and make sure to avoid enemies"
+}else{
+text = "Use the arrow keys to move from one side to the end of the other\n and make sure to avoid enemies"
+}
 }else if (monsterTutorialActive){
 if(monsterTutorialTrial){
 text = "Now you try\n remember left click in a monster's direction\n to deploy a barrier to redirect it"		

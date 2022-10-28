@@ -18,7 +18,7 @@ swimmerTwoMineBarrierCollision(obj_swimmerTwoMineBarrier);
 }
 
 if(instance_exists(obj_trainer)){
-if(obj_trainer.mineTutorialActive){
+if(obj_trainer.mineTutorialActive || obj_trainer.movementTutorialActive){
 y+=vsp;
 }else{
 }

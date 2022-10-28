@@ -9,6 +9,7 @@ audio_stop_sound(snd_monster)
 audio_stop_sound(snd_evolvedMonster)
 audio_stop_sound(snd_mine)
 audio_stop_sound(snd_horror)
+audio_stop_sound(snd_swimming)
 if(instance_exists(obj_horror)){
 obj_horror.state = 0;
 }
@@ -57,9 +58,13 @@ obj_waveGenerator.state = 0;
 if(instance_exists(obj_ship)){
 obj_ship.state = 0;
 }
+if(instance_exists(obj_bubble)){
 obj_bubble.state = 0;
 }
+}
 function stopButtonSounds(){
+audio_stop_sound(snd_AuditoryProcessingDisorder)
+audio_stop_sound(snd_movementTutorial)
 audio_stop_sound(snd_back)	
 audio_stop_sound(snd_besttimes)	
 audio_stop_sound(snd_blindMode)	

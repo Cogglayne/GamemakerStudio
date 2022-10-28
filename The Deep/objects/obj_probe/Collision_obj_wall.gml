@@ -9,7 +9,7 @@ if(instance_exists(obj_trainer)){
 	obj_trainer.textTwo = "Excellent Work, Launch another probe"
 	}
 	if(obj_trainer.probeTutorialTrial && obj_trainer.numHits == 3){
-	obj_trainer.probeTutorialCleared = true	
+	obj_levelTracker.probeTutorialCleared = true	
 	obj_trainer.numHits = 0;
 	obj_trainer.textTwo = ""
 	room_goto(TutorialClear)

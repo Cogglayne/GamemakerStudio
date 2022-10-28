@@ -3,6 +3,11 @@ draw_set_font(ft_dyslexia)
 }else if (!obj_disabilities.dyslexia){
 draw_set_font(ft_scaryFont);
 }
+if (room == LevelFourDifficultySelector){
+if(!obj_levelTracker.monsterTutorialCleared && !obj_levelTracker.mineTutorialCleared && !obj_levelTracker.probeTutorialCleared && !obj_levelTracker.anglerTutorialCleared && !obj_levelTracker.evolvedMonsterTutorialOneCleared && !obj_levelTracker.evolvedMonsterTutorialTwoCleared){
+draw_text_transformed(400,100,"Before continuing, completing the tutorials is recommended",2,2,0);
+}	
+}
 if (room == MainMenu){
 	draw_text_transformed(2230,100,"The",4,4,0);
 	draw_text_transformed(2130,400,"Deep",4,4,0);
@@ -95,6 +100,7 @@ draw_text_transformed(0,100,"ADHD is deactivated and activated by the ADHD butto
 draw_text_transformed(0,200,"Dyscalculia is deactivated and activated by the Dyscalculia button in options. ",1,1,0);
 draw_text_transformed(0,300,"Executive Functioning is deactivated and activated by the Executive Functioning button in options.",1,1,0);
 draw_text_transformed(0,400,"Dyslexia is deactivated and activated by the Dyslexia button in options. ",1,1,0);
+draw_text_transformed(0,500,"Auditory Processing Disorder is deactivated and activated by the Auditory Processing Disorder button in options. ",1,1,0);
 }
 if(draw_get_font() == ft_dyslexia){
 	if (room == Credits){

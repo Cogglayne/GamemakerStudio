@@ -1,5 +1,8 @@
 stopRoomText()
 if(obj_disabilities.blindMode){
+if(room == LevelFourDifficultySelector){
+audio_play_sound(snd_tutorialsRecommended,1,0)
+}
 if(room == LevelFourEasy || room == LevelFourHard || room == LevelFourMedium){
 audio_play_sound(snd_intro,1,0)
 }

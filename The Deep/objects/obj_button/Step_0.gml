@@ -14,103 +14,56 @@ var click = hover && mouse_check_button_pressed(mb_left);
 hover = lerp(hover,hove,0.1)
 if(click && text = "Quit"){
 game_end();
+}else if(click && text = "Movement Tutorial"){
+obj_levelTracker.tutorialRoom = TutorialMovement;
+room_goto(targetRoom);	
 }else if(click && text = "Monster Tutorial"){
-obj_trainer.monsterTutorialActive = true;
-obj_trainer.monsterTutorialTrial = false;
-obj_trainer.tutorialRoom = TutorialMonster;
+obj_levelTracker.tutorialRoom = TutorialMonster;
 room_goto(targetRoom);	
 }else if(click && text = "Mine Tutorial"){
-obj_trainer.mineTutorialActive = true;
-obj_trainer.mineTutorialTrial = false;
-obj_trainer.tutorialRoom = TutorialMine;
+obj_levelTracker.tutorialRoom = TutorialMine;
 room_goto(targetRoom);	
 }else if(click && text = "Evolved Monster Tutorial Two"){
-obj_trainer.evolvedMonsterTutorialTwoActive = true;
-obj_trainer.evolvedMonsterTutorialTrialTwo = false;
-obj_trainer.tutorialRoom = TutorialMonsterEvolvedTwo;
+obj_levelTracker.tutorialRoom = TutorialMonsterEvolvedTwo;
 room_goto(targetRoom);		
 }else if(click && text = "Evolved Monster Tutorial One"){
-obj_trainer.evolvedMonsterTutorialOneActive = true;
-obj_trainer.evolvedMonsterTutorialTrialOne = false;
-obj_trainer.tutorialRoom = TutorialMonsterEvolvedOne;
+obj_levelTracker.tutorialRoom = TutorialMonsterEvolvedOne;
 room_goto(targetRoom);		
 }else if(click && text = "Angler Tutorial"){
-obj_trainer.anglerTutorialActive = true;
-obj_trainer.anglerTutorialTrial = false;
-obj_trainer.tutorialRoom = TutorialAngler;
+obj_levelTracker.tutorialRoom = TutorialAngler;
 room_goto(targetRoom);	
 }else if(click && text = "Probe Tutorial"){
-obj_trainer.probeTutorialActive = true;
-obj_trainer.probeTutorialTrial = false;
-obj_trainer.tutorialRoom = TutorialProbe;
+obj_levelTracker.tutorialRoom = TutorialProbe;
 room_goto(targetRoom);
 }else if(click && text = "Replay Tutorial"){
-switch(obj_trainer.tutorialRoom){
-	case TutorialAngler:
-	obj_trainer.anglerTutorialTrial = false;
-	break;
-	case TutorialMonster:
-	obj_trainer.monsterTutorialTrial = false;
-	break;
-	case TutorialMine:
-	obj_trainer.mineTutorialTrial = false;
-	break;
-	case TutorialProbe:
-	obj_trainer.probeTutorialTrial = false;
-	break;
-	case TutorialMonsterEvolvedOne:
-	obj_trainer.evolvedMonsterTutorialTrialOne = false;
-	break;
-	case TutorialMonsterEvolvedTwo:
-	obj_trainer.evolvedMonsterTutorialTrialTwo = false;
-	break;
-}
-room_goto(obj_trainer.tutorialRoom)
+room_goto(obj_levelTracker.tutorialRoom)
 }else if(click && text = "Next Tutorial"){
-switch(obj_trainer.tutorialRoom){
+switch(obj_levelTracker.tutorialRoom){
+	case TutorialMovement:
+	obj_levelTracker.tutorialRoom = TutorialMonster;
+	room_goto(TutorialMonster)
+	break;
 	case TutorialAngler:
-	obj_trainer.anglerTutorialActive = false;
-	obj_trainer.anglerTutorialTrial = false;
 	room_goto(Tutorial)
 	break;
 	case TutorialMonster:
-	obj_trainer.monsterTutorialActive = false;
-	obj_trainer.monsterTutorialTrial = false;
-	obj_trainer.mineTutorialActive = true;
-	obj_trainer.mineTutorialTrial = false;
-	obj_trainer.tutorialRoom = TutorialMine;
+	obj_levelTracker.tutorialRoom = TutorialMine;
 	room_goto(TutorialMine)
 	break;
 	case TutorialMine:
-	obj_trainer.mineTutorialActive = false;
-	obj_trainer.mineTutorialTrial = false;
-	obj_trainer.evolvedMonsterTutorialOneActive = true;
-	obj_trainer.evolvedMonsterTutorialTrialOne = false;
-	obj_trainer.tutorialRoom = TutorialMonsterEvolvedOne;
+	obj_levelTracker.tutorialRoom = TutorialMonsterEvolvedOne;
 	room_goto(TutorialMonsterEvolvedOne)
 	break;
 	case TutorialProbe:
-	obj_trainer.probeTutorialActive = false;
-	obj_trainer.probeTutorialTrial = false;
-	obj_trainer.anglerTutorialActive = true;
-	obj_trainer.anglerTutorialTrial = false;
-	obj_trainer.tutorialRoom = TutorialAngler;
+	obj_levelTracker.tutorialRoom = TutorialAngler;
 	room_goto(TutorialAngler)
 	break;
 	case TutorialMonsterEvolvedOne:
-	obj_trainer.evolvedMonsterTutorialOneActive = false;
-	obj_trainer.evolvedMonsterTutorialTrialOne = false;
-	obj_trainer.evolvedMonsterTutorialTwoActive = true;
-	obj_trainer.evolvedMonsterTutorialTrialTwo = false;
-	obj_trainer.tutorialRoom = TutorialMonsterEvolvedTwo;
+	obj_levelTracker.tutorialRoom = TutorialMonsterEvolvedTwo;
 	room_goto(TutorialMonsterEvolvedTwo)
 	break;
 	case TutorialMonsterEvolvedTwo:
-	obj_trainer.evolvedMonsterTutorialTwoActive = false;
-	obj_trainer.evolvedMonsterTutorialTrialTwo = false;
-	obj_trainer.probeTutorialActive = true;
-	obj_trainer.probeTutorialTrial = false;
-	obj_trainer.tutorialRoom = TutorialAngler;
+	obj_levelTracker.tutorialRoom = TutorialAngler;
 	room_goto(TutorialProbe)
 	break;
 }
@@ -206,6 +159,12 @@ if(obj_disabilities.executiveFunctioning == false){
 obj_disabilities.executiveFunctioning = true	
 }else if (obj_disabilities.executiveFunctioning == true){
 obj_disabilities.executiveFunctioning = false
+}
+}else if (click && text = "Auditory Processing Disorder"){
+if(audio_is_playing(snd_background)){
+audio_stop_sound(snd_background)
+}else if (!audio_is_playing(snd_background)){
+audio_play_sound(snd_background,0,1);
 }
 }else if (click){
 room_goto(targetRoom);

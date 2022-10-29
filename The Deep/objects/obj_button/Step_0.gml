@@ -96,16 +96,20 @@ room_goto(targetRoom);
 if(obj_microtransactions.swimmerSkinBought){
 if(obj_microtransactions.swimmerSkin == false){
 obj_microtransactions.swimmerSkin = true
+activated = true;
 }else if(obj_microtransactions.swimmerSkin == true){
 obj_microtransactions.swimmerSkin = false
+activated = false;
 }
 }
 }else if (click && text = "Toggle Light Cosmetic"){
 if(obj_microtransactions.lightCosmeticBought){
 if(obj_microtransactions.newLightEffect == false){
 obj_microtransactions.newLightEffect = true	
+activated = true;
 }else if (obj_microtransactions.newLightEffect == true){
-	obj_microtransactions.newLightEffect = false
+obj_microtransactions.newLightEffect = false
+activated = false;
 }
 }
 }else if(click && text = "Left Handed"){
@@ -113,54 +117,87 @@ obj_disabilities.leftHandControls = true;
 obj_disabilities.rightHandControls = false;
 obj_disabilities.normal = false;
 obj_disabilities.poorReactivity = false;
+activated = true;
+inst_303B7AD.activated = false;
+inst_4229D191.activated = false;
+inst_5072045A.activated = false;
 }else if(click && text = "Right Handed"){
 obj_disabilities.leftHandControls = false;	
 obj_disabilities.rightHandControls = true;
 obj_disabilities.normal = false;
 obj_disabilities.poorReactivity = false;
+activated = true;
+inst_188A1605.activated = false;
+inst_303B7AD.activated = false;
+inst_5072045A.activated = false;
 }else if(click && text = "Standard"){
 obj_disabilities.leftHandControls = false;	
 obj_disabilities.rightHandControls = false;
 obj_disabilities.normal = true;
 obj_disabilities.poorReactivity = false;
+activated = true;
+inst_188A1605.activated = false;
+inst_4229D191.activated = false;
+inst_5072045A.activated = false;
 }else if(click && text = "Poor Reactivity"){
 obj_disabilities.leftHandControls = false;	
 obj_disabilities.rightHandControls = false;
 obj_disabilities.normal = false;
 obj_disabilities.poorReactivity = true;
+activated = true;
+inst_188A1605.activated = false;
+inst_303B7AD.activated = false;
+inst_4229D191.activated = false;
 }else if(click && text = "Blind Mode"){
 if(obj_disabilities.blindMode == false){
 obj_disabilities.blindMode = true	
+activated = true;
 }else if (obj_disabilities.blindMode == true){
 obj_disabilities.blindMode = false
+activated = false;
 }
 }else if (click && text == "Coming Soon"){
 error = true;
 }else if (click && text = "ADHD"){
 if(obj_disabilities.ADHD == false){
 obj_disabilities.ADHD = true	
+activated = true;
 }else if (obj_disabilities.ADHD == true){
 obj_disabilities.ADHD = false
+activated = false;
 }
 }else if (click && text = "Dyscalculia"){
 if(obj_disabilities.dyscalculia  == false){
 obj_disabilities.dyscalculia  = true	
+activated = true
 }else if (obj_disabilities.dyscalculia  == true){
 obj_disabilities.dyscalculia = false
+activated = false;
 }
 }else if (click && text = "Dyslexia"){
 if(obj_disabilities.dyslexia  == false){
 obj_disabilities.dyslexia = true	
+activated = true;
 }else if (obj_disabilities.dyslexia  == true){
 obj_disabilities.dyslexia = false
+activated = false;
 }
 }else if (click && text = "Executive Functioning"){
 if(obj_disabilities.executiveFunctioning == false){
 obj_disabilities.executiveFunctioning = true	
+activated = true;
 }else if (obj_disabilities.executiveFunctioning == true){
 obj_disabilities.executiveFunctioning = false
+activated = false;
 }
 }else if (click && text = "Auditory Processing Disorder"){
+if(obj_disabilities.auditoryProcessingDisorder == false){
+obj_disabilities.auditoryProcessingDisorder = true	
+activated = true;
+}else if (obj_disabilities.auditoryProcessingDisorder == true){
+obj_disabilities.auditoryProcessingDisorder = false
+activated = false;
+}
 if(audio_is_playing(snd_background)){
 audio_stop_sound(snd_background)
 }else if (!audio_is_playing(snd_background)){

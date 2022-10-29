@@ -7,6 +7,7 @@ dyscalculia = false
 ADHD = false;
 executiveFunctioning = false;
 dyslexia = false;
+auditoryProcessingDisorder = false
 load();
 
 

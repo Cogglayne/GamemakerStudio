@@ -6,5 +6,6 @@ color = draw_set_color(merge_color(#ffd700,#ffe302,hover));
 shouldBeYellow = false;
 error = false;
 soundHasBeenPlayed = false;
+activated = false;
 var targetRoom;
 var soundToPlay;

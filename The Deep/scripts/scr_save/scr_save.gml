@@ -28,5 +28,6 @@ ini_write_real("Save1","monsterTutorialCleared",obj_levelTracker.monsterTutorial
 ini_write_real("Save1","probeTutorialCleared",obj_levelTracker.probeTutorialCleared);
 ini_write_real("Save1","anglerTutorialCleared",obj_levelTracker.anglerTutorialCleared);
 ini_write_real("Save1","movementTutorialCleared",obj_levelTracker.movementTutorialCleared);
+ini_write_real("Save1","auditoryProcessingDisorder",obj_disabilities.auditoryProcessingDisorder);
 ini_close();
 }

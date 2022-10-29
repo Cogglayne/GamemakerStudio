@@ -28,6 +28,7 @@ obj_levelTracker.monsterTutorialCleared = ini_read_real("Save1","monsterTutorial
 obj_levelTracker.probeTutorialCleared = ini_read_real("Save1","probeTutorialCleared",0)
 obj_levelTracker.anglerTutorialCleared = ini_read_real("Save1","anglerTutorialCleared",0)
 obj_levelTracker.movementTutorialCleared = ini_read_real("Save1","movementTutorialCleared",0)
+obj_disabilities.auditoryProcessingDisorder = ini_read_real("Save1","auditoryProcessingDisorder",0)
 ini_close()
 }else{
 }

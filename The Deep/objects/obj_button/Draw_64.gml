@@ -18,7 +18,11 @@ draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 draw_set_color(c_white);
 }else if (activated == true){
-draw_set_color(merge_color(c_green,c_green,hover));
+if(text == "Buy a Swimmer Cosmetic for $10" || text == "Buy a Light Cosmetic for $10"){
+draw_set_color(merge_color(c_white,c_white,hover));
+}else{
+draw_set_color(merge_color(c_white,c_ltgray,hover));
+}
 draw_roundrect(x,y,x+width,y+height,0);
 draw_set_color(c_black);
 draw_set_halign(fa_center);

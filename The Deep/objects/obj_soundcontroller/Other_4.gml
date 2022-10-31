@@ -1,7 +1,9 @@
 stopRoomText()
 if(obj_disabilities.blindMode){
 if(room == LevelFourDifficultySelector){
+if(!obj_levelTracker.monsterTutorialCleared && !obj_levelTracker.mineTutorialCleared && !obj_levelTracker.probeTutorialCleared && !obj_levelTracker.anglerTutorialCleared && !obj_levelTracker.evolvedMonsterTutorialOneCleared && !obj_levelTracker.evolvedMonsterTutorialTwoCleared){
 audio_play_sound(snd_tutorialsRecommended,1,0)
+}
 }
 if(room == LevelFourEasy || room == LevelFourHard || room == LevelFourMedium){
 audio_play_sound(snd_intro,1,0)
@@ -29,6 +31,19 @@ audio_play_sound(snd_TheDeep,1,0)
 }
 if (room == Win){
 audio_play_sound(snd_win,1,0)
+}
+if (room == TutorialClear){
+stopTrainerSounds()
+if(obj_disabilities.blindMode){
+audio_play_sound(snd_tutorialPassed,1,0)
+}
+audio_play_sound(snd_playerWin,1,0)
+}
+if (room == TutorialFailed){
+stopTrainerSounds()
+if(obj_disabilities.blindMode){
+audio_play_sound(snd_tutorialNotPassed,1,0)
+}
 }
 if (room == Lose){
 audio_play_sound(snd_lostSingle,1,0)

@@ -95,12 +95,13 @@ draw_text_transformed(0,1000," For the puzzle drag the pollutants to their dispo
 draw_text_transformed(0,1100," automatically stop being dragged when releasing left click",1,1,0);
 }
 if (room == InstructionsPageSix){
-draw_text_transformed(0,0,"Blind Mode is deactivated and activated by the blind mode button in options",1,1,0);
+draw_text_transformed(0,0,"Blind Mode is deactivated and activated by the Blind Mode button in options",1,1,0);
 draw_text_transformed(0,100,"ADHD is deactivated and activated by the ADHD button in options",1,1,0);
 draw_text_transformed(0,200,"Dyscalculia is deactivated and activated by the Dyscalculia button in options. ",1,1,0);
 draw_text_transformed(0,300,"Executive Functioning is deactivated and activated by the Executive Functioning button in options.",1,1,0);
 draw_text_transformed(0,400,"Dyslexia is deactivated and activated by the Dyslexia button in options. ",1,1,0);
 draw_text_transformed(0,500,"Auditory Processing Disorder is deactivated and activated by the Auditory Processing Disorder button in options. ",1,1,0);
+draw_text_transformed(0,600,"The tutorials are accessed by clicking singleplayer and then clicking tutorials",1,1,0);
 }
 if(draw_get_font() == ft_dyslexia){
 	if (room == Credits){
@@ -257,7 +258,52 @@ draw_text_transformed(0,1500,"totems say their name when the swimmer gets close 
 draw_text_transformed(0,1600,"text to speek for the puzzle text to give blind players an idea of what the puzzle solution is.",1,1,0)
 }
 if(room == GradingPageFive){
-draw_text_transformed(1500,0,"Tutorial and Learning Disabilities",2,2,0);
+draw_text_transformed(2200,0,"Tutorials",2,2,0);
+draw_text_transformed(0,200,"I created seven tutorials in total, 4 of the tutorials involve teaching the player how to use the barriers to redirect the mine, monster, and",1,1,0)
+draw_text_transformed(0,300,"evolved monster, 1 tutorial teaches the player to how to move around and avoid enemies, 1 tutorial teaches the player how to spawn a probe",1,1,0)
+draw_text_transformed(0,400,"and shows the function of the probe, and the final tutorial shows the player how to turn the swimmer's light off and on to avoid the angler.",1,1,0)
+draw_text_transformed(0,500,"Passing the tutorials involving using the barrier requires the player to successfully use the barrier twice to redirect a mine, monster, or",1,1,0)
+draw_text_transformed(0,600,"evolved monster depending on the tutorial after the player is shown by the trainer how to use a barrier to redirect the mine, monster,",1,1,0)
+draw_text_transformed(0,700,"or evolved monster. The first time the player attempts to redirect a mine, monster, or evolved monster the enemy is not a danger to the",1,1,0)
+draw_text_transformed(0,800,"player, the second time the player attempts to redirect a mine, monster, or evolved monster the enemy is dangerous to the player, giving",1,1,0)
+draw_text_transformed(0,900,"the player the opportunity to practice the skill in a safe environment and then use the skill against an actual enemy in a simple environment.",1,1,0)
+draw_text_transformed(0,1000,"Passing the movement tutorial requires the player to swim to the far right side of the level and then back to the far left side of the",1,1,0)
+draw_text_transformed(0,1100,"level while avoiding monsters after the trainer shows the player how to swim and avoid monsters. Reaching the far right side of the room",1,1,0)
+draw_text_transformed(0,1200,"enables the enemies to harm the player. This enables the player to practice movement in a safe environment and then practice movement",1,1,0)
+draw_text_transformed(0,1300,"in a simple environment with actual enemies. Passing the probe spawning tutorial requires the player to successfully launch two",1,1,0)
+draw_text_transformed(0,1400,"probes that reach the end of the room in any direction after the trainer shows them how to launch a probe. The probe spawning tutorial",1,1,0)
+draw_text_transformed(0,1500,"does not have a portion where the player can fail, players only need to know how to spawn a probe and what the probe does and the tutorial",1,1,0)
+draw_text_transformed(0,1600,"shows them this. A player cannot fail at spawning a probe. Thus the tutorial does not have criteria for failing.",1,1,0)
+}
+if(room == GradingPageSix){
+draw_text_transformed(0,0,"Passing the angler tutorial requires the player to successfully turn their light off and on twice, ideally swimming away from the angler",1,1,0)
+draw_text_transformed(0,100,"everytime they turn off their light, after the trainer shows the player how to turn their light off and on to get away from the angler.",1,1,0)
+draw_text_transformed(0,200,"the first time the player has to turn their light off and on the angler is unable to harm them, after successfully turning their light off",1,1,0)
+draw_text_transformed(0,300,"and on the angler is able to harm the player. This enables the player to practice turning their light off and on in a safe",1,1,0)
+draw_text_transformed(0,400,"environment and then practice turning their light off and on in a simple environment with an actual enemy. If the tutorials are uncompleted",1,1,0)
+draw_text_transformed(0,500,"text appears when a player trys to begin an actual level reccommending that the player completes the tutorial. Each tutorial has the",1,1,0)
+draw_text_transformed(0,600,"has the trainer tell the player what they are supposed to do in the current stage of the tutorial. Each tutorial notifies the player ",1,1,0)
+draw_text_transformed(0,700,"when they have succesfully completed a task and notifies them when they have made a mistake in the tutorial, the tutorial then undoes ",1,1,0)
+draw_text_transformed(0,800,"the mistake and lets the player continue, this only applies if the mistake does not cause the player to fail the tutorial (caused",1,1,0)
+draw_text_transformed(0,900,"the player to die).",1,1,0)
+}
+if(room == GradingPageSeven){
+draw_text_transformed(1900,0,"Learning Disabilities",2,2,0);
+draw_text_transformed(0,200,"I included different options for five disabilities: ADHD, Dyscalculia, Executive Functioning, Dysleixa, and Auditory Processing Disorder.",1,1,0)
+draw_text_transformed(0,300,"Each learning disability option can be activated and deactivated in options. For ADHD, when activated, red text is shown above the player ",1,1,0)
+draw_text_transformed(0,400,"saying collect the polluntats. The text is to remind the player what their task is helping these players stay on task. The positioning",1,1,0)
+draw_text_transformed(0,500,"and color of the text are both designed to be as eye catching as possible to better help players with ADHD stay on task. For",1,1,0)
+draw_text_transformed(0,600,"Dyscalculia, when activated, the number of sprites changes from numeral to pictorial. If there are eight pollutants remaining rather",1,1,0)
+draw_text_transformed(0,700,"than showing these players the number eight they are shown eight pollutant sprites below their character. Every time a pollutant is ",1,1,0)
+draw_text_transformed(0,800,"collected the remaining pollutant sprites are reduced. This removes the usage of numbers for these players. Counting the pollutants",1,1,0)
+draw_text_transformed(0,900,"is also not a problem for these players because counting the remaining pollutants is unnecessary, players only really need to know",1,1,0)
+draw_text_transformed(0,1000,"when they have a single pollutant. Even if these players want to know their total remaining pollutants the placement",1,1,0)
+draw_text_transformed(0,1100,"of the pollutant sprites makes this an easy task. For Executive Functioning when activated, a voice tells the player every ten",1,1,0)
+draw_text_transformed(0,1200,"seconds how long they have been underwater. This consistent reminder every ten seconds helps these players better manage their time.",1,1,0)
+draw_text_transformed(0,1300,"For Dyslexia, when activated, the font in the game is changed from chiller to arial. Arial is one of the best fonts for people with",1,1,0)
+draw_text_transformed(0,1400,"Dyslexia, enabling these players to better read text in the game. For Auditory Processing Disorder, when activated, the background ",1,1,0)
+draw_text_transformed(0,1500,"music playing in the game is stopped. This enables these players to focus on the game sounds that are more relevant to actually playing ",1,1,0)
+draw_text_transformed(0,1600,"the game. This option when activated also stops the background music from playing when the game is opened. ",1,1,0)
 }
 if (room == BestTimes){
 	draw_text_transformed(2200,0,"Best Times",1,1,0);

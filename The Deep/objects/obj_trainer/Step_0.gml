@@ -26,11 +26,11 @@ x+=5;
 }
 if(movementTutorialActive && movementTutorialTrial){
 	sprite_index = spr_blackswimmerIdleRight;
-	if (point_distance(x,  y, 650, 500) > 1) {
+	if (point_distance(x,  y, 700, 500) > 1) {
 	stopTrainerSounds()
 	playSound(snd_movementTutorialTrial)
-    x = 650;
-    y = 1200;
+    x = 700;
+    y = 500;
 }
 }
 // monster tutorial

@@ -8,11 +8,11 @@ instance_destroy(obj_light)
 }else{
 	// angler tutorial
 	if(instance_exists(obj_trainer)){
-	if(obj_trainer.anglerTutorialActive){
+	if(obj_trainer.anglerTutorialTrial){
 	obj_trainer.numHits++;
-	obj_trainer.anglerTutorialTrial = true;
 	if(obj_trainer.anglerTutorialTrial && obj_trainer.numHits == 1){
 	if(obj_disabilities.blindMode){
+	stopTrainerSounds();
 	audio_play_sound(snd_anglerActivated,1,0)
 	}
 	obj_trainer.textTwo = "Excellent Work, This time the danger is real\n make sure to swim away from the angler when your light is off"

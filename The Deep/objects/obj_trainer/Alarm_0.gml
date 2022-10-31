@@ -11,12 +11,12 @@ if(timer == 5){
 }
 // destroys the light, relocates the trainer, and starts the player's trial
 if(timer == 10){
-	if (point_distance(x, y, 4300, 2200) > 1) {
+	if (point_distance(x, y, 4300, 1700) > 1) {
 	instance_create_layer(x,y,"Instances", obj_trainerLight);
 	stopTrainerSounds()
 	playSound(snd_anglerTutorialTrial)
     x = 4300;
-    y = 1800;
+    y = 1700;
 }
 anglerTutorialTrial = true;
 }

@@ -12,7 +12,7 @@ text = "Right click in a mine's direction\n to deploy a barrier to redirect it"
 }
 }else if (movementTutorialActive){
 if(movementTutorialTrial){
-text = "Now you try\n remember to use the arrow keys to move from one side to the end of the other\n and make sure to avoid enemies"
+text = "Now you try\n remember to use the arrow keys to move from one side\n to the end of the other and make sure to avoid enemies"
 }else{
 text = "Use the arrow keys to move from one side to the end of the other\n and make sure to avoid enemies"
 }
@@ -36,7 +36,7 @@ text = "Left click in an evolved monster's direction\n to deploy a barrier to re
 }
 }else if (probeTutorialActive){
 if(probeTutorialTrial){
-text = "Now you try\n remember hit control to spawn the probe that will go towards the mouse to give you vision in a direction"		
+text = "Now you try\n remember hit control to spawn the probe\n that will go towards the mouse to give you vision in a direction"		
 }else{
 text = "Hit control to spawn a probe that will go toward the mouse to give you vision in direction\n probes are an integral part of survival down here"
 }

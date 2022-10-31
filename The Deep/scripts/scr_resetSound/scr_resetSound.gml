@@ -63,6 +63,10 @@ obj_bubble.state = 0;
 }
 }
 function stopButtonSounds(){
+audio_stop_sound(snd_dyscalculia)
+audio_stop_sound(snd_dyslexia)
+audio_stop_sound(snd_adhd)
+audio_stop_sound(snd_executiveFunctioning)
 audio_stop_sound(snd_AuditoryProcessingDisorder)
 audio_stop_sound(snd_movementTutorial)
 audio_stop_sound(snd_back)	
@@ -109,6 +113,10 @@ audio_stop_sound(snd_nextTutorial)
 audio_stop_sound(snd_replayTutorial)	
 }
 function stopRoomText(){
+audio_stop_sound(snd_tutorialNotPassed)
+audio_stop_sound(snd_tutorialNotPassed)
+audio_stop_sound(snd_tutorialsRecommended)
+audio_stop_sound(snd_instructionsPagesix)
 audio_stop_sound(snd_instructionsPagefive)	
 audio_stop_sound(snd_instructionsPagefour)	
 audio_stop_sound(snd_instructionsPagethree)	
@@ -134,7 +142,8 @@ audio_stop_sound(snd_monsterTutorialActive)
 audio_stop_sound(snd_monsterTutorialTrial)	
 audio_stop_sound(snd_probeTutorialActive)
 audio_stop_sound(snd_probeTutorialTrial)
-
+audio_stop_sound(snd_movementTutorialActive)
+audio_stop_sound(snd_movementTutorialTrial)
 // text two
 audio_stop_sound(snd_anglerActivated)	
 audio_stop_sound(snd_enemyActive)	
@@ -148,4 +157,5 @@ audio_stop_sound(snd_monsterTutorialMistake)
 audio_stop_sound(snd_mineTutorialMistake)	
 audio_stop_sound(snd_evolvedMonsterTutorialMistake)	
 audio_stop_sound(snd_probeSecondLaunch)	
+audio_stop_sound(snd_swimLeft)
 }

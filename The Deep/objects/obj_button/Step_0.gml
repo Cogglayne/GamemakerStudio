@@ -63,7 +63,7 @@ switch(obj_levelTracker.tutorialRoom){
 	room_goto(TutorialMonsterEvolvedTwo)
 	break;
 	case TutorialMonsterEvolvedTwo:
-	obj_levelTracker.tutorialRoom = TutorialAngler;
+	obj_levelTracker.tutorialRoom = TutorialProbe;
 	room_goto(TutorialProbe)
 	break;
 }

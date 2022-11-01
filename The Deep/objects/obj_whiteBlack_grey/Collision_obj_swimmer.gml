@@ -44,7 +44,9 @@ if(obj_levelTracker.swimmerOneSinglePlayer == false){
 	resetSound()
 	instance_activate_layer("Pollutants")
 	instance_activate_layer("Puzzle")
+	if(obj_disabilities.blindMode){
 	audio_play_sound(snd_puzzle,1,0);
+	}
 	instance_deactivate_layer("Instances")
 	instance_deactivate_layer("LightInstance")
 	instance_deactivate_layer("Whales")

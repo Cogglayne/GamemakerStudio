@@ -236,6 +236,7 @@
     {"id":{"name":"spr_plantOne","path":"sprites/spr_plantOne/spr_plantOne.yy",},"order":0,},
     {"id":{"name":"spr_swimmerSwimmingRight","path":"sprites/spr_swimmerSwimmingRight/spr_swimmerSwimmingRight.yy",},"order":5,},
     {"id":{"name":"obj_plantOne","path":"objects/obj_plantOne/obj_plantOne.yy",},"order":2,},
+    {"id":{"name":"snd_tutorial","path":"sounds/snd_tutorial/snd_tutorial.yy",},"order":49,},
     {"id":{"name":"snd_monsterTutorial","path":"sounds/snd_monsterTutorial/snd_monsterTutorial.yy",},"order":45,},
     {"id":{"name":"TutorialFailed","path":"rooms/TutorialFailed/TutorialFailed.yy",},"order":9,},
     {"id":{"name":"spr_whiteRedPollutantDisposal","path":"sprites/spr_whiteRedPollutantDisposal/spr_whiteRedPollutantDisposal.yy",},"order":10,},

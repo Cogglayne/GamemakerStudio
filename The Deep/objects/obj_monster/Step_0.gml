@@ -27,3 +27,12 @@ x-=hsp;
 }else{
 x-=hsp;
 }
+if(instance_exists(obj_swimmerTwo)){
+audio_stop_sound(snd_monster);
+}
+if(instance_exists(obj_swimmer)){
+if(!obj_swimmer.singleplayer){
+audio_stop_sound(snd_monster);
+}
+}
+

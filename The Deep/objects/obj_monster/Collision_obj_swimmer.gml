@@ -1,6 +1,4 @@
 if(obj_levelTracker.swimmerOneSinglePlayer == false){
-audio_play_sound(snd_playerdie,1,0)
-audio_stop_sound(snd_swimming)
 instance_destroy(other)
 instance_destroy(obj_light)
 if(instance_exists(obj_probe)){
@@ -17,6 +15,7 @@ if(!instance_exists(obj_swimmerTwo)){
 room_goto(LoseTwoPlayers)
 }
 }
+if(obj_levelTracker.swimmerOneSinglePlayer){
 if(!obj_microtransactions.extraLife  && !tutorialEnemy){
 audio_play_sound(snd_playerdie,1,0)
 audio_stop_sound(snd_swimming)
@@ -32,6 +31,7 @@ instance_deactivate_layer("LightInstance")
 instance_deactivate_layer("Whales")
 instance_deactivate_layer("AmbientBackground")
 }	
+}
 }
 
 

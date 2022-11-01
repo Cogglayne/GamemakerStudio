@@ -1,9 +1,14 @@
 draw_self()
 // draws text if the swimmer is within a distance
+if(instance_exists(obj_swimmer)){
 if(point_distance(obj_swimmer.x,obj_swimmer.y,x,y) <= audioMaxDistanceToBeHeard){
 text = "[Evolved Monster Bellows]";
 }else{
 text = "";
+}
+if(!obj_swimmer.singleplayer){
+text = ""
+}
 }
 // centers and displays text
 draw_set_halign(fa_center)

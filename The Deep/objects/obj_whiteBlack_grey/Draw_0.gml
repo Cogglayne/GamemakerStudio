@@ -8,6 +8,9 @@ text = "";
 }else{
 text = "White and Black"
 }
+if(room == MultiplayerTutorial){
+text = "Swimmer Left Pollutant"
+}
 draw_set_halign(fa_center)
 draw_set_valign(fa_middle)
 draw_text_transformed_colour(x, y+60, text, .5, .5, image_angle, c_white, c_white, c_white, c_white, 1);

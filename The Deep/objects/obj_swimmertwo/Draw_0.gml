@@ -1,12 +1,13 @@
 	draw_set_halign(fa_center)
 	draw_set_valign(fa_middle)
+	if(obj_disabilities.dyscalculia){
+	drawLives()
+	}else if(!obj_disabilities.dyscalculia){
+	if(room!=TutorialAngler && room!=TutorialMine && room != TutorialMonster && room!= TutorialProbe && room !=TutorialMonsterEvolvedOne && room !=TutorialMonsterEvolvedTwo && room != TutorialMovement){
 	draw_text_transformed_colour(x, y+100, string(numPollutants), .5, .5, image_angle, c_white, c_white, c_white, c_white, 1);
-	if(singleplayer){
-	draw_text_transformed_colour(x, y-150, string(timer), .5, .5, image_angle, c_white, c_white, c_white, c_white, 1);
-	draw_text_transformed_colour(x, y-300, text, .5, .5, image_angle, c_white, c_white, c_white, c_white, 1);
-	}else{
-	draw_text_transformed_colour(x, y-200, text, .5, .5, image_angle, c_white, c_white, c_white, c_white, 1);
-	}	
+	}
+	}
+	draw_text_transformed_colour(x, y-200, text, .5, .5, image_angle, c_white, c_white, c_white, c_white, 1);	
 	draw_self();
 	draw_self();
 	switch(currentState){

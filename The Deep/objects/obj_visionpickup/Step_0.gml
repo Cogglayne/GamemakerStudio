@@ -1,3 +1,5 @@
+if(instance_exists(obj_swimmer)){
+if(obj_swimmer.singleplayer){
 if(state = 0 && point_distance(obj_swimmer.x,obj_swimmer.y,x,y) < audioMaxDistanceToBeHeard){
 	audio_play_sound_on(visionEmmiter,snd_cautiousness,0,1)
 	state = 1
@@ -5,7 +7,8 @@ if(state = 0 && point_distance(obj_swimmer.x,obj_swimmer.y,x,y) < audioMaxDistan
 if(point_distance(obj_swimmer.x,obj_swimmer.y,x,y) > audioMaxDistanceToBeHeard){
 	state = 0;
 }
-
+}
+}
 
 
 

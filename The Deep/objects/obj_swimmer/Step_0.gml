@@ -14,8 +14,10 @@ PoorReactivity()
 // sets the state for the swimmer
 if(hsp!=0 || vsp !=0){
 	// plays swimming sound when the swimmer is moving
+	if(singleplayer){
 	if(!audio_is_playing(snd_swimming)){
-		audio_play_sound(snd_swimming,1,0)
+	audio_play_sound(snd_swimming,1,0)
+	}
 	}
 	currentState = MOVING;
 }

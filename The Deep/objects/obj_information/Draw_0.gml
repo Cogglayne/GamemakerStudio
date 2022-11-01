@@ -1,4 +1,5 @@
 if (instance_exists(obj_swimmer)){
+if(obj_swimmer.singleplayer){
 if(instance_exists(obj_horror)){
 if(point_distance(obj_swimmer.x,obj_swimmer.y,obj_horror.x,obj_horror.y) <= obj_horror.audioMaxDistanceToBeHeard){
 draw_set_color(#C0c0c0)
@@ -129,6 +130,7 @@ var probe = instance_nearest(obj_swimmer.x,obj_swimmer.y,obj_probe)
 if(point_distance(obj_swimmer.x,obj_swimmer.y,probe.x,probe.y) <= probe.audioMaxDistanceToBeHeard){
 draw_set_color(#520089)
 draw_circle(probe.x,probe.y,8,false)
+}
 }
 }
 }

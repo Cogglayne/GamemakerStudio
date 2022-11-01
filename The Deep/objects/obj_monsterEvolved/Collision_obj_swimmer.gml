@@ -1,7 +1,4 @@
 if(obj_levelTracker.swimmerOneSinglePlayer == false){
-// plays death sound and stops swimming
-audio_play_sound(snd_playerdie,1,0)
-audio_stop_sound(snd_swimming)
 // destroys swimmer object
 instance_destroy(other)
 instance_destroy(obj_light)

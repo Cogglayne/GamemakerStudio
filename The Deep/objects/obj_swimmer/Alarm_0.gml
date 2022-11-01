@@ -1,8 +1,8 @@
 // increments the timer
-if(obj_microtransactions.timerDelay == false && room!=Tutorial){
+if(obj_microtransactions.timerDelay == false && room==TutorialAngler || room==TutorialMine || room == TutorialMonster || room== TutorialProbe || room ==TutorialMonsterEvolvedOne || room ==TutorialMonsterEvolvedTwo || room == TutorialMovement){
 	timer++;
 	// text to speek for timer if the option is activated
-	if(obj_disabilities.executiveFunctioning){
+	if(obj_disabilities.executiveFunctioning && singleplayer){
 		switch(timer){
 		case 10:
 		audio_play_sound(snd_tenSeconds,1,0)

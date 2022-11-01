@@ -1,8 +1,13 @@
 draw_self()
+if(instance_exists(obj_swimmer)){
 if(point_distance(obj_swimmer.x,obj_swimmer.y,x,y) <= audioMaxDistanceToBeHeard){
 text ="[Mine Pings Location]";
 }else{
 text = "";
+}
+if(!obj_swimmer.singleplayer){
+text = ""
+}
 }
 draw_set_halign(fa_center)
 draw_set_valign(fa_middle)

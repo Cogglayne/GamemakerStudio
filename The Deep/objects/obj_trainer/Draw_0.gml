@@ -1,5 +1,5 @@
 draw_self()
-// Text to speech depending on which tutorial is active and
+// Text shows depending on which tutorial is active and
 // which portion of the tutorial is active
 if(room == TutorialClear || room == TutorialFailed || room == Tutorial){
 text = ""

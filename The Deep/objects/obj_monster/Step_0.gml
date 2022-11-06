@@ -27,6 +27,7 @@ x-=hsp;
 }else{
 x-=hsp;
 }
+// stops sound in multiplayer
 if(instance_exists(obj_swimmerTwo)){
 audio_stop_sound(snd_monster);
 }

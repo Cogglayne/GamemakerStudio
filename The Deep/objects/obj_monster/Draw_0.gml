@@ -6,6 +6,7 @@ text = "[Monster Roars]";
 }else{
 text = "";
 }
+// gets rid of text in multiplayer
 if(!obj_swimmer.singleplayer){
 text = ""
 }

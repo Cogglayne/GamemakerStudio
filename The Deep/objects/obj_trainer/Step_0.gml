@@ -1,6 +1,6 @@
-
 // sets the trainers location depending on which tutorial is 
 // active and which part of the tutorial is active
+// text to speech if active for trainer tutorials
 // movement tutorial
 if(movementTutorialActive && !movementTutorialTrial){
 if (point_distance(x,  y, 1280, 736) > 1 && shouldBeMovingOne) {

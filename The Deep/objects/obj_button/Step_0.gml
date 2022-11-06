@@ -84,7 +84,7 @@ switch(obj_levelTracker.tutorialRoom){
 	room_goto(TutorialProbe)
 	break;
 }
-// cosmetic control
+// mictrotransaction control
 }else if(click && text = "Buy a Light Cosmetic for $10"){
 obj_microtransactions.lightCosmeticBought = true;	
 }else if(click && text = "Buy a Swimmer Cosmetic for $10"){

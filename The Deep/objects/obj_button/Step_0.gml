@@ -19,6 +19,16 @@ hover = lerp(hover,hove,0.1)
 // changes what clicking a button will do depending on its text
 if(click && text = "Quit"){
 game_end();
+// level difficulties
+}else if(click && text = "Easy"){
+obj_levelTracker.levelDiffuclty = "Easy"
+room_goto(targetRoom);
+}else if(click && text = "Medium"){
+obj_levelTracker.levelDiffuclty = "Medium"
+room_goto(targetRoom);
+}else if(click && text = "Hard"){
+obj_levelTracker.levelDiffuclty = "Hard"
+room_goto(targetRoom);
 // tutorials rooms
 }else if(click && text = "Movement Tutorial"){
 obj_levelTracker.tutorialRoom = TutorialMovement;
@@ -91,15 +101,6 @@ instance_activate_layer("AmbientBackground")
 instance_activate_layer("Instances")
 instance_activate_layer("LightInstance")
 instance_deactivate_layer("Extra") 
-}else if(click && text = "Easy"){
-obj_levelTracker.levelDiffuclty = "Easy"
-room_goto(targetRoom);
-}else if(click && text = "Medium"){
-obj_levelTracker.levelDiffuclty = "Medium"
-room_goto(targetRoom);
-}else if(click && text = "Hard"){
-obj_levelTracker.levelDiffuclty = "Hard"
-room_goto(targetRoom);
 }else if (click && text = "Toggle Swimmer Cosmetic"){
 if(obj_microtransactions.swimmerSkinBought){
 if(obj_microtransactions.swimmerSkin == false){

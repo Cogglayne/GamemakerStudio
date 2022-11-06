@@ -1,24 +1,31 @@
+// challenge mode variables
 tutorialChallengeModeClear = false;
-tutorialTime = 100;
 levelFourChallengeModeClear = false;
 levelFourEasyChallengeModeClear = false;
-levelFourEasyTime = 100;
 levelFourMediumChallengeModeClear = false;
-levelFourMediumTime = 100;
 levelFourHardChallengeModeClear = false;
-levelFourHardTime = 100;
 evolvedMonsterTutorialOneCleared = false;
 evolvedMonsterTutorialTwoCleared = false;
+// level time variables
+tutorialTime = 100;
+levelFourEasyTime = 100;
+levelFourMediumTime = 100;
+levelFourHardTime = 100;
+// tutorial support
 mineTutorialCleared = false;
 monsterTutorialCleared = false;
 probeTutorialCleared = false;
 anglerTutorialCleared = false;
 movementTutorialCleared = false;
-load();
-levelDiffuclty = ""
 tutorialRoom = Tutorial;
+// loads variables
+load();
+// used to enable multiple difficulties
+levelDiffuclty = ""
+// determines if a player has found the hidden fish
 leftFishFound = false;
 rightFishFound = false;
+// saves player variables for respawning them
 swimmerOneMVSpeed = 0;
 swimmerTwoMVSpeed = 0;
 lightX = 0;
@@ -31,7 +38,7 @@ swimmerOneSinglePlayer = true;
 swimmerTwoSinglePlayer = true;
 swimmerOneNumPollutants = 0;
 swimmerTwoNumPollutants = 0;
-
+// variables for temporarily showing text
 textShouldBeShowing = true;
 lifeTime = 2;
 alarm[0] = 60;

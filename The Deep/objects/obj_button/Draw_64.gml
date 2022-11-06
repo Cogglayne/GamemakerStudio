@@ -1,3 +1,4 @@
+// changes the color of a button depending on active variables
 if(shouldBeYellow == true){
 draw_roundrect_color(x,y,x+width,y+height,(merge_color(#aa8800,#beaa2a,hover)),c_purple,0);
 draw_set_color(c_black);

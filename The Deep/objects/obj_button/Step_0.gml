@@ -1,6 +1,8 @@
+// determines if mouse is in the button
 var mouseX = device_mouse_x_to_gui(0);
 var mouseY = device_mouse_y_to_gui(0);
 var hove = point_in_rectangle(mouseX,mouseY,x,y,x+width,y+height);
+// text to speak for a button if activated
 if(hove){
 	if(obj_disabilities.blindMode && !soundHasBeenPlayed && !audio_is_playing(soundToPlay)){
 	stopButtonSounds()
@@ -10,10 +12,14 @@ if(hove){
 }else{
 soundHasBeenPlayed = false;
 }
+// decects if the button is being clicked
 var click = hover && mouse_check_button_pressed(mb_left);
+// transitions the button color
 hover = lerp(hover,hove,0.1)
+// changes what clicking a button will do depending on its text
 if(click && text = "Quit"){
 game_end();
+// tutorials rooms
 }else if(click && text = "Movement Tutorial"){
 obj_levelTracker.tutorialRoom = TutorialMovement;
 room_goto(targetRoom);	
@@ -38,6 +44,7 @@ room_goto(targetRoom);
 }else if(click && text = "Replay Tutorial"){
 room_goto(obj_levelTracker.tutorialRoom)
 }else if(click && text = "Next Tutorial"){
+// sets the next tutorial room depending on the current tutorial room	
 switch(obj_levelTracker.tutorialRoom){
 	case TutorialMovement:
 	obj_levelTracker.tutorialRoom = TutorialMonster;
@@ -67,6 +74,7 @@ switch(obj_levelTracker.tutorialRoom){
 	room_goto(TutorialProbe)
 	break;
 }
+// cosmetic control
 }else if(click && text = "Buy a Light Cosmetic for $10"){
 obj_microtransactions.lightCosmeticBought = true;	
 }else if(click && text = "Buy a Swimmer Cosmetic for $10"){
@@ -112,6 +120,7 @@ obj_microtransactions.newLightEffect = false
 activated = false;
 }
 }
+// changes control schemes
 }else if(click && text = "Left Handed"){
 obj_disabilities.leftHandControls = true;	
 obj_disabilities.rightHandControls = false;
@@ -148,6 +157,7 @@ activated = true;
 inst_188A1605.activated = false;
 inst_303B7AD.activated = false;
 inst_4229D191.activated = false;
+// activates text to speech
 }else if(click && text = "Blind Mode"){
 if(obj_disabilities.blindMode == false){
 obj_disabilities.blindMode = true	
@@ -156,8 +166,10 @@ activated = true;
 obj_disabilities.blindMode = false
 activated = false;
 }
+// shows a button does not go anywhere
 }else if (click && text == "Coming Soon"){
 error = true;
+// Activates and decativates different features
 }else if (click && text = "ADHD"){
 if(obj_disabilities.ADHD == false){
 obj_disabilities.ADHD = true	

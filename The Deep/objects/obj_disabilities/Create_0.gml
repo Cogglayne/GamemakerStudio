@@ -1,3 +1,4 @@
+// variables used to deactivate and activate features
 leftHandControls = false;
 rightHandControls = false;
 normal = true;

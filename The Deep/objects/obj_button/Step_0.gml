@@ -87,12 +87,16 @@ switch(obj_levelTracker.tutorialRoom){
 // mictrotransaction control
 }else if(click && text = "Buy a Light Cosmetic for $10"){
 obj_microtransactions.lightCosmeticBought = true;	
+activated = true;
 }else if(click && text = "Buy a Swimmer Cosmetic for $10"){
 obj_microtransactions.swimmerSkinBought = true;	
+activated = true;
 }else if(click && text = "Delay Timer For $1"){
 obj_microtransactions.timerDelay = true;	
+activated = true;
 }else if(click && text = "Slow Down Enemies For $1"){
 obj_microtransactions.enemiesSlowed = true;	
+activated = true;
 }else if(click && text = "Continue level for $1"){
 obj_microtransactions.extraLife = true;	
 obj_levelTracker.textShouldBeShowing = false;

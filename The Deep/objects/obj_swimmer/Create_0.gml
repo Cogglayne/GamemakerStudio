@@ -26,6 +26,13 @@ swimmerSkin = obj_microtransactions.swimmerSkin;
 if (swimmerSkin) {
     sprite_index = spr_blackswimmerIdleRight
 }
+// microtransactions
+if (obj_microtransactions.timerDelayBought) {
+    obj_microtransactions.timerDelay = true;
+}
+if (obj_microtransactions.enemiesSlowedBought) {
+    obj_microtransactions.enemiesSlowed = true;
+}
 // swimmer object tracking
 numMonsterBarriers = 0;
 numMineBarriers = 0;

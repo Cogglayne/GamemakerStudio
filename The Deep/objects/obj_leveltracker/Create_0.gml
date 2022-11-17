@@ -46,7 +46,10 @@ alarm[0] = 60;
 // gamplay option variables
 alternativePunishment = false;
 variableObjectives = false;
+indirectCompetition = false;
 
+timer = 200;
+firstRun = true;
 
 
 

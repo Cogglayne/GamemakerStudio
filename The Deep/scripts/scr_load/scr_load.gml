@@ -31,6 +31,7 @@ function load() {
         obj_disabilities.auditoryProcessingDisorder = ini_read_real("Save1", "auditoryProcessingDisorder", 0)
         obj_levelTracker.alternativePunishment = ini_read_real("Save1", "alternativePunishment", 0)
         obj_levelTracker.variableObjectives = ini_read_real("Save1", "variableObjectives", 0)
+		obj_levelTracker.indirectCompetition = ini_read_real("Save1", "indirectCompetition", 0)
         ini_close()
     } else {}
 }

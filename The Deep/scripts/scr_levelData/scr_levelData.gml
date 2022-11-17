@@ -1,19 +1,7 @@
 function setLevelData() {
-    tutorial();
     levelFourEasy();
     levelFourMedium();
     levelFourHard();
-}
-
-function tutorial() {
-    if (room == Tutorial) {
-        if (obj_swimmer.timer < obj_levelTracker.tutorialTime) {
-            obj_levelTracker.tutorialTime = obj_swimmer.timer;
-        }
-        if (obj_swimmer.hardMode == true) {
-            obj_levelTracker.tutorialChallengeModeClear = true;
-        }
-    }
 }
 
 function levelFour() {
@@ -24,8 +12,8 @@ function levelFour() {
 
 function levelFourEasy() {
     if (room == LevelFourEasy) {
-        if (obj_swimmer.timer < obj_levelTracker.levelFourEasyTime) {
-            obj_levelTracker.levelFourEasyTime = obj_swimmer.timer;
+        if (obj_levelTracker.timer < obj_levelTracker.levelFourEasyTime) {
+            obj_levelTracker.levelFourEasyTime = obj_levelTracker.timer;
         }
         if (obj_swimmer.hardMode == true) {
             obj_levelTracker.levelFourEasyChallengeModeClear = true;
@@ -35,8 +23,8 @@ function levelFourEasy() {
 
 function levelFourMedium() {
     if (room == LevelFourMedium) {
-        if (obj_swimmer.timer < obj_levelTracker.levelFourMediumTime) {
-            obj_levelTracker.levelFourMediumTime = obj_swimmer.timer;
+        if (obj_levelTracker.timer < obj_levelTracker.levelFourMediumTime) {
+            obj_levelTracker.levelFourMediumTime = obj_levelTracker.timer;
         }
         if (obj_swimmer.hardMode == true) {
             obj_levelTracker.levelFourMediumChallengeModeClear = true;
@@ -46,8 +34,8 @@ function levelFourMedium() {
 
 function levelFourHard() {
     if (room == LevelFourHard) {
-        if (obj_swimmer.timer < obj_levelTracker.levelFourHardTime) {
-            obj_levelTracker.levelFourHardTime = obj_swimmer.timer;
+        if (obj_levelTracker.timer < obj_levelTracker.levelFourHardTime) {
+            obj_levelTracker.levelFourHardTime = obj_levelTracker.timer;
         }
         if (obj_swimmer.hardMode == true) {
             obj_levelTracker.levelFourHardChallengeModeClear = true;

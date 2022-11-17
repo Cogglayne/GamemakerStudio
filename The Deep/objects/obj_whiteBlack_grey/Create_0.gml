@@ -11,3 +11,4 @@ audioStartsToDropAt = 150;
 audio_emitter_position(whiteBlackEmiter, x, y, 0)
 audio_emitter_falloff(whiteBlackEmiter, audioStartsToDropAt, audioMaxDistanceToBeHeard, 1)
 state = 0;
+firstRun = true;

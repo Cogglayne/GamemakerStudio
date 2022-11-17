@@ -20,12 +20,34 @@ hover = lerp(hover, hove, 0.1)
 if (click && text = "Quit") {
     game_end();
     // gameplay options
-} else if (click && text = "Variable Objectives") {
+} else if (click && text = "End Run") {
+	if(obj_levelTracker.firstRun && obj_levelTracker.indirectCompetition){
+		obj_levelTracker.firstRun = false;
+		    instance_deactivate_layer("Instances")
+            instance_deactivate_layer("LightInstance")
+            instance_deactivate_layer("Whales")
+            instance_deactivate_layer("AmbientBackground")
+			instance_deactivate_layer("Wait")
+            instance_activate_layer("Transition")	
+	}else{
+		room_goto(targetRoom)
+	}
+}  else if (click && text = "Variable Objectives") {
     if (obj_levelTracker.variableObjectives == false) {
         obj_levelTracker.variableObjectives = true
         activated = true;
     } else if (obj_levelTracker.variableObjectives == true) {
         obj_levelTracker.variableObjectives = false
+        activated = false;
+    }
+} else if (click && text = "Begin Second Player Attempt") {
+    room_restart();
+} else if (click && text = "Indirect Competition") {
+    if (obj_levelTracker.indirectCompetition == false) {
+        obj_levelTracker.indirectCompetition = true
+        activated = true;
+    } else if (obj_levelTracker.indirectCompetition == true) {
+        obj_levelTracker.indirectCompetition = false
         activated = false;
     }
 } else if (click && text = "Alternative Punishment") {
@@ -110,9 +132,11 @@ if (click && text = "Quit") {
     activated = true;
 } else if (click && text = "Delay Timer For $1") {
     obj_microtransactions.timerDelay = true;
+	obj_microtransactions.timerDelayBought = true;
     activated = true;
 } else if (click && text = "Slow Down Enemies For $1") {
     obj_microtransactions.enemiesSlowed = true;
+	obj_microtransactions.enemiesSlowedBought = true;
     activated = true;
 } else if (click && text = "Continue level for $1") {
     obj_microtransactions.extraLife = true;
@@ -122,6 +146,15 @@ if (click && text = "Quit") {
     instance_activate_layer("Instances")
     instance_activate_layer("LightInstance")
     instance_deactivate_layer("Extra")
+} else if (click && text = "Skip Wait for $1") {
+    obj_microtransactions.extraLife = true;
+    obj_levelTracker.textShouldBeShowing = false;
+    instance_destroy(obj_wait)
+    instance_activate_layer("Whales")
+    instance_activate_layer("AmbientBackground")
+    instance_activate_layer("Instances")
+    instance_activate_layer("LightInstance")
+    instance_deactivate_layer("Wait")
 } else if (click && text = "Toggle Swimmer Cosmetic") {
     if (obj_microtransactions.swimmerSkinBought) {
         if (obj_microtransactions.swimmerSkin == false) {

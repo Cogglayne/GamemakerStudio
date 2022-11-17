@@ -27,29 +27,42 @@ if (obj_disabilities.blindMode) {
     }
 }
 instance_destroy(self);
-if (tutorialBottle) {
-    obj_swimmer.text = "Why was that pollutant bigger?"
-}
 if (obj_levelTracker.swimmerOneSinglePlayer == false) {
     if (obj_levelTracker.swimmerOneNumPollutants == 0 && obj_levelTracker.swimmerTwoNumPollutants == 0) {
         room_goto(WinTwoPlayers);
     }
 } else if (obj_levelTracker.swimmerOneSinglePlayer == true) {
     if (obj_swimmer.numPollutants == 0) {
-        setLevelData()
-        if (room == Tutorial) {
-            audio_play_sound(snd_playerWin, 1, 0)
-            room_goto(Win)
+        if (obj_levelTracker.firstRun && obj_levelTracker.indirectCompetition) {
+			stopGameSounds()
+			obj_levelTracker.firstRun = false;
+            if (instance_exists(obj_swimmer)) {
+                if (obj_swimmer.timer < obj_levelTracker.timer) {
+                    obj_levelTracker.timer = obj_swimmer.timer;
+                }
+            }
+            instance_deactivate_layer("Instances")
+            instance_deactivate_layer("LightInstance")
+            instance_deactivate_layer("Whales")
+            instance_deactivate_layer("AmbientBackground")
+            instance_activate_layer("Transition")
+        } else {
+            if (instance_exists(obj_swimmer)) {
+                if (obj_swimmer.timer < obj_levelTracker.timer) {
+                    obj_levelTracker.timer = obj_swimmer.timer;
+                }
+            }
+            setLevelData()
+            stopGameSounds()
+            instance_activate_layer("Pollutants")
+            instance_activate_layer("Puzzle")
+            if (obj_disabilities.blindMode) {
+                audio_play_sound(snd_puzzle, 1, 0);
+            }
+            instance_deactivate_layer("Instances")
+            instance_deactivate_layer("LightInstance")
+            instance_deactivate_layer("Whales")
+            instance_deactivate_layer("AmbientBackground")
         }
-        stopGameSounds()
-        instance_activate_layer("Pollutants")
-        instance_activate_layer("Puzzle")
-        if (obj_disabilities.blindMode) {
-            audio_play_sound(snd_puzzle, 1, 0);
-        }
-        instance_deactivate_layer("Instances")
-        instance_deactivate_layer("LightInstance")
-        instance_deactivate_layer("Whales")
-        instance_deactivate_layer("AmbientBackground")
     }
 }

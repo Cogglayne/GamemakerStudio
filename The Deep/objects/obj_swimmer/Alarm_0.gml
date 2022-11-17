@@ -39,4 +39,3 @@ if (obj_microtransactions.timerDelay == false || room == TutorialAngler || room 
 }
 alarm[0] = 60;
 
-

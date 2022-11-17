@@ -31,5 +31,6 @@ function save() {
     ini_write_real("Save1", "auditoryProcessingDisorder", obj_disabilities.auditoryProcessingDisorder);
     ini_write_real("Save1", "alternativePunishment", obj_levelTracker.alternativePunishment);
     ini_write_real("Save1", "variableObjectives", obj_levelTracker.variableObjectives);
+	ini_write_real("Save1", "indirectCompetition", obj_levelTracker.indirectCompetition);
     ini_close();
 }

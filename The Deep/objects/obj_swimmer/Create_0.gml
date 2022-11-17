@@ -4,6 +4,7 @@ instance_deactivate_layer("Puzzle")
 instance_deactivate_layer("Pollutants")
 instance_deactivate_layer("Extra")
 instance_deactivate_layer("Wait")
+instance_deactivate_layer("Transition")
 // sound
 audio_listener_orientation(0, -1, 0, 0, 0, 1)
 // movement

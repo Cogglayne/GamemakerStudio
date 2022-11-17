@@ -1,4 +1,4 @@
-instance_create_layer(x,y,"Instances", obj_trainerLight);
+instance_create_layer(x, y, "Instances", obj_trainerLight);
 // movement tutorial
 movementTutorialActive = false;
 movementTutorialTrial = false;
@@ -32,11 +32,6 @@ timer = 0;
 text = ""
 textTwo = ""
 numHits = 0;
-
-
-
-
-
 
 
 

@@ -1,7 +1,6 @@
-if(room == Win || room == Lose){
-enemiesSlowed = false;
+if (room == Win || room == Lose) {
+    enemiesSlowed = false;
 }
-
 
 
 

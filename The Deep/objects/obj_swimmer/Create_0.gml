@@ -1,10 +1,10 @@
-instance_create_layer(x,y,"Instances", obj_light);
+instance_create_layer(x, y, "Instances", obj_light);
 // layer manipulation
 instance_deactivate_layer("Puzzle")
 instance_deactivate_layer("Pollutants")
 instance_deactivate_layer("Extra")
 // sound
-audio_listener_orientation(0,-1,0,0,0,1)
+audio_listener_orientation(0, -1, 0, 0, 0, 1)
 // movement
 vsp = 0;
 hsp = 0;
@@ -15,14 +15,14 @@ rightArrowDoubleClick = 0;
 UpArrowDoubleClick = 0;
 downArrowDoubleClick = 0;
 // pollutant tracking
-numPollutants = instance_number(obj_brownWhite_beige) + instance_number(obj_greenRed_yellow)+ instance_number(obj_orangeBlue_brown) + instance_number(obj_redBlue_violet) + instance_number(obj_redYellow_orange) + instance_number(obj_whiteBlack_grey) + instance_number(obj_whiteRed_pink) + instance_number(obj_yellowBlue_green)
+numPollutants = instance_number(obj_brownWhite_beige) + instance_number(obj_greenRed_yellow) + instance_number(obj_orangeBlue_brown) + instance_number(obj_redBlue_violet) + instance_number(obj_redYellow_orange) + instance_number(obj_whiteBlack_grey) + instance_number(obj_whiteRed_pink) + instance_number(obj_yellowBlue_green)
 obj_levelTracker.swimmerOneNumPollutants = numPollutants;
 // text
-text ="";
+text = "";
 // cosmetic skin
 swimmerSkin = obj_microtransactions.swimmerSkin;
-if(swimmerSkin){
-	sprite_index = spr_blackswimmerIdleRight
+if (swimmerSkin) {
+    sprite_index = spr_blackswimmerIdleRight
 }
 // swimmer object tracking
 numMonsterBarriers = 0;
@@ -47,4 +47,3 @@ alarm[3] = 10;
 IDOL = 0;
 MOVING = 1;
 currentState = IDOL;
-

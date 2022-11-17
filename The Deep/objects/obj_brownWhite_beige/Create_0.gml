@@ -7,8 +7,6 @@ soundHasBeenPlayed = false;
 brownWhiteEmiter = audio_emitter_create();
 audioMaxDistanceToBeHeard = 300;
 audioStartsToDropAt = 150;
-audio_emitter_position(brownWhiteEmiter,x,y,0)
-audio_emitter_falloff(brownWhiteEmiter,audioStartsToDropAt,audioMaxDistanceToBeHeard,1)
+audio_emitter_position(brownWhiteEmiter, x, y, 0)
+audio_emitter_falloff(brownWhiteEmiter, audioStartsToDropAt, audioMaxDistanceToBeHeard, 1)
 state = 0;
-
-

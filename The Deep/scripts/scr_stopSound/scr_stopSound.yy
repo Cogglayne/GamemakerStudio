@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "scr_checkLevel",
+  "name": "scr_stopSound",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {

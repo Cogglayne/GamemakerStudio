@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "scr_information",
+  "name": "scr_checkPlayableLevel",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {

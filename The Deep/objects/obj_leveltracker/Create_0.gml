@@ -43,6 +43,10 @@ textShouldBeShowing = true;
 lifeTime = 2;
 alarm[0] = 60;
 
+// gamplay option variables
+alternativePunishment = false;
+variableObjectives = false;
+
 
 
 

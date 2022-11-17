@@ -118,7 +118,7 @@ function stopButtonSounds() {
 }
 
 function stopRoomText() {
-    audio_stop_sound(snd_winNoEnemiesLeft)
+    audio_stop_sound(snd_alternateWin)
     audio_stop_sound(snd_tutorialNotPassed)
     audio_stop_sound(snd_tutorialPassed)
     audio_stop_sound(snd_tutorialsRecommended)

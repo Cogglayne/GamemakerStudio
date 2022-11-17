@@ -203,7 +203,7 @@ function swimmerMonsterBarrierCollision(object) {
             x += sign(hsp);
         }
         hsp = -hsp;
-        if (obj_levelTracker.variableObjectives) {
+        if (obj_levelTracker.variableObjectives && obj_swimmer.isPlaying) {
             numHits--;
         }
         if (numHits == 0) {
@@ -242,7 +242,7 @@ function swimmerMineBarrierCollision(object) {
         while (!place_meeting(x, y + sign(vsp), object)) {
             y += sign(vsp);
         }
-        if (obj_levelTracker.variableObjectives) {
+        if (obj_levelTracker.variableObjectives && obj_swimmer.isPlaying) {
             numHits--;
         }
         if (instance_exists(obj_trainer)) {
@@ -280,7 +280,7 @@ function monsterEvolvedBarrierCollision(object) {
         }
         hsp = -hsp;
         vsp = -vsp;
-        if (obj_levelTracker.variableObjectives) {
+        if (obj_levelTracker.variableObjectives && obj_swimmer.isPlaying) {
             numHits--;
         }
         if (object == obj_swimmerMineBarrier) {

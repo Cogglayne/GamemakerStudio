@@ -192,7 +192,7 @@ if (room == WinTwoPlayers) {
     draw_text_transformed(1900, 200, "This part of the ocean is now clean", 1, 1, 0);
 }
 if (room == AlternateWin) {
-    draw_text_transformed(1000, 200, "Good job getting rid of those monsters, the next guys will get the remaining pollutants", 1, 1, 0);
+    draw_text_transformed(850, 200, "Good job getting rid of those monsters and mines, the next guys will get the remaining pollutants", 1, 1, 0);
 }
 if (room == Grading) {
     draw_text_transformed(2100, 0, "Motivations", 2, 2, 0);

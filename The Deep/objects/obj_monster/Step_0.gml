@@ -18,14 +18,12 @@ if (instance_exists(obj_swimmerMonsterBarrier)) {
 if (instance_exists(obj_swimmerTwoMonsterBarrier)) {
     swimmerTwoMonsterBarrierCollision(obj_swimmerTwoMonsterBarrier);
 }
-// movement
-if (instance_exists(obj_trainer)) {
-    if (obj_trainer.monsterTutorialActive || obj_trainer.movementTutorialActive) {
-        x -= hsp;
-    } else {}
-} else {
-    x -= hsp;
+// destroy if health is zero
+if (numHits == 0) {
+    instance_destroy()
 }
+// movement
+x -= hsp;
 // stops sound in multiplayer
 if (instance_exists(obj_swimmerTwo)) {
     audio_stop_sound(snd_monster);

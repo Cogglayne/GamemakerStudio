@@ -33,7 +33,7 @@ if (obj_disabilities.blindMode) {
         audio_play_sound(snd_win, 1, 0)
     }
     if (room == AlternateWin) {
-        audio_play_sound(snd_winNoEnemiesLeft, 1, 0)
+        audio_play_sound(snd_alternateWin, 1, 0)
     }
     if (room == TutorialClear) {
         stopTrainerSounds()

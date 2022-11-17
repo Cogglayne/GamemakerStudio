@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "snd_winNoEnemiesLeft",
+  "name": "snd_alternateWin",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -14,8 +14,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_winNoEnemiesLeft.mp3",
-  "duration": 4.571333,
+  "soundFile": "snd_alternateWin.mp3",
+  "duration": 5.0155,
   "parent": {
     "name": "Room Text",
     "path": "folders/Sounds/Room Text.yy",

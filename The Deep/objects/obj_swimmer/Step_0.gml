@@ -31,3 +31,9 @@ swimmerCollisions(obj_wall);
 // move swimmer
 x += hsp;
 y += vsp;
+// checks if swimimer has destroyed all enemies
+if (isPlaying && obj_levelTracker.variableObjectives) {
+    if (instance_number(obj_monster) == 0 && instance_number(obj_mine) == 0 && instance_number(obj_monsterEvolved) == 0) {
+        room_goto(AlternateWin)
+    }
+}

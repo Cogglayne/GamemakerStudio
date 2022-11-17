@@ -10,15 +10,8 @@ if (vsp > 0 && hsp > 0) {
     audio_emitter_pitch(evolvedMonsterEmmiter, 1.2)
 }
 // movement
-if (instance_exists(obj_trainer)) {
-    if (obj_trainer.evolvedMonsterTutorialOneActive || obj_trainer.evolvedMonsterTutorialTwoActive) {
-        x += hsp;
-        y += vsp;
-    } else {}
-} else {
-    x += hsp;
-    y += vsp;
-}
+x += hsp;
+y += vsp;
 // collisions
 tutorialMonsterEvolvedCollision(obj_tutorialMonsterBarrier)
 monsterEvolvedCollision(obj_monsterBarrier);
@@ -27,4 +20,8 @@ if (instance_exists(obj_swimmerMonsterBarrier)) {
 }
 if (instance_exists(obj_swimmerMineBarrier)) {
     monsterEvolvedBarrierCollision(obj_swimmerMineBarrier);
+}
+// destroy if health is zero
+if (numHits == 0) {
+    instance_destroy()
 }

@@ -3,6 +3,7 @@ instance_create_layer(x, y, "Instances", obj_light);
 instance_deactivate_layer("Puzzle")
 instance_deactivate_layer("Pollutants")
 instance_deactivate_layer("Extra")
+instance_deactivate_layer("Wait")
 // sound
 audio_listener_orientation(0, -1, 0, 0, 0, 1)
 // movement
@@ -47,3 +48,5 @@ alarm[3] = 10;
 IDOL = 0;
 MOVING = 1;
 currentState = IDOL;
+// checks if swimmer is in a level
+isPlaying = false;

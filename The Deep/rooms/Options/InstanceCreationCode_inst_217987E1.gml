@@ -3,4 +3,4 @@ soundToPlay = snd_executiveFunctioning
 if(obj_disabilities.executiveFunctioning == true){
 	activated = true;
 }
-width = 1050;
+width = 1100;

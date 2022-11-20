@@ -32,6 +32,7 @@ function load() {
         obj_levelTracker.alternativePunishment = ini_read_real("Save1", "alternativePunishment", 0)
         obj_levelTracker.variableObjectives = ini_read_real("Save1", "variableObjectives", 0)
 		obj_levelTracker.indirectCompetition = ini_read_real("Save1", "indirectCompetition", 0)
+		obj_levelTracker.conflictResolutionAlternatives = ini_read_real("Save1", "conflictResolutionAlternative", 0)
         ini_close()
     } else {}
 }

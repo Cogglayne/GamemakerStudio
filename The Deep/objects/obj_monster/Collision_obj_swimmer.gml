@@ -20,7 +20,7 @@ if (obj_levelTracker.swimmerOneSinglePlayer == false) {
 }
 // checks if enemy can hurt player
 if (obj_levelTracker.swimmerOneSinglePlayer) {
-    if (!obj_microtransactions.extraLife && !tutorialEnemy) {
+    if (!obj_microtransactions.extraLife && !tutorialEnemy && !obj_swimmer.avoidanceTime) {
         audio_play_sound(snd_playerdie, 1, 0)
         audio_stop_sound(snd_swimming)
         obj_levelTracker.textShouldBeShowing = true;

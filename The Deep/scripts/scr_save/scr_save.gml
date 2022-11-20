@@ -32,5 +32,6 @@ function save() {
     ini_write_real("Save1", "alternativePunishment", obj_levelTracker.alternativePunishment);
     ini_write_real("Save1", "variableObjectives", obj_levelTracker.variableObjectives);
 	ini_write_real("Save1", "indirectCompetition", obj_levelTracker.indirectCompetition);
+	ini_write_real("Save1", "conflictResolutionAlternative", obj_levelTracker.conflictResolutionAlternatives);
     ini_close();
 }

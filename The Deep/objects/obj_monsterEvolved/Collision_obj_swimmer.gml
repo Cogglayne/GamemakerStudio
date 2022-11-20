@@ -17,7 +17,7 @@ if (obj_levelTracker.swimmerOneSinglePlayer == false) {
         room_goto(LoseTwoPlayers)
     }
 }
-if (!obj_microtransactions.extraLife && !tutorialEnemy) {
+if (!obj_microtransactions.extraLife && !tutorialEnemy && !obj_swimmer.avoidanceTime) {
     // if the extra life cosmetic life is not active and the evolve
     // monster is not a tutorial enemy
     audio_play_sound(snd_playerdie, 1, 0)

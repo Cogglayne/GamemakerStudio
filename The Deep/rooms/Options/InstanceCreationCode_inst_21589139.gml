@@ -3,4 +3,4 @@ soundToPlay = snd_indirectCompetition;
 if(obj_levelTracker.indirectCompetition == true){
 	activated = true;
 }
-width = 1050;
+width = 1100;

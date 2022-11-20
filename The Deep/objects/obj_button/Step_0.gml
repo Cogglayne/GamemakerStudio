@@ -40,7 +40,15 @@ if (click && text = "Quit") {
         obj_levelTracker.variableObjectives = false
         activated = false;
     }
-} else if (click && text = "Begin Second Player Attempt") {
+}  else if (click && text = "Conflict Resolution Alternative") {
+    if (obj_levelTracker.conflictResolutionAlternatives == false) {
+        obj_levelTracker.conflictResolutionAlternatives = true
+        activated = true;
+    } else if (obj_levelTracker.conflictResolutionAlternatives == true) {
+        obj_levelTracker.conflictResolutionAlternatives = false
+        activated = false;
+    }
+}  else if (click && text = "Begin Second Player Attempt") {
     room_restart();
 } else if (click && text = "Indirect Competition") {
     if (obj_levelTracker.indirectCompetition == false) {

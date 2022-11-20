@@ -1,4 +1,4 @@
-if (!obj_microtransactions.extraLife) {
+if (!obj_microtransactions.extraLife && !obj_swimmer.avoidanceTime) {
     audio_play_sound(snd_playerdie, 1, 0)
     audio_stop_sound(snd_swimming)
     obj_levelTracker.textShouldBeShowing = true;

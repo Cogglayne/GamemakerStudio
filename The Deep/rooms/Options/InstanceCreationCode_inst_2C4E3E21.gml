@@ -3,4 +3,4 @@ soundToPlay = snd_variableObjectives;
 if(obj_levelTracker.variableObjectives == true){
 	activated = true;
 }
-width = 1050;
+width = 1100;

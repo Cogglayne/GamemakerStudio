@@ -3,4 +3,4 @@ soundToPlay = snd_standard
 if(obj_disabilities.normal == true){
 	activated = true;
 }
-width = 1050;
+width = 1100;

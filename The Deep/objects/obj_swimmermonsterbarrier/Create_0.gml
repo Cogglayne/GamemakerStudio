@@ -7,6 +7,10 @@ state = 0;
 text = "[Barrier Hums]"
 
 
+// sprite selection
+if(obj_levelTracker.variableObjectives){
+	sprite_index = spr_swimmerMonsterBarrierDestroy
+}
 
 
 

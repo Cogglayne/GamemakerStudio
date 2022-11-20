@@ -46,7 +46,11 @@ xCollision = false;
 // timer 
 delayTime = 5;
 extraLifeTime = 5;
+avoidanceTime = false;
+avoidanceTimer = 0;
 timer = 0;
+// avoidance charges
+avoidanceCharges = 4;
 // timers
 alarm[0] = 60;
 alarm[1] = 60;

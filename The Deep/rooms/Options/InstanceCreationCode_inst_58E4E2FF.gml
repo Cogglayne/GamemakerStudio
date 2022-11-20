@@ -3,4 +3,4 @@ soundToPlay = snd_alternativePunishment
 if(obj_levelTracker.alternativePunishment == true){
 	activated = true;
 }
-width = 1050;
+width = 1100;

@@ -3,4 +3,4 @@ soundToPlay = snd_dyslexia
 if(obj_disabilities.dyslexia == true){
 	activated = true;
 }
-width = 1050;
+width = 1100;

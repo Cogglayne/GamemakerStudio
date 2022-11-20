@@ -1,5 +1,4 @@
 // challenge mode variables
-tutorialChallengeModeClear = false;
 levelFourChallengeModeClear = false;
 levelFourEasyChallengeModeClear = false;
 levelFourMediumChallengeModeClear = false;
@@ -7,7 +6,6 @@ levelFourHardChallengeModeClear = false;
 evolvedMonsterTutorialOneCleared = false;
 evolvedMonsterTutorialTwoCleared = false;
 // level time variables
-tutorialTime = 100;
 levelFourEasyTime = 100;
 levelFourMediumTime = 100;
 levelFourHardTime = 100;
@@ -18,8 +16,6 @@ probeTutorialCleared = false;
 anglerTutorialCleared = false;
 movementTutorialCleared = false;
 tutorialRoom = Tutorial;
-// loads variables
-load();
 // used to enable multiple difficulties
 levelDiffuclty = ""
 // determines if a player has found the hidden fish
@@ -47,11 +43,13 @@ alarm[0] = 60;
 alternativePunishment = false;
 variableObjectives = false;
 indirectCompetition = false;
+conflictResolutionAlternatives = false;
 
 timer = 200;
 firstRun = true;
 
-
+// loads variables
+load();
 
 
 

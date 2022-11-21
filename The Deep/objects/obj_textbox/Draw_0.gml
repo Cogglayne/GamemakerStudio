@@ -19,49 +19,48 @@ if (room == TutorialFailed) {
     draw_text_transformed(1800, 0, "Tutorial Not Passed", 2, 2, 0);
 }
 if (room == Instructions) {
-    draw_text_transformed(0, 0, " Swim into the insanity totem to begin challenge mode (single player)", 1, 1, 0);
-    draw_text_transformed(0, 100, " There are normal totems, swim into them to receive increased swim speed or vision", 1, 1, 0);
-    draw_text_transformed(0, 200, " There are cursed totems swimming into them gives a higher amount of speed or vision but also causes a reduction in the other stat", 1, 1, 0);
-    draw_text_transformed(0, 300, " Standard Controls (activated by the standard button in options, deactivates all other control schemes)", 1, 1, 0);
-    draw_text_transformed(0, 400, "Swimmer Left (player on the left side of the level)", 1, 1, 0);
-    draw_text_transformed(0, 500, " Up Arrow Key To Swim Up, Down Arrow Key To Swim Down, Left Arrow Key To Swim Left, Right Arrow Key To Swim Right", 1, 1, 0);
-    draw_text_transformed(0, 600, " Left click to the left or right of the swimmer to spawn a barrier that can redirect monsters", 1, 1, 0);
-    draw_text_transformed(0, 700, " Right click above or below the swimmer to spawn a barrier that can redirect mines", 1, 1, 0);
-    draw_text_transformed(0, 800, " The mine and monster barriers can also redirect the evolved monsters that swim diagonally", 1, 1, 0);
-    draw_text_transformed(0, 900, " The swimmer can only have one barrier of each type active at a time, redirecting a monster or mine will break that barrier", 1, 1, 0);
-    draw_text_transformed(0, 1000, " The same applies for redirecting the evolved monster with either barrier type", 1, 1, 0);
-    draw_text_transformed(0, 1100, " Pressing control spawns a probe at the swimmer's location that will go towards the mouse cursor to give you vision in a direction", 1, 1, 0);
-    draw_text_transformed(0, 1200, " There can only be one probe at a time. The probe will break if it collides with a mine, monster, or the edge of the room", 1, 1, 0);
-    draw_text_transformed(0, 1300, " Press shift to turn your light off and on to hide from the angler", 1, 1, 0);
-    draw_text_transformed(0, 1400, " For the puzzle drag the pollutants to their disposal unit using left click, left click again if the pollutant does not", 1, 1, 0);
-    draw_text_transformed(0, 1500, " automatically stop being dragged when releasing left click", 1, 1, 0);
+    draw_text_transformed(0, 0, " Swim into the insanity totem to begin challenge mode (single-player).", 1, 1, 0);
+    draw_text_transformed(0, 100, " There are normal totems, swim into them to receive increased swim speed or vision.", 1, 1, 0);
+    draw_text_transformed(0, 200, " There are cursed totems swimming into them gives a higher amount of speed or vision but also causes a reduction in the other stat.", 1, 1, 0);
+    draw_text_transformed(0, 300, " Standard Controls (activated by the standard button in options, deactivates all other control schemes).", 1, 1, 0);
+    draw_text_transformed(0, 400, " Up Arrow Key To Swim Up, Down Arrow Key To Swim Down, Left Arrow Key To Swim Left, Right Arrow Key To Swim Right.", 1, 1, 0);
+    draw_text_transformed(0, 500, " Left click to the left or right of the swimmer to spawn a barrier that can redirect monsters.", 1, 1, 0);
+    draw_text_transformed(0, 600, " Right click above or below the swimmer to spawn a barrier that can redirect mines.", 1, 1, 0);
+    draw_text_transformed(0, 700, " The mine and monster barriers can also redirect the evolved monsters that swim diagonally.", 1, 1, 0);
+    draw_text_transformed(0, 800, " The swimmer can only have one barrier of each type active at a time, redirecting a monster or mine will break that barrier.", 1, 1, 0);
+    draw_text_transformed(0, 900, " The same applies for redirecting the evolved monster with either barrier type.", 1, 1, 0);
+    draw_text_transformed(0, 1000, " Pressing control spawns a probe at the swimmer's location that will go towards the mouse cursor to give you vision in a direction.", 1, 1, 0);
+    draw_text_transformed(0, 1100, " There can only be one probe at a time. The probe will break if it collides with a mine, monster, or the edge of the room.", 1, 1, 0);
+    draw_text_transformed(0, 1200, " Press shift to turn your light off and on to hide from the angler.", 1, 1, 0);
+    draw_text_transformed(0, 1300, " For the puzzle drag the pollutants to their disposal unit using left click, left click again if the pollutant does not", 1, 1, 0);
+    draw_text_transformed(0, 1400, " automatically stop being dragged when releasing left click. Press Numpad 0 to activate the device to avoid enemies.", 1, 1, 0);
 }
 if (room == InstructionsPageTwo) {
-    draw_text_transformed(0, 0, "Swimmer Right (player on the right side of the level)(Multiplayer)", 1, 1, 0);
-    draw_text_transformed(0, 100, " W To Swim Up, S To Swim Down, A To Swim Left, D To Swim Right", 1, 1, 0);
-    draw_text_transformed(0, 200, " J spawns a barrier to the left of the swimmer and L spawns a barrier to the right of the swimmer that can redirect monsters", 1, 1, 0);
-    draw_text_transformed(0, 300, " I spawns a barrier above the swimmer and K spawns a barrier below the swimmer that can redirect mines", 1, 1, 0);
-    draw_text_transformed(0, 400, " The swimmer can only have one barrier of each type active at a time, redirecting a monster or mine will break that barrier", 1, 1, 0);
+    draw_text_transformed(0, 0, "Swimmer Right (player on the right side of the level)(Multiplayer).", 1, 1, 0);
+    draw_text_transformed(0, 100, " W To Swim Up, S To Swim Down, A To Swim Left, D To Swim Right.", 1, 1, 0);
+    draw_text_transformed(0, 200, " J spawns a barrier to the left of the swimmer and L spawns a barrier to the right of the swimmer that can redirect monsters.", 1, 1, 0);
+    draw_text_transformed(0, 300, " I spawns a barrier above the swimmer and K spawns a barrier below the swimmer that can redirect mines.", 1, 1, 0);
+    draw_text_transformed(0, 400, " The swimmer can only have one barrier of each type active at a time, redirecting a monster or mine will break that barrier.", 1, 1, 0);
     draw_text_transformed(0, 500, " Pressing space spawns a probe at the swimmer's location. There can be three probes at a time.", 1, 1, 0);
-    draw_text_transformed(0, 600, " A probe will break if it collides with a mine, monster or if a fourth probe is spawned", 1, 1, 0);
+    draw_text_transformed(0, 600, " A probe will break if it collides with a mine, monster, or if a fourth probe is spawned.", 1, 1, 0);
 
 }
 if (room == InstructionsPageThree) {
-    draw_text_transformed(0, 0, " Left Handed Controls (activated by the left handed button in options, deactivates all other control schemes)", 1, 1, 0);
-    draw_text_transformed(0, 100, " W To Swim Up, S To Swim Down, A To Swim Left, D To Swim Right", 1, 1, 0);
+    draw_text_transformed(0, 0, " Left Handed Controls (activated by the left handed button in options, deactivates all other control schemes).", 1, 1, 0);
+    draw_text_transformed(0, 100, " W To Swim Up, S To Swim Down, A To Swim Left, D To Swim Right.", 1, 1, 0);
     draw_text_transformed(0, 200, " Double tapping A spawns a barrier to the left of the swimmer and double tapping D spawns a barrier to the right of the swimmer", 1, 1, 0);
     draw_text_transformed(0, 300, " that can redirect monsters. Double tapping W spawns a barrier above the swimmer and double tapping S spawns", 1, 1, 0);
     draw_text_transformed(0, 400, " a barrier below the swimmer that can redirect mines. The mine and monster barriers can also redirect ", 1, 1, 0);
     draw_text_transformed(0, 500, " the evolved monsters that swim diagonally. The swimmer can only have one barrier of each type active at a time, redirecting a monster", 1, 1, 0);
-    draw_text_transformed(0, 600, " or mine will break that barrier. The same applies for redirecting the evolved monster with either barrier type. Pressing shift spawns", 1, 1, 0);
+    draw_text_transformed(0, 600, " or mine will break that barrier. The same applies to redirecting the evolved monster with either barrier type. Pressing shift spawns", 1, 1, 0);
     draw_text_transformed(0, 700, " a probe at the swimmer's location that will move at an angle of 0 degrees, 45 degrees, 90 degrees, 135 degrees, 180 degrees,", 1, 1, 0);
     draw_text_transformed(0, 800, " 235 degrees, 270 degrees, or 315 degrees depending on the swimmer's direction and movement to give you vision in a direction. ", 1, 1, 0);
     draw_text_transformed(0, 900, " Facing right or going right 0 degrees, going left and down 235 degrees, right and up 45 degrees, right and down 315 degrees,", 1, 1, 0);
     draw_text_transformed(0, 1000, " left and up 135 degrees, straight up 90 degrees, facing left or going left 180 degrees, straight down 270 degrees", 1, 1, 0);
-    draw_text_transformed(0, 1100, " There can only be one probe at a time. The probe will break if it collides with a mine, monster, or the edge of the room", 1, 1, 0);
+    draw_text_transformed(0, 1100, " There can only be one probe at a time. The probe will break if it collides with a mine, monster, or the edge of the room.", 1, 1, 0);
     draw_text_transformed(0, 1200, " Press caps lock to turn your light off and on to hide from the angler.", 1, 1, 0);
     draw_text_transformed(0, 1300, " For the puzzle drag the pollutants to their disposal unit using left click, left click again if the pollutant does not", 1, 1, 0);
-    draw_text_transformed(0, 1400, " automatically stop being dragged when releasing left click", 1, 1, 0);
+    draw_text_transformed(0, 1400, " automatically stop being dragged when releasing left click. Press F to activate the device to avoid enemies.", 1, 1, 0);
 }
 if (room == InstructionsPageFour) {
     draw_text_transformed(0, 0, " Right Handed Controls (activated by the right handed button in options, deactivates all other control schemes)", 1, 1, 0);
@@ -70,38 +69,42 @@ if (room == InstructionsPageFour) {
     draw_text_transformed(0, 300, " barrier to the right of the swimmer that can redirect monsters. Double tapping the Up Arrow Key spawns a barrier above the swimmer and", 1, 1, 0);
     draw_text_transformed(0, 400, " double tapping the Down Arrow Key spawns a barrier below the swimmer that can redirect mines. The mine and monster barriers can also", 1, 1, 0);
     draw_text_transformed(0, 500, " redirect the evolved monsters that swim diagonally. The swimmer can only have one barrier of each type active at a time, redirecting a", 1, 1, 0);
-    draw_text_transformed(0, 600, " monster or mine will break that barrier. The same applies for redirecting the evolved monster with either barrier type. Pressing num pad 0 ", 1, 1, 0);
+    draw_text_transformed(0, 600, " monster or mine will break that barrier. The same applies to redirecting the evolved monster with either barrier type. Pressing num pad 0 ", 1, 1, 0);
     draw_text_transformed(0, 700, " spawns a probe at the swimmer's location that will move at an angle of 0 degrees, 45 degrees, 90 degrees, 135 degrees, 180 degrees,", 1, 1, 0);
     draw_text_transformed(0, 800, " 235 degrees, 270 degrees, or 315 degrees depending on the swimmer's direction and movement to give you vision in a direction. ", 1, 1, 0);
     draw_text_transformed(0, 900, " Facing right or going right 0 degrees, going left and down 235 degrees, right and up 45 degrees, right and down 315 degrees,", 1, 1, 0);
-    draw_text_transformed(0, 1000, " left and up 135 degrees, straight up 90 degrees, facing left or going left 180 degrees, straight down 270 degrees", 1, 1, 0);
+    draw_text_transformed(0, 1000, " left and up 135 degrees, straight up 90 degrees, facing left or going left 180 degrees, straight down 270 degrees.", 1, 1, 0);
     draw_text_transformed(0, 1100, " There can only be one probe at a time. The probe will break if it collides with a mine, monster, or the edge of the room.", 1, 1, 0);
     draw_text_transformed(0, 1200, " Press num pad 1 to turn your light off and on to hide from the angler.", 1, 1, 0);
     draw_text_transformed(0, 1300, " For the puzzle drag the pollutants to their disposal unit using left click, left click again if the pollutant does not", 1, 1, 0);
-    draw_text_transformed(0, 1400, " automatically stop being dragged when releasing left click", 1, 1, 0);
+    draw_text_transformed(0, 1400, " automatically stop being dragged when releasing left click. Press control to activate the device to avoid enemies.", 1, 1, 0);
 }
 if (room == InstructionsPageFive) {
-    draw_text_transformed(0, 0, " Poor Reactivity Controls (activated by the poor reactivity button in options, deactivates all other control schemes)", 1, 1, 0);
-    draw_text_transformed(0, 100, " Up Arrow Key To Swim Up, Down Arrow Key To Swim Down, Left Arrow Key To Swim Left, Right Arrow Key To Swim Right", 1, 1, 0);
-    draw_text_transformed(0, 200, " Left click to the left or right of the swimmer to spawn a barrier that can redirect monsters", 1, 1, 0);
-    draw_text_transformed(0, 300, " Right click above or below the swimmer to spawn a barrier that can redirect mines", 1, 1, 0);
-    draw_text_transformed(0, 400, " The mine and monster barriers can also redirect the evolved monsters that swim diagonally", 1, 1, 0);
-    draw_text_transformed(0, 500, " The swimmer can only have one barrier of each type active at a time, redirecting a monster or mine will break that barrier", 1, 1, 0);
-    draw_text_transformed(0, 600, " The same applies for redirecting the evolved monster with either barrier type", 1, 1, 0);
-    draw_text_transformed(0, 700, " Pressing control spawns a probe at the swimmer's location that will go towards the mouse cursor to give you vision in a direction", 1, 1, 0);
-    draw_text_transformed(0, 800, " There can only be one probe at a time. The probe will break if it collides with a mine, monster, or the edge of the room", 1, 1, 0);
-    draw_text_transformed(0, 900, " Press shift to turn your light off and on to hide from the angler", 1, 1, 0);
-    draw_text_transformed(0, 1000, " For the puzzle drag the pollutants to their disposal unit using left click, left click again if the pollutant does not", 1, 1, 0);
-    draw_text_transformed(0, 1100, " automatically stop being dragged when releasing left click", 1, 1, 0);
+    draw_text_transformed(0, 0, " Poor Reactivity Controls (activated by the poor reactivity button in options, deactivates all other control schemes).", 1, 1, 0);
+    draw_text_transformed(0, 100, " Up Arrow Key To Swim Up, Down Arrow Key To Swim Down, Left Arrow Key To Swim Left, Right Arrow Key To Swim Right.", 1, 1, 0);
+    draw_text_transformed(0, 200, " Left click to the left or right of the swimmer to spawn a barrier that can redirect monsters.", 1, 1, 0);
+    draw_text_transformed(0, 300, " Right click above or below the swimmer to spawn a barrier that can redirect mines.", 1, 1, 0);
+    draw_text_transformed(0, 400, " The mine and monster barriers can also redirect the evolved monsters that swim diagonally.", 1, 1, 0);
+    draw_text_transformed(0, 500, " The swimmer can only have one barrier of each type active at a time, redirecting a monster or mine will break that barrier.", 1, 1, 0);
+    draw_text_transformed(0, 600, " The same applies to redirecting the evolved monster with either barrier type.", 1, 1, 0);
+    draw_text_transformed(0, 700, " Pressing control spawns a probe at the swimmer's location that will go towards the mouse cursor to give you vision in a direction.", 1, 1, 0);
+    draw_text_transformed(0, 800, " There can only be one probe at a time. The probe will break if it collides with a mine, monster, or the edge of the room.", 1, 1, 0);
+    draw_text_transformed(0, 900, " Press shift to turn your light off and on to hide from the angler.", 1, 1, 0);
+    draw_text_transformed(0, 1000, " For the puzzle drag the pollutants to their disposal unit using the left click, left click again if the pollutant does not", 1, 1, 0);
+    draw_text_transformed(0, 1100, " automatically stop being dragged when releasing left click. Press Numpad 0 to activate the device to avoid enemies.", 1, 1, 0);
 }
 if (room == InstructionsPageSix) {
     draw_text_transformed(0, 0, "Blind Mode is deactivated and activated by the Blind Mode button in options", 1, 1, 0);
     draw_text_transformed(0, 100, "ADHD is deactivated and activated by the ADHD button in options", 1, 1, 0);
-    draw_text_transformed(0, 200, "Dyscalculia is deactivated and activated by the Dyscalculia button in options. ", 1, 1, 0);
+    draw_text_transformed(0, 200, "Dyscalculia is deactivated and activated by the Dyscalculia button in options.", 1, 1, 0);
     draw_text_transformed(0, 300, "Executive Functioning is deactivated and activated by the Executive Functioning button in options.", 1, 1, 0);
-    draw_text_transformed(0, 400, "Dyslexia is deactivated and activated by the Dyslexia button in options. ", 1, 1, 0);
-    draw_text_transformed(0, 500, "Auditory Processing Disorder is deactivated and activated by the Auditory Processing Disorder button in options. ", 1, 1, 0);
-    draw_text_transformed(0, 600, "The tutorials are accessed by clicking singleplayer and then clicking tutorials", 1, 1, 0);
+    draw_text_transformed(0, 400, "Dyslexia is deactivated and activated by the Dyslexia button in options.", 1, 1, 0);
+    draw_text_transformed(0, 500, "Auditory Processing Disorder is deactivated and activated by the Auditory Processing Disorder button in options.", 1, 1, 0);
+    draw_text_transformed(0, 600, "The tutorials are accessed by clicking singleplayer and then clicking tutorials.", 1, 1, 0);
+    draw_text_transformed(0, 700, "Alternative Punishment is deactivated and activated by the Alternative Punishment button in options.", 1, 1, 0);
+    draw_text_transformed(0, 800, "Variable Objectives is deactivated and activated by the Variable Objectives button in options.", 1, 1, 0);
+    draw_text_transformed(0, 900, "Indirect Competition is deactivated and activated by the Indirect Competition button in options.", 1, 1, 0);
+    draw_text_transformed(0, 1000, "Alternative Punishment is deactivated and activated by the Alternative Punishment button in options.", 1, 1, 0);
 }
 if (draw_get_font() == ft_dyslexia) {
     if (room == Credits) {
@@ -139,6 +142,10 @@ if (draw_get_font() == ft_dyslexia) {
         draw_text_transformed(850, 200, " MundoSound", 1, 1, 0);
         draw_text_transformed(950, 400, " Umplix", 1, 1, 0);
     }
+    if (room == CreditsPageFour) {
+        draw_text_transformed(2300, 0, "Coding", 1.5, 1.5, 0);
+        draw_text_transformed(700, 200, " David Strachan", 1, 1, 0);
+    }
 } else if (draw_get_font() == ft_scaryFont) {
     if (room == Credits) {
         draw_text_transformed(2400, 0, "Art", 1.5, 1.5, 0);
@@ -174,6 +181,10 @@ if (draw_get_font() == ft_dyslexia) {
         draw_text_transformed(2300, 0, "Music", 1.5, 1.5, 0);
         draw_text_transformed(850, 175, " MundoSound", 1, 1, 0);
         draw_text_transformed(950, 375, " Umplix", 1, 1, 0);
+    }
+    if (room == CreditsPageFour) {
+        draw_text_transformed(2300, 0, "Coding", 1.5, 1.5, 0);
+        draw_text_transformed(700, 175, " David Strachan", 1, 1, 0);
     }
 }
 
@@ -307,6 +318,22 @@ if (room == GradingPageSeven) {
     draw_text_transformed(0, 1400, "Dyslexia, enabling these players to better read text in the game. For Auditory Processing Disorder, when activated, the background ", 1, 1, 0)
     draw_text_transformed(0, 1500, "music playing in the game is stopped. This enables these players to focus on the game sounds that are more relevant to actually playing ", 1, 1, 0)
     draw_text_transformed(0, 1600, "the game. This option when activated also stops the background music from playing when the game is opened. ", 1, 1, 0)
+}
+if (room == GradingPageEight) {
+    draw_text_transformed(1700, 0, "Female Gameplay Styles", 2, 2, 0);
+    draw_text_transformed(0, 200, "I included four features that can be activated and deactivated in options. Variable Objectives enabling this feature allows the player to", 1, 1, 0)
+    draw_text_transformed(0, 300, "destroy monsters, evolved monsters, and mines by deflecting them twice with a barrier. Destroying all of these enemies takes the player to", 1, 1, 0)
+    draw_text_transformed(0, 400, "an alternative win screen. This option allows you to change your role from collecting pollutants to clearing the ocean of dangers allowing the", 1, 1, 0)
+    draw_text_transformed(0, 500, "next swimmer to safely collect all the pollutants. This option also changes the barrier's sprite to better show the swimmer's new capabilities.", 1, 1, 0)
+    draw_text_transformed(0, 600, "Indirect Competition enabling this feature allows to players to play the same level back to back. Whichever player gets the better time for", 1, 1, 0)
+    draw_text_transformed(0, 700, "that level has their time recorded in the best times room. Playing back to back means that two players can be competitive but neither can", 1, 1, 0)
+    draw_text_transformed(0, 800, "directly affect the other. Conflict Resolution Alternative enabling this features allow the player to activate a device that gives them", 1, 1, 0)
+    draw_text_transformed(0, 900, "the ability to be undectable by monsters and mines. This allows them to swim through enemies rather than dodging or deflecting them.", 1, 1, 0)
+    draw_text_transformed(0, 1000, "There are four charges of this ability and each charge grants five seconds of avoidance. The time that each charge gives you is shown", 1, 1, 0)
+    draw_text_transformed(0, 1100, "by a circle that is drawn incrementally around the timer. Alternative Punishments enabling this feature changes a collision from", 1, 1, 0)
+    draw_text_transformed(0, 1200, "killing the player to instead making them wait five seconds before they can continue a level. The player then has temporary", 1, 1, 0)
+    draw_text_transformed(0, 1300, "invulnerability. I also extended the extra life microtransaction to instead be a skip wait timer transaction. For variable objectives", 1, 1, 0)
+    draw_text_transformed(0, 1400, "the remaining number of deflects requrired to destroy the enemy is shown above them.", 1, 1, 0)
 }
 if (room == BestTimes) {
     draw_text_transformed(2200, 0, "Best Times", 1, 1, 0);

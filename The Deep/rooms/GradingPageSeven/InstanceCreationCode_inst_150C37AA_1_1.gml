@@ -1,3 +1,3 @@
-text = "Main Menu"
-targetRoom = MainMenu
-soundToPlay = snd_mainMenu
+text = "Next"
+soundToPlay = snd_next
+targetRoom = GradingPageEight

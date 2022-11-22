@@ -37,4 +37,3 @@ if (isPlaying && obj_levelTracker.variableObjectives) {
         room_goto(AlternateWin)
     }
 }
-show_debug_message(string(avoidanceCharges))

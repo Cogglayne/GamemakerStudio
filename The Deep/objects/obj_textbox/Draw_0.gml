@@ -1,146 +1,4 @@
-draw_set_color(c_white)
-if (obj_disabilities.dyslexia) {
-    draw_set_font(ft_dyslexia)
-} else if (!obj_disabilities.dyslexia) {
-    draw_set_font(ft_scaryFont);
-}
-if (room == MainMenu) {
-    draw_text_transformed(2230, 100, "The", 4, 4, 0);
-    draw_text_transformed(2130, 400, "Deep", 4, 4, 0);
-}
-if (room == LevelFourDifficultySelector) {
-    if (!obj_levelTracker.monsterTutorialCleared && !obj_levelTracker.mineTutorialCleared && !obj_levelTracker.probeTutorialCleared && !obj_levelTracker.anglerTutorialCleared && !obj_levelTracker.evolvedMonsterTutorialOneCleared && !obj_levelTracker.evolvedMonsterTutorialTwoCleared) {
-        draw_text_transformed(400, 100, "Before continuing, completing the tutorials is recommended", 2, 2, 0);
-    }
-}
-if (room == TutorialClear) {
-    draw_text_transformed(2000, 0, "Tutorial Passed", 2, 2, 0);
-}
-if (room == TutorialFailed) {
-    draw_text_transformed(1800, 0, "Tutorial Not Passed", 2, 2, 0);
-}
-if (room == Lose) {
-    draw_text_transformed(2000, 200, "The sea is a dangerous place", 1, 1, 0);
-    draw_text_transformed(1850, 400, "Hopefully the next guy has better luck", 1, 1, 0);
-}
-if (room == LoseTwoPlayers) {
-    draw_text_transformed(2000, 200, "The sea is a dangerous place", 1, 1, 0);
-    draw_text_transformed(1850, 400, "Hopefully the next guys have better luck", 1, 1, 0);
-}
-if (room == Win) {
-    draw_text_transformed(1900, 200, "This part of the ocean is now clean", 1, 1, 0);
-}
-if (room == WinTwoPlayers) {
-    draw_text_transformed(1900, 200, "This part of the ocean is now clean", 1, 1, 0);
-}
-if (room == AlternateWin) {
-    draw_text_transformed(850, 200, "Good job getting rid of those monsters and mines, the next guys will get the remaining pollutants", 1, 1, 0);
-}
-if (room == BestTimes) {
-    draw_text_transformed(2200, 0, "Best Times", 1, 1, 0);
-    if (obj_levelTracker.levelFourEasyTime == 100) {
-        draw_text_transformed(0, 100, "Level Four Easy: ", 1, 1, 0);
-    } else {
-        draw_text_transformed(0, 100, "Level Four Easy: " + string(obj_levelTracker.levelFourEasyTime) + " seconds", 1, 1, 0);
-    }
-    if (obj_levelTracker.levelFourMediumTime == 100) {
-        draw_text_transformed(0, 200, "Level Four Medium: ", 1, 1, 0);
-    } else {
-        draw_text_transformed(0, 200, "Level Four Medium: " + string(obj_levelTracker.levelFourMediumTime) + " seconds", 1, 1, 0);
-    }
-    if (obj_levelTracker.levelFourHardTime == 100) {
-        draw_text_transformed(0, 300, "Level Four Hard: ", 1, 1, 0);
-    } else {
-        draw_text_transformed(0, 300, "Level Four Hard: " + string(obj_levelTracker.levelFourHardTime) + " seconds", 1, 1, 0);
-    }
-}
-if (LevelFour()) {
-    draw_text_transformed_colour(2200, 0, "Pollutant Disposal", 1, 1, image_angle, c_white, c_white, c_white, c_white, 1);
-    draw_text_transformed_colour(1025, 100, " Each disposal unit is calibrated to neutralize a specific combination of chemicals", 1, 1, image_angle, c_white, c_white, c_white, c_white, 1);
-    draw_text_transformed_colour(1025, 200, "Each pollutant type has a unique chemical make up. Dispose of the pollutants properly", 1, 1, image_angle, c_white, c_white, c_white, c_white, 1);
-}
-if (draw_get_font() == ft_dyslexia) {
-    if (room == Credits) {
-        draw_text_transformed(2400, 50, "Art", 1.5, 1.5, 0);
-        draw_text_transformed(950, 200, " Ansimuz", 1, 1, 0);
-        draw_text_transformed(850, 400, " Rapidpunches", 1, 1, 0);
-        draw_text_transformed(950, 605, " Jattenalle", 1, 1, 0);
-        draw_text_transformed(100, 1005, " Warlock's Gauntlet Team", 1, 1, 0);
-        draw_text_transformed(850, 1205, " Rapidpunches", 1, 1, 0);
-    }
-    if (room == CreditsPageTwo) {
-        draw_text_transformed(2300, 50, "Sound", 1.5, 1.5, 0);
-        draw_text_transformed(900, 200, " Qubodup", 1, 1, 0);
-        draw_text_transformed(900, 410, " Cough-E", 1, 1, 0);
-        draw_text_transformed(900, 605, " Spanac", 1, 1, 0);
-        draw_text_transformed(500, 805, " Ogrebane/Artisticdude", 1, 1, 0);
-        draw_text_transformed(350, 1005, " Little Robot Sound Factory", 1, 1, 0);
-        draw_text_transformed(950, 1205, " Pauliuw", 1, 1, 0);
-        draw_text_transformed(800, 1405, " Qubodup", 1, 1, 0);
-        draw_text_transformed(300, 1605, " Michael Brigida and students", 1, 1, 0);
-    }
-    if (room == CreditsPageTwoContinued) {
-        draw_text_transformed(2300, 50, "Sound", 1.5, 1.5, 0);
-        draw_text_transformed(400, 200, " Electricity reactor buzz", 1, 1, 0);
-        draw_text_transformed(900, 400, " Remaxim", 1, 1, 0);
-        draw_text_transformed(900, 605, " Spanac", 1, 1, 0);
-        draw_text_transformed(850, 805, " Rubberduck", 1, 1, 0);
-        draw_text_transformed(600, 1005, "  Whale song sound", 1, 1, 0);
-        draw_text_transformed(650, 1205, " Blender Foundation", 1, 1, 0);
-        draw_text_transformed(650, 1405, " Zero is not null", 1, 1, 0);
-        draw_text_transformed(800, 1605, " HDVideoGuy", 1, 1, 0);
-    }
-    if (room == CreditsPageThree) {
-        draw_text_transformed(2300, 50, "Music", 1.5, 1.5, 0);
-        draw_text_transformed(850, 200, " MundoSound", 1, 1, 0);
-        draw_text_transformed(950, 400, " Umplix", 1, 1, 0);
-    }
-    if (room == CreditsPageFour) {
-        draw_text_transformed(2300, 0, "Coding", 1.5, 1.5, 0);
-        draw_text_transformed(700, 200, " David Strachan", 1, 1, 0);
-    }
-} else if (draw_get_font() == ft_scaryFont) {
-    if (room == Credits) {
-        draw_text_transformed(2400, 0, "Art", 1.5, 1.5, 0);
-        draw_text_transformed(950, 175, " Ansimuz", 1, 1, 0);
-        draw_text_transformed(850, 375, " Rapidpunches", 1, 1, 0);
-        draw_text_transformed(950, 580, " Jattenalle", 1, 1, 0);
-        draw_text_transformed(100, 980, " Warlock's Gauntlet Team", 1, 1, 0);
-        draw_text_transformed(850, 1180, " Rapidpunches", 1, 1, 0);
-    }
-    if (room == CreditsPageTwo) {
-        draw_text_transformed(2300, 0, "Sound", 1.5, 1.5, 0);
-        draw_text_transformed(900, 175, " Qubodup", 1, 1, 0);
-        draw_text_transformed(900, 375, " Cough-E", 1, 1, 0);
-        draw_text_transformed(900, 580, " Spanac", 1, 1, 0);
-        draw_text_transformed(500, 780, " Ogrebane/Artisticdude", 1, 1, 0);
-        draw_text_transformed(350, 980, " Little Robot Sound Factory", 1, 1, 0);
-        draw_text_transformed(950, 1180, " Pauliuw", 1, 1, 0);
-        draw_text_transformed(800, 1380, " Qubodup", 1, 1, 0);
-        draw_text_transformed(300, 1580, " Michael Brigida and students", 1, 1, 0);
-    }
-    if (room == CreditsPageTwoContinued) {
-        draw_text_transformed(2300, 0, "Sound", 1.5, 1.5, 0);
-        draw_text_transformed(400, 175, " Electricity reactor buzz", 1, 1, 0);
-        draw_text_transformed(900, 375, " Remaxim", 1, 1, 0);
-        draw_text_transformed(900, 580, " Spanac", 1, 1, 0);
-        draw_text_transformed(850, 780, " Rubberduck", 1, 1, 0);
-        draw_text_transformed(600, 980, "  Whale song sound", 1, 1, 0);
-        draw_text_transformed(650, 1180, " Blender Foundation", 1, 1, 0);
-        draw_text_transformed(650, 1380, " Zero is not null", 1, 1, 0);
-        draw_text_transformed(800, 1580, " HDVideoGuy", 1, 1, 0);
-    }
-    if (room == CreditsPageThree) {
-        draw_text_transformed(2300, 0, "Music", 1.5, 1.5, 0);
-        draw_text_transformed(850, 175, " MundoSound", 1, 1, 0);
-        draw_text_transformed(950, 375, " Umplix", 1, 1, 0);
-    }
-    if (room == CreditsPageFour) {
-        draw_text_transformed(2300, 0, "Coding", 1.5, 1.5, 0);
-        draw_text_transformed(700, 175, " David Strachan", 1, 1, 0);
-    }
-}
-
+draw_set_font(ft_dyslexia)
 draw_set_color(c_orange)
 if (room == Instructions) {
     draw_text_transformed(0, 0, " Mouse and Arrow Key Controls (activated by the Mouse and Arrow Key Controls button in options, deactivates all other control schemes).", 1, 1, 0);
@@ -327,4 +185,154 @@ if (room == GradingPageEight) {
     draw_text_transformed(0, 1200, "killing the player to instead making them wait five seconds before they can continue a level. The player then has temporary", 1, 1, 0)
     draw_text_transformed(0, 1300, "invulnerability. I also extended the extra life microtransaction to instead be a skip wait timer transaction. For variable objectives", 1, 1, 0)
     draw_text_transformed(0, 1400, "the remaining number of deflects requrired to destroy the enemy is shown above them.", 1, 1, 0)
+}
+draw_set_color(c_white)
+if (obj_disabilities.dyslexia) {
+    draw_set_font(ft_dyslexia)
+} else if (!obj_disabilities.dyslexia) {
+    draw_set_font(ft_scaryFont);
+}
+if (room == MainMenu) {
+    draw_text_transformed(2230, 100, "The", 4, 4, 0);
+    draw_text_transformed(2130, 400, "Deep", 4, 4, 0);
+}
+if (room == LevelFourDifficultySelector) {
+    if (!obj_levelTracker.monsterTutorialCleared && !obj_levelTracker.mineTutorialCleared && !obj_levelTracker.probeTutorialCleared && !obj_levelTracker.anglerTutorialCleared && !obj_levelTracker.evolvedMonsterTutorialOneCleared && !obj_levelTracker.evolvedMonsterTutorialTwoCleared) {
+        draw_text_transformed(400, 100, "Before continuing, completing the tutorials is recommended", 2, 2, 0);
+    }
+}
+if (room == TutorialClear) {
+    draw_text_transformed(2000, 0, "Tutorial Passed", 2, 2, 0);
+}
+if (room == TutorialFailed) {
+    draw_text_transformed(1800, 0, "Tutorial Not Passed", 2, 2, 0);
+}
+if (room == Lose) {
+    draw_text_transformed(2000, 200, "The sea is a dangerous place", 1, 1, 0);
+    draw_text_transformed(1850, 400, "Hopefully the next guy has better luck", 1, 1, 0);
+}
+if (room == LoseTwoPlayers) {
+    draw_text_transformed(2000, 200, "The sea is a dangerous place", 1, 1, 0);
+    draw_text_transformed(1850, 400, "Hopefully the next guys have better luck", 1, 1, 0);
+}
+if (room == Win) {
+    draw_text_transformed(1900, 200, "This part of the ocean is now clean", 1, 1, 0);
+}
+if (room == WinTwoPlayers) {
+    draw_text_transformed(1900, 200, "This part of the ocean is now clean", 1, 1, 0);
+}
+if (room == AlternateWin) {
+    draw_text_transformed(850, 200, "Good job getting rid of those monsters and mines, the next guys will get the remaining pollutants", 1, 1, 0);
+}
+if (room == BestTimes) {
+    draw_text_transformed(2200, 0, "Best Times", 1, 1, 0);
+    if (obj_levelTracker.levelFourEasyTime == 100) {
+        draw_text_transformed(0, 100, "Level Four Easy: ", 1, 1, 0);
+    } else {
+        draw_text_transformed(0, 100, "Level Four Easy: " + string(obj_levelTracker.levelFourEasyTime) + " seconds", 1, 1, 0);
+    }
+    if (obj_levelTracker.levelFourMediumTime == 100) {
+        draw_text_transformed(0, 200, "Level Four Medium: ", 1, 1, 0);
+    } else {
+        draw_text_transformed(0, 200, "Level Four Medium: " + string(obj_levelTracker.levelFourMediumTime) + " seconds", 1, 1, 0);
+    }
+    if (obj_levelTracker.levelFourHardTime == 100) {
+        draw_text_transformed(0, 300, "Level Four Hard: ", 1, 1, 0);
+    } else {
+        draw_text_transformed(0, 300, "Level Four Hard: " + string(obj_levelTracker.levelFourHardTime) + " seconds", 1, 1, 0);
+    }
+}
+if (LevelFour()) {
+    draw_text_transformed_colour(2200, 0, "Pollutant Disposal", 1, 1, image_angle, c_white, c_white, c_white, c_white, 1);
+    draw_text_transformed_colour(1025, 100, " Each disposal unit is calibrated to neutralize a specific combination of chemicals", 1, 1, image_angle, c_white, c_white, c_white, c_white, 1);
+    draw_text_transformed_colour(1025, 200, "Each pollutant type has a unique chemical make up. Dispose of the pollutants properly", 1, 1, image_angle, c_white, c_white, c_white, c_white, 1);
+}
+if (draw_get_font() == ft_dyslexia) {
+    if (room == Credits) {
+        draw_text_transformed(2400, 50, "Art", 1.5, 1.5, 0);
+        draw_text_transformed(950, 200, " Ansimuz", 1, 1, 0);
+        draw_text_transformed(850, 400, " Rapidpunches", 1, 1, 0);
+        draw_text_transformed(950, 605, " Jattenalle", 1, 1, 0);
+        draw_text_transformed(100, 1005, " Warlock's Gauntlet Team", 1, 1, 0);
+        draw_text_transformed(850, 1205, " Rapidpunches", 1, 1, 0);
+    }
+    if (room == CreditsPageTwo) {
+        draw_text_transformed(2300, 50, "Sound", 1.5, 1.5, 0);
+        draw_text_transformed(900, 200, " Qubodup", 1, 1, 0);
+        draw_text_transformed(900, 410, " Cough-E", 1, 1, 0);
+        draw_text_transformed(900, 605, " Spanac", 1, 1, 0);
+        draw_text_transformed(500, 805, " Ogrebane/Artisticdude", 1, 1, 0);
+        draw_text_transformed(350, 1005, " Little Robot Sound Factory", 1, 1, 0);
+        draw_text_transformed(950, 1205, " Pauliuw", 1, 1, 0);
+        draw_text_transformed(800, 1405, " Qubodup", 1, 1, 0);
+        draw_text_transformed(300, 1605, " Michael Brigida and students", 1, 1, 0);
+    }
+    if (room == CreditsPageThree) {
+        draw_text_transformed(2300, 50, "Sound", 1.5, 1.5, 0);
+        draw_text_transformed(400, 200, " Electricity reactor buzz", 1, 1, 0);
+        draw_text_transformed(900, 400, " Remaxim", 1, 1, 0);
+        draw_text_transformed(900, 605, " Spanac", 1, 1, 0);
+        draw_text_transformed(850, 805, " Rubberduck", 1, 1, 0);
+        draw_text_transformed(600, 1005, "  Whale song sound", 1, 1, 0);
+        draw_text_transformed(650, 1205, " Blender Foundation", 1, 1, 0);
+        draw_text_transformed(650, 1405, " Zero is not null", 1, 1, 0);
+        draw_text_transformed(800, 1605, " HDVideoGuy", 1, 1, 0);
+    }
+    if (room == CreditsPageFour) {
+        draw_text_transformed(2300, 50, "Sound", 1.5, 1.5, 0);
+        draw_text_transformed(850, 200, " jalastram", 1, 1, 0);
+    }
+    if (room == CreditsPageFive) {
+        draw_text_transformed(2300, 50, "Music", 1.5, 1.5, 0);
+        draw_text_transformed(850, 200, " MundoSound", 1, 1, 0);
+        draw_text_transformed(950, 400, " Umplix", 1, 1, 0);
+    }
+    if (room == CreditsPageSix) {
+        draw_text_transformed(2300, 50, "Coding", 1.5, 1.5, 0);
+        draw_text_transformed(700, 200, " David Strachan", 1, 1, 0);
+    }
+} else if (draw_get_font() == ft_scaryFont) {
+    if (room == Credits) {
+        draw_text_transformed(2400, 0, "Art", 1.5, 1.5, 0);
+        draw_text_transformed(950, 175, " Ansimuz", 1, 1, 0);
+        draw_text_transformed(850, 375, " Rapidpunches", 1, 1, 0);
+        draw_text_transformed(950, 580, " Jattenalle", 1, 1, 0);
+        draw_text_transformed(100, 980, " Warlock's Gauntlet Team", 1, 1, 0);
+        draw_text_transformed(850, 1180, " Rapidpunches", 1, 1, 0);
+    }
+    if (room == CreditsPageTwo) {
+        draw_text_transformed(2300, 0, "Sound", 1.5, 1.5, 0);
+        draw_text_transformed(900, 175, " Qubodup", 1, 1, 0);
+        draw_text_transformed(900, 375, " Cough-E", 1, 1, 0);
+        draw_text_transformed(900, 580, " Spanac", 1, 1, 0);
+        draw_text_transformed(500, 780, " Ogrebane/Artisticdude", 1, 1, 0);
+        draw_text_transformed(350, 980, " Little Robot Sound Factory", 1, 1, 0);
+        draw_text_transformed(950, 1180, " Pauliuw", 1, 1, 0);
+        draw_text_transformed(800, 1380, " Qubodup", 1, 1, 0);
+        draw_text_transformed(300, 1580, " Michael Brigida and students", 1, 1, 0);
+    }
+    if (room == CreditsPageThree) {
+        draw_text_transformed(2300, 0, "Sound", 1.5, 1.5, 0);
+        draw_text_transformed(400, 175, " Electricity reactor buzz", 1, 1, 0);
+        draw_text_transformed(900, 375, " Remaxim", 1, 1, 0);
+        draw_text_transformed(900, 580, " Spanac", 1, 1, 0);
+        draw_text_transformed(850, 780, " Rubberduck", 1, 1, 0);
+        draw_text_transformed(600, 980, "  Whale song sound", 1, 1, 0);
+        draw_text_transformed(650, 1180, " Blender Foundation", 1, 1, 0);
+        draw_text_transformed(650, 1380, " Zero is not null", 1, 1, 0);
+        draw_text_transformed(800, 1580, " HDVideoGuy", 1, 1, 0);
+    }
+	if (room == CreditsPageFour) {
+        draw_text_transformed(2300, 0, "Sound", 1.5, 1.5, 0);
+        draw_text_transformed(900, 175, " jalastram", 1, 1, 0);
+    }
+    if (room == CreditsPageFive) {
+        draw_text_transformed(2300, 0, "Music", 1.5, 1.5, 0);
+        draw_text_transformed(850, 175, " MundoSound", 1, 1, 0);
+        draw_text_transformed(950, 375, " Umplix", 1, 1, 0);
+    }
+    if (room == CreditsPageSix) {
+        draw_text_transformed(2300, 0, "Coding", 1.5, 1.5, 0);
+        draw_text_transformed(700, 175, " David Strachan", 1, 1, 0);
+    }
 }

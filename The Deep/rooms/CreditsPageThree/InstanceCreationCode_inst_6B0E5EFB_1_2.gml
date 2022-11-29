@@ -1,3 +1,3 @@
 text = "Next"
-targetRoom = CreditsPageThree
+targetRoom = CreditsPageFour
 soundToPlay = snd_next

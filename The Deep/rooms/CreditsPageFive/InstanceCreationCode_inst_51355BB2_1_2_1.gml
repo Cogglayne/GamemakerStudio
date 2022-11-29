@@ -1,3 +1,3 @@
 text = "Back"
-targetRoom = CreditsPageThree
+targetRoom = CreditsPageFour
 soundToPlay = snd_back

@@ -1,2 +1,2 @@
-text = "Main Menu"
-targetRoom = MainMenu
+text = "Next"
+targetRoom = CreditsPageThree

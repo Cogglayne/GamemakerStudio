@@ -15,7 +15,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_alternativePunishment.mp3",
-  "duration": 1.4105,
+  "duration": 1.436667,
   "parent": {
     "name": "Buttons",
     "path": "folders/Sounds/Buttons.yy",

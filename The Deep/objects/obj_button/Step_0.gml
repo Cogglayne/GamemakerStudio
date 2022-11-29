@@ -32,7 +32,7 @@ if (click && text = "Quit") {
 	}else{
 		room_goto(targetRoom)
 	}
-}  else if (click && text = "Variable Objectives") {
+}  else if (click && text = "Destroy Enemies With Barriers") {
     if (obj_levelTracker.variableObjectives == false) {
         obj_levelTracker.variableObjectives = true
         activated = true;
@@ -40,7 +40,7 @@ if (click && text = "Quit") {
         obj_levelTracker.variableObjectives = false
         activated = false;
     }
-}  else if (click && text = "Conflict Resolution Alternative") {
+}  else if (click && text = "Monster Avoidance Ability") {
     if (obj_levelTracker.conflictResolutionAlternatives == false) {
         obj_levelTracker.conflictResolutionAlternatives = true
         activated = true;
@@ -50,7 +50,7 @@ if (click && text = "Quit") {
     }
 }  else if (click && text = "Begin Second Player Attempt") {
     room_restart();
-} else if (click && text = "Indirect Competition") {
+} else if (click && text = "Play A Level Back To Back") {
     if (obj_levelTracker.indirectCompetition == false) {
         obj_levelTracker.indirectCompetition = true
         activated = true;
@@ -58,7 +58,7 @@ if (click && text = "Quit") {
         obj_levelTracker.indirectCompetition = false
         activated = false;
     }
-} else if (click && text = "Alternative Punishment") {
+} else if (click && text = "Wait Time Instead Of Death") {
     if (obj_levelTracker.alternativePunishment == false) {
         obj_levelTracker.alternativePunishment = true
         activated = true;
@@ -184,7 +184,7 @@ if (click && text = "Quit") {
         }
     }
     // changes control schemes
-} else if (click && text = "Left Handed") {
+} else if (click && text = "WASD Controls") {
     obj_disabilities.leftHandControls = true;
     obj_disabilities.rightHandControls = false;
     obj_disabilities.normal = false;
@@ -193,7 +193,7 @@ if (click && text = "Quit") {
     inst_303B7AD.activated = false;
     inst_4229D191.activated = false;
     inst_5072045A.activated = false;
-} else if (click && text = "Right Handed") {
+} else if (click && text = "Arrow Key Controls") {
     obj_disabilities.leftHandControls = false;
     obj_disabilities.rightHandControls = true;
     obj_disabilities.normal = false;
@@ -202,7 +202,7 @@ if (click && text = "Quit") {
     inst_188A1605.activated = false;
     inst_303B7AD.activated = false;
     inst_5072045A.activated = false;
-} else if (click && text = "Standard") {
+} else if (click && text = "Mouse and Arrow Key Controls") {
     obj_disabilities.leftHandControls = false;
     obj_disabilities.rightHandControls = false;
     obj_disabilities.normal = true;
@@ -211,7 +211,7 @@ if (click && text = "Quit") {
     inst_188A1605.activated = false;
     inst_4229D191.activated = false;
     inst_5072045A.activated = false;
-} else if (click && text = "Poor Reactivity") {
+} else if (click && text = "Slow Enemies and Increase Vision") {
     obj_disabilities.leftHandControls = false;
     obj_disabilities.rightHandControls = false;
     obj_disabilities.normal = false;
@@ -221,7 +221,7 @@ if (click && text = "Quit") {
     inst_303B7AD.activated = false;
     inst_4229D191.activated = false;
     // activates text to speech
-} else if (click && text = "Blind Mode") {
+} else if (click && text = "Text To Speak") {
     if (obj_disabilities.blindMode == false) {
         obj_disabilities.blindMode = true
         activated = true;
@@ -233,7 +233,7 @@ if (click && text = "Quit") {
 } else if (click && text == "Coming Soon") {
     error = true;
     // Activates and decativates different features
-} else if (click && text = "ADHD") {
+} else if (click && text = "Objective Reminder") {
     if (obj_disabilities.ADHD == false) {
         obj_disabilities.ADHD = true
         activated = true;
@@ -241,7 +241,7 @@ if (click && text = "Quit") {
         obj_disabilities.ADHD = false
         activated = false;
     }
-} else if (click && text = "Dyscalculia") {
+} else if (click && text = "Show Number Of Pollutants Pictorially") {
     if (obj_disabilities.dyscalculia == false) {
         obj_disabilities.dyscalculia = true
         activated = true
@@ -249,7 +249,7 @@ if (click && text = "Quit") {
         obj_disabilities.dyscalculia = false
         activated = false;
     }
-} else if (click && text = "Dyslexia") {
+} else if (click && text = "Change Font To Ariel") {
     if (obj_disabilities.dyslexia == false) {
         obj_disabilities.dyslexia = true
         activated = true;
@@ -257,7 +257,7 @@ if (click && text = "Quit") {
         obj_disabilities.dyslexia = false
         activated = false;
     }
-} else if (click && text = "Executive Functioning") {
+} else if (click && text = "Time Announcements") {
     if (obj_disabilities.executiveFunctioning == false) {
         obj_disabilities.executiveFunctioning = true
         activated = true;
@@ -265,7 +265,7 @@ if (click && text = "Quit") {
         obj_disabilities.executiveFunctioning = false
         activated = false;
     }
-} else if (click && text = "Auditory Processing Disorder") {
+} else if (click && text = "Remove Background Noise") {
     if (obj_disabilities.auditoryProcessingDisorder == false) {
         obj_disabilities.auditoryProcessingDisorder = true
         activated = true;

@@ -122,7 +122,6 @@ function stopRoomText() {
     audio_stop_sound(snd_tutorialNotPassed)
     audio_stop_sound(snd_tutorialPassed)
     audio_stop_sound(snd_tutorialsRecommended)
-    audio_stop_sound(snd_instructionsPagesix)
     audio_stop_sound(snd_instructionsPagefive)
     audio_stop_sound(snd_instructionsPagefour)
     audio_stop_sound(snd_instructionsPagethree)
@@ -132,7 +131,6 @@ function stopRoomText() {
     audio_stop_sound(snd_lostSingle)
     audio_stop_sound(snd_win)
     audio_stop_sound(snd_TheDeep)
-    audio_stop_sound(snd_instructionsPagesix)
 }
 
 function stopTrainerSounds() {

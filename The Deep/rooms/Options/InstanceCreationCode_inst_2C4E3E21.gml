@@ -1,6 +1,6 @@
-text = "Variable Objectives"
+text = "Destroy Enemies With Barriers"
 soundToPlay = snd_variableObjectives;
 if(obj_levelTracker.variableObjectives == true){
 	activated = true;
 }
-width = 1100;
+width = 1350;

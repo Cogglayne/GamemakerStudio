@@ -1,7 +1,7 @@
 draw_self()
 // draws text when the monster is close enough to the swimmer
 if (instance_exists(obj_swimmer)) {
-    if (point_distance(obj_swimmer.x, obj_swimmer.y, x, y) <= audioMaxDistanceToBeHeard) {
+    if (point_distance(obj_swimmer.x, obj_swimmer.y, x, y) <= audioMaxDistanceToBeHeard && point_distance(obj_swimmer.x, obj_swimmer.y, x, y) >= audioMaxDistanceToBeHeard - 200) {
         text = "[Monster Roars]";
     } else {
         text = "";

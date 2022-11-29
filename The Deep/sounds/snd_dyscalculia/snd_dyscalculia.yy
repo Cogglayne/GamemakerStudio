@@ -15,7 +15,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_dyscalculia.mp3",
-  "duration": 0.992667,
+  "duration": 2.142,
   "parent": {
     "name": "Buttons",
     "path": "folders/Sounds/Buttons.yy",

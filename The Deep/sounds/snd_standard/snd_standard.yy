@@ -15,7 +15,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_standard.mp3",
-  "duration": 1.170863,
+  "duration": 1.724,
   "parent": {
     "name": "Buttons",
     "path": "folders/Sounds/Buttons.yy",

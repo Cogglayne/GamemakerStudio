@@ -15,7 +15,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_AuditoryProcessingDisorder.mp3",
-  "duration": 1.880833,
+  "duration": 1.515,
   "parent": {
     "name": "Buttons",
     "path": "folders/Sounds/Buttons.yy",

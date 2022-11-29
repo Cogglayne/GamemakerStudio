@@ -1,6 +1,6 @@
-text = "ADHD"
+text = "Objective Reminder"
 soundToPlay = snd_adhd
 if(obj_disabilities.ADHD == true){
 	activated = true;
 }
-width = 1100;
+width = 1350;

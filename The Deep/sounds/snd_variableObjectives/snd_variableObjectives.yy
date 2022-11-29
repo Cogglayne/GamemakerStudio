@@ -15,7 +15,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_variableObjectives.mp3",
-  "duration": 1.358333,
+  "duration": 1.880833,
   "parent": {
     "name": "Buttons",
     "path": "folders/Sounds/Buttons.yy",

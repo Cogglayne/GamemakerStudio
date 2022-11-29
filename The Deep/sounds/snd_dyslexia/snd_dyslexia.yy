@@ -15,7 +15,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_dyslexia.mp3",
-  "duration": 0.862,
+  "duration": 1.28,
   "parent": {
     "name": "Buttons",
     "path": "folders/Sounds/Buttons.yy",

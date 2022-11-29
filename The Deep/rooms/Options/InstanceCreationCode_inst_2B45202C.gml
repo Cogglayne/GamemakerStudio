@@ -1,6 +1,6 @@
-text = "Conflict Resolution Alternative"
+text = "Monster Avoidance Ability"
 soundToPlay = snd_conflictResolutionAlternatives
 if(obj_levelTracker.conflictResolutionAlternatives == true){
 	activated = true;
 }
-width = 1100;
+width = 1350;

@@ -15,7 +15,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_leftHanded.mp3",
-  "duration": 1.300939,
+  "duration": 1.097167,
   "parent": {
     "name": "Buttons",
     "path": "folders/Sounds/Buttons.yy",

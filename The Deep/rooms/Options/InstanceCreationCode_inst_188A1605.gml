@@ -1,6 +1,6 @@
-text = "Left Handed"
+text = "WASD Controls"
 soundToPlay = snd_leftHanded
 if(obj_disabilities.leftHandControls == true){
 	activated = true;
 }
-width = 1100;
+width = 1350;

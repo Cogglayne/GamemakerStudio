@@ -33,3 +33,4 @@ if (instance_exists(obj_swimmer)) {
         audio_stop_sound(snd_monster);
     }
 }
+show_debug_message(string(audio_sound_get_track_position(snd_monster)))

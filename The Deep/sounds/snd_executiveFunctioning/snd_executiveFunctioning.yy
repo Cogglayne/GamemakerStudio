@@ -15,7 +15,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_executiveFunctioning.mp3",
-  "duration": 1.306,
+  "duration": 1.071,
   "parent": {
     "name": "Buttons",
     "path": "folders/Sounds/Buttons.yy",

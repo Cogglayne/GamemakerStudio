@@ -15,7 +15,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_blindMode.mp3",
-  "duration": 1.248707,
+  "duration": 0.940333,
   "parent": {
     "name": "Buttons",
     "path": "folders/Sounds/Buttons.yy",

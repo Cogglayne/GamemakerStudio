@@ -1,6 +1,6 @@
-text = "Blind Mode"
+text = "Text To Speak"
 soundToPlay = snd_blindMode
 if(obj_disabilities.blindMode == true){
 	activated = true;
 }
-width = 1100;
+width = 1350;

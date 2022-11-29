@@ -5,7 +5,7 @@ if (obj_disabilities.dyscalculia) {
     drawLives()
 } else if (!obj_disabilities.dyscalculia) {
     if (room != TutorialAngler && room != TutorialMine && room != TutorialMonster && room != TutorialProbe && room != TutorialMonsterEvolvedOne && room != TutorialMonsterEvolvedTwo && room != TutorialMovement) {
-        draw_text_transformed_colour(x, y + 100, string(numPollutants), .5, .5, image_angle, c_white, c_white, c_white, c_white, 1);
+        draw_text_transformed_colour(x, y + 120, string(numPollutants), .5, .5, image_angle, c_white, c_white, c_white, c_white, 1);
     }
 }
 if (singleplayer) {
@@ -20,17 +20,17 @@ if (singleplayer) {
     }
     if (room != TutorialAngler && room != TutorialMine && room != TutorialMonster && room != TutorialProbe && room != TutorialMonsterEvolvedOne && room != TutorialMonsterEvolvedTwo && room != TutorialMovement) {
 		drawCircularBar(x, y - 110, avoidanceTimer, 5, c_white, 50, 1, 6)
+		drawBarriers()
+     if(obj_levelTracker.conflictResolutionAlternatives){
+		 	 drawAvoidanceCharges()
+	 }		
 		draw_text_transformed_colour(x, y - 100, string(timer), .5, .5, image_angle, c_white, c_white, c_white, c_white, 1);
         draw_text_transformed_colour(x, y - 200, text, .5, .5, image_angle, c_red, c_red, c_red, c_red, 2);
     }
 } else {
     draw_text_transformed_colour(x, y - 200, text, .5, .5, image_angle, c_white, c_white, c_white, c_white, 1);
 }
-  if (room != TutorialAngler && room != TutorialMine && room != TutorialMonster && room != TutorialProbe && room != TutorialMonsterEvolvedOne && room != TutorialMonsterEvolvedTwo && room != TutorialMovement) {
-     if(obj_levelTracker.conflictResolutionAlternatives){
-		 	 drawAvoidanceCharges()
-	 }
-    }
+
 draw_self();
 // draws the swimmers depending on the swimmer's state and direction
 switch (currentState) {

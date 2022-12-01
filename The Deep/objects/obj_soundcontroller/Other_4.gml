@@ -23,9 +23,6 @@ if (obj_disabilities.blindMode) {
     if (room == InstructionsPageFive) {
         audio_play_sound(snd_instructionsPagefive, 1, 0)
     }
-    if (room == InstructionsPageSix) {
-        audio_play_sound(snd_instructionsPagesix, 1, 0)
-    }
     if (room == MainMenu) {
         audio_play_sound(snd_TheDeep, 1, 0)
     }
@@ -54,6 +51,13 @@ if (obj_disabilities.blindMode) {
     if (room == LoseTwoPlayers) {
         audio_play_sound(snd_lostMulti, 1, 0)
     }
+	if(room == LevelFourDifficultySelector){
+		if(obj_levelTracker.variableObjectives){
+			audio_play_sound(snd_collectOrDestroy,1,0)
+		}else{
+			audio_play_sound(snd_collectPollutants,1,0)
+		}
+	}
 }
 
 

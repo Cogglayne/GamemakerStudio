@@ -196,10 +196,17 @@ if (room == MainMenu) {
     draw_text_transformed(2230, 100, "The", 4, 4, 0);
     draw_text_transformed(2130, 400, "Deep", 4, 4, 0);
 }
-if (room == LevelFourDifficultySelector) {
+if (room == Levels) {
     if (!obj_levelTracker.monsterTutorialCleared && !obj_levelTracker.mineTutorialCleared && !obj_levelTracker.probeTutorialCleared && !obj_levelTracker.anglerTutorialCleared && !obj_levelTracker.evolvedMonsterTutorialOneCleared && !obj_levelTracker.evolvedMonsterTutorialTwoCleared) {
         draw_text_transformed(400, 100, "Before continuing, completing the tutorials is recommended", 2, 2, 0);
     }
+}
+if(room == LevelFourDifficultySelector){
+    if (obj_levelTracker.variableObjectives) {
+        draw_text_transformed(100, 100, "Collect all the pollutants or destroy all the enemies using a barrier", 2, 2, 0);
+    }else{
+		draw_text_transformed(1650, 100, "Collect all the pollutants", 2, 2, 0);
+	}
 }
 if (room == TutorialClear) {
     draw_text_transformed(2000, 0, "Tutorial Passed", 2, 2, 0);
@@ -242,10 +249,11 @@ if (room == BestTimes) {
         draw_text_transformed(0, 300, "Level Four Hard: " + string(obj_levelTracker.levelFourHardTime) + " seconds", 1, 1, 0);
     }
 }
-if (LevelFour()) {
+if (room == Lose) {
     draw_text_transformed_colour(2200, 0, "Pollutant Disposal", 1, 1, image_angle, c_white, c_white, c_white, c_white, 1);
     draw_text_transformed_colour(1025, 100, " Each disposal unit is calibrated to neutralize a specific combination of chemicals", 1, 1, image_angle, c_white, c_white, c_white, c_white, 1);
-    draw_text_transformed_colour(1025, 200, "Each pollutant type has a unique chemical make up. Dispose of the pollutants properly", 1, 1, image_angle, c_white, c_white, c_white, c_white, 1);
+    draw_text_transformed_colour(1025, 200, " Each pollutant type has a unique chemical make up. The top left disposal unit", 1, 1, image_angle, c_white, c_white, c_white, c_white, 1);
+	draw_text_transformed_colour(1025, 300, " is the first disposal unit. Dispose of the pollutants properly.", 1, 1, image_angle, c_white, c_white, c_white, c_white, 1);
 }
 if (draw_get_font() == ft_dyslexia) {
     if (room == Credits) {

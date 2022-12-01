@@ -115,6 +115,8 @@ function stopButtonSounds() {
     audio_stop_sound(snd_anglerTutorial)
     audio_stop_sound(snd_nextTutorial)
     audio_stop_sound(snd_replayTutorial)
+	audio_stop_sound(snd_conflictResolutionAlternatives)
+	audio_stop_sound(snd_indirectCompetition)
 }
 
 function stopRoomText() {
@@ -131,6 +133,8 @@ function stopRoomText() {
     audio_stop_sound(snd_lostSingle)
     audio_stop_sound(snd_win)
     audio_stop_sound(snd_TheDeep)
+    audio_stop_sound(snd_collectOrDestroy)
+    audio_stop_sound(snd_collectPollutants)	
 }
 
 function stopTrainerSounds() {

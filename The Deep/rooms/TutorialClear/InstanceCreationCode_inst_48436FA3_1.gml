@@ -1,3 +1,3 @@
-text = "Singleplayer"
-targetRoom = Levels
-soundToPlay = snd_singleplayer
+text = "Main Menu"
+targetRoom = MainMenu
+soundToPlay = snd_mainMenu

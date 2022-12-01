@@ -16,6 +16,10 @@ if (hove) {
 var click = hover && mouse_check_button_pressed(mb_left);
 // transitions the button color
 hover = lerp(hover, hove, 0.1)
+if(click){
+	stopButtonSounds()
+	audio_play_sound(snd_menuSelection,1,0);
+}
 // changes what clicking a button will do depending on its text
 if (click && text = "Quit") {
     game_end();

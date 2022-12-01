@@ -15,7 +15,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_conflictResolutionAlternatives.mp3",
-  "duration": 2.194167,
+  "duration": 1.6195,
   "parent": {
     "name": "Buttons",
     "path": "folders/Sounds/Buttons.yy",

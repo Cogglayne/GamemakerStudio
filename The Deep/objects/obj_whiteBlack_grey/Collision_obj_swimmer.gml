@@ -29,7 +29,11 @@ if (obj_disabilities.blindMode) {
 instance_destroy(self);
 if (obj_levelTracker.swimmerOneSinglePlayer == false) {
     if (obj_levelTracker.swimmerOneNumPollutants == 0 && obj_levelTracker.swimmerTwoNumPollutants == 0) {
-        room_goto(WinTwoPlayers);
+	if(room == MultiplayerTutorial){
+		room_goto(MainMenu)
+	}else{
+		room_goto(WinTwoPlayers);		
+	}
     }
 } else if (obj_levelTracker.swimmerOneSinglePlayer == true) {
     if (obj_swimmer.numPollutants == 0) {

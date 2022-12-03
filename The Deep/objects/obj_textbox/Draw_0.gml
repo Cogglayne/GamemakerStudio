@@ -44,17 +44,17 @@ if (room == InstructionsPageFour) {
     draw_text_transformed(0, 1250, " automatically stop being dragged when releasing left click. Press control to temporarily avoid monsters.", 1, 1, 0);
 }
 if (room == InstructionsPageFive) {
-    draw_text_transformed(0, 0, "Blind Mode is deactivated and activated by the Blind Mode button in options", 1, 1, 0);
-    draw_text_transformed(0, 100, "ADHD is deactivated and activated by the ADHD button in options", 1, 1, 0);
-    draw_text_transformed(0, 200, "Dyscalculia is deactivated and activated by the Dyscalculia button in options.", 1, 1, 0);
-    draw_text_transformed(0, 300, "Executive Functioning is deactivated and activated by the Executive Functioning button in options.", 1, 1, 0);
-    draw_text_transformed(0, 400, "Dyslexia is deactivated and activated by the Dyslexia button in options.", 1, 1, 0);
-    draw_text_transformed(0, 500, "Auditory Processing Disorder is deactivated and activated by the Auditory Processing Disorder button in options.", 1, 1, 0);
-    draw_text_transformed(0, 600, "The tutorials are accessed by clicking singleplayer and then clicking tutorials.", 1, 1, 0);
-    draw_text_transformed(0, 700, "Alternative Punishment is deactivated and activated by the Alternative Punishment button in options.", 1, 1, 0);
-    draw_text_transformed(0, 800, "Variable Objectives is deactivated and activated by the Variable Objectives button in options.", 1, 1, 0);
-    draw_text_transformed(0, 900, "Indirect Competition is deactivated and activated by the Indirect Competition button in options.", 1, 1, 0);
-    draw_text_transformed(0, 1000, "Alternative Punishment is deactivated and activated by the Alternative Punishment button in options.", 1, 1, 0);
+    draw_text_transformed(0, 0, "Blind Mode is deactivated and activated by the Text To Speak button in options", 1, 1, 0);
+    draw_text_transformed(0, 100, "ADHD is deactivated and activated by the Objective Reminder button in options", 1, 1, 0);
+    draw_text_transformed(0, 200, "Dyscalculia is deactivated and activated by the Show Number of Pollutants Pictorially button in options.", 1, 1, 0);
+    draw_text_transformed(0, 300, "Executive Functioning is deactivated and activated by the Time Announcements button in options.", 1, 1, 0);
+    draw_text_transformed(0, 400, "Dyslexia is deactivated and activated by the Change Font To Ariel button in options.", 1, 1, 0);
+    draw_text_transformed(0, 500, "Auditory Processing Disorder is deactivated and activated by the Remove Background Noise button in options.", 1, 1, 0);
+    draw_text_transformed(0, 600, "The tutorials are accessed by clicking singleplayer tutorials or multiplayer tutorial.", 1, 1, 0);
+    draw_text_transformed(0, 700, "Alternative Punishment is deactivated and activated by the Wait Time Instead of Death button in options.", 1, 1, 0);
+    draw_text_transformed(0, 800, "Variable Objectives is deactivated and activated by the Destroy Enemies With Barriers button in options.", 1, 1, 0);
+    draw_text_transformed(0, 900, "Indirect Competition is deactivated and activated by the Play A Level Back To Back button in options.", 1, 1, 0);
+    draw_text_transformed(0, 1000, "Conflict Resolution Alternative is deactivated and activated by the Monster Avoidance Ability button in options.", 1, 1, 0);
 }
 if (room == Grading) {
     draw_text_transformed(2100, 0, "Motivations", 2, 2, 0);
@@ -249,7 +249,7 @@ if (room == BestTimes) {
         draw_text_transformed(0, 300, "Level Four Hard: " + string(obj_levelTracker.levelFourHardTime) + " seconds", 1, 1, 0);
     }
 }
-if (room == Lose) {
+if (LevelFour()) {
     draw_text_transformed_colour(2200, 0, "Pollutant Disposal", 1, 1, image_angle, c_white, c_white, c_white, c_white, 1);
     draw_text_transformed_colour(1025, 100, " Each disposal unit is calibrated to neutralize a specific combination of chemicals", 1, 1, image_angle, c_white, c_white, c_white, c_white, 1);
     draw_text_transformed_colour(1025, 200, " Each pollutant type has a unique chemical make up. The top left disposal unit", 1, 1, image_angle, c_white, c_white, c_white, c_white, 1);

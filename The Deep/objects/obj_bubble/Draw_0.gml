@@ -1,5 +1,5 @@
-draw_self();
-if (point_distance(obj_swimmer.x, obj_swimmer.y, x, y + 50) <= audioMaxDistanceToBeHeard) {
+ draw_self();
+if (point_distance(obj_swimmer.x, obj_swimmer.y, x, y + 50) <= audioMaxDistanceToBeHeard && point_distance(obj_swimmer.x, obj_swimmer.y, x, y + 50) >= audioMaxDistanceToBeHeard - 175) {
     text = "[Bubbling From Polluted Ocean Plant Life]"
 } else {
     text = "";

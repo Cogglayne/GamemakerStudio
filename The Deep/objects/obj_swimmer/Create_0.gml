@@ -11,6 +11,10 @@ audio_listener_orientation(0, -1, 0, 0, 0, 1)
 vsp = 0;
 hsp = 0;
 mvspeed = 6
+left = 0;
+right = 0;
+up = 0;
+down = 0;
 // double tapping keys
 leftArrowDoubleClick = 0;
 rightArrowDoubleClick = 0;

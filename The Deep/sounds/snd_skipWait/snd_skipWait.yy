@@ -15,7 +15,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_skipWait.mp3",
-  "duration": 1.541167,
+  "duration": 1.698,
   "parent": {
     "name": "Buttons",
     "path": "folders/Sounds/Buttons.yy",

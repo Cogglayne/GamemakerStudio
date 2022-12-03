@@ -1,2 +1,2 @@
-text = "Skip Wait for $1"
+text = "Skip Wait for $.50"
 soundToPlay = snd_skipWait

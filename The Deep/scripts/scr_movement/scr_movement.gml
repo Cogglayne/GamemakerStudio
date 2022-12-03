@@ -10,4 +10,5 @@ function playerTwoMovement() {
     keyDown = keyboard_check(vk_down);
     keyLeft = keyboard_check(vk_left);
     keyRight = keyboard_check(vk_right);
+	show_debug_message(string(keyLeft))
 }

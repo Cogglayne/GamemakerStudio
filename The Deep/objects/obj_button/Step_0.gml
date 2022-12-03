@@ -150,7 +150,7 @@ if (click && text = "Quit") {
     obj_microtransactions.enemiesSlowed = true;
 	obj_microtransactions.enemiesSlowedBought = true;
     activated = true;
-} else if (click && text = "Continue level for $1") {
+} else if (click && text = "Continue level for $.50") {
     obj_microtransactions.extraLife = true;
     obj_levelTracker.textShouldBeShowing = false;
     instance_activate_layer("Whales")
@@ -158,7 +158,7 @@ if (click && text = "Quit") {
     instance_activate_layer("Instances")
     instance_activate_layer("LightInstance")
     instance_deactivate_layer("Extra")
-} else if (click && text = "Skip Wait for $1") {
+} else if (click && text = "Skip Wait for $.50") {
     obj_microtransactions.extraLife = true;
     obj_levelTracker.textShouldBeShowing = false;
     instance_destroy(obj_wait)

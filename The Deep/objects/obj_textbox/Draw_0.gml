@@ -44,17 +44,17 @@ if (room == InstructionsPageFour) {
     draw_text_transformed(0, 1250, " automatically stop being dragged when releasing left click. Press control to temporarily avoid monsters.", 1, 1, 0);
 }
 if (room == InstructionsPageFive) {
-    draw_text_transformed(0, 0, "Blind Mode is deactivated and activated by the Text To Speak button in options", 1, 1, 0);
-    draw_text_transformed(0, 100, "ADHD is deactivated and activated by the Objective Reminder button in options", 1, 1, 0);
-    draw_text_transformed(0, 200, "Dyscalculia is deactivated and activated by the Show Number of Pollutants Pictorially button in options.", 1, 1, 0);
-    draw_text_transformed(0, 300, "Executive Functioning is deactivated and activated by the Time Announcements button in options.", 1, 1, 0);
-    draw_text_transformed(0, 400, "Dyslexia is deactivated and activated by the Change Font To Ariel button in options.", 1, 1, 0);
-    draw_text_transformed(0, 500, "Auditory Processing Disorder is deactivated and activated by the Remove Background Noise button in options.", 1, 1, 0);
-    draw_text_transformed(0, 600, "The tutorials are accessed by clicking singleplayer tutorials or multiplayer tutorial.", 1, 1, 0);
-    draw_text_transformed(0, 700, "Alternative Punishment is deactivated and activated by the Wait Time Instead of Death button in options.", 1, 1, 0);
-    draw_text_transformed(0, 800, "Variable Objectives is deactivated and activated by the Destroy Enemies With Barriers button in options.", 1, 1, 0);
-    draw_text_transformed(0, 900, "Indirect Competition is deactivated and activated by the Play A Level Back To Back button in options.", 1, 1, 0);
-    draw_text_transformed(0, 1000, "Conflict Resolution Alternative is deactivated and activated by the Monster Avoidance Ability button in options.", 1, 1, 0);
+    draw_text_transformed(0, 0, "Blind Mode is deactivated and activated by the Text To Speak button in options.", 1, 1, 0);
+    draw_text_transformed(0, 125, "ADHD is deactivated and activated by the Objective Reminder button in options.", 1, 1, 0);
+    draw_text_transformed(0, 250, "Dyscalculia is deactivated and activated by the Show Number of Pollutants Pictorially button in options.", 1, 1, 0);
+    draw_text_transformed(0, 375, "Executive Functioning is deactivated and activated by the Time Announcements button in options.", 1, 1, 0);
+    draw_text_transformed(0, 500, "Dyslexia is deactivated and activated by the Change Font To Ariel button in options.", 1, 1, 0);
+    draw_text_transformed(0, 625, "Auditory Processing Disorder is deactivated and activated by the Remove Background Noise button in options.", 1, 1, 0);
+    draw_text_transformed(0, 750, "The tutorials are accessed by clicking singleplayer tutorials or multiplayer tutorial.", 1, 1, 0);
+    draw_text_transformed(0, 875, "Alternative Punishment is deactivated and activated by the Wait Time Instead of Death button in options.", 1, 1, 0);
+    draw_text_transformed(0, 1000, "Variable Objectives is deactivated and activated by the Destroy Enemies With Barriers button in options.", 1, 1, 0);
+    draw_text_transformed(0, 1125, "Indirect Competition is deactivated and activated by the Play A Level Back To Back button in options.", 1, 1, 0);
+    draw_text_transformed(0, 1250, "Conflict Resolution Alternative is deactivated and activated by the Monster Avoidance Ability button in options.", 1, 1, 0);
 }
 if (room == Grading) {
     draw_text_transformed(2100, 0, "Motivations", 2, 2, 0);

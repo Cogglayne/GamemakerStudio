@@ -4,7 +4,7 @@
   "name": "snd_instructionsPagefive",
   "conversionMode": 0,
   "compression": 0,
-  "volume": 0.0,
+  "volume": 1.0,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -15,7 +15,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_instructionsPagefive.mp3",
-  "duration": 69.0155,
+  "duration": 61.5705,
   "parent": {
     "name": "Room Text",
     "path": "folders/Sounds/Room Text.yy",

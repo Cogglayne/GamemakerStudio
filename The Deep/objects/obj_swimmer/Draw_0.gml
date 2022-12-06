@@ -19,7 +19,7 @@ if (singleplayer) {
         draw_text_transformed_colour(x, y - 200, text, .5, .5, image_angle, c_white, c_white, c_white, c_white, 1);
     }
     if (room != TutorialAngler && room != TutorialMine && room != TutorialMonster && room != TutorialProbe && room != TutorialMonsterEvolvedOne && room != TutorialMonsterEvolvedTwo && room != TutorialMovement) {
-		drawCircularBar(x, y - 110, avoidanceTimer, 5, c_white, 50, 1, 6)
+		drawCircularBar(x, y - 110, avoidanceTimer, 5, #FBFFFF, 50, 1, 12)
 		drawBarriers()
      if(obj_levelTracker.conflictResolutionAlternatives){
 		 	 drawAvoidanceCharges()

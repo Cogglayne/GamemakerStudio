@@ -44,7 +44,7 @@
     {"id":{"name":"ft_dyslexia","path":"fonts/ft_dyslexia/ft_dyslexia.yy",},"order":1,},
     {"id":{"name":"Store","path":"rooms/Store/Store.yy",},"order":2,},
     {"id":{"name":"snd_intro","path":"sounds/snd_intro/snd_intro.yy",},"order":8,},
-    {"id":{"name":"snd_error","path":"sounds/snd_error/snd_error.yy",},"order":15,},
+    {"id":{"name":"snd_avoidanceActivation","path":"sounds/snd_avoidanceActivation/snd_avoidanceActivation.yy",},"order":15,},
     {"id":{"name":"snd_quit","path":"sounds/snd_quit/snd_quit.yy",},"order":5,},
     {"id":{"name":"obj_insanity","path":"objects/obj_insanity/obj_insanity.yy",},"order":8,},
     {"id":{"name":"snd_barrierCreation","path":"sounds/snd_barrierCreation/snd_barrierCreation.yy",},"order":3,},

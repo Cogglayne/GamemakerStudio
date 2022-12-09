@@ -103,6 +103,7 @@ if (room == GradingPageThree) {
     draw_text_transformed(0, 1100, "For players with poor reactivity I kept the same control scheme as the standard control scheme but, I increased the distance from", 1, 1, 0)
     draw_text_transformed(0, 1200, "the swimmer that barriers spawn giving these players more time to redirect enemies, I added more vision to each difficulty setting", 1, 1, 0)
     draw_text_transformed(0, 1300, "to enable these players to see more of the game at once, and I slowed down all of the enemies.", 1, 1, 0)
+	draw_text_transformed(0, 1400, "These features are activated and deactivated in options.", 1, 1, 0)
 }
 if (room == GradingPageFour) {
     draw_text_transformed(2100, 0, "Blind Gamers", 2, 2, 0);
@@ -120,7 +121,7 @@ if (room == GradingPageFour) {
     draw_text_transformed(0, 1300, "The number of pollutants remaining is spoken aloud every time the swimmer collects a pollutant. The pollutants and pollutant", 1, 1, 0)
     draw_text_transformed(0, 1400, "disposal units indicate their color(s) when the player hovers over them with the mouse during the puzzle. I also made the", 1, 1, 0)
     draw_text_transformed(0, 1500, "totems say their name when the swimmer gets close to them, that way the player knows which totem is which. Finally I added", 1, 1, 0)
-    draw_text_transformed(0, 1600, "text to speek for the puzzle text to give blind players an idea of what the puzzle solution is.", 1, 1, 0)
+    draw_text_transformed(0, 1600, "text-to-speak for the puzzle text to give blind players an idea of what the puzzle solution is. Text-to-speak is activated in options.", 1, 1, 0)
 }
 if (room == GradingPageFive) {
     draw_text_transformed(2200, 0, "Tutorials", 2, 2, 0);
@@ -150,7 +151,7 @@ if (room == GradingPageSix) {
     draw_text_transformed(0, 600, "has the trainer tell the player what they are supposed to do in the current stage of the tutorial. Each tutorial notifies the player ", 1, 1, 0)
     draw_text_transformed(0, 700, "when they have succesfully completed a task and notifies them when they have made a mistake in the tutorial, the tutorial then undoes ", 1, 1, 0)
     draw_text_transformed(0, 800, "the mistake and lets the player continue, this only applies if the mistake does not cause the player to fail the tutorial (caused", 1, 1, 0)
-    draw_text_transformed(0, 900, "the player to die).", 1, 1, 0)
+    draw_text_transformed(0, 900, "the player to die) Tutorials are on the main menu.", 1, 1, 0)
 }
 if (room == GradingPageSeven) {
     draw_text_transformed(1900, 0, "Learning Disabilities", 2, 2, 0);
@@ -184,13 +185,20 @@ if (room == GradingPageEight) {
     draw_text_transformed(0, 1100, "by a circle that is drawn incrementally around the timer. Alternative Punishments enabling this feature changes a collision from", 1, 1, 0)
     draw_text_transformed(0, 1200, "killing the player to instead making them wait five seconds before they can continue a level. The player then has temporary", 1, 1, 0)
     draw_text_transformed(0, 1300, "invulnerability. I also extended the extra life microtransaction to instead be a skip wait timer transaction. For variable objectives", 1, 1, 0)
-    draw_text_transformed(0, 1400, "the remaining number of deflects requrired to destroy the enemy is shown above them.", 1, 1, 0)
+    draw_text_transformed(0, 1400, "the remaining number of deflects required to destroy the enemy is shown above them.", 1, 1, 0)
 }
 draw_set_color(c_white)
 if (obj_disabilities.dyslexia) {
     draw_set_font(ft_dyslexia)
 } else if (!obj_disabilities.dyslexia) {
     draw_set_font(ft_scaryFont);
+}
+if(room == Options){
+	draw_text_transformed(0, 1200, "Mouse and Arrow Key Controls is the standard controls, WASD Controls is left handed controls, Arrow Key Controls is right handed ", 1, 1, 0);
+	draw_text_transformed(0, 1300, "controls, Decrease Reaction Time Required is Poor Reactivity, Text To Speak is Blind Mode, Objective Reminder is ADHD, Show Number of ", 1, 1, 0);
+	draw_text_transformed(0, 1400, "Pollutants Pictorially is Dyscalculia, Time Announcements is Executive Functioning, Dyslexia is Change Font to Ariel, Auditory Processing", 1, 1, 0);
+	draw_text_transformed(0, 1500, "Disorder is Remove Background Noise, Alternative Punishement is Wait Time Instead Of Death, Variable Objectives is Destroy Enemies with ", 1, 1, 0);
+	draw_text_transformed(0, 1600, "Barriers, Indirect Competition is Play A Level Back To Back, Conflict Resolution Alternative is Monster Avoidance Ability. ", 1, 1, 0);
 }
 if (room == MainMenu) {
     draw_text_transformed(2230, 100, "The", 4, 4, 0);

@@ -15,7 +15,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_poorReactivity.mp3",
-  "duration": 1.933,
+  "duration": 2.115833,
   "parent": {
     "name": "Buttons",
     "path": "folders/Sounds/Buttons.yy",

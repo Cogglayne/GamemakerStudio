@@ -1,3 +1,3 @@
-text = "Next"
-targetRoom = InstructionsPageFive
-soundToPlay = snd_next
+text = "Main Menu"
+targetRoom = MainMenu
+soundToPlay = snd_mainMenu

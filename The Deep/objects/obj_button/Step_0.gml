@@ -233,6 +233,15 @@ if (click && text = "Quit") {
         obj_disabilities.blindMode = false
         activated = false;
     }
+    // activates closed captioning
+}	else if (click && text = "Closed Captioning") {
+    if (obj_disabilities.closedCaptioning == false) {
+        obj_disabilities.closedCaptioning = true
+        activated = true;
+    } else if (obj_disabilities.closedCaptioning == true) {
+        obj_disabilities.closedCaptioning = false
+        activated = false;
+    }
     // shows a button does not go anywhere
 } else if (click && text == "Coming Soon") {
     error = true;

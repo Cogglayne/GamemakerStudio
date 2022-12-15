@@ -9,6 +9,7 @@ ADHD = false;
 executiveFunctioning = false;
 dyslexia = false;
 auditoryProcessingDisorder = false
+closedCaptioning = false;
 load();
 
 

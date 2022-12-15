@@ -1,3 +1,3 @@
 text = "Back";
-targetRoom = Instructions;
+targetRoom = InstructionsPageOne;
 soundToPlay = snd_back

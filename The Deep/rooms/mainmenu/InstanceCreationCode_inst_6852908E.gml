@@ -1,3 +1,3 @@
 text = "Instructions";
-targetRoom = Instructions;
+targetRoom = InstructionsPageOne;
 soundToPlay = snd_Instructions

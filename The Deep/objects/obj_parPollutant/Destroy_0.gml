@@ -1,5 +1,13 @@
-audio_emitter_free(whiteRedEmiter)
+audio_emitter_free(pollutantEmitter)
 instance_create_layer(x, y, "Instances", obj_pollutantPickUpText)
+
+
+
+
+
+
+
+
 
 
 

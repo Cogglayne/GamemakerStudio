@@ -1,15 +1,17 @@
 draw_set_font(ft_dyslexia)
 draw_set_color(c_orange)
 if (room == Instructions) {
-    draw_text_transformed(0, 0, " Mouse and Arrow Key Controls (activated by the Mouse and Arrow Key Controls button in options, deactivates all other control schemes).", 1, 1, 0);
-    draw_text_transformed(0, 125, " Up Arrow Key To Swim Up, Down Arrow Key To Swim Down, Left Arrow Key To Swim Left, Right Arrow Key To Swim Right.", 1, 1, 0);
-    draw_text_transformed(0, 250, " Left click to the left or right of the swimmer to spawn a barrier that can redirect monsters.", 1, 1, 0);
-    draw_text_transformed(0, 375, " Right click above or below the swimmer to spawn a barrier that can redirect mines.", 1, 1, 0);
-    draw_text_transformed(0, 500, " The mine and monster barriers can also redirect the evolved monsters that swim diagonally.", 1, 1, 0);
-    draw_text_transformed(0, 625, " Pressing control spawns a probe at the swimmer's location that will go towards the mouse cursor to give you vision in a direction.", 1, 1, 0);
-    draw_text_transformed(0, 750, " Press shift to turn your light off and on to hide from the angler.", 1, 1, 0);
-    draw_text_transformed(0, 875, " For the puzzle drag the pollutants to their disposal unit using left click, left click again if the pollutant does not", 1, 1, 0);
-    draw_text_transformed(0, 1000, " automatically stop being dragged when releasing left click. Press Numpad 0 to temporarily avoid monsters.", 1, 1, 0);
+draw_text_ext(0, 0, 
+@"Mouse and Arrow Key Controls (activated by the Mouse and Arrow Key Controls button in options, deactivates all other control schemes). 
+Up Arrow Key To Swim Up, Down Arrow Key To Swim Down, Left Arrow Key To Swim Left, Right Arrow Key To Swim Right.
+Left click to the left or right of the swimmer to spawn a barrier that can redirect monsters.
+Right click above or below the swimmer to spawn a barrier that can redirect mines.
+The mine and monster barriers can also redirect the evolved monsters that swim diagonally.
+Pressing control spawns a probe at the swimmer's location that will go towards the mouse cursor to give you vision in a direction.
+Press shift to turn your light off and on to hide from the angler.
+For the puzzle drag the pollutants to their disposal unit using left click, left click again if the pollutant does not
+automatically stop being dragged when releasing left click. Press Numpad 0 to temporarily avoid monsters.
+", 125, 7000);
 }
 if (room == InstructionsPageTwo) {
     draw_text_transformed(0, 0, " Swimmer Right (Multiplayer).", 1, 1, 0);
@@ -192,13 +194,6 @@ if (obj_disabilities.dyslexia) {
     draw_set_font(ft_dyslexia)
 } else if (!obj_disabilities.dyslexia) {
     draw_set_font(ft_scaryFont);
-}
-if(room == Options){
-	draw_text_transformed(0, 1200, "Mouse and Arrow Key Controls is the standard controls, WASD Controls is left handed controls, Arrow Key Controls is right handed ", 1, 1, 0);
-	draw_text_transformed(0, 1300, "controls, Decrease Reaction Time Required is Poor Reactivity, Text To Speak is Blind Mode, Objective Reminder is ADHD, Show Number of ", 1, 1, 0);
-	draw_text_transformed(0, 1400, "Pollutants Pictorially is Dyscalculia, Time Announcements is Executive Functioning, Dyslexia is Change Font to Ariel, Auditory Processing", 1, 1, 0);
-	draw_text_transformed(0, 1500, "Disorder is Remove Background Noise, Alternative Punishement is Wait Time Instead Of Death, Variable Objectives is Destroy Enemies with ", 1, 1, 0);
-	draw_text_transformed(0, 1600, "Barriers, Indirect Competition is Play A Level Back To Back, Conflict Resolution Alternative is Monster Avoidance Ability. ", 1, 1, 0);
 }
 if (room == MainMenu) {
     draw_text_transformed(2230, 100, "The", 4, 4, 0);

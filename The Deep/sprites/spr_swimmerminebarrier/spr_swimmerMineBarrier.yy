@@ -68,7 +68,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "player spawns",
-    "path": "folders/Sprites/player spawns.yy",
+    "name": "Player Spawns",
+    "path": "folders/Sprites/Player Spawns.yy",
   },
 }

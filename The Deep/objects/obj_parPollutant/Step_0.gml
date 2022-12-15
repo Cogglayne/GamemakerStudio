@@ -1,5 +1,5 @@
 if (state = 0 && !puzzleActive) {
-    audio_play_sound_on(whiteBlackEmiter, snd_pollutant, 1, 1)
+    audio_play_sound_on(pollutantEmitter, snd_pollutant, 1, 1)
     state = 1
 }
 if (position_meeting(mouse_x, mouse_y, self) && puzzleActive && obj_disabilities.blindMode && dragged == false) {
@@ -27,6 +27,29 @@ if (instance_exists(obj_swimmer)) {
         audio_stop_sound(snd_pollutant);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -51,6 +51,7 @@
     {"id":{"name":"snd_probeTutorialActive","path":"sounds/snd_probeTutorialActive/snd_probeTutorialActive.yy",},"order":10,},
     {"id":{"name":"TutorialMine","path":"rooms/TutorialMine/TutorialMine.yy",},"order":1,},
     {"id":{"name":"snd_anglerTutorialTrial","path":"sounds/snd_anglerTutorialTrial/snd_anglerTutorialTrial.yy",},"order":1,},
+    {"id":{"name":"obj_parEnemy","path":"objects/obj_parEnemy/obj_parEnemy.yy",},"order":7,},
     {"id":{"name":"obj_mine","path":"objects/obj_mine/obj_mine.yy",},"order":6,},
     {"id":{"name":"obj_blackPollutantDisposer","path":"objects/obj_blackPollutantDisposer/obj_blackPollutantDisposer.yy",},"order":0,},
     {"id":{"name":"TutorialProbe","path":"rooms/TutorialProbe/TutorialProbe.yy",},"order":4,},

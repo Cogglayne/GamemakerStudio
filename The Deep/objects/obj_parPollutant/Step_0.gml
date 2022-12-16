@@ -1,4 +1,4 @@
-if (state = 0 && !puzzleActive) {
+if (state = 0 && !puzzleActive && (!instance_exists(obj_swimmerTwo) && obj_swimmer.singleplayer)) {
     audio_play_sound_on(pollutantEmitter, snd_pollutant, 1, 1)
     state = 1
 }
@@ -16,19 +16,6 @@ if (dragged == false) {
     x = mouse_x + xx;
     y = mouse_y + yy;
 }
-
-
-// stops sound in multiplayer
-if (instance_exists(obj_swimmerTwo)) {
-    audio_stop_sound(snd_pollutant);
-}
-if (instance_exists(obj_swimmer)) {
-    if (!obj_swimmer.singleplayer) {
-        audio_stop_sound(snd_pollutant);
-    }
-}
-
-
 
 
 

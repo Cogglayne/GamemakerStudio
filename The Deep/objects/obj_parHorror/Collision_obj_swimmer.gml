@@ -1,6 +1,5 @@
-if (!obj_microtransactions.extraLife && !tutorialEnemy) {
+if (!obj_microtransactions.extraLife && !obj_swimmer.avoidanceTime && !tutorialEnemy) {
     audio_play_sound(snd_playerdie, 1, 0)
-    audio_stop_sound(snd_swimming)
     obj_levelTracker.textShouldBeShowing = true;
     stopGameSounds()
     if (room == TutorialAngler) {
@@ -12,6 +11,10 @@ if (!obj_microtransactions.extraLife && !tutorialEnemy) {
     instance_deactivate_layer("Whales")
     instance_deactivate_layer("AmbientBackground")
 }
+
+
+
+
 
 
 

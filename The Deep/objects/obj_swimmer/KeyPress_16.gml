@@ -19,6 +19,7 @@ if (singleplayer == true) {
                         obj_horrorTutorial.tutorialEnemy = false;
                     }
                     if (obj_trainer.anglerTutorialTrial && obj_trainer.numHits == 2) {
+						stopGameSounds()
                         obj_levelTracker.anglerTutorialCleared = true
                         instance_destroy(obj_horrorTutorial)
                         obj_trainer.numHits = 0;

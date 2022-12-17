@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_parEnemy",
+  "name": "obj_parPatrollingEnemy",
   "spriteId": null,
   "solid": false,
   "visible": true,

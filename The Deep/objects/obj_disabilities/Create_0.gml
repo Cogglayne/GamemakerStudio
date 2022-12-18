@@ -10,6 +10,7 @@ executiveFunctioning = false;
 dyslexia = false;
 auditoryProcessingDisorder = false
 closedCaptioning = false;
+sonar = false;
 load();
 
 

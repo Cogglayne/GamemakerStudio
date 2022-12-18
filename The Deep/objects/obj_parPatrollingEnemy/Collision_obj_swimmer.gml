@@ -1,4 +1,5 @@
 if (obj_levelTracker.swimmerOneSinglePlayer == false) {
+	 audio_play_sound(snd_playerdie, 1, 0)
     // destroys swimmer object
     instance_destroy(other)
     instance_destroy(obj_light)
@@ -16,7 +17,7 @@ if (obj_levelTracker.swimmerOneSinglePlayer == false) {
     if (!instance_exists(obj_swimmerTwo)) {
         room_goto(LoseTwoPlayers)
     }
-}
+}else{
 if (!obj_microtransactions.extraLife && !tutorialEnemy && !obj_swimmer.avoidanceTime) {
     // if the extra life cosmetic life is not active and the evolve
     // monster is not a tutorial enemy
@@ -47,6 +48,8 @@ if (!obj_microtransactions.extraLife && !tutorialEnemy && !obj_swimmer.avoidance
         }
     }
 }
+}
+
 
 
  

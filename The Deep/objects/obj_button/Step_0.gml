@@ -233,8 +233,17 @@ if (click && text = "Quit") {
         obj_disabilities.blindMode = false
         activated = false;
     }
+    // activates sonar
+} else if (click && text = "Sonar") {
+    if (obj_disabilities.sonar == false) {
+        obj_disabilities.sonar = true
+        activated = true;
+    } else if (obj_disabilities.sonar == true) {
+        obj_disabilities.sonar = false
+        activated = false;
+    }
     // activates closed captioning
-}	else if (click && text = "Closed Captioning") {
+}  else if (click && text = "Closed Captioning") {
     if (obj_disabilities.closedCaptioning == false) {
         obj_disabilities.closedCaptioning = true
         activated = true;

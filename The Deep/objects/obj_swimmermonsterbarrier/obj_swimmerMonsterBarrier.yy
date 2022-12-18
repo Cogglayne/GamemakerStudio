@@ -11,7 +11,10 @@
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_parBarrier",
+    "path": "objects/obj_parBarrier/obj_parBarrier.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -24,17 +27,15 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":1,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":5,"eventType":7,"collisionObjectId":null,},
-  ],
+  "eventList": [],
   "properties": [],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"monster","path":"objects/obj_parBarrier/obj_parBarrier.yy",},"objectId":{"name":"obj_parBarrier","path":"objects/obj_parBarrier/obj_parBarrier.yy",},"value":"True",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"yTextOffset","path":"objects/obj_parBarrier/obj_parBarrier.yy",},"objectId":{"name":"obj_parBarrier","path":"objects/obj_parBarrier/obj_parBarrier.yy",},"value":"60",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"swimmer","path":"objects/obj_parBarrier/obj_parBarrier.yy",},"objectId":{"name":"obj_parBarrier","path":"objects/obj_parBarrier/obj_parBarrier.yy",},"value":"obj_swimmer",},
+  ],
   "parent": {
-    "name": "Player One",
-    "path": "folders/Objects/Players/Player One.yy",
+    "name": "Child Barriers",
+    "path": "folders/Objects/Barriers/Child Barriers.yy",
   },
 }

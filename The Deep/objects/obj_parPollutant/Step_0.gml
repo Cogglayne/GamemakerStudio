@@ -1,21 +1,8 @@
-if (state = 0 && !puzzleActive && (!instance_exists(obj_swimmerTwo) && obj_swimmer.singleplayer)) {
+if (state = 0 && (!instance_exists(obj_swimmerTwo) && obj_swimmer.singleplayer)) {
     audio_play_sound_on(pollutantEmitter, snd_pollutant, 1, 1)
     state = 1
 }
-if (position_meeting(mouse_x, mouse_y, self) && puzzleActive && obj_disabilities.blindMode && dragged == false) {
-    if (!audio_is_playing(snd_whiteandblack) && !soundHasBeenPlayed) {
-        audio_play_sound(snd_whiteandblack, 1, 0)
-        soundHasBeenPlayed = true;
-    }
-} else {
-    soundHasBeenPlayed = false;
-}
-if (dragged == false) {
-    exit;
-} else {
-    x = mouse_x + xx;
-    y = mouse_y + yy;
-}
+audio_emitter_position(pollutantEmitter, x, y, 0)
 
 
 

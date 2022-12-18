@@ -11,7 +11,10 @@
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_parBarrier",
+    "path": "objects/obj_parBarrier/obj_parBarrier.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -26,9 +29,12 @@
   "physicsShapePoints": [],
   "eventList": [],
   "properties": [],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"mine","path":"objects/obj_parBarrier/obj_parBarrier.yy",},"objectId":{"name":"obj_parBarrier","path":"objects/obj_parBarrier/obj_parBarrier.yy",},"value":"True",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"swimmer","path":"objects/obj_parBarrier/obj_parBarrier.yy",},"objectId":{"name":"obj_parBarrier","path":"objects/obj_parBarrier/obj_parBarrier.yy",},"value":"obj_swimmerTwo",},
+  ],
   "parent": {
-    "name": "Player Two",
-    "path": "folders/Objects/Players/Player Two.yy",
+    "name": "Child Barriers",
+    "path": "folders/Objects/Barriers/Child Barriers.yy",
   },
 }

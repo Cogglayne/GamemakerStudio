@@ -11,7 +11,10 @@
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_parTotem",
+    "path": "objects/obj_parTotem/obj_parTotem.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -24,16 +27,16 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_swimmer","path":"objects/obj_swimmer/obj_swimmer.yy",},},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
-  ],
+  "eventList": [],
   "properties": [],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"text","path":"objects/obj_parTotem/obj_parTotem.yy",},"objectId":{"name":"obj_parTotem","path":"objects/obj_parTotem/obj_parTotem.yy",},"value":"\"Totem of Recklessness\"",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"swimmerOneTotem","path":"objects/obj_parTotem/obj_parTotem.yy",},"objectId":{"name":"obj_parTotem","path":"objects/obj_parTotem/obj_parTotem.yy",},"value":"True",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"sound","path":"objects/obj_parTotem/obj_parTotem.yy",},"objectId":{"name":"obj_parTotem","path":"objects/obj_parTotem/obj_parTotem.yy",},"value":"snd_recklessness",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"spd","path":"objects/obj_parTotem/obj_parTotem.yy",},"objectId":{"name":"obj_parTotem","path":"objects/obj_parTotem/obj_parTotem.yy",},"value":"True",},
+  ],
   "parent": {
-    "name": "Totems",
-    "path": "folders/Objects/Totems.yy",
+    "name": "Child Totems",
+    "path": "folders/Objects/Totems/Child Totems.yy",
   },
 }

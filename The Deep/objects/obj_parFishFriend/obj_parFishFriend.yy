@@ -1,11 +1,8 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_plantThree",
-  "spriteId": {
-    "name": "spr_plantThree",
-    "path": "sprites/spr_plantThree/spr_plantThree.yy",
-  },
+  "name": "obj_parFishFriend",
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "managed": true,
@@ -24,11 +21,14 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Empty Ambient",
-    "path": "folders/Objects/Ambient/Empty Ambient.yy",
+    "name": "Fish Friend",
+    "path": "folders/Objects/Fish Friend.yy",
   },
 }

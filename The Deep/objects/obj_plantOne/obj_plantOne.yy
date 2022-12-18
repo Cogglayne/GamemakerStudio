@@ -28,7 +28,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Ambient",
-    "path": "folders/Objects/Ambient.yy",
+    "name": "Empty Ambient",
+    "path": "folders/Objects/Ambient/Empty Ambient.yy",
   },
 }

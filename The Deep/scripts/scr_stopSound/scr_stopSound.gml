@@ -1,6 +1,5 @@
 function stopGameSounds() {
     audio_stop_sound(snd_pollutant)
-    audio_stop_sound(snd_whale)
     audio_stop_sound(snd_ship)
     audio_stop_sound(snd_bubble)
     audio_stop_sound(snd_waves)
@@ -39,9 +38,6 @@ function stopGameSounds() {
     }
     if (instance_exists(obj_yellowBlue_green)) {
         obj_yellowBlue_green.state = 0;
-    }
-    if (instance_exists(obj_whale)) {
-        obj_whale.state = 0;
     }
     if (instance_exists(obj_probe)) {
         obj_probe.state = 0;

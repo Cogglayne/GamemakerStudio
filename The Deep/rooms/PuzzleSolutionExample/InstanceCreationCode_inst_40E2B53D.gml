@@ -1,1 +1,0 @@
-puzzleActive = true

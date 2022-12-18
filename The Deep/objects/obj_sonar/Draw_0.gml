@@ -43,16 +43,10 @@ if(wave.text != "") {
 draw_circle(bubbles.x,bubbles.y+60,8,false)
 }
 }
-if(instance_exists(obj_whale)){
-if(point_distance(obj_swimmer.x,obj_swimmer.y,obj_whale.x,obj_whale.y) <= obj_whale.audioMaxDistanceToBeHeard) {
-                        draw_set_color(#520089)
-draw_circle(obj_whale.x,obj_whale.y,8,false)
-}
-}
 if(instance_exists(obj_ship)){
 if(point_distance(obj_swimmer.x,obj_swimmer.y,obj_ship.x,obj_ship.y) <= obj_ship.audioMaxDistanceToBeHeard) {
                                 draw_set_color(#520089)
-draw_circle(obj_ship.x,obj_ship.y-350,8,false)
+draw_circle(obj_ship.x,obj_ship.y-50,8,false)
 }
 }
 if(instance_exists(obj_brownWhite_beige)){

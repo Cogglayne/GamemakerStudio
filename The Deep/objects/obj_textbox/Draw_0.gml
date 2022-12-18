@@ -111,12 +111,6 @@ if (room == BestTimes) {
         draw_text_transformed(0, 300, "Level Four Hard: " + string(obj_levelTracker.levelFourHardTime) + " seconds", 1, 1, 0);
     }
 }
-if (LevelFour()) {
-    draw_text_transformed_colour(2200, 0, "Pollutant Disposal", 1, 1, image_angle, c_white, c_white, c_white, c_white, 1);
-    draw_text_transformed_colour(1025, 100, " Each disposal unit is calibrated to neutralize a specific combination of chemicals", 1, 1, image_angle, c_white, c_white, c_white, c_white, 1);
-    draw_text_transformed_colour(1025, 200, " Each pollutant type has a unique chemical make up. The top left disposal unit", 1, 1, image_angle, c_white, c_white, c_white, c_white, 1);
-	draw_text_transformed_colour(1025, 300, " is the first disposal unit. Dispose of the pollutants properly.", 1, 1, image_angle, c_white, c_white, c_white, c_white, 1);
-}
 if (draw_get_font() == ft_dyslexia) {
     if (room == Credits) {
         draw_text_transformed(2400, 50, "Art", 1.5, 1.5, 0);

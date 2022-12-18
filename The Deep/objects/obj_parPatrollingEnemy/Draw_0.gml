@@ -4,7 +4,7 @@ draw_set_halign(fa_center)
 draw_set_valign(fa_middle)
 // draws text if the swimmer is within a distance
 if (instance_exists(obj_swimmer)) {
-    if (point_distance(obj_swimmer.x, obj_swimmer.y, x, y) <= audioMaxDistanceToBeHeard && point_distance(obj_swimmer.x, obj_swimmer.y, x, y) >= audioMaxDistanceToBeHeard - 300) {
+    if (point_distance(obj_swimmer.x, obj_swimmer.y, x, y) <= audioMaxDistanceToBeHeard) {
         if (obj_disabilities.closedCaptioning) {
             if (image_xscale == 1) {
                 draw_text_transformed_colour(x + xTextOffset, y + yTextOffset, text, .5, .5, image_angle, c_white, c_white, c_white, c_white, 1);

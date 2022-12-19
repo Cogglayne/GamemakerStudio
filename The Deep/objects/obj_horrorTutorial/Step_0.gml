@@ -1,9 +1,10 @@
 if (state = 0 && !audio_is_playing(snd_horror)) {
     audio_play_sound_on(anglerEmitter, snd_horror, 1, 1)
     state = 1
+	isPlayingSound = true;
 }
 audio_emitter_position(anglerEmitter, x, y, 0)
-if (instance_exists(obj_light)) {
+if (instance_exists(obj_playerOneLight)) {
     if (obj_trainer.anglerTutorialTrial && obj_trainer.anglerTutorialActive) {
         direction = point_direction(x, y, obj_swimmer.x, obj_swimmer.y);
         if (obj_microtransactions.extraLife) {

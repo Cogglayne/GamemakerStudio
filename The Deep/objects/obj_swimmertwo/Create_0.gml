@@ -1,4 +1,4 @@
-instance_create_layer(x, y, "Instances", obj_lightPlayerTwo);
+instance_create_layer(x, y, "Instances", obj_playerTwoLight);
 vsp = 0;
 hsp = 0;
 mvspeed = 6

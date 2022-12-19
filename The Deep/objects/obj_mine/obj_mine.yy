@@ -42,7 +42,7 @@
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"numHits","path":"objects/obj_parPatrollingEnemy/obj_parPatrollingEnemy.yy",},"objectId":{"name":"obj_parPatrollingEnemy","path":"objects/obj_parPatrollingEnemy/obj_parPatrollingEnemy.yy",},"value":"2",},
   ],
   "parent": {
-    "name": "Child Enemies",
-    "path": "folders/Objects/Enemies/Child Enemies.yy",
+    "name": "Child Patrolling Enemies",
+    "path": "folders/Objects/Enemies/Child Patrolling Enemies.yy",
   },
 }

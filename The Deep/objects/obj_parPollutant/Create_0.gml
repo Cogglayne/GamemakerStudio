@@ -1,8 +1,3 @@
-// puzzle
-dragged = false;
-xx = 0;
-yy = 0;
-puzzleActive = false;
 // sound
 soundHasBeenPlayed = false;
 pollutantEmitter = audio_emitter_create();
@@ -13,6 +8,7 @@ audio_emitter_falloff(pollutantEmitter, audioStartsToDropAt, audioMaxDistanceToB
 state = 0;
 // back to back play
 firstRun = true;
+isPlayingSound = false;
 
 
 

@@ -34,3 +34,4 @@ if (hsp == 0 && vsp == 0) {
 swimmerCollisions(obj_wall);
 x += hsp;
 y += vsp;
+show_debug_message(string(numProbes))

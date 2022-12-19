@@ -3,8 +3,8 @@
 if (singleplayer == true) {
     if (obj_disabilities.normal || obj_disabilities.poorReactivity) {
         audio_play_sound(snd_light, 1, 0)
-        if (instance_exists(obj_light)) {
-            instance_destroy(obj_light)
+        if (instance_exists(obj_playerOneLight)) {
+            instance_destroy(obj_playerOneLight)
         } else {
             // angler tutorial
             if (instance_exists(obj_trainer)) {
@@ -27,9 +27,9 @@ if (singleplayer == true) {
                     }
                 }
             }
-            instance_create_layer(obj_swimmer.x, obj_swimmer.y, "Instances", obj_light);
-            obj_light.xBoundry = obj_levelTracker.lightX;
-            obj_light.yBoundry = obj_levelTracker.lightY;
+            instance_create_layer(obj_swimmer.x, obj_swimmer.y, "Instances", obj_playerOneLight);
+            obj_playerOneLight.xBoundry = obj_levelTracker.lightX;
+            obj_playerOneLight.yBoundry = obj_levelTracker.lightY;
         }
     }
 }

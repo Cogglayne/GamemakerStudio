@@ -1,8 +1,8 @@
 draw_set_color(c_white)
 if (obj_disabilities.dyslexia) {
-    draw_set_font(ft_dyslexia)
+    draw_set_font(ft_Ariel)
 } else if (!obj_disabilities.dyslexia) {
-    draw_set_font(ft_scaryFont);
+    draw_set_font(ft_Chiller);
 }
 if (room == InstructionsPageOne) {
 draw_text_ext(0, 0, 
@@ -111,7 +111,7 @@ if (room == BestTimes) {
         draw_text_transformed(0, 300, "Level Four Hard: " + string(obj_levelTracker.levelFourHardTime) + " seconds", 1, 1, 0);
     }
 }
-if (draw_get_font() == ft_dyslexia) {
+if (draw_get_font() == ft_Ariel) {
     if (room == Credits) {
         draw_text_transformed(2400, 50, "Art", 1.5, 1.5, 0);
         draw_text_transformed(950, 200, " Ansimuz", 1, 1, 0);
@@ -155,7 +155,7 @@ if (draw_get_font() == ft_dyslexia) {
         draw_text_transformed(2300, 50, "Coding", 1.5, 1.5, 0);
         draw_text_transformed(700, 200, " David Strachan", 1, 1, 0);
     }
-} else if (draw_get_font() == ft_scaryFont) {
+} else if (draw_get_font() == ft_Chiller) {
     if (room == Credits) {
         draw_text_transformed(2400, 0, "Art", 1.5, 1.5, 0);
         draw_text_transformed(950, 175, " Ansimuz", 1, 1, 0);

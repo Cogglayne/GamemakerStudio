@@ -2,7 +2,7 @@ if (obj_levelTracker.swimmerOneSinglePlayer == false) {
 	 audio_play_sound(snd_playerdie, 1, 0)
     // destroys swimmer object
     instance_destroy(other)
-    instance_destroy(obj_light)
+    instance_destroy(obj_playerOneLight)
     if (instance_exists(obj_probe)) {
         instance_destroy(obj_probe)
         instance_destroy(obj_probeLight)

@@ -17,9 +17,12 @@ if (instance_exists(obj_trainer)) {
         }
     }
 }
-instance_destroy(obj_probeLight)
 instance_destroy(self)
-obj_swimmer.probeExists = false;
+if(swimmer == obj_swimmer){
+	obj_swimmer.probeExists = false;
+}else if (swimmer == obj_swimmerTwo){
+	obj_swimmerTwo.numProbes--;
+}
 
 
 

@@ -1,7 +1,7 @@
 {
   "resourceType": "GMFont",
   "resourceVersion": "1.0",
-  "name": "ft_scaryFont",
+  "name": "ft_Chiller",
   "hinting": 0,
   "glyphOperations": 0,
   "interpreter": 0,

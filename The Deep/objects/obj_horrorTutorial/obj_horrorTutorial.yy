@@ -35,7 +35,7 @@
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"tutorialEnemy","path":"objects/obj_parHorror/obj_parHorror.yy",},"objectId":{"name":"obj_parHorror","path":"objects/obj_parHorror/obj_parHorror.yy",},"value":"True",},
   ],
   "parent": {
-    "name": "Child Enemies",
-    "path": "folders/Objects/Enemies/Child Enemies.yy",
+    "name": "Partial Child Horrors",
+    "path": "folders/Objects/Enemies/Partial Child Horrors.yy",
   },
 }

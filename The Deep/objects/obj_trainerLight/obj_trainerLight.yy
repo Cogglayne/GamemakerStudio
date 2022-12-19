@@ -8,7 +8,10 @@
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obJ_parLight",
+    "path": "objects/obJ_parLight/obJ_parLight.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -21,14 +24,15 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
-  ],
+  "eventList": [],
   "properties": [],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"follow","path":"objects/obJ_parLight/obJ_parLight.yy",},"objectId":{"name":"obJ_parLight","path":"objects/obJ_parLight/obJ_parLight.yy",},"value":"obj_trainer",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"xBoundry","path":"objects/obJ_parLight/obJ_parLight.yy",},"objectId":{"name":"obJ_parLight","path":"objects/obJ_parLight/obJ_parLight.yy",},"value":"3",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"yBoundry","path":"objects/obJ_parLight/obJ_parLight.yy",},"objectId":{"name":"obJ_parLight","path":"objects/obJ_parLight/obJ_parLight.yy",},"value":"3",},
+  ],
   "parent": {
-    "name": "Utility",
-    "path": "folders/Objects/Utility.yy",
+    "name": "Child Lights",
+    "path": "folders/Objects/Lights/Child Lights.yy",
   },
 }

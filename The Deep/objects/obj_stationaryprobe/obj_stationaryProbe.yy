@@ -11,7 +11,10 @@
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_parProbe",
+    "path": "objects/obj_parProbe/obj_parProbe.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -24,18 +27,15 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_mine","path":"objects/obj_mine/obj_mine.yy",},},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_monster","path":"objects/obj_monster/obj_monster.yy",},},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":1,"collisionObjectId":null,},
-  ],
+  "eventList": [],
   "properties": [],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"detectionRadius","path":"objects/obj_parProbe/obj_parProbe.yy",},"objectId":{"name":"obj_parProbe","path":"objects/obj_parProbe/obj_parProbe.yy",},"value":"90",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"lightType","path":"objects/obj_parProbe/obj_parProbe.yy",},"objectId":{"name":"obj_parProbe","path":"objects/obj_parProbe/obj_parProbe.yy",},"value":"obj_stationaryProbeLight",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"swimmer","path":"objects/obj_parProbe/obj_parProbe.yy",},"objectId":{"name":"obj_parProbe","path":"objects/obj_parProbe/obj_parProbe.yy",},"value":"obj_swimmerTwo",},
+  ],
   "parent": {
-    "name": "Probes",
-    "path": "folders/Objects/Probes.yy",
+    "name": "Child Probes",
+    "path": "folders/Objects/Probes/Child Probes.yy",
   },
 }

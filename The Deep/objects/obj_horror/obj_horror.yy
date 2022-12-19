@@ -34,7 +34,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Child Enemies",
-    "path": "folders/Objects/Enemies/Child Enemies.yy",
+    "name": "Partial Child Horrors",
+    "path": "folders/Objects/Enemies/Partial Child Horrors.yy",
   },
 }

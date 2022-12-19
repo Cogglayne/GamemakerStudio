@@ -5,7 +5,7 @@ state = 0;
 audio_play_sound(snd_playerdie, 1, 0)
 // destroys swimmer two and swimmer two objects
 instance_destroy(other)
-instance_destroy(obj_lightPlayerTwo)
+instance_destroy(obj_playerTwoLight)
 if (instance_exists(obj_stationaryProbe)) {
     instance_destroy(obj_stationaryProbe)
     instance_destroy(obj_stationaryProbeLight)

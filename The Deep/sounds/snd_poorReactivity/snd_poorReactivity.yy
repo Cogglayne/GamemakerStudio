@@ -17,7 +17,7 @@
   "soundFile": "snd_poorReactivity.mp3",
   "duration": 2.115833,
   "parent": {
-    "name": "Buttons",
-    "path": "folders/Sounds/Buttons.yy",
+    "name": "Options",
+    "path": "folders/Sounds/Buttons/Options.yy",
   },
 }

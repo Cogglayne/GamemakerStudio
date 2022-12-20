@@ -32,7 +32,7 @@
   "overriddenProperties": [
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"detectionRadius","path":"objects/obj_parProbe/obj_parProbe.yy",},"objectId":{"name":"obj_parProbe","path":"objects/obj_parProbe/obj_parProbe.yy",},"value":"145",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"lightType","path":"objects/obj_parProbe/obj_parProbe.yy",},"objectId":{"name":"obj_parProbe","path":"objects/obj_parProbe/obj_parProbe.yy",},"value":"obj_probeLight",},
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"swimmer","path":"objects/obj_parProbe/obj_parProbe.yy",},"objectId":{"name":"obj_parProbe","path":"objects/obj_parProbe/obj_parProbe.yy",},"value":"obj_swimmer",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"swimmer","path":"objects/obj_parProbe/obj_parProbe.yy",},"objectId":{"name":"obj_parProbe","path":"objects/obj_parProbe/obj_parProbe.yy",},"value":"obj_swimmerOne",},
   ],
   "parent": {
     "name": "Child Probes",

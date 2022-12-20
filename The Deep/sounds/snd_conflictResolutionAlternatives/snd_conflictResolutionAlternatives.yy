@@ -17,7 +17,7 @@
   "soundFile": "snd_conflictResolutionAlternatives.mp3",
   "duration": 1.6195,
   "parent": {
-    "name": "Buttons",
-    "path": "folders/Sounds/Buttons.yy",
+    "name": "Options",
+    "path": "folders/Sounds/Buttons/Options.yy",
   },
 }

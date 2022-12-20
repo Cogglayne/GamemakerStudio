@@ -17,7 +17,7 @@
   "soundFile": "snd_blindMode.mp3",
   "duration": 0.940333,
   "parent": {
-    "name": "Buttons",
-    "path": "folders/Sounds/Buttons.yy",
+    "name": "Options",
+    "path": "folders/Sounds/Buttons/Options.yy",
   },
 }

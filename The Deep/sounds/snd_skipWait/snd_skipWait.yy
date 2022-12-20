@@ -17,7 +17,7 @@
   "soundFile": "snd_skipWait.mp3",
   "duration": 1.698,
   "parent": {
-    "name": "Buttons",
-    "path": "folders/Sounds/Buttons.yy",
+    "name": "Microtransactions",
+    "path": "folders/Sounds/Buttons/Microtransactions.yy",
   },
 }

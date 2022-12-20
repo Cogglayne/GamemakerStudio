@@ -1,4 +1,4 @@
-if (obj_disabilities.poorReactivity) {
+if (obj_options.poorReactivity) {
     obj_playerOneLight.xBoundry = 2.2
     obj_playerOneLight.yBoundry = 2.2
 } else {

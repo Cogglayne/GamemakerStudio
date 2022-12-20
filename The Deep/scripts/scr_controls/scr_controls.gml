@@ -1,5 +1,5 @@
 function LeftHand() {
-    if (obj_disabilities.leftHandControls) {
+    if (obj_options.leftHandControls) {
         if (keyboard_check_released(ord("A"))) {
             leftArrowDoubleClick = 1;
             rightArrowDoubleClick = 0;
@@ -8,7 +8,7 @@ function LeftHand() {
             alarm[3] = 10;
         }
         if (keyboard_check_pressed(ord("A")) && leftArrowDoubleClick == 1 && numMonsterBarriers < 1) {
-            instance_create_layer(x - 95, y, "Instances", obj_swimmerMonsterBarrier);
+            instance_create_layer(x - 95, y, "Instances", obj_swimmerOneMonsterBarrier);
             leftArrowDoubleClick = 0;
             numMonsterBarriers++;
         }
@@ -20,7 +20,7 @@ function LeftHand() {
             alarm[3] = 10;
         }
         if (keyboard_check_pressed(ord("D")) && rightArrowDoubleClick == 1 && numMonsterBarriers < 1) {
-            instance_create_layer(x + 95, y, "Instances", obj_swimmerMonsterBarrier);
+            instance_create_layer(x + 95, y, "Instances", obj_swimmerOneMonsterBarrier);
             rightArrowDoubleClick = 0;
             numMonsterBarriers++;
         }
@@ -32,7 +32,7 @@ function LeftHand() {
             alarm[3] = 10;
         }
         if (keyboard_check_pressed(ord("W")) && UpArrowDoubleClick == 1 && numMineBarriers < 1) {
-            instance_create_layer(x, y - 110, "Instances", obj_swimmerMineBarrier);
+            instance_create_layer(x, y - 110, "Instances", obj_swimmerOneMineBarrier);
             UpArrowDoubleClick = 0;
             numMineBarriers++;
         }
@@ -44,41 +44,41 @@ function LeftHand() {
             alarm[3] = 10;
         }
         if (keyboard_check_pressed(ord("S")) && downArrowDoubleClick == 1 && numMineBarriers < 1) {
-            instance_create_layer(x, y + 110, "Instances", obj_swimmerMineBarrier);
+            instance_create_layer(x, y + 110, "Instances", obj_swimmerOneMineBarrier);
             downArrowDoubleClick = 0;
             numMineBarriers++;
         }
         if (keyboard_check(vk_shift) && !probeExists) {
             instance_create_layer(x, y, "Instances", obj_probe);
             with(obj_probe) {
-                if (obj_swimmer.vsp == 0 && obj_swimmer.hsp == 0 && (obj_swimmer.sprite_index == spr_swimmerIdleLeft || obj_swimmer.sprite_index == spr_blackswimmerIdleLeft)) {
+                if (obj_swimmerOne.vsp == 0 && obj_swimmerOne.hsp == 0 && (obj_swimmerOne.sprite_index == spr_swimmerIdleLeft || obj_swimmerOne.sprite_index == spr_blackswimmerIdleLeft)) {
                     // left
                     direction = 180;
-                } else if (obj_swimmer.vsp == 0 && obj_swimmer.hsp == 0 && (obj_swimmer.sprite_index == spr_swimmerIdleRight || obj_swimmer.sprite_index == spr_blackswimmerIdleRight)) {
+                } else if (obj_swimmerOne.vsp == 0 && obj_swimmerOne.hsp == 0 && (obj_swimmerOne.sprite_index == spr_swimmerIdleRight || obj_swimmerOne.sprite_index == spr_blackswimmerIdleRight)) {
                     //right
                     direction = 0;
-                } else if (obj_swimmer.vsp < 0 && obj_swimmer.hsp < 0) {
+                } else if (obj_swimmerOne.vsp < 0 && obj_swimmerOne.hsp < 0) {
                     // up and left
                     direction = 135;
-                } else if (obj_swimmer.vsp < 0 && obj_swimmer.hsp > 0) {
+                } else if (obj_swimmerOne.vsp < 0 && obj_swimmerOne.hsp > 0) {
                     // up and right
                     direction = 45;
-                } else if (obj_swimmer.vsp > 0 && obj_swimmer.hsp < 0) {
+                } else if (obj_swimmerOne.vsp > 0 && obj_swimmerOne.hsp < 0) {
                     // down and left
                     direction = 225;
-                } else if (obj_swimmer.vsp > 0 && obj_swimmer.hsp > 0) {
+                } else if (obj_swimmerOne.vsp > 0 && obj_swimmerOne.hsp > 0) {
                     // down and right
                     direction = 315;
-                } else if (obj_swimmer.vsp == 0 && obj_swimmer.hsp > 0) {
+                } else if (obj_swimmerOne.vsp == 0 && obj_swimmerOne.hsp > 0) {
                     // right
                     direction = 0;
-                } else if (obj_swimmer.vsp == 0 && obj_swimmer.hsp < 0) {
+                } else if (obj_swimmerOne.vsp == 0 && obj_swimmerOne.hsp < 0) {
                     // left
                     direction = 180;
-                } else if (obj_swimmer.vsp < 0 && obj_swimmer.hsp == 0) {
+                } else if (obj_swimmerOne.vsp < 0 && obj_swimmerOne.hsp == 0) {
                     // up
                     direction = 90;
-                } else if (obj_swimmer.vsp > 0 && obj_swimmer.hsp == 0) {
+                } else if (obj_swimmerOne.vsp > 0 && obj_swimmerOne.hsp == 0) {
                     // down
                     direction = 270;
                 }
@@ -91,7 +91,7 @@ function LeftHand() {
             if (instance_exists(obj_playerOneLight)) {
                 instance_destroy(obj_playerOneLight)
             } else {
-                instance_create_layer(obj_swimmer.x, obj_swimmer.y, "Instances", obj_playerOneLight);
+                instance_create_layer(obj_swimmerOne.x, obj_swimmerOne.y, "Instances", obj_playerOneLight);
                 obj_playerOneLight.xBoundry = obj_levelTracker.lightX;
                 obj_playerOneLight.yBoundry = obj_levelTracker.lightY;
             }
@@ -100,7 +100,7 @@ function LeftHand() {
 }
 
 function RightHand() {
-    if (obj_disabilities.rightHandControls) {
+    if (obj_options.rightHandControls) {
         if (keyboard_check_released(vk_left)) {
             leftArrowDoubleClick = 1;
             rightArrowDoubleClick = 0;
@@ -109,7 +109,7 @@ function RightHand() {
             alarm[3] = 10;
         }
         if (keyboard_check_pressed(vk_left) && leftArrowDoubleClick == 1 && numMonsterBarriers < 1) {
-            instance_create_layer(x - 95, y, "Instances", obj_swimmerMonsterBarrier);
+            instance_create_layer(x - 95, y, "Instances", obj_swimmerOneMonsterBarrier);
             leftArrowDoubleClick = 0;
             numMonsterBarriers++;
         }
@@ -121,7 +121,7 @@ function RightHand() {
             alarm[3] = 10;
         }
         if (keyboard_check_pressed(vk_right) && rightArrowDoubleClick == 1 && numMonsterBarriers < 1) {
-            instance_create_layer(x + 95, y, "Instances", obj_swimmerMonsterBarrier);
+            instance_create_layer(x + 95, y, "Instances", obj_swimmerOneMonsterBarrier);
             rightArrowDoubleClick = 0;
             numMonsterBarriers++;
         }
@@ -133,7 +133,7 @@ function RightHand() {
             alarm[3] = 10;
         }
         if (keyboard_check_pressed(vk_up) && UpArrowDoubleClick == 1 && numMineBarriers < 1) {
-            instance_create_layer(x, y - 110, "Instances", obj_swimmerMineBarrier);
+            instance_create_layer(x, y - 110, "Instances", obj_swimmerOneMineBarrier);
             UpArrowDoubleClick = 0;
             numMineBarriers++;
         }
@@ -145,41 +145,41 @@ function RightHand() {
             alarm[3] = 10;
         }
         if (keyboard_check_pressed(vk_down) && downArrowDoubleClick == 1 && numMineBarriers < 1) {
-            instance_create_layer(x, y + 110, "Instances", obj_swimmerMineBarrier);
+            instance_create_layer(x, y + 110, "Instances", obj_swimmerOneMineBarrier);
             downArrowDoubleClick = 0;
             numMineBarriers++;
         }
         if (keyboard_check(vk_numpad0) && !probeExists) {
             instance_create_layer(x, y, "Instances", obj_probe);
             with(obj_probe) {
-                if (obj_swimmer.vsp == 0 && obj_swimmer.hsp == 0 && (obj_swimmer.sprite_index == spr_swimmerIdleLeft || obj_swimmer.sprite_index == spr_blackswimmerIdleLeft)) {
+                if (obj_swimmerOne.vsp == 0 && obj_swimmerOne.hsp == 0 && (obj_swimmerOne.sprite_index == spr_swimmerIdleLeft || obj_swimmerOne.sprite_index == spr_blackswimmerIdleLeft)) {
                     // left
                     direction = 180;
-                } else if (obj_swimmer.vsp == 0 && obj_swimmer.hsp == 0 && (obj_swimmer.sprite_index == spr_swimmerIdleRight || obj_swimmer.sprite_index == spr_blackswimmerIdleRight)) {
+                } else if (obj_swimmerOne.vsp == 0 && obj_swimmerOne.hsp == 0 && (obj_swimmerOne.sprite_index == spr_swimmerIdleRight || obj_swimmerOne.sprite_index == spr_blackswimmerIdleRight)) {
                     //right
                     direction = 0;
-                } else if (obj_swimmer.vsp < 0 && obj_swimmer.hsp < 0) {
+                } else if (obj_swimmerOne.vsp < 0 && obj_swimmerOne.hsp < 0) {
                     // up and left
                     direction = 135;
-                } else if (obj_swimmer.vsp < 0 && obj_swimmer.hsp > 0) {
+                } else if (obj_swimmerOne.vsp < 0 && obj_swimmerOne.hsp > 0) {
                     // up and right
                     direction = 45;
-                } else if (obj_swimmer.vsp > 0 && obj_swimmer.hsp < 0) {
+                } else if (obj_swimmerOne.vsp > 0 && obj_swimmerOne.hsp < 0) {
                     // down and left
                     direction = 225;
-                } else if (obj_swimmer.vsp > 0 && obj_swimmer.hsp > 0) {
+                } else if (obj_swimmerOne.vsp > 0 && obj_swimmerOne.hsp > 0) {
                     // down and right
                     direction = 315;
-                } else if (obj_swimmer.vsp == 0 && obj_swimmer.hsp > 0) {
+                } else if (obj_swimmerOne.vsp == 0 && obj_swimmerOne.hsp > 0) {
                     // right
                     direction = 0;
-                } else if (obj_swimmer.vsp == 0 && obj_swimmer.hsp < 0) {
+                } else if (obj_swimmerOne.vsp == 0 && obj_swimmerOne.hsp < 0) {
                     // left
                     direction = 180;
-                } else if (obj_swimmer.vsp < 0 && obj_swimmer.hsp == 0) {
+                } else if (obj_swimmerOne.vsp < 0 && obj_swimmerOne.hsp == 0) {
                     // up
                     direction = 90;
-                } else if (obj_swimmer.vsp > 0 && obj_swimmer.hsp == 0) {
+                } else if (obj_swimmerOne.vsp > 0 && obj_swimmerOne.hsp == 0) {
                     // down
                     direction = 270;
                 }
@@ -191,22 +191,22 @@ function RightHand() {
 }
 
 function Standard() {
-    if (obj_disabilities.normal) {
+    if (obj_options.normal) {
         if (mouse_check_button_pressed(mb_left) && numMonsterBarriers < 1) {
             if (mouse_x < x) {
-                instance_create_layer(x - 50, y, "Instances", obj_swimmerMonsterBarrier);
+                instance_create_layer(x - 50, y, "Instances", obj_swimmerOneMonsterBarrier);
                 numMonsterBarriers++;
             } else if (mouse_x > x) {
-                instance_create_layer(x + 50, y, "Instances", obj_swimmerMonsterBarrier);
+                instance_create_layer(x + 50, y, "Instances", obj_swimmerOneMonsterBarrier);
                 numMonsterBarriers++;
             }
         }
         if (mouse_check_button_pressed(mb_right) && numMineBarriers < 1) {
             if (mouse_y > y) {
-                instance_create_layer(x, y + 70, "Instances", obj_swimmerMineBarrier);
+                instance_create_layer(x, y + 70, "Instances", obj_swimmerOneMineBarrier);
                 numMineBarriers++;
             } else if (mouse_y < y) {
-                instance_create_layer(x, y - 70, "Instances", obj_swimmerMineBarrier);
+                instance_create_layer(x, y - 70, "Instances", obj_swimmerOneMineBarrier);
                 numMineBarriers++;
             }
         }
@@ -222,22 +222,22 @@ function Standard() {
 }
 
 function PoorReactivity() {
-    if (obj_disabilities.poorReactivity) {
+    if (obj_options.poorReactivity) {
         if (mouse_check_button_pressed(mb_left) && numMonsterBarriers < 1) {
             if (mouse_x < x) {
-                instance_create_layer(x - 100, y, "Instances", obj_swimmerMonsterBarrier);
+                instance_create_layer(x - 100, y, "Instances", obj_swimmerOneMonsterBarrier);
                 numMonsterBarriers++;
             } else if (mouse_x > x) {
-                instance_create_layer(x + 100, y, "Instances", obj_swimmerMonsterBarrier);
+                instance_create_layer(x + 100, y, "Instances", obj_swimmerOneMonsterBarrier);
                 numMonsterBarriers++;
             }
         }
         if (mouse_check_button_pressed(mb_right) && numMineBarriers < 1) {
             if (mouse_y > y) {
-                instance_create_layer(x, y + 140, "Instances", obj_swimmerMineBarrier);
+                instance_create_layer(x, y + 140, "Instances", obj_swimmerOneMineBarrier);
                 numMineBarriers++;
             } else if (mouse_y < y) {
-                instance_create_layer(x, y - 140, "Instances", obj_swimmerMineBarrier);
+                instance_create_layer(x, y - 140, "Instances", obj_swimmerOneMineBarrier);
                 numMineBarriers++;
             }
         }

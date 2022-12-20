@@ -38,16 +38,6 @@ swimmerTwoNumPollutants = 0;
 textShouldBeShowing = true;
 lifeTime = 2;
 alarm[0] = 60;
-
-// gamplay option variables
-alternativePunishment = false;
-variableObjectives = false;
-indirectCompetition = false;
-conflictResolutionAlternatives = false;
-
-timer = 200;
-firstRun = true;
-
 // loads variables
 load();
 

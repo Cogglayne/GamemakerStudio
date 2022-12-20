@@ -1,8 +1,8 @@
 draw_self()
 draw_set_halign(fa_center)
 draw_set_valign(fa_middle)
-if (point_distance(obj_swimmer.x, obj_swimmer.y, x, y) <= audioMaxDistanceToBeHeard) {
-	if(obj_disabilities.closedCaptioning && isPlayingSound){
+if (point_distance(obj_swimmerOne.x, obj_swimmerOne.y, x, y) <= audioMaxDistanceToBeHeard) {
+	if(obj_options.closedCaptioning && isPlayingSound){
 		draw_text_transformed_colour(x, y + 100, text, .5, .5, image_angle, c_white, c_white, c_white, c_white, 1);
 	}
 }

@@ -17,7 +17,7 @@
   "soundFile": "snd_mineTutorial.mp3",
   "duration": 0.940333,
   "parent": {
-    "name": "Buttons",
-    "path": "folders/Sounds/Buttons.yy",
+    "name": "Tutorials",
+    "path": "folders/Sounds/Buttons/Tutorials.yy",
   },
 }

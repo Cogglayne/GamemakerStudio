@@ -15,7 +15,7 @@ function levelFourEasy() {
         if (obj_levelTracker.timer < obj_levelTracker.levelFourEasyTime) {
             obj_levelTracker.levelFourEasyTime = obj_levelTracker.timer;
         }
-        if (obj_swimmer.hardMode == true) {
+        if (obj_swimmerOne.hardMode == true) {
             obj_levelTracker.levelFourEasyChallengeModeClear = true;
         }
     }
@@ -26,7 +26,7 @@ function levelFourMedium() {
         if (obj_levelTracker.timer < obj_levelTracker.levelFourMediumTime) {
             obj_levelTracker.levelFourMediumTime = obj_levelTracker.timer;
         }
-        if (obj_swimmer.hardMode == true) {
+        if (obj_swimmerOne.hardMode == true) {
             obj_levelTracker.levelFourMediumChallengeModeClear = true;
         }
     }
@@ -37,7 +37,7 @@ function levelFourHard() {
         if (obj_levelTracker.timer < obj_levelTracker.levelFourHardTime) {
             obj_levelTracker.levelFourHardTime = obj_levelTracker.timer;
         }
-        if (obj_swimmer.hardMode == true) {
+        if (obj_swimmerOne.hardMode == true) {
             obj_levelTracker.levelFourHardChallengeModeClear = true;
         }
     }

@@ -1,7 +1,7 @@
 if (surface_exists(surface)) {
     surface_set_target(surface);
     draw_clear(c_black)
-    with(obJ_parLight) {
+    with(obj_parLight) {
         gpu_set_blendmode(bm_subtract)
         draw_sprite_ext(spr_light, 0, x, y, xBoundry, yBoundry, 0, c_black, 1);
         if (obj_microtransactions.newLightEffect) {

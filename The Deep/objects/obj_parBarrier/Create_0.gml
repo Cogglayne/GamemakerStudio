@@ -4,7 +4,7 @@ audioStartsToDropAt = 100;
 audio_emitter_position(barrierEmitter, x, y, 0)
 audio_emitter_falloff(barrierEmitter, audioStartsToDropAt, audioMaxDistanceToBeHeard, 1)
 state = 0;
-
+isPlayingSound = false;
 // sprite selection
 if(obj_levelTracker.variableObjectives){
 	if(mine){

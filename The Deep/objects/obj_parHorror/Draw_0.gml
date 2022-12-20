@@ -1,13 +1,13 @@
 draw_self()
 draw_set_halign(fa_center)
 draw_set_valign(fa_middle)
-if (instance_exists(obj_swimmer)) {
-    if (point_distance(obj_swimmer.x, obj_swimmer.y, x, y) <= audioMaxDistanceToBeHeard) {
-		if(obj_disabilities.closedCaptioning && isPlayingSound){
+if (instance_exists(obj_swimmerOne)) {
+    if (point_distance(obj_swimmerOne.x, obj_swimmerOne.y, x, y) <= audioMaxDistanceToBeHeard) {
+		if(obj_options.closedCaptioning && isPlayingSound){
 			draw_text_transformed_colour(x, y + 200, "[The Angler Growls]", .5, .5, image_angle, c_white, c_white, c_white, c_white, 1);
 		}
     }
-    if (!obj_swimmer.singleplayer) {
+    if (!obj_swimmerOne.singleplayer) {
         text = ""
     }
 }
@@ -23,10 +23,10 @@ if(tutorialEnemy){
     }
 }
 if (obj_trainer.anglerTutorialActive && obj_trainer.anglerTutorialTrial) {
-    if (obj_swimmer.x < x) {
+    if (obj_swimmerOne.x < x) {
         sprite_index = spr_horrorLeft
     }
-    if (obj_swimmer.x > x) {
+    if (obj_swimmerOne.x > x) {
         sprite_index = spr_horrorRight
     }
 }
@@ -40,10 +40,10 @@ if (!obj_trainer.anglerTutorialActive && !obj_trainer.anglerTutorialTrial) {
 }
 
 }else{
-	if (obj_swimmer.x < x) {
+	if (obj_swimmerOne.x < x) {
     sprite_index = spr_horrorLeft
 }
-if (obj_swimmer.x > x) {
+if (obj_swimmerOne.x > x) {
     sprite_index = spr_horrorRight
 }
 

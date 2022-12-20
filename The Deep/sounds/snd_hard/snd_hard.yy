@@ -17,7 +17,7 @@
   "soundFile": "snd_hard.mp3",
   "duration": 0.910425,
   "parent": {
-    "name": "Buttons",
-    "path": "folders/Sounds/Buttons.yy",
+    "name": "Navigation",
+    "path": "folders/Sounds/Buttons/Navigation.yy",
   },
 }

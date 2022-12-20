@@ -17,7 +17,7 @@
   "soundFile": "snd_beginSecondPlayerAttempt.mp3",
   "duration": 1.541167,
   "parent": {
-    "name": "Buttons",
-    "path": "folders/Sounds/Buttons.yy",
+    "name": "Navigation",
+    "path": "folders/Sounds/Buttons/Navigation.yy",
   },
 }

@@ -2,12 +2,12 @@ if (obj_levelTracker.rightFishFound) {
     visible = true;
 }
 if (visible == true) {
-    x = obj_swimmer.x + 150
-    y = obj_swimmer.y
+    x = obj_swimmerOne.x + 150
+    y = obj_swimmerOne.y
     if (obj_levelTracker.rightFishFound == false) {
         obj_levelTracker.rightFishFound = true;
         if (instance_exists(obj_playerOneLight)) {
-            obj_swimmer.mvspeed += 2;
+            obj_swimmerOne.mvspeed += 2;
             obj_playerOneLight.xBoundry += .2;
             obj_playerOneLight.yBoundry += .2;
         } else {

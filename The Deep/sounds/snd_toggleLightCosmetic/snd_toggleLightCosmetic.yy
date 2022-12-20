@@ -17,7 +17,7 @@
   "soundFile": "snd_toggleLightCosmetic.mp3",
   "duration": 1.599241,
   "parent": {
-    "name": "Buttons",
-    "path": "folders/Sounds/Buttons.yy",
+    "name": "Microtransactions",
+    "path": "folders/Sounds/Buttons/Microtransactions.yy",
   },
 }

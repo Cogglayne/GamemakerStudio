@@ -1,5 +1,5 @@
 // sound
-if (state = 0 && (!instance_exists(obj_swimmerTwo) && obj_swimmer.singleplayer)) {
+if (state = 0 && (!instance_exists(obj_swimmerTwo) && obj_swimmerOne.singleplayer)) {
     audio_play_sound_on(enemyEmitter, sound, 1, 1)
     state = 1
 	isPlayingSound = true;
@@ -17,8 +17,8 @@ if (monster) {
     }
     monsterCollision(obj_monsterBarrier);
     monsterTutorialCollision(obj_tutorialMonsterBarrier)
-    if (instance_exists(obj_swimmerMonsterBarrier)) {
-        swimmerMonsterBarrierCollision(obj_swimmerMonsterBarrier);
+    if (instance_exists(obj_swimmerOneMonsterBarrier)) {
+        swimmerMonsterBarrierCollision(obj_swimmerOneMonsterBarrier);
     }
     if (instance_exists(obj_swimmerTwoMonsterBarrier)) {
         swimmerTwoMonsterBarrierCollision(obj_swimmerTwoMonsterBarrier);
@@ -31,8 +31,8 @@ if (monster) {
     }
     mineCollision(obj_mineBarrier);
     mineTutorialCollision(obj_tutorialMineBarrier)
-    if (instance_exists(obj_swimmerMineBarrier)) {
-        swimmerMineBarrierCollision(obj_swimmerMineBarrier);
+    if (instance_exists(obj_swimmerOneMineBarrier)) {
+        swimmerMineBarrierCollision(obj_swimmerOneMineBarrier);
     }
     if (instance_exists(obj_swimmerTwoMineBarrier)) {
         swimmerTwoMineBarrierCollision(obj_swimmerTwoMineBarrier);
@@ -45,11 +45,11 @@ if (monster) {
     }
     tutorialMonsterEvolvedCollision(obj_tutorialMonsterBarrier)
     monsterEvolvedCollision(obj_monsterBarrier);
-    if (instance_exists(obj_swimmerMonsterBarrier)) {
-        monsterEvolvedBarrierCollision(obj_swimmerMonsterBarrier);
+    if (instance_exists(obj_swimmerOneMonsterBarrier)) {
+        monsterEvolvedBarrierCollision(obj_swimmerOneMonsterBarrier);
     }
-    if (instance_exists(obj_swimmerMineBarrier)) {
-        monsterEvolvedBarrierCollision(obj_swimmerMineBarrier);
+    if (instance_exists(obj_swimmerOneMineBarrier)) {
+        monsterEvolvedBarrierCollision(obj_swimmerOneMineBarrier);
     }
 }
 // destroy if health is zero

@@ -17,7 +17,7 @@
   "soundFile": "snd_delay.mp3",
   "duration": 1.924293,
   "parent": {
-    "name": "Buttons",
-    "path": "folders/Sounds/Buttons.yy",
+    "name": "Microtransactions",
+    "path": "folders/Sounds/Buttons/Microtransactions.yy",
   },
 }

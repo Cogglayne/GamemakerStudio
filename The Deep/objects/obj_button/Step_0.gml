@@ -4,7 +4,7 @@ var mouseY = device_mouse_y_to_gui(0);
 var hove = point_in_rectangle(mouseX, mouseY, x, y, x + width, y + height);
 // text to speak for a button if activated
 if (hove) {
-    if (obj_disabilities.blindMode && !soundHasBeenPlayed && !audio_is_playing(soundToPlay)) {
+    if (obj_options.blindMode && !soundHasBeenPlayed && !audio_is_playing(soundToPlay)) {
         stopButtonSounds()
         audio_play_sound(soundToPlay, 1, 0)
         soundHasBeenPlayed = true;
@@ -23,55 +23,8 @@ if(click){
 // changes what clicking a button will do depending on its text
 if (click && text = "Quit") {
     game_end();
-    // gameplay options
-} else if (click && text = "End Run") {
-	if(obj_levelTracker.firstRun && obj_levelTracker.indirectCompetition){
-		obj_levelTracker.firstRun = false;
-		    instance_deactivate_layer("Instances")
-            instance_deactivate_layer("LightInstance")
-            instance_deactivate_layer("Whales")
-            instance_deactivate_layer("AmbientBackground")
-			instance_deactivate_layer("Wait")
-            instance_activate_layer("Transition")	
-	}else{
-		room_goto(targetRoom)
-	}
-}  else if (click && text = "Destroy Enemies With Barriers") {
-    if (obj_levelTracker.variableObjectives == false) {
-        obj_levelTracker.variableObjectives = true
-        activated = true;
-    } else if (obj_levelTracker.variableObjectives == true) {
-        obj_levelTracker.variableObjectives = false
-        activated = false;
-    }
-}  else if (click && text = "Monster Avoidance Ability") {
-    if (obj_levelTracker.conflictResolutionAlternatives == false) {
-        obj_levelTracker.conflictResolutionAlternatives = true
-        activated = true;
-    } else if (obj_levelTracker.conflictResolutionAlternatives == true) {
-        obj_levelTracker.conflictResolutionAlternatives = false
-        activated = false;
-    }
-}  else if (click && text = "Begin Second Player Attempt") {
-    room_restart();
-} else if (click && text = "Play A Level Back To Back") {
-    if (obj_levelTracker.indirectCompetition == false) {
-        obj_levelTracker.indirectCompetition = true
-        activated = true;
-    } else if (obj_levelTracker.indirectCompetition == true) {
-        obj_levelTracker.indirectCompetition = false
-        activated = false;
-    }
-} else if (click && text = "Wait Time Instead Of Death") {
-    if (obj_levelTracker.alternativePunishment == false) {
-        obj_levelTracker.alternativePunishment = true
-        activated = true;
-    } else if (obj_levelTracker.alternativePunishment == true) {
-        obj_levelTracker.alternativePunishment = false
-        activated = false;
-    }
-    // level difficulties
-} else if (click && text = "Easy") {
+    // difficulties
+}  else if (click && text = "Easy") {
     obj_levelTracker.levelDiffuclty = "Easy"
     room_goto(targetRoom);
 } else if (click && text = "Medium") {
@@ -189,116 +142,156 @@ if (click && text = "Quit") {
     }
     // changes control schemes
 } else if (click && text = "WASD Controls") {
-    obj_disabilities.leftHandControls = true;
-    obj_disabilities.rightHandControls = false;
-    obj_disabilities.normal = false;
-    obj_disabilities.poorReactivity = false;
+    obj_options.leftHandControls = true;
+    obj_options.rightHandControls = false;
+    obj_options.normal = false;
+    obj_options.poorReactivity = false;
     activated = true;
     inst_303B7AD.activated = false;
     inst_4229D191.activated = false;
     inst_5072045A.activated = false;
 } else if (click && text = "Arrow Key Controls") {
-    obj_disabilities.leftHandControls = false;
-    obj_disabilities.rightHandControls = true;
-    obj_disabilities.normal = false;
-    obj_disabilities.poorReactivity = false;
+    obj_options.leftHandControls = false;
+    obj_options.rightHandControls = true;
+    obj_options.normal = false;
+    obj_options.poorReactivity = false;
     activated = true;
     inst_188A1605.activated = false;
     inst_303B7AD.activated = false;
     inst_5072045A.activated = false;
 } else if (click && text = "Mouse and Arrow Key Controls") {
-    obj_disabilities.leftHandControls = false;
-    obj_disabilities.rightHandControls = false;
-    obj_disabilities.normal = true;
-    obj_disabilities.poorReactivity = false;
+    obj_options.leftHandControls = false;
+    obj_options.rightHandControls = false;
+    obj_options.normal = true;
+    obj_options.poorReactivity = false;
     activated = true;
     inst_188A1605.activated = false;
     inst_4229D191.activated = false;
     inst_5072045A.activated = false;
+	// activate and deactivate gameplay options
 } else if (click && text = "Decrease Reaction Time Required") {
-    obj_disabilities.leftHandControls = false;
-    obj_disabilities.rightHandControls = false;
-    obj_disabilities.normal = false;
-    obj_disabilities.poorReactivity = true;
+    obj_options.leftHandControls = false;
+    obj_options.rightHandControls = false;
+    obj_options.normal = false;
+    obj_options.poorReactivity = true;
     activated = true;
     inst_188A1605.activated = false;
     inst_303B7AD.activated = false;
     inst_4229D191.activated = false;
-    // activates text to speech
 } else if (click && text = "Text To Speak") {
-    if (obj_disabilities.blindMode == false) {
-        obj_disabilities.blindMode = true
+    if (obj_options.blindMode == false) {
+        obj_options.blindMode = true
         activated = true;
-    } else if (obj_disabilities.blindMode == true) {
-        obj_disabilities.blindMode = false
+    } else if (obj_options.blindMode == true) {
+        obj_options.blindMode = false
         activated = false;
     }
-    // activates sonar
 } else if (click && text = "Sonar") {
-    if (obj_disabilities.sonar == false) {
-        obj_disabilities.sonar = true
+    if (obj_options.sonar == false) {
+        obj_options.sonar = true
         activated = true;
-    } else if (obj_disabilities.sonar == true) {
-        obj_disabilities.sonar = false
+    } else if (obj_options.sonar == true) {
+        obj_options.sonar = false
         activated = false;
     }
-    // activates closed captioning
 }  else if (click && text = "Closed Captioning") {
-    if (obj_disabilities.closedCaptioning == false) {
-        obj_disabilities.closedCaptioning = true
+    if (obj_options.closedCaptioning == false) {
+        obj_options.closedCaptioning = true
         activated = true;
-    } else if (obj_disabilities.closedCaptioning == true) {
-        obj_disabilities.closedCaptioning = false
+    } else if (obj_options.closedCaptioning == true) {
+        obj_options.closedCaptioning = false
         activated = false;
     }
-    // shows a button does not go anywhere
-} else if (click && text == "Coming Soon") {
-    error = true;
-    // Activates and decativates different features
 } else if (click && text = "Objective Reminder") {
-    if (obj_disabilities.ADHD == false) {
-        obj_disabilities.ADHD = true
+    if (obj_options.ADHD == false) {
+        obj_options.ADHD = true
         activated = true;
-    } else if (obj_disabilities.ADHD == true) {
-        obj_disabilities.ADHD = false
+    } else if (obj_options.ADHD == true) {
+        obj_options.ADHD = false
         activated = false;
     }
 } else if (click && text = "Show Number Of Pollutants Pictorially") {
-    if (obj_disabilities.dyscalculia == false) {
-        obj_disabilities.dyscalculia = true
+    if (obj_options.dyscalculia == false) {
+        obj_options.dyscalculia = true
         activated = true
-    } else if (obj_disabilities.dyscalculia == true) {
-        obj_disabilities.dyscalculia = false
+    } else if (obj_options.dyscalculia == true) {
+        obj_options.dyscalculia = false
         activated = false;
     }
 } else if (click && text = "Change Font To Ariel") {
-    if (obj_disabilities.dyslexia == false) {
-        obj_disabilities.dyslexia = true
+    if (obj_options.dyslexia == false) {
+        obj_options.dyslexia = true
         activated = true;
-    } else if (obj_disabilities.dyslexia == true) {
-        obj_disabilities.dyslexia = false
+    } else if (obj_options.dyslexia == true) {
+        obj_options.dyslexia = false
         activated = false;
     }
 } else if (click && text = "Time Announcements") {
-    if (obj_disabilities.executiveFunctioning == false) {
-        obj_disabilities.executiveFunctioning = true
+    if (obj_options.executiveFunctioning == false) {
+        obj_options.executiveFunctioning = true
         activated = true;
-    } else if (obj_disabilities.executiveFunctioning == true) {
-        obj_disabilities.executiveFunctioning = false
+    } else if (obj_options.executiveFunctioning == true) {
+        obj_options.executiveFunctioning = false
         activated = false;
     }
 } else if (click && text = "Remove Background Noise") {
-    if (obj_disabilities.auditoryProcessingDisorder == false) {
-        obj_disabilities.auditoryProcessingDisorder = true
+    if (obj_options.auditoryProcessingDisorder == false) {
+        obj_options.auditoryProcessingDisorder = true
         activated = true;
-    } else if (obj_disabilities.auditoryProcessingDisorder == true) {
-        obj_disabilities.auditoryProcessingDisorder = false
+    } else if (obj_options.auditoryProcessingDisorder == true) {
+        obj_options.auditoryProcessingDisorder = false
         activated = false;
     }
     if (audio_is_playing(snd_background)) {
         audio_stop_sound(snd_background)
     } else if (!audio_is_playing(snd_background)) {
         audio_play_sound(snd_background, 0, 1);
+    }
+}else if (click && text = "End Run") {
+	if(obj_options.firstRun && obj_options.indirectCompetition){
+		obj_options.firstRun = false;
+		    instance_deactivate_layer("Instances")
+            instance_deactivate_layer("LightInstance")
+            instance_deactivate_layer("Whales")
+            instance_deactivate_layer("AmbientBackground")
+			instance_deactivate_layer("Wait")
+            instance_activate_layer("Transition")	
+	}else{
+		room_goto(targetRoom)
+	}
+}  else if (click && text = "Destroy Enemies With Barriers") {
+    if (obj_options.variableObjectives == false) {
+        obj_options.variableObjectives = true
+        activated = true;
+    } else if (obj_options.variableObjectives == true) {
+        obj_options.variableObjectives = false
+        activated = false;
+    }
+}  else if (click && text = "Monster Avoidance Ability") {
+    if (obj_options.conflictResolutionAlternatives == false) {
+        obj_options.conflictResolutionAlternatives = true
+        activated = true;
+    } else if (obj_options.conflictResolutionAlternatives == true) {
+        obj_options.conflictResolutionAlternatives = false
+        activated = false;
+    }
+}  else if (click && text = "Begin Second Player Attempt") {
+    room_restart();
+} else if (click && text = "Play A Level Back To Back") {
+    if (obj_options.indirectCompetition == false) {
+        obj_options.indirectCompetition = true
+        activated = true;
+    } else if (obj_options.indirectCompetition == true) {
+        obj_options.indirectCompetition = false
+        activated = false;
+    }
+} else if (click && text = "Wait Time Instead Of Death") {
+    if (obj_options.alternativePunishment == false) {
+        obj_options.alternativePunishment = true
+        activated = true;
+    } else if (obj_options.alternativePunishment == true) {
+        obj_options.alternativePunishment = false
+        activated = false;
     }
 } else if (click) {
     room_goto(targetRoom);

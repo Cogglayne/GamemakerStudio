@@ -1,5 +1,4 @@
 // layer manipulation
-instance_activate_layer("Whales")
 instance_activate_layer("AmbientBackground")
 instance_activate_layer("Instances")
 instance_activate_layer("LightInstance")

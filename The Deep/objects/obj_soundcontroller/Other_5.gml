@@ -1,5 +1,0 @@
-audio_stop_sound(snd_pollutant)
-audio_stop_sound(snd_waves)
-audio_stop_sound(snd_bubble)
-audio_stop_sound(snd_whale)
-audio_stop_sound(snd_ship)

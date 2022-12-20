@@ -17,7 +17,7 @@
   "soundFile": "snd_lightCosmetic.mp3",
   "duration": 2.450759,
   "parent": {
-    "name": "Buttons",
-    "path": "folders/Sounds/Buttons.yy",
+    "name": "Microtransactions",
+    "path": "folders/Sounds/Buttons/Microtransactions.yy",
   },
 }

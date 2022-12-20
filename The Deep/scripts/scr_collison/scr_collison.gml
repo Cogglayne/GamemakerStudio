@@ -17,7 +17,7 @@ function swimmerCollisions(object) {
     } else {
         yCollision = false;
     }
-    if ((xCollision == true || yCollision == true) && obj_disabilities.blindMode) {
+    if ((xCollision == true || yCollision == true) && obj_options.blindMode) {
         if (!audio_is_playing(snd_wall)) {
             audio_play_sound(snd_wall, 1, 0);
         }
@@ -34,15 +34,15 @@ function mineTutorialCollision(object) {
         }
         if (instance_exists(obj_trainer)) {
             if (obj_trainer.mineTutorialActive) {
-                if (instance_exists(obj_swimmerMineBarrier) && !obj_trainer.firstBounce) {
-                    if (obj_disabilities.blindMode) {
+                if (instance_exists(obj_swimmerOneMineBarrier) && !obj_trainer.firstBounce) {
+                    if (obj_options.blindMode) {
                         stopTrainerSounds()
                         audio_play_sound(snd_mineTutorialMistake, 1, 0)
                     }
                     obj_trainer.textTwo = "Make sure you deploy the barrier in the mine's path\n out in the field you can only deploy one at a time\n try again"
-                    instance_destroy(obj_swimmerMineBarrier)
+                    instance_destroy(obj_swimmerOneMineBarrier)
                 } else {
-                    if (obj_disabilities.blindMode) {
+                    if (obj_options.blindMode) {
                         stopTrainerSounds()
                         audio_play_sound(snd_mineUp, 1, 0)
                     }
@@ -62,15 +62,15 @@ function mineCollision(object) {
         }
         if (instance_exists(obj_trainer)) {
             if (obj_trainer.mineTutorialActive) {
-                if (instance_exists(obj_swimmerMineBarrier)) {
-                    if (obj_disabilities.blindMode) {
+                if (instance_exists(obj_swimmerOneMineBarrier)) {
+                    if (obj_options.blindMode) {
                         stopTrainerSounds()
                         audio_play_sound(snd_mineTutorialMistake, 1, 0)
                     }
                     obj_trainer.textTwo = "Make sure you deploy the barrier in the mine's path\n out in the field you can only deploy one at a time\n try again"
-                    instance_destroy(obj_swimmerMineBarrier)
+                    instance_destroy(obj_swimmerOneMineBarrier)
                 } else {
-                    if (obj_disabilities.blindMode) {
+                    if (obj_options.blindMode) {
                         stopTrainerSounds()
                         audio_play_sound(snd_mineDown, 1, 0)
                     }
@@ -90,15 +90,15 @@ function monsterTutorialCollision(object) {
         hsp = -hsp;
         if (instance_exists(obj_trainer)) {
             if (obj_trainer.monsterTutorialActive) {
-                if (instance_exists(obj_swimmerMonsterBarrier) && !obj_trainer.firstBounce) {
-                    if (obj_disabilities.blindMode) {
+                if (instance_exists(obj_swimmerOneMonsterBarrier) && !obj_trainer.firstBounce) {
+                    if (obj_options.blindMode) {
                         stopTrainerSounds()
                         audio_play_sound(snd_monsterTutorialMistake, 1, 0)
                     }
                     obj_trainer.textTwo = "Make sure you deploy the barrier in the monster's path\n out in the field you can only deploy one at a time\n try again"
-                    instance_destroy(obj_swimmerMonsterBarrier)
+                    instance_destroy(obj_swimmerOneMonsterBarrier)
                 } else {
-                    if (obj_disabilities.blindMode) {
+                    if (obj_options.blindMode) {
                         stopTrainerSounds()
                         audio_play_sound(snd_monsterRight, 1, 0)
                     }
@@ -119,15 +119,15 @@ function monsterCollision(object) {
         hsp = -hsp;
         if (instance_exists(obj_trainer)) {
             if (obj_trainer.monsterTutorialActive) {
-                if (instance_exists(obj_swimmerMonsterBarrier)) {
-                    if (obj_disabilities.blindMode) {
+                if (instance_exists(obj_swimmerOneMonsterBarrier)) {
+                    if (obj_options.blindMode) {
                         stopTrainerSounds()
                         audio_play_sound(snd_monsterTutorialMistake, 1, 0)
                     }
                     obj_trainer.textTwo = "Make sure you deploy the barriers in the monster's path\n out in the field you can only deploy one at a time\n try again"
-                    instance_destroy(obj_swimmerMonsterBarrier)
+                    instance_destroy(obj_swimmerOneMonsterBarrier)
                 } else {
-                    if (obj_disabilities.blindMode) {
+                    if (obj_options.blindMode) {
                         stopTrainerSounds()
                         audio_play_sound(snd_monsterLeft, 1, 0)
                     }
@@ -145,16 +145,16 @@ function tutorialMonsterEvolvedCollision(object) {
             x += sign(hsp);
         }
         if (instance_exists(obj_trainer)) {
-            if (instance_exists(obj_swimmerMineBarrier) || instance_exists(obj_swimmerMonsterBarrier)) {
-                if (obj_disabilities.blindMode) {
+            if (instance_exists(obj_swimmerOneMineBarrier) || instance_exists(obj_swimmerOneMonsterBarrier)) {
+                if (obj_options.blindMode) {
                     stopTrainerSounds()
                     audio_play_sound(snd_evolvedMonsterTutorialMistake, 1, 0)
                 }
                 obj_trainer.textTwo = "Make sure you deploy the barrier in the evolved monster's path\n out in the field you can only deploy one at a time\n try again"
-                instance_destroy(obj_swimmerMineBarrier)
-                instance_destroy(obj_swimmerMineBarrier)
+                instance_destroy(obj_swimmerOneMineBarrier)
+                instance_destroy(obj_swimmerOneMineBarrier)
             } else {
-                if (obj_disabilities.blindMode) {
+                if (obj_options.blindMode) {
                     stopTrainerSounds()
                     audio_play_sound(snd_monsterEvolvedCollision, 1, 0)
                 }
@@ -173,16 +173,16 @@ function monsterEvolvedCollision(object) {
             x += sign(hsp);
         }
         if (instance_exists(obj_trainer)) {
-            if ((instance_exists(obj_swimmerMineBarrier) || instance_exists(obj_swimmerMonsterBarrier)) && !obj_trainer.firstBounce) {
-                if (obj_disabilities.blindMode) {
+            if ((instance_exists(obj_swimmerOneMineBarrier) || instance_exists(obj_swimmerOneMonsterBarrier)) && !obj_trainer.firstBounce) {
+                if (obj_options.blindMode) {
                     stopTrainerSounds()
                     audio_play_sound(snd_evolvedMonsterTutorialMistake, 1, 0)
                 }
                 obj_trainer.textTwo = "Make sure you deploy the barrier in the evolved monster's path\n out in the field you can only deploy one at a time\n try again"
-                instance_destroy(obj_swimmerMineBarrier)
-                instance_destroy(obj_swimmerMineBarrier)
+                instance_destroy(obj_swimmerOneMineBarrier)
+                instance_destroy(obj_swimmerOneMineBarrier)
             } else {
-                if (obj_disabilities.blindMode) {
+                if (obj_options.blindMode) {
                     stopTrainerSounds()
                     audio_play_sound(snd_monsterEvolvedTutorialCollision, 1, 0)
                 }
@@ -203,7 +203,7 @@ function swimmerMonsterBarrierCollision(object) {
             x += sign(hsp);
         }
         hsp = -hsp;
-        if (obj_levelTracker.variableObjectives && obj_swimmer.isPlaying) {
+        if (obj_levelTracker.variableObjectives && obj_swimmerOne.isPlaying) {
             numHits--;
         }
         if (numHits == 0) {
@@ -217,7 +217,7 @@ function swimmerMonsterBarrierCollision(object) {
                 obj_trainer.monsterTutorialTrial = true;
                 obj_trainer.numHits++;
                 if (obj_trainer.monsterTutorialTrial && obj_trainer.numHits == 2) {
-                    if (obj_disabilities.blindMode) {
+                    if (obj_options.blindMode) {
                         stopTrainerSounds()
                         audio_play_sound(snd_enemyActive, 1, 0)
                     }
@@ -242,7 +242,7 @@ function swimmerMineBarrierCollision(object) {
         while (!place_meeting(x, y + sign(vsp), object)) {
             y += sign(vsp);
         }
-        if (obj_levelTracker.variableObjectives && obj_swimmer.isPlaying) {
+        if (obj_levelTracker.variableObjectives && obj_swimmerOne.isPlaying) {
             numHits--;
         }
         if (instance_exists(obj_trainer)) {
@@ -250,7 +250,7 @@ function swimmerMineBarrierCollision(object) {
                 obj_trainer.numHits++;
                 obj_trainer.mineTutorialTrial = true;
                 if (obj_trainer.mineTutorialTrial && obj_trainer.numHits == 2) {
-                    if (obj_disabilities.blindMode) {
+                    if (obj_options.blindMode) {
                         stopTrainerSounds()
                         audio_play_sound(snd_enemyActive, 1, 0)
                     }
@@ -280,16 +280,16 @@ function monsterEvolvedBarrierCollision(object) {
         }
         hsp = -hsp;
         vsp = -vsp;
-        if (obj_levelTracker.variableObjectives && obj_swimmer.isPlaying) {
+        if (obj_levelTracker.variableObjectives && obj_swimmerOne.isPlaying) {
             numHits--;
         }
-        if (object == obj_swimmerMineBarrier) {
+        if (object == obj_swimmerOneMineBarrier) {
             if (instance_exists(obj_trainer)) {
                 if (obj_trainer.evolvedMonsterTutorialOneActive) {
                     obj_trainer.numHits++;
                     obj_trainer.evolvedMonsterTutorialTrialOne = true;
                     if (obj_trainer.evolvedMonsterTutorialTrialOne && obj_trainer.numHits == 2) {
-                        if (obj_disabilities.blindMode) {
+                        if (obj_options.blindMode) {
                             stopTrainerSounds()
                             audio_play_sound(snd_enemyActive, 1, 0)
                         }
@@ -309,13 +309,13 @@ function monsterEvolvedBarrierCollision(object) {
             instance_destroy(object)
             audio_play_sound(snd_barrierDestruction, 1, 0)
         }
-        if (object == obj_swimmerMonsterBarrier) {
+        if (object == obj_swimmerOneMonsterBarrier) {
             if (instance_exists(obj_trainer)) {
                 if (obj_trainer.evolvedMonsterTutorialTwoActive) {
                     obj_trainer.numHits++;
                     obj_trainer.evolvedMonsterTutorialTrialTwo = true;
                     if (obj_trainer.evolvedMonsterTutorialTrialTwo && obj_trainer.numHits == 2) {
-                        if (obj_disabilities.blindMode) {
+                        if (obj_options.blindMode) {
                             stopTrainerSounds()
                             audio_play_sound(snd_enemyActive, 1, 0)
                         }

@@ -17,7 +17,7 @@
   "soundFile": "snd_slowEnemies.mp3",
   "duration": 2.188443,
   "parent": {
-    "name": "Buttons",
-    "path": "folders/Sounds/Buttons.yy",
+    "name": "Microtransactions",
+    "path": "folders/Sounds/Buttons/Microtransactions.yy",
   },
 }

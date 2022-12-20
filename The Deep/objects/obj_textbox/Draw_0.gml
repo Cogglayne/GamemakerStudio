@@ -1,7 +1,7 @@
 draw_set_color(c_white)
-if (obj_disabilities.dyslexia) {
+if (obj_options.dyslexia) {
     draw_set_font(ft_Ariel)
-} else if (!obj_disabilities.dyslexia) {
+} else if (!obj_options.dyslexia) {
     draw_set_font(ft_Chiller);
 }
 if (room == InstructionsPageOne) {
@@ -64,7 +64,7 @@ if (room == Levels) {
     }
 }
 if(room == LevelFourDifficultySelector){
-    if (obj_levelTracker.variableObjectives) {
+    if (obj_options.variableObjectives) {
         draw_text_transformed(100, 100, "Collect all the pollutants or destroy all the enemies using a barrier", 2, 2, 0);
     }else{
 		draw_text_transformed(1650, 100, "Collect all the pollutants", 2, 2, 0);

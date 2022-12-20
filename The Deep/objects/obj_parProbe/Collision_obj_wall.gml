@@ -3,7 +3,7 @@ if (instance_exists(obj_trainer)) {
         obj_trainer.numHits++;
         obj_trainer.probeTutorialTrial = true;
         if (obj_trainer.probeTutorialTrial && obj_trainer.numHits == 2) {
-            if (obj_disabilities.blindMode) {
+            if (obj_options.blindMode) {
                 audio_play_sound(snd_probeSecondLaunch, 1, 0)
             }
             obj_trainer.textTwo = "Excellent Work, Launch another probe"
@@ -18,8 +18,8 @@ if (instance_exists(obj_trainer)) {
     }
 }
 instance_destroy(self)
-if(swimmer == obj_swimmer){
-	obj_swimmer.probeExists = false;
+if(swimmer == obj_swimmerOne){
+	obj_swimmerOne.probeExists = false;
 }else if (swimmer == obj_swimmerTwo){
 	obj_swimmerTwo.numProbes--;
 }

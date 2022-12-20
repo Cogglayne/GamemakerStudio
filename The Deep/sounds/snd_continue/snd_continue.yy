@@ -17,7 +17,7 @@
   "soundFile": "snd_continue.mp3",
   "duration": 1.092489,
   "parent": {
-    "name": "Buttons",
-    "path": "folders/Sounds/Buttons.yy",
+    "name": "Navigation",
+    "path": "folders/Sounds/Buttons/Navigation.yy",
   },
 }

@@ -17,7 +17,7 @@
   "soundFile": "snd_toggleSwimmerCosmetic.mp3",
   "duration": 1.647439,
   "parent": {
-    "name": "Buttons",
-    "path": "folders/Sounds/Buttons.yy",
+    "name": "Microtransactions",
+    "path": "folders/Sounds/Buttons/Microtransactions.yy",
   },
 }

@@ -17,7 +17,7 @@
   "soundFile": "snd_movementTutorial.mp3",
   "duration": 1.227667,
   "parent": {
-    "name": "Buttons",
-    "path": "folders/Sounds/Buttons.yy",
+    "name": "Tutorials",
+    "path": "folders/Sounds/Buttons/Tutorials.yy",
   },
 }

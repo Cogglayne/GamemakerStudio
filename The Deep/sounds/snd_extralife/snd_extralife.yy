@@ -17,7 +17,7 @@
   "soundFile": "snd_extralife.mp3",
   "duration": 1.906833,
   "parent": {
-    "name": "Buttons",
-    "path": "folders/Sounds/Buttons.yy",
+    "name": "Microtransactions",
+    "path": "folders/Sounds/Buttons/Microtransactions.yy",
   },
 }

@@ -9,57 +9,26 @@ function stopGameSounds() {
     audio_stop_sound(snd_mine)
     audio_stop_sound(snd_horror)
     audio_stop_sound(snd_swimming)
-    if (instance_exists(obj_horror)) {
-        obj_horror.state = 0;
+    if (instance_exists(obj_parHorror)) {
+        obj_parHorror.state = 0;
     }
-    if (instance_exists(obj_monsterEvolved)) {
-        obj_monsterEvolved.state = 0;
+    if (instance_exists(obj_parPollutant)) {
+        obj_parPollutant.state = 0;
     }
-    if (instance_exists(obj_brownWhite_beige)) {
-        obj_brownWhite_beige.state = 0;
+    if (instance_exists(obj_parProbe)) {
+        obj_parProbe.state = 0;
     }
-    if (instance_exists(obj_greenRed_yellow)) {
-        obj_greenRed_yellow.state = 0;
+    if (instance_exists(obj_parPatrollingEnemy)) {
+        obj_parPatrollingEnemy.state = 0;
     }
-    if (instance_exists(obj_orangeBlue_brown)) {
-        obj_orangeBlue_brown.state = 0;
-    }
-    if (instance_exists(obj_redBlue_violet)) {
-        obj_redBlue_violet.state = 0;
-    }
-    if (instance_exists(obj_redYellow_orange)) {
-        obj_redYellow_orange.state = 0;
-    }
-    if (instance_exists(obj_whiteBlack_grey)) {
-        obj_whiteBlack_grey.state = 0;
-    }
-    if (instance_exists(obj_whiteRed_pink)) {
-        obj_whiteRed_pink.state = 0;
-    }
-    if (instance_exists(obj_yellowBlue_green)) {
-        obj_yellowBlue_green.state = 0;
-    }
-    if (instance_exists(obj_probe)) {
-        obj_probe.state = 0;
-    }
-    if (instance_exists(obj_monster)) {
-        obj_monster.state = 0;
-    }
-    if (instance_exists(obj_mine)) {
-        obj_mine.state = 0;
-    }
-    if (instance_exists(obj_waveGenerator)) {
-        obj_waveGenerator.state = 0;
-    }
-    if (instance_exists(obj_ship)) {
-        obj_ship.state = 0;
-    }
-    if (instance_exists(obj_bubble)) {
-        obj_bubble.state = 0;
+    if (instance_exists(obj_parAmbient)) {
+        obj_parAmbient.state = 0;
     }
 }
 
 function stopButtonSounds() {
+	audio_stop_sound(snd_closedCaptioning)
+	audio_stop_sound(snd_sonar)
     audio_stop_sound(snd_alternativePunishment)
     audio_stop_sound(snd_variableObjectives)
     audio_stop_sound(snd_dyscalculia)
@@ -78,7 +47,6 @@ function stopButtonSounds() {
     audio_stop_sound(snd_easy)
     audio_stop_sound(snd_endrun)
     audio_stop_sound(snd_extralife)
-    audio_stop_sound(snd_grading)
     audio_stop_sound(snd_hard)
     audio_stop_sound(snd_Instructions)
     audio_stop_sound(snd_leftHanded)
@@ -86,12 +54,10 @@ function stopButtonSounds() {
     audio_stop_sound(snd_lightCosmetic)
     audio_stop_sound(snd_mainMenu)
     audio_stop_sound(snd_medium)
-    audio_stop_sound(snd_minigames)
     audio_stop_sound(snd_multiplayer)
     audio_stop_sound(snd_next)
     audio_stop_sound(snd_options)
     audio_stop_sound(snd_poorReactivity)
-    audio_stop_sound(snd_puzzleSolutionExample)
     audio_stop_sound(snd_quit)
     audio_stop_sound(snd_rightHanded)
     audio_stop_sound(snd_singleplayer)
@@ -120,7 +86,6 @@ function stopRoomText() {
     audio_stop_sound(snd_tutorialNotPassed)
     audio_stop_sound(snd_tutorialPassed)
     audio_stop_sound(snd_tutorialsRecommended)
-    audio_stop_sound(snd_instructionsPagefive)
     audio_stop_sound(snd_instructionsPagefour)
     audio_stop_sound(snd_instructionsPagethree)
     audio_stop_sound(snd_instructionsPagetwo)

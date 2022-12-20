@@ -17,7 +17,7 @@
   "soundFile": "snd_evolvedMonsterTutorialOne.mp3",
   "duration": 2.011333,
   "parent": {
-    "name": "Buttons",
-    "path": "folders/Sounds/Buttons.yy",
+    "name": "Tutorials",
+    "path": "folders/Sounds/Buttons/Tutorials.yy",
   },
 }

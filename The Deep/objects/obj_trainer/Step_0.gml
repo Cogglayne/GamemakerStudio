@@ -41,9 +41,9 @@ if (monsterTutorialActive && !monsterTutorialTrial) {
         x = 500;
         y = 992;
     }
-    if (obj_swimmer.numMonsterBarriers < 1) {
-        instance_create_layer(x + 100, y, "Instances", obj_swimmerMonsterBarrier);
-        obj_swimmer.numMonsterBarriers++;
+    if (obj_swimmerOne.numMonsterBarriers < 1) {
+        instance_create_layer(x + 100, y, "Instances", obj_swimmerOneMonsterBarrier);
+        obj_swimmerOne.numMonsterBarriers++;
     }
 }
 
@@ -63,9 +63,9 @@ if (mineTutorialActive && !mineTutorialTrial) {
         x = 1024;
         y = 1200;
     }
-    if (obj_swimmer.numMineBarriers < 1) {
-        instance_create_layer(x, y - 140, "Instances", obj_swimmerMineBarrier);
-        obj_swimmer.numMineBarriers++;
+    if (obj_swimmerOne.numMineBarriers < 1) {
+        instance_create_layer(x, y - 140, "Instances", obj_swimmerOneMineBarrier);
+        obj_swimmerOne.numMineBarriers++;
     }
 }
 if (mineTutorialActive && mineTutorialTrial) {
@@ -85,9 +85,9 @@ if (evolvedMonsterTutorialOneActive && !evolvedMonsterTutorialTrialOne) {
         x = 1900;
         y = 850;
     }
-    if (obj_swimmer.numMineBarriers < 1) {
-        instance_create_layer(x, y - 140, "Instances", obj_swimmerMineBarrier);
-        obj_swimmer.numMineBarriers++;
+    if (obj_swimmerOne.numMineBarriers < 1) {
+        instance_create_layer(x, y - 140, "Instances", obj_swimmerOneMineBarrier);
+        obj_swimmerOne.numMineBarriers++;
     }
 }
 if (evolvedMonsterTutorialOneActive && evolvedMonsterTutorialTrialOne) {
@@ -108,9 +108,9 @@ if (evolvedMonsterTutorialTwoActive && !evolvedMonsterTutorialTrialTwo) {
         x = 2000;
         y = 700;
     }
-    if (obj_swimmer.numMonsterBarriers < 1) {
-        instance_create_layer(x - 100, y, "Instances", obj_swimmerMonsterBarrier);
-        obj_swimmer.numMonsterBarriers++;
+    if (obj_swimmerOne.numMonsterBarriers < 1) {
+        instance_create_layer(x - 100, y, "Instances", obj_swimmerOneMonsterBarrier);
+        obj_swimmerOne.numMonsterBarriers++;
     }
 }
 
@@ -132,13 +132,13 @@ if (probeTutorialActive && !probeTutorialTrial) {
         x = 1200;
         y = 500;
     }
-    if (!obj_swimmer.probeExists) {
+    if (!obj_swimmerOne.probeExists) {
         instance_create_layer(x, y, "Instances", obj_probe);
         with(obj_probe) {
             direction = 0;
             speed = 5;
         }
-        obj_swimmer.probeExists = true;
+        obj_swimmerOne.probeExists = true;
     }
 }
 

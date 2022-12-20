@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obJ_parLight",
+  "name": "obj_parLight",
   "spriteId": null,
   "solid": false,
   "visible": true,

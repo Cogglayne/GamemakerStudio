@@ -9,8 +9,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obJ_parLight",
-    "path": "objects/obJ_parLight/obJ_parLight.yy",
+    "name": "obj_parLight",
+    "path": "objects/obj_parLight/obj_parLight.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -27,9 +27,9 @@
   "eventList": [],
   "properties": [],
   "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"follow","path":"objects/obJ_parLight/obJ_parLight.yy",},"objectId":{"name":"obJ_parLight","path":"objects/obJ_parLight/obJ_parLight.yy",},"value":"obj_trainer",},
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"xBoundry","path":"objects/obJ_parLight/obJ_parLight.yy",},"objectId":{"name":"obJ_parLight","path":"objects/obJ_parLight/obJ_parLight.yy",},"value":"3",},
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"yBoundry","path":"objects/obJ_parLight/obJ_parLight.yy",},"objectId":{"name":"obJ_parLight","path":"objects/obJ_parLight/obJ_parLight.yy",},"value":"3",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"follow","path":"objects/obj_parLight/obj_parLight.yy",},"objectId":{"name":"obj_parLight","path":"objects/obj_parLight/obj_parLight.yy",},"value":"obj_trainer",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"xBoundry","path":"objects/obj_parLight/obj_parLight.yy",},"objectId":{"name":"obj_parLight","path":"objects/obj_parLight/obj_parLight.yy",},"value":"3",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"yBoundry","path":"objects/obj_parLight/obj_parLight.yy",},"objectId":{"name":"obj_parLight","path":"objects/obj_parLight/obj_parLight.yy",},"value":"3",},
   ],
   "parent": {
     "name": "Child Lights",

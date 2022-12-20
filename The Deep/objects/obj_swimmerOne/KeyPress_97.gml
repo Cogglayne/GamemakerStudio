@@ -1,7 +1,7 @@
 // if single player is active and right hand controls are active
 // destroys or creates the swimmer's light
 if (singleplayer == true) {
-    if (obj_options.rightHandControls) {
+    if (obj_options.arrowKeyControls) {
         audio_play_sound(snd_light, 1, 0)
         if (instance_exists(obj_playerOneLight)) {
             instance_destroy(obj_playerOneLight)

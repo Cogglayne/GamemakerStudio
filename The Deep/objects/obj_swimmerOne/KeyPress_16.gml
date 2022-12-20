@@ -1,7 +1,7 @@
 // if single player is active and normal or poor reactivity is active
 // destroys or creates the swimmer's light
 if (singleplayer == true) {
-    if (obj_options.normal || obj_options.poorReactivity) {
+    if (obj_options.mouseAndArrowKeyControls || obj_options.decreaseReactionTimeRequired) {
         audio_play_sound(snd_light, 1, 0)
         if (instance_exists(obj_playerOneLight)) {
             instance_destroy(obj_playerOneLight)

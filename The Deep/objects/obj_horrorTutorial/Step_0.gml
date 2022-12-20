@@ -6,11 +6,11 @@ if (state = 0 && !audio_is_playing(snd_horror)) {
 audio_emitter_position(anglerEmitter, x, y, 0)
 if (instance_exists(obj_playerOneLight)) {
     if (obj_trainer.anglerTutorialTrial && obj_trainer.anglerTutorialActive) {
-        direction = point_direction(x, y, obj_swimmer.x, obj_swimmer.y);
+        direction = point_direction(x, y, obj_swimmerOne.x, obj_swimmerOne.y);
         if (obj_microtransactions.extraLife) {
             speed = 0;
         } else {
-            if (obj_microtransactions.enemiesSlowed || obj_disabilities.poorReactivity) {
+            if (obj_microtransactions.enemiesSlowed || obj_options.decreaseReactionTimeRequired) {
                 speed = 5;
             } else {
                 speed = 5; //7
@@ -26,7 +26,7 @@ if (instance_exists(obj_trainerLight)) {
         if (obj_microtransactions.extraLife) {
             speed = 0;
         } else {
-            if (obj_microtransactions.enemiesSlowed || obj_disabilities.poorReactivity) {
+            if (obj_microtransactions.enemiesSlowed || obj_options.decreaseReactionTimeRequired) {
                 speed = 5;
             } else {
                 speed = 5; //7

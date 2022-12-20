@@ -1,7 +1,7 @@
 // sets swimmer movement
-if (obj_options.normal || obj_options.rightHandControls || obj_options.poorReactivity) {
+if (obj_options.mouseAndArrowKeyControls || obj_options.arrowKeyControls || obj_options.decreaseReactionTimeRequired) {
     ArrowKeys();
-} else {
+} else if (obj_options.WASDControls) {
 	WASD();
 }
 hsp = (keyRight - keyLeft) * mvspeed;
@@ -32,7 +32,7 @@ swimmerCollisions(obj_wall);
 x += hsp;
 y += vsp;
 // checks if swimimer has destroyed all enemies
-if (isPlaying && obj_options.variableObjectives) {
+if (isPlaying && obj_options.destroyEnemiesWithBarriers) {
     if (instance_number(obj_monster) == 0 && instance_number(obj_mine) == 0 && instance_number(obj_monsterEvolved) == 0) {
         room_goto(AlternateWin)
     }

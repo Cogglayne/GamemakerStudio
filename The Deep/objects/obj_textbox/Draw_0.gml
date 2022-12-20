@@ -1,7 +1,7 @@
 draw_set_color(c_white)
-if (obj_options.dyslexia) {
+if (obj_options.changeFontToAriel) {
     draw_set_font(ft_Ariel)
-} else if (!obj_options.dyslexia) {
+} else if (!obj_options.changeFontToAriel) {
     draw_set_font(ft_Chiller);
 }
 if (room == InstructionsPageOne) {

@@ -68,7 +68,7 @@
     {"id":{"name":"snd_tutorialsRecommended","path":"sounds/snd_tutorialsRecommended/snd_tutorialsRecommended.yy",},"order":11,},
     {"id":{"name":"snd_probeCreation","path":"sounds/snd_probeCreation/snd_probeCreation.yy",},"order":2,},
     {"id":{"name":"spr_swimmerIdleRight","path":"sprites/spr_swimmerIdleRight/spr_swimmerIdleRight.yy",},"order":1,},
-    {"id":{"name":"obj_spawnerSwimmer","path":"objects/obj_spawnerSwimmer/obj_spawnerSwimmer.yy",},"order":7,},
+    {"id":{"name":"obj_swimmerSpawner","path":"objects/obj_swimmerSpawner/obj_swimmerSpawner.yy",},"order":7,},
     {"id":{"name":"snd_monster","path":"sounds/snd_monster/snd_monster.yy",},"order":2,},
     {"id":{"name":"scr_controls","path":"scripts/scr_controls/scr_controls.yy",},"order":9,},
     {"id":{"name":"obj_stationaryProbeLight","path":"objects/obj_stationaryProbeLight/obj_stationaryProbeLight.yy",},"order":3,},

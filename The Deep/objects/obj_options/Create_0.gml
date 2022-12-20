@@ -1,20 +1,20 @@
 // variables used to deactivate and activate features
-leftHandControls = false;
-rightHandControls = false;
-normal = true;
-poorReactivity = false;
-blindMode = false;
-dyscalculia = false
-ADHD = false;
-executiveFunctioning = false;
-dyslexia = false;
-auditoryProcessingDisorder = false
+WASDControls = false;
+arrowKeyControls = false;
+mouseAndArrowKeyControls = true;
+decreaseReactionTimeRequired = false;
+textToSpeak = false;
+showNumberOfPollutantsPictorially = false
+objectiveReminder = false;
+timeAnnoucements = false;
+changeFontToAriel = false;
+removeBackgroundNoise = false
 closedCaptioning = false;
 sonar = false;
-alternativePunishment = false;
-variableObjectives = false;
-indirectCompetition = false;
-conflictResolutionAlternatives = false;
+waitTimeInsteadOfDeath = false;
+destroyEnemiesWithBarriers = false;
+playALevelBackToBack = false;
+monsterAvoidanceAbility = false;
 
 timer = 200;
 firstRun = true;

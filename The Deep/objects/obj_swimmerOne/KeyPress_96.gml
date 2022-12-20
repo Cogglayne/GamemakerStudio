@@ -1,4 +1,4 @@
-if(obj_options.conflictResolutionAlternatives && (obj_options.normal || obj_options.poorReactivity) && !avoidanceTime && avoidanceCharges > 0){
+if(obj_options.monsterAvoidanceAbility && (obj_options.mouseAndArrowKeyControls || obj_options.decreaseReactionTimeRequired) && !avoidanceTime && avoidanceCharges > 0){
 avoidanceCharges--;
 audio_play_sound(snd_avoidanceActivation,1,0)
 avoidanceTime = true;

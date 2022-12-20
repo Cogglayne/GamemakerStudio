@@ -4,7 +4,7 @@ var mouseY = device_mouse_y_to_gui(0);
 var hove = point_in_rectangle(mouseX, mouseY, x, y, x + width, y + height);
 // text to speak for a button if activated
 if (hove) {
-    if (obj_options.blindMode && !soundHasBeenPlayed && !audio_is_playing(soundToPlay)) {
+    if (obj_options.textToSpeak && !soundHasBeenPlayed && !audio_is_playing(soundToPlay)) {
         stopButtonSounds()
         audio_play_sound(soundToPlay, 1, 0)
         soundHasBeenPlayed = true;
@@ -142,48 +142,48 @@ if (click && text = "Quit") {
     }
     // changes control schemes
 } else if (click && text = "WASD Controls") {
-    obj_options.leftHandControls = true;
-    obj_options.rightHandControls = false;
-    obj_options.normal = false;
-    obj_options.poorReactivity = false;
+    obj_options.WASDControls = true;
+    obj_options.arrowKeyControls = false;
+    obj_options.mouseAndArrowKeyControls = false;
+    obj_options.decreaseReactionTimeRequired = false;
     activated = true;
     inst_303B7AD.activated = false;
     inst_4229D191.activated = false;
     inst_5072045A.activated = false;
 } else if (click && text = "Arrow Key Controls") {
-    obj_options.leftHandControls = false;
-    obj_options.rightHandControls = true;
-    obj_options.normal = false;
-    obj_options.poorReactivity = false;
+    obj_options.WASDControls = false;
+    obj_options.arrowKeyControls = true;
+    obj_options.mouseAndArrowKeyControls = false;
+    obj_options.decreaseReactionTimeRequired = false;
     activated = true;
     inst_188A1605.activated = false;
     inst_303B7AD.activated = false;
     inst_5072045A.activated = false;
 } else if (click && text = "Mouse and Arrow Key Controls") {
-    obj_options.leftHandControls = false;
-    obj_options.rightHandControls = false;
-    obj_options.normal = true;
-    obj_options.poorReactivity = false;
+    obj_options.WASDControls = false;
+    obj_options.arrowKeyControls = false;
+    obj_options.mouseAndArrowKeyControls = true;
+    obj_options.decreaseReactionTimeRequired = false;
     activated = true;
     inst_188A1605.activated = false;
     inst_4229D191.activated = false;
     inst_5072045A.activated = false;
 	// activate and deactivate gameplay options
 } else if (click && text = "Decrease Reaction Time Required") {
-    obj_options.leftHandControls = false;
-    obj_options.rightHandControls = false;
-    obj_options.normal = false;
-    obj_options.poorReactivity = true;
+    obj_options.WASDControls = false;
+    obj_options.arrowKeyControls = false;
+    obj_options.mouseAndArrowKeyControls = false;
+    obj_options.decreaseReactionTimeRequired = true;
     activated = true;
     inst_188A1605.activated = false;
     inst_303B7AD.activated = false;
     inst_4229D191.activated = false;
 } else if (click && text = "Text To Speak") {
-    if (obj_options.blindMode == false) {
-        obj_options.blindMode = true
+    if (obj_options.textToSpeak == false) {
+        obj_options.textToSpeak = true
         activated = true;
-    } else if (obj_options.blindMode == true) {
-        obj_options.blindMode = false
+    } else if (obj_options.textToSpeak == true) {
+        obj_options.textToSpeak = false
         activated = false;
     }
 } else if (click && text = "Sonar") {
@@ -203,43 +203,43 @@ if (click && text = "Quit") {
         activated = false;
     }
 } else if (click && text = "Objective Reminder") {
-    if (obj_options.ADHD == false) {
-        obj_options.ADHD = true
+    if (obj_options.objectiveReminder == false) {
+        obj_options.objectiveReminder = true
         activated = true;
-    } else if (obj_options.ADHD == true) {
-        obj_options.ADHD = false
+    } else if (obj_options.objectiveReminder == true) {
+        obj_options.objectiveReminder = false
         activated = false;
     }
 } else if (click && text = "Show Number Of Pollutants Pictorially") {
-    if (obj_options.dyscalculia == false) {
-        obj_options.dyscalculia = true
+    if (obj_options.showNumberOfPollutantsPictorially == false) {
+        obj_options.showNumberOfPollutantsPictorially = true
         activated = true
-    } else if (obj_options.dyscalculia == true) {
-        obj_options.dyscalculia = false
+    } else if (obj_options.showNumberOfPollutantsPictorially == true) {
+        obj_options.showNumberOfPollutantsPictorially = false
         activated = false;
     }
 } else if (click && text = "Change Font To Ariel") {
-    if (obj_options.dyslexia == false) {
-        obj_options.dyslexia = true
+    if (obj_options.changeFontToAriel == false) {
+        obj_options.changeFontToAriel = true
         activated = true;
-    } else if (obj_options.dyslexia == true) {
-        obj_options.dyslexia = false
+    } else if (obj_options.changeFontToAriel == true) {
+        obj_options.changeFontToAriel = false
         activated = false;
     }
 } else if (click && text = "Time Announcements") {
-    if (obj_options.executiveFunctioning == false) {
-        obj_options.executiveFunctioning = true
+    if (obj_options.timeAnnoucements == false) {
+        obj_options.timeAnnoucements = true
         activated = true;
-    } else if (obj_options.executiveFunctioning == true) {
-        obj_options.executiveFunctioning = false
+    } else if (obj_options.timeAnnoucements == true) {
+        obj_options.timeAnnoucements = false
         activated = false;
     }
 } else if (click && text = "Remove Background Noise") {
-    if (obj_options.auditoryProcessingDisorder == false) {
-        obj_options.auditoryProcessingDisorder = true
+    if (obj_options.removeBackgroundNoise == false) {
+        obj_options.removeBackgroundNoise = true
         activated = true;
-    } else if (obj_options.auditoryProcessingDisorder == true) {
-        obj_options.auditoryProcessingDisorder = false
+    } else if (obj_options.removeBackgroundNoise == true) {
+        obj_options.removeBackgroundNoise = false
         activated = false;
     }
     if (audio_is_playing(snd_background)) {
@@ -248,7 +248,7 @@ if (click && text = "Quit") {
         audio_play_sound(snd_background, 0, 1);
     }
 }else if (click && text = "End Run") {
-	if(obj_options.firstRun && obj_options.indirectCompetition){
+	if(obj_options.firstRun && obj_options.playALevelBackToBack){
 		obj_options.firstRun = false;
 		    instance_deactivate_layer("Instances")
             instance_deactivate_layer("LightInstance")
@@ -268,21 +268,21 @@ if (click && text = "Quit") {
         activated = false;
     }
 }  else if (click && text = "Monster Avoidance Ability") {
-    if (obj_options.conflictResolutionAlternatives == false) {
-        obj_options.conflictResolutionAlternatives = true
+    if (obj_options.monsterAvoidanceAbility == false) {
+        obj_options.monsterAvoidanceAbility = true
         activated = true;
-    } else if (obj_options.conflictResolutionAlternatives == true) {
-        obj_options.conflictResolutionAlternatives = false
+    } else if (obj_options.monsterAvoidanceAbility == true) {
+        obj_options.monsterAvoidanceAbility = false
         activated = false;
     }
 }  else if (click && text = "Begin Second Player Attempt") {
     room_restart();
 } else if (click && text = "Play A Level Back To Back") {
-    if (obj_options.indirectCompetition == false) {
-        obj_options.indirectCompetition = true
+    if (obj_options.playALevelBackToBack == false) {
+        obj_options.playALevelBackToBack = true
         activated = true;
-    } else if (obj_options.indirectCompetition == true) {
-        obj_options.indirectCompetition = false
+    } else if (obj_options.playALevelBackToBack == true) {
+        obj_options.playALevelBackToBack = false
         activated = false;
     }
 } else if (click && text = "Wait Time Instead Of Death") {

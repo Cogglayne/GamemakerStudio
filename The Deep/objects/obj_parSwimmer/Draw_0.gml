@@ -1,17 +1,17 @@
 draw_set_halign(fa_center)
 draw_set_valign(fa_middle)
 // draws text for the swimmer
-if (obj_options.dyscalculia) {
+if (obj_options.showNumberOfPollutantsPictorially) {
     drawLives()
-} else if (!obj_options.dyscalculia) {
+} else if (!obj_options.showNumberOfPollutantsPictorially) {
     if (room != TutorialAngler && room != TutorialMine && room != TutorialMonster && room != TutorialProbe && room != TutorialMonsterEvolvedOne && room != TutorialMonsterEvolvedTwo && room != TutorialMovement) {
         draw_text_transformed_colour(x, y + 120, string(numPollutants), .5, .5, image_angle, c_white, c_white, c_white, c_white, 1);
     }
 }
 if (singleplayer) { 
-    if (obj_options.ADHD) {
+    if (obj_options.objectiveReminder) {
         text = "Collect the pollutants"
-    } else if (!obj_options.ADHD) {
+    } else if (!obj_options.objectiveReminder) {
         text = ""
     }
     //drawPie(x ,y-100 ,timer, 100, c_white, 20, 1)
@@ -21,7 +21,7 @@ if (singleplayer) {
     if (room != TutorialAngler && room != TutorialMine && room != TutorialMonster && room != TutorialProbe && room != TutorialMonsterEvolvedOne && room != TutorialMonsterEvolvedTwo && room != TutorialMovement) {
 		drawCircularBar(x, y - 110, avoidanceTimer, 5, #FBFFFF, 50, 1, 12)
 		drawBarriers()
-     if(obj_options.conflictResolutionAlternatives){
+     if(obj_options.monsterAvoidanceAbility){
 		 	 drawAvoidanceCharges()
 	 }		
 		draw_text_transformed_colour(x, y - 100, string(timer), .5, .5, image_angle, c_white, c_white, c_white, c_white, 1);

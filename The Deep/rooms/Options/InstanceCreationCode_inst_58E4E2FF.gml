@@ -1,6 +1,6 @@
 text = "Wait Time Instead Of Death"
 soundToPlay = snd_alternativePunishment
-if(obj_options.alternativePunishment == true){
+if(obj_options.waitTimeInsteadOfDeath == true){
 	activated = true;
 }
 width = 1350;

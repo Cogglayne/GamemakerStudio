@@ -5,7 +5,7 @@ if (!obj_microtransactions.extraLife && !obj_swimmerOne.avoidanceTime && !tutori
     if (room == TutorialAngler) {
         room_goto(TutorialFailed)
     }
-        if (obj_options.alternativePunishment) {
+        if (obj_options.waitTimeInsteadOfDeath) {
             // layer manipulation
             instance_create_layer(2400, 0, "Wait", obj_wait)
             instance_activate_layer("Wait")

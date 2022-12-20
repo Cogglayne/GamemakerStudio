@@ -6,7 +6,7 @@ audio_emitter_falloff(barrierEmitter, audioStartsToDropAt, audioMaxDistanceToBeH
 state = 0;
 isPlayingSound = false;
 // sprite selection
-if(obj_levelTracker.variableObjectives){
+if(obj_options.destroyEnemiesWithBarriers){
 	if(mine){
 		sprite_index = spr_swimmerMineBarrierDestroy
 	}else if (monster){

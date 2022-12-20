@@ -1,5 +1,5 @@
 function LeftHand() {
-    if (obj_options.leftHandControls) {
+    if (obj_options.WASDControls) {
         if (keyboard_check_released(ord("A"))) {
             leftArrowDoubleClick = 1;
             rightArrowDoubleClick = 0;
@@ -100,7 +100,7 @@ function LeftHand() {
 }
 
 function RightHand() {
-    if (obj_options.rightHandControls) {
+    if (obj_options.arrowKeyControls) {
         if (keyboard_check_released(vk_left)) {
             leftArrowDoubleClick = 1;
             rightArrowDoubleClick = 0;
@@ -191,7 +191,7 @@ function RightHand() {
 }
 
 function Standard() {
-    if (obj_options.normal) {
+    if (obj_options.mouseAndArrowKeyControls) {
         if (mouse_check_button_pressed(mb_left) && numMonsterBarriers < 1) {
             if (mouse_x < x) {
                 instance_create_layer(x - 50, y, "Instances", obj_swimmerOneMonsterBarrier);
@@ -222,7 +222,7 @@ function Standard() {
 }
 
 function PoorReactivity() {
-    if (obj_options.poorReactivity) {
+    if (obj_options.decreaseReactionTimeRequired) {
         if (mouse_check_button_pressed(mb_left) && numMonsterBarriers < 1) {
             if (mouse_x < x) {
                 instance_create_layer(x - 100, y, "Instances", obj_swimmerOneMonsterBarrier);

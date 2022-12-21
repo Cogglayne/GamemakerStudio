@@ -1,4 +1,4 @@
-if (obj_options.poorReactivity) {
+if (obj_options.decreaseReactionTimeRequired) {
     obj_playerOneLight.xBoundry = 2.2
     obj_playerOneLight.yBoundry = 2.2
 } else {

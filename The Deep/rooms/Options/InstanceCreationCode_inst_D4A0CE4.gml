@@ -1,5 +1,5 @@
 text = "Text To Speak"
-soundToPlay = snd_blindMode
+soundToPlay = snd_textToSpeak
 if(obj_options.textToSpeak == true){
 	activated = true;
 }

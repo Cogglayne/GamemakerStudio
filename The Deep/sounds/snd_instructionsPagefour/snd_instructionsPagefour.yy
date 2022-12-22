@@ -11,13 +11,13 @@
   "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "roomTextSounds",
-    "path": "audiogroups/roomTextSounds",
+    "name": "RoomTextSounds",
+    "path": "audiogroups/RoomTextSounds",
   },
   "soundFile": "snd_instructionsPagefour.mp3",
   "duration": 74.71017,
   "parent": {
-    "name": "Room Text",
-    "path": "folders/Sounds/Room Text.yy",
+    "name": "Room Text Sounds",
+    "path": "folders/Sounds/Room Text Sounds.yy",
   },
 }

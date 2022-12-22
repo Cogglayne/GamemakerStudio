@@ -11,13 +11,13 @@
   "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "playerSounds",
-    "path": "audiogroups/playerSounds",
+    "name": "GameSounds",
+    "path": "audiogroups/GameSounds",
   },
   "soundFile": "snd_barrierDestruction.ogg",
   "duration": 2.207458,
   "parent": {
-    "name": "Player Sounds",
-    "path": "folders/Sounds/Player Sounds.yy",
+    "name": "Swimmer Object Sounds",
+    "path": "folders/Sounds/Game Sounds/Swimmer Object Sounds.yy",
   },
 }

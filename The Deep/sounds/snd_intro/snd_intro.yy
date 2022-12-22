@@ -11,13 +11,13 @@
   "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default",
+    "name": "RoomTextSounds",
+    "path": "audiogroups/RoomTextSounds",
   },
   "soundFile": "snd_intro.mp3",
   "duration": 14.796371,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "Room Text Sounds",
+    "path": "folders/Sounds/Room Text Sounds.yy",
   },
 }

@@ -11,13 +11,13 @@
   "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "buttonSounds",
-    "path": "audiogroups/buttonSounds",
+    "name": "ButtonSounds",
+    "path": "audiogroups/ButtonSounds",
   },
   "soundFile": "snd_continue.mp3",
   "duration": 1.092489,
   "parent": {
     "name": "Navigation",
-    "path": "folders/Sounds/Buttons/Navigation.yy",
+    "path": "folders/Sounds/Button Sounds/Navigation.yy",
   },
 }

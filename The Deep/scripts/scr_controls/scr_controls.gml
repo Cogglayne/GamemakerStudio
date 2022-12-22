@@ -87,7 +87,7 @@ function LeftHand() {
             probeExists = true;
         }
         if (keyboard_check_pressed(20)) {
-            audio_play_sound(snd_light, 1, 0)
+            audio_play_sound(snd_lightToggle, 1, 0)
             if (instance_exists(obj_playerOneLight)) {
                 instance_destroy(obj_playerOneLight)
             } else {

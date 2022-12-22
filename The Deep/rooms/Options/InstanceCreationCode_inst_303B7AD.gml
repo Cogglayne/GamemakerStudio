@@ -1,5 +1,5 @@
 text = "Mouse And Arrow Key Controls"
-soundToPlay = snd_standard
+soundToPlay = snd_mouseAndArrowKeyControls
 if(obj_options.mouseAndArrowKeyControls == true){
 	activated = true;
 }

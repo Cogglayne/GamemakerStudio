@@ -11,13 +11,13 @@
   "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "ambientSounds",
-    "path": "audiogroups/ambientSounds",
+    "name": "GameSounds",
+    "path": "audiogroups/GameSounds",
   },
   "soundFile": "snd_whale.mp3",
   "duration": 65.73206,
   "parent": {
-    "name": "Ambient",
-    "path": "folders/Sounds/Ambient.yy",
+    "name": "Ambient Sounds",
+    "path": "folders/Sounds/Game Sounds/Ambient Sounds.yy",
   },
 }

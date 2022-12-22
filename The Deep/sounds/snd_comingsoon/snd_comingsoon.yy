@@ -11,13 +11,13 @@
   "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "buttonSounds",
-    "path": "audiogroups/buttonSounds",
+    "name": "ButtonSounds",
+    "path": "audiogroups/ButtonSounds",
   },
   "soundFile": "snd_comingsoon.mp3",
   "duration": 1.35016,
   "parent": {
-    "name": "Buttons",
-    "path": "folders/Sounds/Buttons.yy",
+    "name": "Button Sounds",
+    "path": "folders/Sounds/Button Sounds.yy",
   },
 }

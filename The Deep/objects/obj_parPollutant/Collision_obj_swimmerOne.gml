@@ -1,28 +1,28 @@
-audio_play_sound(snd_pickup, 1, 0)
+audio_play_sound(snd_pickupPollutant, 1, 0)
 obj_swimmerOne.numPollutants--;
 obj_levelTracker.swimmerOneNumPollutants--;
-if (obj_options.blindMode) {
+if (obj_options.textToSpeak) {
     switch (obj_levelTracker.swimmerOneNumPollutants) {
         case 1:
-            audio_play_sound(snd_1, 1, 0);
+            audio_play_sound(snd_onePollutantRemaining, 1, 0);
             break;
         case 2:
-            audio_play_sound(snd_2, 1, 0);
+            audio_play_sound(snd_twoPollutantsRemaining, 1, 0);
             break;
         case 3:
-            audio_play_sound(snd_3, 1, 0);
+            audio_play_sound(snd_threePollutantsRemaining, 1, 0);
             break;
         case 4:
-            audio_play_sound(snd_4, 1, 0);
+            audio_play_sound(snd_fourPollutantsRemaining, 1, 0);
             break;
         case 5:
-            audio_play_sound(snd_5, 1, 0);
+            audio_play_sound(snd_fivePollutantsRemaining, 1, 0);
             break;
         case 6:
-            audio_play_sound(snd_6, 1, 0);
+            audio_play_sound(snd_sixPollutantsRemaining, 1, 0);
             break;
         case 7:
-            audio_play_sound(snd_7, 1, 0);
+            audio_play_sound(snd_sevenPollutantsRemaining, 1, 0);
             break;
     }
 }
@@ -37,9 +37,9 @@ if (obj_levelTracker.swimmerOneSinglePlayer == false) {
     }
 } else if (obj_levelTracker.swimmerOneSinglePlayer == true) {
     if (obj_swimmerOne.numPollutants == 0) {
-        if (obj_levelTracker.firstRun && obj_levelTracker.indirectCompetition) {
+        if (obj_options.firstRun && obj_options.playALevelBackToBack) {
 			stopGameSounds()
-			obj_levelTracker.firstRun = false;
+			obj_options.firstRun = false;
             if (instance_exists(obj_swimmerOne)) {
                 if (obj_swimmerOne.timer < obj_levelTracker.timer) {
                     obj_levelTracker.timer = obj_swimmerOne.timer;

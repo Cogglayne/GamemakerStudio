@@ -11,13 +11,13 @@
   "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "buttonSounds",
-    "path": "audiogroups/buttonSounds",
+    "name": "ButtonSounds",
+    "path": "audiogroups/ButtonSounds",
   },
   "soundFile": "snd_sonar.mp3",
   "duration": 0.653,
   "parent": {
     "name": "Options",
-    "path": "folders/Sounds/Buttons/Options.yy",
+    "path": "folders/Sounds/Button Sounds/Options.yy",
   },
 }

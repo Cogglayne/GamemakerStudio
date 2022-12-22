@@ -1,5 +1,5 @@
 text = "Show Number Of Pollutants Pictorially"
-soundToPlay = snd_dyscalculia
+soundToPlay = snd_showNumberOfPollutantsPictorially
 if(obj_options.showNumberOfPollutantsPictorially == true){
 	activated = true;
 }

@@ -1,5 +1,5 @@
 text = "Decrease Reaction Time Required"
-soundToPlay = snd_poorReactivity
+soundToPlay = snd_decreaseReactionTimeRequired
 if(obj_options.decreaseReactionTimeRequired == true){
 	activated = true;
 }

@@ -1,5 +1,5 @@
 text = "Time Announcements"
-soundToPlay = snd_executiveFunctioning
+soundToPlay = snd_timeAnnoucements
 if(obj_options.timeAnnoucements == true){
 	activated = true;
 }

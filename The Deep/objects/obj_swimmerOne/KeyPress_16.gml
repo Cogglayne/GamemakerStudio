@@ -2,7 +2,7 @@
 // destroys or creates the swimmer's light
 if (singleplayer == true) {
     if (obj_options.mouseAndArrowKeyControls || obj_options.decreaseReactionTimeRequired) {
-        audio_play_sound(snd_light, 1, 0)
+        audio_play_sound(snd_lightToggle, 1, 0)
         if (instance_exists(obj_playerOneLight)) {
             instance_destroy(obj_playerOneLight)
         } else {
@@ -11,7 +11,7 @@ if (singleplayer == true) {
                 if (obj_trainer.anglerTutorialTrial) {
                     obj_trainer.numHits++;
                     if (obj_trainer.anglerTutorialTrial && obj_trainer.numHits == 1) {
-                        if (obj_options.blindMode) {
+                        if (obj_options.textToSpeak) {
                             stopTrainerSounds();
                             audio_play_sound(snd_anglerActivated, 1, 0)
                         }

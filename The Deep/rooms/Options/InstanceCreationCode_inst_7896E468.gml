@@ -1,5 +1,5 @@
 text = "Objective Reminder"
-soundToPlay = snd_adhd
+soundToPlay = snd_objectiveReminder
 if(obj_options.objectiveReminder == true){
 	activated = true;
 }

@@ -1,5 +1,5 @@
 text = "Remove Background Noise"
-soundToPlay = snd_AuditoryProcessingDisorder;
+soundToPlay = snd_removeBackgroundNoise;
 if(obj_options.removeBackgroundNoise == true){
 	activated = true;
 }

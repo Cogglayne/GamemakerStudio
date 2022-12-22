@@ -11,13 +11,13 @@
   "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "totemSounds",
-    "path": "audiogroups/totemSounds",
+    "name": "GameSounds",
+    "path": "audiogroups/GameSounds",
   },
   "soundFile": "snd_recklessness.mp3",
   "duration": 1.547044,
   "parent": {
-    "name": "Totem",
-    "path": "folders/Sounds/Totem.yy",
+    "name": "Totem Sounds",
+    "path": "folders/Sounds/Game Sounds/Totem Sounds.yy",
   },
 }

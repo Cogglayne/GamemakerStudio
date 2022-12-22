@@ -11,13 +11,13 @@
   "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "enemySounds",
-    "path": "audiogroups/enemySounds",
+    "name": "GameSounds",
+    "path": "audiogroups/GameSounds",
   },
   "soundFile": "snd_monster.wav",
   "duration": 3.023673,
   "parent": {
     "name": "Enemy Sounds",
-    "path": "folders/Sounds/Enemy Sounds.yy",
+    "path": "folders/Sounds/Game Sounds/Enemy Sounds.yy",
   },
 }

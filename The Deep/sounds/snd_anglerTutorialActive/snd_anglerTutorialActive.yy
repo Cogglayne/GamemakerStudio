@@ -11,13 +11,13 @@
   "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "trainerSounds",
-    "path": "audiogroups/trainerSounds",
+    "name": "TrainerSounds",
+    "path": "audiogroups/TrainerSounds",
   },
   "soundFile": "snd_anglerTutorialActive.mp3",
   "duration": 5.720833,
   "parent": {
     "name": "Text",
-    "path": "folders/Sounds/Trainer/Text.yy",
+    "path": "folders/Sounds/Trainer Sounds/Text.yy",
   },
 }

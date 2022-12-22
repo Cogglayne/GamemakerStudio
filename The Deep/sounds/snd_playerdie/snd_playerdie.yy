@@ -11,13 +11,13 @@
   "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "playerSounds",
-    "path": "audiogroups/playerSounds",
+    "name": "GameSounds",
+    "path": "audiogroups/GameSounds",
   },
   "soundFile": "snd_playerdie.wav",
   "duration": 4.624979,
   "parent": {
     "name": "Player Sounds",
-    "path": "folders/Sounds/Player Sounds.yy",
+    "path": "folders/Sounds/Game Sounds/Player Sounds.yy",
   },
 }

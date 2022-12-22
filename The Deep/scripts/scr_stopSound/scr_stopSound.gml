@@ -1,7 +1,5 @@
 function stopGameSounds() {
-	audio_group_stop_all(ambientSounds)
-	audio_group_stop_all(enemySounds)
-	audio_group_stop_all(playerSounds)
+	audio_group_stop_all(GameSounds)
     if (instance_exists(obj_parHorror)) {
         obj_parHorror.state = 0;
     }
@@ -17,16 +15,19 @@ function stopGameSounds() {
     if (instance_exists(obj_parAmbient)) {
         obj_parAmbient.state = 0;
     }
+	if (instance_exists(obj_parBarrier)) {
+	    obj_parBarrier.state = 0;
+    }
 }
 
 function stopButtonSounds() {
-	audio_group_stop_all(buttonSounds)
+	audio_group_stop_all(ButtonSounds)
 }
 
 function stopRoomText() {
-	audio_group_stop_all(roomTextSounds)
+	audio_group_stop_all(RoomTextSounds)
 }
 
 function stopTrainerSounds() {
-	audio_group_stop_all(trainerSounds)
+	audio_group_stop_all(TrainerSounds)
 }

@@ -11,13 +11,13 @@
   "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "timeReminderSounds",
-    "path": "audiogroups/timeReminderSounds",
+    "name": "GameSounds",
+    "path": "audiogroups/GameSounds",
   },
   "soundFile": "snd_oneHundredSeconds.mp3",
   "duration": 2.011333,
   "parent": {
-    "name": "Time Reminder",
-    "path": "folders/Sounds/Time Reminder.yy",
+    "name": "Time Spent Underwater Reminder Sounds",
+    "path": "folders/Sounds/Game Sounds/Time Spent Underwater Reminder Sounds.yy",
   },
 }

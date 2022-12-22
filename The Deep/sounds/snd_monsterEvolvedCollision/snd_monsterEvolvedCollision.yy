@@ -11,13 +11,13 @@
   "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "trainerSounds",
-    "path": "audiogroups/trainerSounds",
+    "name": "TrainerSounds",
+    "path": "audiogroups/TrainerSounds",
   },
   "soundFile": "snd_monsterEvolvedCollision.mp3",
   "duration": 3.291333,
   "parent": {
     "name": "TextTwo",
-    "path": "folders/Sounds/Trainer/TextTwo.yy",
+    "path": "folders/Sounds/Trainer Sounds/TextTwo.yy",
   },
 }

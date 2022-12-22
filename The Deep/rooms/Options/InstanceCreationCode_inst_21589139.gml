@@ -1,5 +1,5 @@
 text = "Play A Level Back To Back"
-soundToPlay = snd_indirectCompetition;
+soundToPlay = snd_playALevelBackToBack;
 if(obj_options.playALevelBackToBack == true){
 	activated = true;
 }

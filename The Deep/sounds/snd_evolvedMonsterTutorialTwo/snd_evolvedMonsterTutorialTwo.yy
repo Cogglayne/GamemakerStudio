@@ -11,13 +11,13 @@
   "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "buttonSounds",
-    "path": "audiogroups/buttonSounds",
+    "name": "ButtonSounds",
+    "path": "audiogroups/ButtonSounds",
   },
   "soundFile": "snd_evolvedMonsterTutorialTwo.mp3",
   "duration": 1.985333,
   "parent": {
     "name": "Tutorials",
-    "path": "folders/Sounds/Buttons/Tutorials.yy",
+    "path": "folders/Sounds/Button Sounds/Tutorials.yy",
   },
 }

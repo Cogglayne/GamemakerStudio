@@ -1,5 +1,5 @@
 text = "Monster Avoidance Ability"
-soundToPlay = snd_conflictResolutionAlternatives
+soundToPlay = snd_monsterAvoidanceAbility
 if(obj_options.monsterAvoidanceAbility == true){
 	activated = true;
 }

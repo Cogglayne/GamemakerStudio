@@ -11,13 +11,13 @@
   "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "buttonSounds",
-    "path": "audiogroups/buttonSounds",
+    "name": "ButtonSounds",
+    "path": "audiogroups/ButtonSounds",
   },
   "soundFile": "snd_store.mp3",
   "duration": 1.04051,
   "parent": {
     "name": "Microtransactions",
-    "path": "folders/Sounds/Buttons/Microtransactions.yy",
+    "path": "folders/Sounds/Button Sounds/Microtransactions.yy",
   },
 }

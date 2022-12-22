@@ -11,8 +11,8 @@
   "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default",
+    "name": "enemySounds",
+    "path": "audiogroups/enemySounds",
   },
   "soundFile": "snd_horror.wav",
   "duration": 5.378435,

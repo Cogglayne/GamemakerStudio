@@ -11,8 +11,8 @@
   "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default",
+    "name": "trainerSounds",
+    "path": "audiogroups/trainerSounds",
   },
   "soundFile": "snd_evolvedMonsterTutorialTwoActive.mp3",
   "duration": 4.231833,

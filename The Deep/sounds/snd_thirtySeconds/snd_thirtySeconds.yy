@@ -11,8 +11,8 @@
   "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default",
+    "name": "timeReminderSounds",
+    "path": "audiogroups/timeReminderSounds",
   },
   "soundFile": "snd_thirtySeconds.mp3",
   "duration": 1.750167,

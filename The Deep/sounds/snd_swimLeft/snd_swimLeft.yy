@@ -11,8 +11,8 @@
   "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default",
+    "name": "trainerSounds",
+    "path": "audiogroups/trainerSounds",
   },
   "soundFile": "snd_swimLeft.mp3",
   "duration": 4.5975,

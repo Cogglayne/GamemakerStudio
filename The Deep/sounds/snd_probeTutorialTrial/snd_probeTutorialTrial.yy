@@ -11,8 +11,8 @@
   "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default",
+    "name": "trainerSounds",
+    "path": "audiogroups/trainerSounds",
   },
   "soundFile": "snd_probeTutorialTrial.mp3",
   "duration": 5.955833,

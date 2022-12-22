@@ -11,8 +11,8 @@
   "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default",
+    "name": "playerSounds",
+    "path": "audiogroups/playerSounds",
   },
   "soundFile": "snd_6.mp3",
   "duration": 1.515,

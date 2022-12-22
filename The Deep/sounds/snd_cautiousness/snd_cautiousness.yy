@@ -11,8 +11,8 @@
   "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default",
+    "name": "totemSounds",
+    "path": "audiogroups/totemSounds",
   },
   "soundFile": "snd_cautiousness.mp3",
   "duration": 1.515906,

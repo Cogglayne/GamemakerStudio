@@ -11,8 +11,8 @@
   "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default",
+    "name": "buttonSounds",
+    "path": "audiogroups/buttonSounds",
   },
   "soundFile": "snd_nextTutorial.mp3",
   "duration": 1.097167,

@@ -39,6 +39,14 @@ textShouldBeShowing = true;
 lifeTime = 2;
 alarm[0] = 60;
 // loads variables
+audio_group_load(ambientSounds)
+audio_group_load(buttonSounds)
+audio_group_load(enemySounds)
+audio_group_load(playerSounds)
+audio_group_load(roomTextSounds)
+audio_group_load(timeReminderSounds)
+audio_group_load(totemSounds)
+audio_group_load(trainerSounds)
 load();
 
 

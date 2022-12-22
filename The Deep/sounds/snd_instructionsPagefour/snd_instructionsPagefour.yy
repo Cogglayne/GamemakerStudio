@@ -11,8 +11,8 @@
   "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default",
+    "name": "roomTextSounds",
+    "path": "audiogroups/roomTextSounds",
   },
   "soundFile": "snd_instructionsPagefour.mp3",
   "duration": 74.71017,

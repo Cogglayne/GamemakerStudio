@@ -47,7 +47,6 @@ if (obj_levelTracker.swimmerOneSinglePlayer == false) {
             }
             instance_deactivate_layer("Instances")
             instance_deactivate_layer("LightInstance")
-            instance_deactivate_layer("Whales")
             instance_deactivate_layer("AmbientBackground")
             instance_activate_layer("Transition")
         } else {

@@ -1,5 +1,3 @@
-//instance_create_layer(480, 1000, "Instances", obj_swimmer);
-//instance_create_layer(4520, 1000, "Instances", obj_swimmerTwo);
 if (instance_exists(obj_swimmerOne)) {
     swimmerOneExists = true;
 } else {

@@ -17,7 +17,7 @@ if (instance_exists(obj_swimmerOne)) {
         text = ""
     }
 }
-if (room != MultiplayerLevelFour && room != TutorialMonster && room != TutorialMovement && obj_options.variableObjectives) {
+if (room != MultiplayerLevelFour && room != TutorialMonster && room != TutorialMovement && obj_options.destroyEnemiesWithBarriers) {
     draw_text_transformed_colour(x, y - yTextOffset, numHits, .5, .5, image_angle, c_white, c_white, c_white, c_white, 1);
 }
 draw_set_halign(fa_left);

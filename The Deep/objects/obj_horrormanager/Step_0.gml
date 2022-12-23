@@ -4,7 +4,7 @@ if (instance_exists(obj_horror)) {
     horrorExists = false;
 }
 
-if (!horrorExists && spawnTimer == 1) {
+if (!horrorExists && spawnTimer == 0) {
     if (leftSpawn) {
         instance_create_layer(480, 1000, "Instances", obj_horror);
         leftSpawn = false;
@@ -16,7 +16,6 @@ if (!horrorExists && spawnTimer == 1) {
     }
 
 }
-
 
 
 

@@ -58,13 +58,13 @@ if (room == MainMenu) {
     draw_text_transformed(2230, 100, "The", 4, 4, 0);
     draw_text_transformed(2130, 400, "Deep", 4, 4, 0);
 }
-if (room == Levels) {
+if (room == Levels || room == Multiplayer) {
     if (!obj_levelTracker.monsterTutorialCleared && !obj_levelTracker.mineTutorialCleared && !obj_levelTracker.probeTutorialCleared && !obj_levelTracker.anglerTutorialCleared && !obj_levelTracker.evolvedMonsterTutorialOneCleared && !obj_levelTracker.evolvedMonsterTutorialTwoCleared) {
         draw_text_transformed(400, 100, "Before continuing, completing the tutorials is recommended", 2, 2, 0);
     }
 }
 if(room == LevelFourDifficultySelector){
-    if (obj_options.variableObjectives) {
+    if (obj_options.destroyEnemiesWithBarriers) {
         draw_text_transformed(100, 100, "Collect all the pollutants or destroy all the enemies using a barrier", 2, 2, 0);
     }else{
 		draw_text_transformed(1650, 100, "Collect all the pollutants", 2, 2, 0);

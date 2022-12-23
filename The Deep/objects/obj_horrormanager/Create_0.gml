@@ -1,4 +1,4 @@
-spawnTimer = 11;
+spawnTimer = 10;
 horrorExists = false;
 leftSpawn = false;
 rightSpawn = true;

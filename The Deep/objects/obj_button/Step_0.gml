@@ -106,7 +106,6 @@ if (click && text = "Quit") {
 } else if (click && text = "Continue level for $.50") {
     obj_microtransactions.extraLife = true;
     obj_levelTracker.textShouldBeShowing = false;
-    instance_activate_layer("Whales")
     instance_activate_layer("AmbientBackground")
     instance_activate_layer("Instances")
     instance_activate_layer("LightInstance")
@@ -115,7 +114,6 @@ if (click && text = "Quit") {
     obj_microtransactions.extraLife = true;
     obj_levelTracker.textShouldBeShowing = false;
     instance_destroy(obj_wait)
-    instance_activate_layer("Whales")
     instance_activate_layer("AmbientBackground")
     instance_activate_layer("Instances")
     instance_activate_layer("LightInstance")
@@ -260,11 +258,11 @@ if (click && text = "Quit") {
 		room_goto(targetRoom)
 	}
 }  else if (click && text = "Destroy Enemies With Barriers") {
-    if (obj_options.variableObjectives == false) {
-        obj_options.variableObjectives = true
+    if (obj_options.destroyEnemiesWithBarriers == false) {
+        obj_options.destroyEnemiesWithBarriers = true
         activated = true;
-    } else if (obj_options.variableObjectives == true) {
-        obj_options.variableObjectives = false
+    } else if (obj_options.destroyEnemiesWithBarriers == true) {
+        obj_options.destroyEnemiesWithBarriers = false
         activated = false;
     }
 }  else if (click && text = "Monster Avoidance Ability") {
@@ -286,11 +284,11 @@ if (click && text = "Quit") {
         activated = false;
     }
 } else if (click && text = "Wait Time Instead Of Death") {
-    if (obj_options.alternativePunishment == false) {
-        obj_options.alternativePunishment = true
+    if (obj_options.waitTimeInsteadOfDeath == false) {
+        obj_options.waitTimeInsteadOfDeath = true
         activated = true;
-    } else if (obj_options.alternativePunishment == true) {
-        obj_options.alternativePunishment = false
+    } else if (obj_options.waitTimeInsteadOfDeath == true) {
+        obj_options.waitTimeInsteadOfDeath = false
         activated = false;
     }
 } else if (click) {

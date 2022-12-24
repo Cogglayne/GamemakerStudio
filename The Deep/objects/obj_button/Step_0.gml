@@ -236,21 +236,17 @@ if (click && text = "Quit") {
     if (obj_options.removeBackgroundNoise == false) {
         obj_options.removeBackgroundNoise = true
         activated = true;
+		 audio_stop_sound(snd_background)
     } else if (obj_options.removeBackgroundNoise == true) {
         obj_options.removeBackgroundNoise = false
         activated = false;
-    }
-    if (audio_is_playing(snd_background)) {
-        audio_stop_sound(snd_background)
-    } else if (!audio_is_playing(snd_background)) {
-        audio_play_sound(snd_background, 0, 1);
+		 audio_play_sound(snd_background, 0, 1);
     }
 }else if (click && text = "End Run") {
 	if(obj_options.firstRun && obj_options.playALevelBackToBack){
 		obj_options.firstRun = false;
 		    instance_deactivate_layer("Instances")
             instance_deactivate_layer("LightInstance")
-            instance_deactivate_layer("Whales")
             instance_deactivate_layer("AmbientBackground")
 			instance_deactivate_layer("Wait")
             instance_activate_layer("Transition")	

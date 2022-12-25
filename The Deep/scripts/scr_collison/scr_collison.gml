@@ -203,7 +203,7 @@ function swimmerMonsterBarrierCollision(object) {
             x += sign(hsp);
         }
         hsp = -hsp;
-        if (obj_levelTracker.variableObjectives && obj_swimmerOne.isPlaying) {
+        if (obj_options.destroyEnemiesWithBarriers && obj_swimmerOne.isPlaying) {
             numHits--;
         }
         if (numHits == 0) {
@@ -242,7 +242,7 @@ function swimmerMineBarrierCollision(object) {
         while (!place_meeting(x, y + sign(vsp), object)) {
             y += sign(vsp);
         }
-        if (obj_levelTracker.variableObjectives && obj_swimmerOne.isPlaying) {
+        if (obj_options.destroyEnemiesWithBarriers && obj_parSwimmer.isPlaying) {
             numHits--;
         }
         if (instance_exists(obj_trainer)) {
@@ -280,7 +280,7 @@ function monsterEvolvedBarrierCollision(object) {
         }
         hsp = -hsp;
         vsp = -vsp;
-        if (obj_levelTracker.variableObjectives && obj_swimmerOne.isPlaying) {
+        if (obj_options.destroyEnemiesWithBarriers && obj_parSwimmer.isPlaying) {
             numHits--;
         }
         if (object == obj_swimmerOneMineBarrier) {
@@ -336,30 +336,5 @@ function monsterEvolvedBarrierCollision(object) {
             audio_play_sound(snd_barrierDestruction, 1, 0)
         }
         image_xscale = -image_xscale;
-    }
-}
-
-function swimmerTwoMonsterBarrierCollision(object) {
-    if (place_meeting(x + hsp, y, object)) {
-        while (!place_meeting(x + sign(hsp), y, object)) {
-            x += sign(hsp);
-        }
-        hsp = -hsp;
-        image_xscale = -image_xscale;
-        instance_destroy(object)
-        audio_play_sound(snd_barrierDestruction, 1, 0)
-        obj_swimmerTwo.numMonsterBarriers--;
-    }
-}
-
-function swimmerTwoMineBarrierCollision(object) {
-    if (place_meeting(x, y + vsp, object)) {
-        while (!place_meeting(x, y + sign(vsp), object)) {
-            y += sign(vsp);
-        }
-        vsp = -vsp;
-        instance_destroy(object)
-        audio_play_sound(snd_barrierDestruction, 1, 0)
-        obj_swimmerTwo.numMineBarriers--;
     }
 }

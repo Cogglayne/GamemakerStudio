@@ -10,6 +10,7 @@ shouldBeYellow = false;
 error = false;
 soundHasBeenPlayed = false;
 activated = false;
+bought = false;
 // variables unique to each button
 var targetRoom;
 var soundToPlay;

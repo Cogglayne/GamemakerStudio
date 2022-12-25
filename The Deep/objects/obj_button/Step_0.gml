@@ -91,10 +91,10 @@ if (click && text = "Quit") {
     // mictrotransaction control
 } else if (click && text = "Buy a Light Cosmetic for $10") {
     obj_microtransactions.lightCosmeticBought = true;
-    activated = true;
+    bought = true;
 } else if (click && text = "Buy a Swimmer Cosmetic for $10") {
     obj_microtransactions.swimmerSkinBought = true;
-    activated = true;
+    bought = true;
 } else if (click && text = "Delay Timer For $1") {
     obj_microtransactions.timerDelay = true;
 	obj_microtransactions.timerDelayBought = true;

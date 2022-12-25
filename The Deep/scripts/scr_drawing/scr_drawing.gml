@@ -180,3 +180,14 @@ function drawCircularBar(x, y, value, max, colour, radius, transparency, width) 
 
     }
 }
+
+function drawButton(col1, col2, col3, col4){
+		draw_roundrect_color(x, y, x + width, y + height, (merge_color(col1, col2, hover)), col3, 0);
+		draw_set_color(c_black);
+		draw_set_halign(fa_center);
+		draw_set_valign(fa_middle);
+		draw_text_colour(x + width / 2, y + height / 2, text, col4, col4, col4, col4, 1);
+		draw_set_halign(fa_left);
+		draw_set_valign(fa_top);
+		draw_set_color(c_white);
+}

@@ -21,7 +21,7 @@ if (monster) {
         swimmerMonsterBarrierCollision(obj_swimmerOneMonsterBarrier);
     }
     if (instance_exists(obj_swimmerTwoMonsterBarrier)) {
-        swimmerTwoMonsterBarrierCollision(obj_swimmerTwoMonsterBarrier);
+        swimmerMonsterBarrierCollision(obj_swimmerTwoMonsterBarrier);
     }
 } else if (mine) {
     if (vsp > 0) {
@@ -35,7 +35,7 @@ if (monster) {
         swimmerMineBarrierCollision(obj_swimmerOneMineBarrier);
     }
     if (instance_exists(obj_swimmerTwoMineBarrier)) {
-        swimmerTwoMineBarrierCollision(obj_swimmerTwoMineBarrier);
+        swimmerMineBarrierCollision(obj_swimmerTwoMineBarrier);
     }
 } else if (evolvedMonster) {
     if (vsp > 0 && hsp > 0) {

@@ -4,7 +4,7 @@ var mouseY = device_mouse_y_to_gui(0);
 var hove = point_in_rectangle(mouseX, mouseY, x, y, x + width, y + height);
 // text to speak for a button if activated
 if (hove) {
-    if (obj_options.textToSpeak && !soundHasBeenPlayed && !audio_is_playing(soundToPlay)) {
+    if (obj_options.textToSpeak && !soundHasBeenPlayed) {
         stopButtonSounds()
         audio_play_sound(soundToPlay, 1, 0)
         soundHasBeenPlayed = true;

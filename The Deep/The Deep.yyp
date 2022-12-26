@@ -246,6 +246,7 @@
     {"id":{"name":"Levels","path":"rooms/Levels/Levels.yy",},"order":0,},
     {"id":{"name":"snd_oneHundredSeconds","path":"sounds/snd_oneHundredSeconds/snd_oneHundredSeconds.yy",},"order":9,},
     {"id":{"name":"LevelFourEasy","path":"rooms/LevelFourEasy/LevelFourEasy.yy",},"order":2,},
+    {"id":{"name":"scr_activation","path":"scripts/scr_activation/scr_activation.yy",},"order":10,},
     {"id":{"name":"snd_slowEnemies","path":"sounds/snd_slowEnemies/snd_slowEnemies.yy",},"order":5,},
     {"id":{"name":"snd_ninetySeconds","path":"sounds/snd_ninetySeconds/snd_ninetySeconds.yy",},"order":8,},
     {"id":{"name":"snd_pollutant","path":"sounds/snd_pollutant/snd_pollutant.yy",},"order":0,},

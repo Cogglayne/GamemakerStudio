@@ -17,7 +17,7 @@ anglerTutorialCleared = false;
 movementTutorialCleared = false;
 tutorialRoom = Tutorial;
 // used to enable multiple difficulties
-levelDiffuclty = ""
+levelDifficulty = ""
 // determines if a player has found the hidden fish
 leftFishFound = false;
 rightFishFound = false;

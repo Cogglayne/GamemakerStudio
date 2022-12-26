@@ -25,13 +25,13 @@ if (click && text = "Quit") {
     game_end();
     // difficulties
 }  else if (click && text = "Easy") {
-    obj_levelTracker.levelDiffuclty = "Easy"
+    obj_levelTracker.levelDifficulty = "Easy"
     room_goto(targetRoom);
 } else if (click && text = "Medium") {
-    obj_levelTracker.levelDiffuclty = "Medium"
+    obj_levelTracker.levelDifficulty = "Medium"
     room_goto(targetRoom);
 } else if (click && text = "Hard") {
-    obj_levelTracker.levelDiffuclty = "Hard"
+    obj_levelTracker.levelDifficulty = "Hard"
     room_goto(targetRoom);
     // tutorials rooms
 } else if (click && text = "Movement Tutorial") {

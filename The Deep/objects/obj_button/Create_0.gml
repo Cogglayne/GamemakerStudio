@@ -12,5 +12,5 @@ soundHasBeenPlayed = false;
 activated = false;
 bought = false;
 // variables unique to each button
-var targetRoom;
+var targetRoom = noone;
 var soundToPlay;

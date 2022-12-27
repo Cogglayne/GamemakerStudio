@@ -1,6 +1,6 @@
 stopRoomText()
 if (obj_options.textToSpeak) {
-    if (room == Levels || Multiplayer) {
+    if (room == Levels || room == Multiplayer) {
         if (!obj_levelTracker.monsterTutorialCleared && !obj_levelTracker.mineTutorialCleared && !obj_levelTracker.probeTutorialCleared && !obj_levelTracker.anglerTutorialCleared && !obj_levelTracker.evolvedMonsterTutorialOneCleared && !obj_levelTracker.evolvedMonsterTutorialTwoCleared) {
             audio_play_sound(snd_tutorialsRecommended, 1, 0)
         }

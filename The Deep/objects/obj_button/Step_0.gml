@@ -178,7 +178,9 @@ if (click && text = "Quit") {
 } else if (click && text = "Begin Second Player Attempt") {
     room_restart();
 } else if (click && text = "Decrease Reaction Time Required") {
-	obj_options.decreaseReactionTimeRequired = changeVariableStatus(decreaseReactionTimeRequired)
+	with(obj_options){
+		decreaseReactionTimeRequired = changeVariableStatus(decreaseReactionTimeRequired)
+	}
 	changeActivated()
 } else if (click && text = "Text To Speak") {
 	with(obj_options){

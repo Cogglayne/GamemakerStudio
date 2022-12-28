@@ -18,6 +18,9 @@ function stopGameSounds() {
 	if (instance_exists(obj_parBarrier)) {
 	    obj_parBarrier.state = 0;
     }
+	if (instance_exists(obj_parSwimmer)) {
+	    obj_parSwimmer.state = 0;
+    }	
 }
 
 function stopButtonSounds() {

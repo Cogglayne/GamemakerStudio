@@ -3,8 +3,12 @@ instance_create_layer(x, y, "Instances", light);
 instance_deactivate_layer("Extra")
 instance_deactivate_layer("Wait")
 instance_deactivate_layer("Transition")
+// swimmer status tracking
+hardMode = false;
+singleplayer = true
 // sound
 audio_listener_orientation(0, -1, 0, 0, 0, 1)
+state = 0;
 // movement
 vsp = 0;
 hsp = 0;
@@ -36,9 +40,6 @@ numMonsterBarriers = 0;
 numMineBarriers = 0;
 probeExists = false;
 numProbes = 0;
-// swimmer status tracking
-hardMode = false;
-singleplayer = true
 // collision tracking
 yCollision = false;
 xCollision = false;

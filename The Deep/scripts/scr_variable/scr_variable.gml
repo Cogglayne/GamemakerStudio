@@ -1,13 +1,14 @@
 function changeVariableStatus(variable){
 if(variable == false){
-if(variable == removeBackgroundNoise){
-	audio_stop_sound(snd_background)
-}	
 return true;
 }else if (variable == true){
-if(variable == removeBackgroundNoise){
-	audio_play_sound(snd_background,0,1)
-}	
 return false;	
 }
+}
+function changeBackgroundNoiseStatus(){
+	if(audio_is_playing(snd_background)){
+		audio_stop_sound(snd_background)
+	}else{
+		audio_play_sound(snd_background,0,1)
+	}
 }

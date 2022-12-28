@@ -9,6 +9,7 @@ evolvedMonsterTutorialTwoCleared = false;
 levelFourEasyTime = 100;
 levelFourMediumTime = 100;
 levelFourHardTime = 100;
+timer = 100;
 // tutorial support
 mineTutorialCleared = false;
 monsterTutorialCleared = false;

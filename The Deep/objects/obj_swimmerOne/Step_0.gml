@@ -10,7 +10,6 @@ vsp = (keyDown - keyUp) * mvspeed;
 RightHand();
 LeftHand();
 Standard();
-PoorReactivity()
 // sets the state for the swimmer
 if (hsp != 0 || vsp != 0) {
     // plays swimming sound when the swimmer is moving

@@ -25,67 +25,51 @@ if (click && text = "Quit") {
     game_end();
     // difficulties
 }  else if (click && text = "Easy") {
-    obj_levelTracker.levelDifficulty = "Easy"
-    room_goto(targetRoom);
+	setDifficulty("Easy")
 } else if (click && text = "Medium") {
-    obj_levelTracker.levelDifficulty = "Medium"
-    room_goto(targetRoom);
+	setDifficulty("Medium")
 } else if (click && text = "Hard") {
-    obj_levelTracker.levelDifficulty = "Hard"
-    room_goto(targetRoom);
+	setDifficulty("Hard")
     // tutorials rooms
 } else if (click && text = "Movement Tutorial") {
-    obj_levelTracker.tutorialRoom = TutorialMovement;
-    room_goto(targetRoom);
+	setTutorialRoom(TutorialMovement)
 } else if (click && text = "Monster Tutorial") {
-    obj_levelTracker.tutorialRoom = TutorialMonster;
-    room_goto(targetRoom);
+	setTutorialRoom(TutorialMonster)
 } else if (click && text = "Mine Tutorial") {
-    obj_levelTracker.tutorialRoom = TutorialMine;
-    room_goto(targetRoom);
+	setTutorialRoom(TutorialMine)
 } else if (click && text = "Evolved Monster Tutorial Two") {
-    obj_levelTracker.tutorialRoom = TutorialMonsterEvolvedTwo;
-    room_goto(targetRoom);
+	setTutorialRoom(TutorialMonsterEvolvedTwo)
 } else if (click && text = "Evolved Monster Tutorial One") {
-    obj_levelTracker.tutorialRoom = TutorialMonsterEvolvedOne;
-    room_goto(targetRoom);
+	setTutorialRoom(TutorialMonsterEvolvedOne)
 } else if (click && text = "Angler Tutorial") {
-    obj_levelTracker.tutorialRoom = TutorialAngler;
-    room_goto(targetRoom);
+	setTutorialRoom(TutorialAngler)
 } else if (click && text = "Probe Tutorial") {
-    obj_levelTracker.tutorialRoom = TutorialProbe;
-    room_goto(targetRoom);
+	setTutorialRoom(TutorialProbe)
 } else if (click && text = "Replay Tutorial") {
     room_goto(obj_levelTracker.tutorialRoom)
 } else if (click && text = "Next Tutorial") {
     // sets the next tutorial room depending on the current tutorial room	
     switch (obj_levelTracker.tutorialRoom) {
         case TutorialMovement:
-            obj_levelTracker.tutorialRoom = TutorialMonster;
-            room_goto(TutorialMonster)
+			setTutorialRoom(TutorialMonster)
             break;
         case TutorialAngler:
-            room_goto(Tutorial)
+            setTutorialRoom(Tutorial)
             break;
         case TutorialMonster:
-            obj_levelTracker.tutorialRoom = TutorialMine;
-            room_goto(TutorialMine)
+          setTutorialRoom(TutorialMine)
             break;
         case TutorialMine:
-            obj_levelTracker.tutorialRoom = TutorialMonsterEvolvedOne;
-            room_goto(TutorialMonsterEvolvedOne)
+			setTutorialRoom(TutorialMonsterEvolvedOne)
             break;
         case TutorialProbe:
-            obj_levelTracker.tutorialRoom = TutorialAngler;
-            room_goto(TutorialAngler)
+			setTutorialRoom(TutorialAngler)		
             break;
         case TutorialMonsterEvolvedOne:
-            obj_levelTracker.tutorialRoom = TutorialMonsterEvolvedTwo;
-            room_goto(TutorialMonsterEvolvedTwo)
+			setTutorialRoom(TutorialMonsterEvolvedTwo)				
             break;
         case TutorialMonsterEvolvedTwo:
-            obj_levelTracker.tutorialRoom = TutorialProbe;
-            room_goto(TutorialProbe)
+			setTutorialRoom(TutorialProbe)		
             break;
     }
     // mictrotransaction control
@@ -104,39 +88,22 @@ if (click && text = "Quit") {
 	obj_microtransactions.enemiesSlowedBought = true;
     activated = true;
 } else if (click && text = "Continue level for $.50") {
-    obj_microtransactions.extraLife = true;
-    obj_levelTracker.textShouldBeShowing = false;
-    instance_activate_layer("AmbientBackground")
-    instance_activate_layer("Instances")
-    instance_activate_layer("LightInstance")
-    instance_deactivate_layer("Extra")
+	activateExtraLifeOrSkipWaitTime("Extra")
 } else if (click && text = "Skip Wait for $.50") {
-    obj_microtransactions.extraLife = true;
-    obj_levelTracker.textShouldBeShowing = false;
-    instance_destroy(obj_wait)
-    instance_activate_layer("AmbientBackground")
-    instance_activate_layer("Instances")
-    instance_activate_layer("LightInstance")
-    instance_deactivate_layer("Wait")
+	activateExtraLifeOrSkipWaitTime("Skip")
 } else if (click && text = "Toggle Swimmer Cosmetic") {
     if (obj_microtransactions.swimmerSkinBought) {
-        if (obj_microtransactions.swimmerSkin == false) {
-            obj_microtransactions.swimmerSkin = true
-            activated = true;
-        } else if (obj_microtransactions.swimmerSkin == true) {
-            obj_microtransactions.swimmerSkin = false
-            activated = false;
-        }
+		with(obj_microtransactions){
+			swimmerSkin = changeVariableStatus(swimmerSkin)
+		}
+		changeActivated()	
     }
 } else if (click && text = "Toggle Light Cosmetic") {
     if (obj_microtransactions.lightCosmeticBought) {
-        if (obj_microtransactions.newLightEffect == false) {
-            obj_microtransactions.newLightEffect = true
-            activated = true;
-        } else if (obj_microtransactions.newLightEffect == true) {
-            obj_microtransactions.newLightEffect = false
-            activated = false;
-        }
+		with(obj_microtransactions){
+			newLightEffect = changeVariableStatus(newLightEffect)
+		}
+		changeActivated()
     }
     // changes control schemes
 } else if (click && text = "WASD Controls") {
@@ -221,6 +188,7 @@ if (click && text = "Quit") {
 	with(obj_options){
 		removeBackgroundNoise = changeVariableStatus(removeBackgroundNoise)
 	}	
+	changeBackgroundNoiseStatus()
 	changeActivated()
 } else if (click && text = "Destroy Enemies With Barriers") {
 	with(obj_options){

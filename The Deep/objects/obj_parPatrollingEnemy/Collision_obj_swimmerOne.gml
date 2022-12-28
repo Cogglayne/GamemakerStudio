@@ -20,11 +20,11 @@ if (obj_levelTracker.swimmerOneSinglePlayer == false) {
 if (!obj_microtransactions.extraLife && !tutorialEnemy && !obj_swimmerOne.avoidanceTime) {
     // if the extra life cosmetic life is not active and the evolve
     // monster is not a tutorial enemy
-    audio_play_sound(snd_playerdie, 1, 0)
     // shows death text
     obj_levelTracker.textShouldBeShowing = true;
 		 // stops sounds
         stopGameSounds()
+		audio_play_sound(snd_playerdie, 1, 0)
         if (room == TutorialMonsterEvolvedOne || room == TutorialMonsterEvolvedTwo  || room == TutorialMine  || room == TutorialMonster || room == TutorialMovement) {
             room_goto(TutorialFailed)
         }

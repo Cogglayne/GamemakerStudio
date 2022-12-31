@@ -11,6 +11,7 @@ if (instance_exists(obj_swimmerTwo)) {
 
 if (!swimmerOneExists && swimmerOneSpawnTime == 0) {
     instance_create_layer(480, 1000, "Instances", obj_swimmerOne);
+	obj_microtransactions.extraLife = true;
     obj_swimmerOne.mvspeed = obj_levelTracker.swimmerOneMVSpeed;
     obj_playerOneLight.xBoundry = obj_levelTracker.lightX;
     obj_playerOneLight.yBoundry = obj_levelTracker.lightY;
@@ -18,6 +19,7 @@ if (!swimmerOneExists && swimmerOneSpawnTime == 0) {
     obj_swimmerOne.singleplayer = false;
 }
 if (!swimmerTwoExists && swimmerTwoSpawnTime == 0) {
+	obj_microtransactions.extraLife2 = true;
     instance_create_layer(4520, 1000, "Instances", obj_swimmerTwo);
     obj_swimmerTwo.mvspeed = obj_levelTracker.swimmerTwoMVSpeed;
     obj_playerTwoLight.xBoundry = obj_levelTracker.lightTwoX;

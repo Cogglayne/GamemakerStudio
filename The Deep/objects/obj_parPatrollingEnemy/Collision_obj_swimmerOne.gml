@@ -1,4 +1,4 @@
-if (obj_levelTracker.swimmerOneSinglePlayer == false) {
+if (!obj_microtransactions.extraLife && !obj_levelTracker.swimmerOneSinglePlayer) {
     // destroys swimmer object
     instance_destroy(other)
     instance_destroy(obj_playerOneLight)

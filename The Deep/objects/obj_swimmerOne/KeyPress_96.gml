@@ -1,10 +1,7 @@
-if(obj_options.monsterAvoidanceAbility && obj_options.mouseAndArrowKeyControls && !avoidanceTime && avoidanceCharges > 0){
-avoidanceCharges--;
-audio_play_sound(snd_monsterAvoidanceAbilityActivation,1,0)
-avoidanceTime = true;
-alarm[4] = 60;
+// avoidance ability for Mouse and Arrow Key Controls
+if (obj_options.monsterAvoidanceAbility && obj_options.mouseAndArrowKeyControls && !avoidanceTime && avoidanceCharges > 0) {
+	useAvoidanceAbility()
 }
-
 
 
 

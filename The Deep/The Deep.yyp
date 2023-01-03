@@ -196,6 +196,7 @@
     {"id":{"name":"snd_continue","path":"sounds/snd_continue/snd_continue.yy",},"order":3,},
     {"id":{"name":"scr_stopSound","path":"scripts/scr_stopSound/scr_stopSound.yy",},"order":5,},
     {"id":{"name":"snd_toggleSwimmerCosmetic","path":"sounds/snd_toggleSwimmerCosmetic/snd_toggleSwimmerCosmetic.yy",},"order":3,},
+    {"id":{"name":"scr_swimmerObjects","path":"scripts/scr_swimmerObjects/scr_swimmerObjects.yy",},"order":12,},
     {"id":{"name":"spr_visionPickUp","path":"sprites/spr_visionPickUp/spr_visionPickUp.yy",},"order":2,},
     {"id":{"name":"obj_playerOneLight","path":"objects/obj_playerOneLight/obj_playerOneLight.yy",},"order":0,},
     {"id":{"name":"spr_orangeBlue_brown","path":"sprites/spr_orangeBlue_brown/spr_orangeBlue_brown.yy",},"order":1,},

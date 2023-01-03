@@ -10,19 +10,20 @@ vsp = (keyDown - keyUp) * mvspeed;
 RightHand();
 LeftHand();
 Standard();
+// starts playing the swimmers movement sound
 if(state == 0 && singleplayer){
 audio_play_sound(snd_swimming,1,1)
 state = 1;
 }
 // sets the state for the swimmer
 if (hsp != 0 || vsp != 0) {
-    // plays swimming sound when the swimmer is moving
-	audio_sound_gain(snd_swimming,1,100)
+    // increases gain when moving
+	audio_sound_gain(snd_swimming,.8,100)
     currentState = MOVING;
 }
 if (hsp == 0 && vsp == 0) {
-    // stops swimming sound when swimmer stops
-	audio_sound_gain(snd_swimming,.5,100)
+    // reduces gain when stopped
+	audio_sound_gain(snd_swimming,.3,100)
     currentState = IDOL;
 }
 // collisions with wall

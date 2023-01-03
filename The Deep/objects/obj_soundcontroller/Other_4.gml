@@ -32,7 +32,6 @@ if (obj_options.textToSpeak) {
     if (room == TutorialClear) {
         stopTrainerSounds()
         audio_play_sound(snd_tutorialPassed, 1, 0)
-        audio_play_sound(snd_playerWin, 1, 0)
     }
     if (room == TutorialFailed) {
         stopTrainerSounds()

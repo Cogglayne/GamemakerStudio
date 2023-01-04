@@ -20,6 +20,7 @@ function toggleLight() {
                     obj_levelTracker.anglerTutorialCleared = true
                     instance_destroy(obj_horrorTutorial)
                     obj_trainer.numHits = 0;
+					audio_play_sound(snd_playerWin,1,0)
                     room_goto(TutorialClear)
                 }
             }

@@ -3,7 +3,7 @@ if (instance_exists(obj_trainer)) {
         obj_trainer.numHits++;
         obj_trainer.probeTutorialTrial = true;
         if (obj_trainer.probeTutorialTrial && obj_trainer.numHits == 2) {
-            if (obj_options.textToSpeak) {
+            if (obj_options.blindMode) {
                 audio_play_sound(snd_probeSecondLaunch, 1, 0)
             }
             obj_trainer.textTwo = "Excellent Work, Launch another probe"
@@ -13,7 +13,6 @@ if (instance_exists(obj_trainer)) {
             obj_levelTracker.probeTutorialCleared = true
             obj_trainer.numHits = 0;
             obj_trainer.textTwo = ""
-			audio_play_sound(snd_playerWin,1,0)
             room_goto(TutorialClear)
         }
     }

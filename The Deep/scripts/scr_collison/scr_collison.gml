@@ -230,7 +230,6 @@ function swimmerMonsterBarrierCollision(object) {
                     obj_trainer.firstBounce = true;
                     obj_trainer.numHits = 0;
                     obj_trainer.textTwo = ""
-					audio_play_sound(snd_playerWin,1,0)
                     room_goto(TutorialClear);
                 }
             }
@@ -264,7 +263,6 @@ function swimmerMineBarrierCollision(object) {
                     obj_trainer.firstBounce = true;
                     obj_trainer.numHits = 0;
                     obj_trainer.textTwo = ""
-					audio_play_sound(snd_playerWin,1,0)
                     room_goto(TutorialClear);
                 }
             }
@@ -304,7 +302,6 @@ function monsterEvolvedBarrierCollision(object) {
                         obj_trainer.firstBounce = true;
                         obj_trainer.numHits = 0;
                         obj_trainer.textTwo = ""
-						audio_play_sound(snd_playerWin,1,0)
                         room_goto(TutorialClear);
                     }
                 }
@@ -331,7 +328,6 @@ function monsterEvolvedBarrierCollision(object) {
                         obj_trainer.firstBounce = true;
                         obj_trainer.numHits = 0;
                         obj_trainer.textTwo = ""
-						audio_play_sound(snd_playerWin,1,0)
                         room_goto(TutorialClear);
                     }
                 }

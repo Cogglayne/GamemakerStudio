@@ -1,44 +1,18 @@
-function setLevelData() {
-    levelFourEasy();
-    levelFourMedium();
-    levelFourHard();
+function setLevelData(roomNumber) {
+	levelFour(roomNumber);
 }
 
-function levelFour() {
-    if (obj_levelTracker.levelFourEasyChallengeModeClear && obj_levelTracker.levelFourMediumChallengeModeClear && obj_levelTracker.levelFourHardChallengeModeClear) {
-        obj_levelTracker.levelFourChallengeModeClear = true;
-    }
-}
-
-function levelFourEasy() {
-    if (room == LevelFourEasy) {
-        if (obj_levelTracker.timer < obj_levelTracker.levelFourEasyTime) {
-            obj_levelTracker.levelFourEasyTime = obj_levelTracker.timer;
-        }
+function levelFour(roomNumber) {
+	if(room == obj_levelTracker.levelFourRooms[roomNumber]){
+		if(obj_levelTracker.timer < obj_levelTracker.levelFourTimes[roomNumber]){
+			obj_levelTracker.levelFourTimes[roomNumber] = obj_levelTracker.timer;
+		}
         if (obj_swimmerOne.hardMode == true) {
-            obj_levelTracker.levelFourEasyChallengeModeClear = true;
-        }
+            obj_levelTracker.levelFourChallengeModes[roomNumber] = true;
+        }		
+	}	
+    if (obj_levelTracker.levelFourChallengeModes[1] && obj_levelTracker.levelFourChallengeModes[2] && obj_levelTracker.levelFourChallengeModes[3]) {
+        obj_levelTracker.levelFourChallengeModes[0] = true;
     }
 }
 
-function levelFourMedium() {
-    if (room == LevelFourMedium) {
-        if (obj_levelTracker.timer < obj_levelTracker.levelFourMediumTime) {
-            obj_levelTracker.levelFourMediumTime = obj_levelTracker.timer;
-        }
-        if (obj_swimmerOne.hardMode == true) {
-            obj_levelTracker.levelFourMediumChallengeModeClear = true;
-        }
-    }
-}
-
-function levelFourHard() {
-    if (room == LevelFourHard) {
-        if (obj_levelTracker.timer < obj_levelTracker.levelFourHardTime) {
-            obj_levelTracker.levelFourHardTime = obj_levelTracker.timer;
-        }
-        if (obj_swimmerOne.hardMode == true) {
-            obj_levelTracker.levelFourHardChallengeModeClear = true;
-        }
-    }
-}

@@ -55,7 +55,17 @@ if (obj_levelTracker.swimmerOneSinglePlayer == false) {
                     obj_levelTracker.timer = obj_swimmerOne.timer;
                 }
             }
-            setLevelData()
+			switch(obj_levelTracker.levelDifficulty){
+				case "Easy":
+					setLevelData(0)
+				break;
+				case "Medium":
+					setLevelData(1)
+				break;
+				case "Hard":
+					setLevelData(2)
+				break;
+			}
             stopGameSounds()
 			audio_play_sound(snd_playerWin, 1, 0)
 			room_goto(Win);

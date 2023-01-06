@@ -16,4 +16,3 @@ if (instance_exists(obj_swimmerTwo)) {
     swimmerTwoText = obj_swimmerTwo.text
     swimmerTwoSinglePlayer = obj_swimmerTwo.singleplayer
 }
-

@@ -1,20 +1,15 @@
 function save() {
     if (file_exists("User.sav")) file_delete("User.sav");
     ini_open("User.sav")
-    ini_write_real("Save1", "levelFourEasyTime", obj_levelTracker.levelFourEasyTime);
-    ini_write_real("Save1", "levelFourEasyChallengemodeClear", obj_levelTracker.levelFourEasyChallengeModeClear);
-    ini_write_real("Save1", "levelFourMediumTime", obj_levelTracker.levelFourMediumTime);
-    ini_write_real("Save1", "levelFourMediumChallengemodeClear", obj_levelTracker.levelFourMediumChallengeModeClear);
-    ini_write_real("Save1", "levelFourHardTime", obj_levelTracker.levelFourHardTime);
-    ini_write_real("Save1", "levelFourHardChallengemodeClear", obj_levelTracker.levelFourHardChallengeModeClear);
-    ini_write_real("Save1", "levelFourChallengemodeClear", obj_levelTracker.levelFourChallengeModeClear);
-    ini_write_real("Save1", "evolvedMonsterTutorialOneCleared", obj_levelTracker.evolvedMonsterTutorialOneCleared);
-    ini_write_real("Save1", "evolvedMonsterTutorialTwoCleared", obj_levelTracker.evolvedMonsterTutorialTwoCleared);
-    ini_write_real("Save1", "mineTutorialCleared", obj_levelTracker.mineTutorialCleared);
-    ini_write_real("Save1", "monsterTutorialCleared", obj_levelTracker.monsterTutorialCleared);
-    ini_write_real("Save1", "probeTutorialCleared", obj_levelTracker.probeTutorialCleared);
-    ini_write_real("Save1", "anglerTutorialCleared", obj_levelTracker.anglerTutorialCleared);
-    ini_write_real("Save1", "movementTutorialCleared", obj_levelTracker.movementTutorialCleared);
+	for (index = 0; index < array_length_1d(obj_levelTracker.levelFourTimes); index += 1) {
+		ini_write_real("Save1","levelFourTimes"+string(index),obj_levelTracker.levelFourTimes[index]);
+	}	
+	for (index = 0; index < array_length_1d(obj_levelTracker.levelFourChallengeModes); index += 1) {
+		ini_write_real("Save1","levelFourChallengeModes"+string(index),obj_levelTracker.levelFourChallengeModes[index]);
+	}
+	for (index = 0; index < array_length_1d(obj_levelTracker.tutorials); index += 1) {
+		ini_write_real("Save1","tutorials"+string(index),obj_levelTracker.tutorials[index]);
+	}	
 	ini_write_real("Save1", "swimmerCosmetic", obj_microtransactions.swimmerSkin);
     ini_write_real("Save1", "lightCosmetic", obj_microtransactions.newLightEffect);
     ini_write_real("Save1", "swimmerSkinBought", obj_microtransactions.swimmerSkinBought);

@@ -225,11 +225,9 @@ function swimmerMonsterBarrierCollision(object) {
                     obj_monster.tutorialEnemy = false;
                 }
                 if (obj_trainer.monsterTutorialTrial && obj_trainer.numHits == 3) {
-                    obj_levelTracker.monsterTutorialCleared = true
-                    instance_destroy(obj_monster)
-                    obj_trainer.firstBounce = true;
-                    obj_trainer.numHits = 0;
-                    obj_trainer.textTwo = ""
+                    obj_levelTracker.tutorials[1] = true
+					stopGameSounds()
+					audio_play_sound(snd_playerWin,1,0)
                     room_goto(TutorialClear);
                 }
             }
@@ -258,11 +256,9 @@ function swimmerMineBarrierCollision(object) {
                     obj_mine.tutorialEnemy = false;
                 }
                 if (obj_trainer.mineTutorialTrial && obj_trainer.numHits == 3) {
-                    obj_levelTracker.mineTutorialCleared = true
-                    instance_destroy(obj_mine)
-                    obj_trainer.firstBounce = true;
-                    obj_trainer.numHits = 0;
-                    obj_trainer.textTwo = ""
+                    obj_levelTracker.tutorials[2] = true
+					stopGameSounds()
+					audio_play_sound(snd_playerWin,1,0)
                     room_goto(TutorialClear);
                 }
             }
@@ -297,11 +293,9 @@ function monsterEvolvedBarrierCollision(object) {
                         obj_monsterEvolved.tutorialEnemy = false;
                     }
                     if (obj_trainer.evolvedMonsterTutorialTrialOne && obj_trainer.numHits == 3) {
-                        obj_levelTracker.evolvedMonsterTutorialOneCleared = true
-                        instance_destroy(obj_monsterEvolved)
-                        obj_trainer.firstBounce = true;
-                        obj_trainer.numHits = 0;
-                        obj_trainer.textTwo = ""
+                        obj_levelTracker.tutorials[3] = true
+						stopGameSounds()
+						audio_play_sound(snd_playerWin,1,0)
                         room_goto(TutorialClear);
                     }
                 }
@@ -323,11 +317,9 @@ function monsterEvolvedBarrierCollision(object) {
                         obj_monsterEvolved.tutorialEnemy = false;
                     }
                     if (obj_trainer.evolvedMonsterTutorialTrialTwo && obj_trainer.numHits == 3) {
-                        obj_levelTracker.evolvedMonsterTutorialTwoCleared = true
-                        instance_destroy(obj_monsterEvolved)
-                        obj_trainer.firstBounce = true;
-                        obj_trainer.numHits = 0;
-                        obj_trainer.textTwo = ""
+						obj_levelTracker.tutorials[4] = true
+						stopGameSounds()
+						audio_play_sound(snd_playerWin,1,0)
                         room_goto(TutorialClear);
                     }
                 }

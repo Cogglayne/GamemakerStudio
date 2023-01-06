@@ -94,7 +94,6 @@
     {"id":{"name":"spr_avoidance","path":"sprites/spr_avoidance/spr_avoidance.yy",},"order":5,},
     {"id":{"name":"obj_whiteBlack_grey","path":"objects/obj_whiteBlack_grey/obj_whiteBlack_grey.yy",},"order":5,},
     {"id":{"name":"snd_skipWait","path":"sounds/snd_skipWait/snd_skipWait.yy",},"order":4,},
-    {"id":{"name":"scr_checkPlayableLevel","path":"scripts/scr_checkPlayableLevel/scr_checkPlayableLevel.yy",},"order":4,},
     {"id":{"name":"snd_sixPollutantsRemaining","path":"sounds/snd_sixPollutantsRemaining/snd_sixPollutantsRemaining.yy",},"order":3,},
     {"id":{"name":"spr_whiteRed_pink","path":"sprites/spr_whiteRed_pink/spr_whiteRed_pink.yy",},"order":3,},
     {"id":{"name":"snd_Instructions","path":"sounds/snd_Instructions/snd_Instructions.yy",},"order":8,},

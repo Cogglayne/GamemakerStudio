@@ -16,10 +16,9 @@ function toggleLight() {
                     obj_horrorTutorial.tutorialEnemy = false;
                 }
                 if (obj_trainer.anglerTutorialTrial && obj_trainer.numHits == 2) {
+                    obj_levelTracker.tutorials[6] = true
                     stopGameSounds()
-                    obj_levelTracker.anglerTutorialCleared = true
-                    instance_destroy(obj_horrorTutorial)
-                    obj_trainer.numHits = 0;
+					audio_play_sound(snd_playerWin,1,0)
                     room_goto(TutorialClear)
                 }
             }

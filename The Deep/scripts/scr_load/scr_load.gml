@@ -1,20 +1,15 @@
 function load() {
     if (file_exists("User.sav")) {
         ini_open("User.sav")
-        obj_levelTracker.levelFourEasyTime = ini_read_real("Save1", "levelFourEasyTime", 0)
-        obj_levelTracker.levelFourEasyChallengeModeClear = ini_read_real("Save1", "levelFourEasyChallengemodeClear", 0);
-        obj_levelTracker.levelFourMediumTime = ini_read_real("Save1", "levelFourMediumTime", 0)
-        obj_levelTracker.levelFourMediumChallengeModeClear = ini_read_real("Save1", "levelFourMediumChallengemodeClear", 0);
-        obj_levelTracker.levelFourHardTime = ini_read_real("Save1", "levelFourHardTime", 0)
-        obj_levelTracker.levelFourHardChallengeModeClear = ini_read_real("Save1", "levelFourHardChallengemodeClear", 0);
-        obj_levelTracker.levelFourChallengeModeClear = ini_read_real("Save1", "levelFourChallengemodeClear", 0)
-        obj_levelTracker.evolvedMonsterTutorialOneCleared = ini_read_real("Save1", "evolvedMonsterTutorialOneCleared", 0)
-        obj_levelTracker.evolvedMonsterTutorialTwoCleared = ini_read_real("Save1", "evolvedMonsterTutorialTwoCleared", 0);
-        obj_levelTracker.mineTutorialCleared = ini_read_real("Save1", "mineTutorialCleared", 0)
-        obj_levelTracker.monsterTutorialCleared = ini_read_real("Save1", "monsterTutorialCleared", 0);
-        obj_levelTracker.probeTutorialCleared = ini_read_real("Save1", "probeTutorialCleared", 0)
-        obj_levelTracker.anglerTutorialCleared = ini_read_real("Save1", "anglerTutorialCleared", 0)
-        obj_levelTracker.movementTutorialCleared = ini_read_real("Save1", "movementTutorialCleared", 0)
+	for (index = 0; index < array_length_1d(obj_levelTracker.levelFourTimes); index += 1) {
+		obj_levelTracker.levelFourTimes[index] = ini_read_real("Save1", "levelFourTimes"+string(index), 0)
+	}	
+	for (index = 0; index < array_length_1d(obj_levelTracker.levelFourChallengeModes); index += 1) {
+		obj_levelTracker.levelFourChallengeModes[index] = ini_read_real("Save1", "levelFourChallengeModes"+string(index), 0)
+	}	
+	for (index = 0; index < array_length_1d(obj_levelTracker.levelFourChallengeModes); index += 1) {
+		obj_levelTracker.tutorials[index] = ini_read_real("Save1", "tutorials"+string(index), 0)
+	}	
 		obj_microtransactions.swimmerSkin = ini_read_real("Save1", "swimmerCosmetic", 0)
         obj_microtransactions.newLightEffect = ini_read_real("Save1", "lightCosmetic", 0)
         obj_microtransactions.swimmerSkinBought = ini_read_real("Save1", "swimmerSkinBought", 0)

@@ -1,21 +1,6 @@
-// challenge mode variables
-levelFourChallengeModeClear = false;
-levelFourEasyChallengeModeClear = false;
-levelFourMediumChallengeModeClear = false;
-levelFourHardChallengeModeClear = false;
-evolvedMonsterTutorialOneCleared = false;
-evolvedMonsterTutorialTwoCleared = false;
-// level time variables
-levelFourEasyTime = 100;
-levelFourMediumTime = 100;
-levelFourHardTime = 100;
+// best time support
 timer = 100;
 // tutorial support
-mineTutorialCleared = false;
-monsterTutorialCleared = false;
-probeTutorialCleared = false;
-anglerTutorialCleared = false;
-movementTutorialCleared = false;
 tutorialRoom = Tutorial;
 // used to enable multiple difficulties
 levelDifficulty = ""
@@ -44,6 +29,14 @@ audio_group_load(GameSounds)
 audio_group_load(ButtonSounds)
 audio_group_load(RoomTextSounds)
 audio_group_load(TrainerSounds)
+levelFourRooms = [LevelFourEasy, LevelFourMedium, LevelFourHard];
+// 0 is level, 1 is easy, 2 is medium, 3 is hard
+levelFourChallengeModes = [false, false, false, false];
+// 0 is easy, 1 is medium, 3 is hard
+levelFourTimes = [100, 100, 100];
+// 0 is movement, 1 is monster, 2 is mine, 3 is evolved monster one,
+// 4 is evolved monster two, 5 is probe, 6 is angler
+tutorials = [false, false, false, false, false, false, false]
 load();
 
 

@@ -95,20 +95,20 @@ if (room == AlternateWin) {
 }
 if (room == BestTimes) {
     draw_text_transformed(2200, 0, "Best Times", 1, 1, 0);
-    if (obj_levelTracker.levelFourEasyTime == 100) {
+    if (obj_levelTracker.levelFourTimes[0] == 100) {
         draw_text_transformed(0, 100, "Level Four Easy: ", 1, 1, 0);
     } else {
-        draw_text_transformed(0, 100, "Level Four Easy: " + string(obj_levelTracker.levelFourEasyTime) + " seconds", 1, 1, 0);
+        draw_text_transformed(0, 100, "Level Four Easy: " + string(obj_levelTracker.levelFourTimes[0]) + " seconds", 1, 1, 0);
     }
-    if (obj_levelTracker.levelFourMediumTime == 100) {
+    if (obj_levelTracker.levelFourTimes[1] == 100) {
         draw_text_transformed(0, 200, "Level Four Medium: ", 1, 1, 0);
     } else {
-        draw_text_transformed(0, 200, "Level Four Medium: " + string(obj_levelTracker.levelFourMediumTime) + " seconds", 1, 1, 0);
+        draw_text_transformed(0, 200, "Level Four Medium: " + string(obj_levelTracker.levelFourTimes[1]) + " seconds", 1, 1, 0);
     }
-    if (obj_levelTracker.levelFourHardTime == 100) {
+    if (obj_levelTracker.levelFourTimes[2] == 100) {
         draw_text_transformed(0, 300, "Level Four Hard: ", 1, 1, 0);
     } else {
-        draw_text_transformed(0, 300, "Level Four Hard: " + string(obj_levelTracker.levelFourHardTime) + " seconds", 1, 1, 0);
+        draw_text_transformed(0, 300, "Level Four Hard: " + string(obj_levelTracker.levelFourTimes[2]) + " seconds", 1, 1, 0);
     }
 }
 if (draw_get_font() == ft_Ariel) {

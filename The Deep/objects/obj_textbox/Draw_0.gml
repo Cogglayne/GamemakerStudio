@@ -59,7 +59,7 @@ if (room == MainMenu) {
     draw_text_transformed(2130, 400, "Deep", 4, 4, 0);
 }
 if (room == Levels || room == Multiplayer) {
-    if (!obj_levelTracker.monsterTutorialCleared && !obj_levelTracker.mineTutorialCleared && !obj_levelTracker.probeTutorialCleared && !obj_levelTracker.anglerTutorialCleared && !obj_levelTracker.evolvedMonsterTutorialOneCleared && !obj_levelTracker.evolvedMonsterTutorialTwoCleared) {
+    if (!obj_levelTracker.tutorials[0] && !obj_levelTracker.tutorials[1] && !obj_levelTracker.tutorials[2] && !obj_levelTracker.tutorials[3] && !obj_levelTracker.tutorials[4] && !obj_levelTracker.tutorials[5] && !obj_levelTracker.tutorials[6]) {
         draw_text_transformed(400, 100, "Before continuing, completing the tutorials is recommended", 2, 2, 0);
     }
 }
@@ -95,21 +95,23 @@ if (room == AlternateWin) {
 }
 if (room == BestTimes) {
     draw_text_transformed(2200, 0, "Best Times", 1, 1, 0);
-    if (obj_levelTracker.levelFourTimes[0] == 100) {
-        draw_text_transformed(0, 100, "Level Four Easy: ", 1, 1, 0);
-    } else {
-        draw_text_transformed(0, 100, "Level Four Easy: " + string(obj_levelTracker.levelFourTimes[0]) + " seconds", 1, 1, 0);
-    }
-    if (obj_levelTracker.levelFourTimes[1] == 100) {
-        draw_text_transformed(0, 200, "Level Four Medium: ", 1, 1, 0);
-    } else {
-        draw_text_transformed(0, 200, "Level Four Medium: " + string(obj_levelTracker.levelFourTimes[1]) + " seconds", 1, 1, 0);
-    }
-    if (obj_levelTracker.levelFourTimes[2] == 100) {
-        draw_text_transformed(0, 300, "Level Four Hard: ", 1, 1, 0);
-    } else {
-        draw_text_transformed(0, 300, "Level Four Hard: " + string(obj_levelTracker.levelFourTimes[2]) + " seconds", 1, 1, 0);
-    }
+	levelText = ["Level One Easy", "Level One Medium", "Level One Hard", "Level Two Easy", "Level Two Medium", "Level Two Hard", 
+	"Level Three Easy", "Level Three Medium", "Level Three Hard", "Level Four Easy", "Level Four Medium", "Level Four Hard"]
+	startPosition = 100;
+	for (i = 0; i < array_length(levelText); i++){
+		 draw_text_transformed(0, startPosition, string(levelText[i]), 1, 1, 0);
+		startPosition += 100;
+	}	
+	startPosition = 100;
+	for (i = 0; i < array_length(obj_levelTracker.times); i++){
+		if(obj_levelTracker.times[i] == 100){
+			 draw_text_transformed(750, startPosition," NA", 1, 1, 0);
+		}else{
+			 draw_text_transformed(750, startPosition, string(obj_levelTracker.times[i]) + " seconds", 1, 1, 0);
+		}
+
+		startPosition += 100;
+	}
 }
 if (draw_get_font() == ft_Ariel) {
     if (room == Credits) {

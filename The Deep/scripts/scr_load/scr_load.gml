@@ -1,13 +1,13 @@
 function load() {
     if (file_exists("User.sav")) {
         ini_open("User.sav")
-	for (index = 0; index < array_length_1d(obj_levelTracker.levelFourTimes); index += 1) {
-		obj_levelTracker.levelFourTimes[index] = ini_read_real("Save1", "levelFourTimes"+string(index), 0)
+	for (index = 0; index < array_length_1d(obj_levelTracker.times); index += 1) {
+		obj_levelTracker.times[index] = ini_read_real("Save1", "times"+string(index), 0)
 	}	
-	for (index = 0; index < array_length_1d(obj_levelTracker.levelFourChallengeModes); index += 1) {
-		obj_levelTracker.levelFourChallengeModes[index] = ini_read_real("Save1", "levelFourChallengeModes"+string(index), 0)
+	for (index = 0; index < array_length_1d(obj_levelTracker.challengeModes); index += 1) {
+		obj_levelTracker.challengeModes[index] = ini_read_real("Save1", "challengeModes"+string(index), 0)
 	}	
-	for (index = 0; index < array_length_1d(obj_levelTracker.levelFourChallengeModes); index += 1) {
+	for (index = 0; index < array_length_1d(obj_levelTracker.tutorials); index += 1) {
 		obj_levelTracker.tutorials[index] = ini_read_real("Save1", "tutorials"+string(index), 0)
 	}	
 		obj_microtransactions.swimmerSkin = ini_read_real("Save1", "swimmerCosmetic", 0)

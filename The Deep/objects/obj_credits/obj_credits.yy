@@ -29,7 +29,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Utility",
-    "path": "folders/Objects/Utility.yy",
+    "name": "The Deep",
+    "path": "The Deep.yyp",
   },
 }

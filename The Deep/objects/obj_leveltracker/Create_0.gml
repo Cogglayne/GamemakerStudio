@@ -29,15 +29,17 @@ audio_group_load(GameSounds)
 audio_group_load(ButtonSounds)
 audio_group_load(RoomTextSounds)
 audio_group_load(TrainerSounds)
-levelFourRooms = [LevelFourEasy, LevelFourMedium, LevelFourHard];
-// 0 is level, 1 is easy, 2 is medium, 3 is hard
-levelFourChallengeModes = [false, false, false, false];
-// 0 is easy, 1 is medium, 3 is hard
-levelFourTimes = [100, 100, 100];
+rooms = [0,0,0,0,0,0,0,0,0, LevelFourEasy, LevelFourMedium, LevelFourHard];
+// easy > medium > hard > next level
+challengeModes = [false, false, false, false,
+false, false, false, false, false, false, false, false];
+// easy > medium > hard > next level
+times = [100,100,100,100,100,100,100,100,100, 100, 100, 100];
 // 0 is movement, 1 is monster, 2 is mine, 3 is evolved monster one,
 // 4 is evolved monster two, 5 is probe, 6 is angler
 tutorials = [false, false, false, false, false, false, false]
 load();
+
 
 
 

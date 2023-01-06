@@ -13,3 +13,11 @@ function changeBackgroundNoiseStatus() {
         audio_play_sound(snd_background, 0, 1)
     }
 }
+
+function findRoomNumber(){
+	for (i = 0; i< array_length(obj_levelTracker.rooms); i++){
+		if(room == obj_levelTracker.rooms[i]){
+			return i;
+		}
+	}
+}

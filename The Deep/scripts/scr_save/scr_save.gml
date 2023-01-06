@@ -1,11 +1,11 @@
 function save() {
     if (file_exists("User.sav")) file_delete("User.sav");
     ini_open("User.sav")
-	for (index = 0; index < array_length_1d(obj_levelTracker.levelFourTimes); index += 1) {
-		ini_write_real("Save1","levelFourTimes"+string(index),obj_levelTracker.levelFourTimes[index]);
+	for (index = 0; index < array_length_1d(obj_levelTracker.times); index += 1) {
+		ini_write_real("Save1","times"+string(index),obj_levelTracker.times[index]);
 	}	
-	for (index = 0; index < array_length_1d(obj_levelTracker.levelFourChallengeModes); index += 1) {
-		ini_write_real("Save1","levelFourChallengeModes"+string(index),obj_levelTracker.levelFourChallengeModes[index]);
+	for (index = 0; index < array_length_1d(obj_levelTracker.challengeModes); index += 1) {
+		ini_write_real("Save1","challengeModes"+string(index),obj_levelTracker.challengeModes[index]);
 	}
 	for (index = 0; index < array_length_1d(obj_levelTracker.tutorials); index += 1) {
 		ini_write_real("Save1","tutorials"+string(index),obj_levelTracker.tutorials[index]);

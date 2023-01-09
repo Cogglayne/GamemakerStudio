@@ -1,4 +1,4 @@
-obj_trainer.movementTutorialTrial = true;
+obj_trainer.tutorials[1] = true;
 
 
 

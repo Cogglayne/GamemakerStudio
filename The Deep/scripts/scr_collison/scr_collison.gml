@@ -32,25 +32,11 @@ function mineTutorialCollision(object) {
         while (!place_meeting(x, y + sign(vsp), object)) {
             y += sign(vsp);
         }
-        if (instance_exists(obj_trainer)) {
-            if (obj_trainer.mineTutorialActive) {
-                if (instance_exists(obj_swimmerOneMineBarrier) && !obj_trainer.firstBounce) {
-                    if (obj_options.textToSpeak) {
-                        stopTrainerSounds()
-                        audio_play_sound(snd_mineTutorialMistake, 1, 0)
-                    }
-                    obj_trainer.textTwo = "Make sure you deploy the barrier in the mine's path\n out in the field you can only deploy one at a time\n try again"
-                    instance_destroy(obj_swimmerOneMineBarrier)
-                } else {
-                    if (obj_options.textToSpeak) {
-                        stopTrainerSounds()
-                        audio_play_sound(snd_mineUp, 1, 0)
-                    }
-                    obj_trainer.textTwo = "Deploy the barrier to redirect the mine up"
-                }
-                obj_trainer.firstBounce = false;
-            }
-        }
+		tutorialCollision(2,
+		"Make sure you deploy the barrier in the mine's path\n out in the field you can only deploy one at a time\n try again",
+		"Deploy the barrier to redirect the mine up",
+		snd_mineTutorialMistake,
+		snd_mineUp)
         vsp = -vsp;
     }
 }
@@ -60,24 +46,11 @@ function mineCollision(object) {
         while (!place_meeting(x, y + sign(vsp), object)) {
             y += sign(vsp);
         }
-        if (instance_exists(obj_trainer)) {
-            if (obj_trainer.mineTutorialActive) {
-                if (instance_exists(obj_swimmerOneMineBarrier)) {
-                    if (obj_options.textToSpeak) {
-                        stopTrainerSounds()
-                        audio_play_sound(snd_mineTutorialMistake, 1, 0)
-                    }
-                    obj_trainer.textTwo = "Make sure you deploy the barrier in the mine's path\n out in the field you can only deploy one at a time\n try again"
-                    instance_destroy(obj_swimmerOneMineBarrier)
-                } else {
-                    if (obj_options.textToSpeak) {
-                        stopTrainerSounds()
-                        audio_play_sound(snd_mineDown, 1, 0)
-                    }
-                    obj_trainer.textTwo = "Deploy the barrier to redirect the mine down"
-                }
-            }
-        }
+		tutorialCollision(2,
+		"Make sure you deploy the barrier in the mine's path\n out in the field you can only deploy one at a time\n try again",
+		"Deploy the barrier to redirect the mine down",
+		snd_mineTutorialMistake,
+		snd_mineDown)
         vsp = -vsp;
     }
 }
@@ -88,25 +61,11 @@ function monsterTutorialCollision(object) {
             x += sign(hsp);
         }
         hsp = -hsp;
-        if (instance_exists(obj_trainer)) {
-            if (obj_trainer.monsterTutorialActive) {
-                if (instance_exists(obj_swimmerOneMonsterBarrier) && !obj_trainer.firstBounce) {
-                    if (obj_options.textToSpeak) {
-                        stopTrainerSounds()
-                        audio_play_sound(snd_monsterTutorialMistake, 1, 0)
-                    }
-                    obj_trainer.textTwo = "Make sure you deploy the barrier in the monster's path\n out in the field you can only deploy one at a time\n try again"
-                    instance_destroy(obj_swimmerOneMonsterBarrier)
-                } else {
-                    if (obj_options.textToSpeak) {
-                        stopTrainerSounds()
-                        audio_play_sound(snd_monsterRight, 1, 0)
-                    }
-                    obj_trainer.textTwo = "Deploy the barrier to redirect the monster to the right"
-                }
-                obj_trainer.firstBounce = false;
-            }
-        }
+		tutorialCollision(4,
+		"Make sure you deploy the barrier in the monster's path\n out in the field you can only deploy one at a time\n try again",
+		"Deploy the barrier to redirect the monster to the right",
+		snd_monsterTutorialMistake,
+		snd_monsterRight)
         image_xscale = -image_xscale;
     }
 }
@@ -117,24 +76,11 @@ function monsterCollision(object) {
             x += sign(hsp);
         }
         hsp = -hsp;
-        if (instance_exists(obj_trainer)) {
-            if (obj_trainer.monsterTutorialActive) {
-                if (instance_exists(obj_swimmerOneMonsterBarrier)) {
-                    if (obj_options.textToSpeak) {
-                        stopTrainerSounds()
-                        audio_play_sound(snd_monsterTutorialMistake, 1, 0)
-                    }
-                    obj_trainer.textTwo = "Make sure you deploy the barriers in the monster's path\n out in the field you can only deploy one at a time\n try again"
-                    instance_destroy(obj_swimmerOneMonsterBarrier)
-                } else {
-                    if (obj_options.textToSpeak) {
-                        stopTrainerSounds()
-                        audio_play_sound(snd_monsterLeft, 1, 0)
-                    }
-                    obj_trainer.textTwo = "Deploy the barrier to redirect the monster to the left"
-                }
-            }
-        }
+		tutorialCollision(4,
+		"Make sure you deploy the barrier in the monster's path\n out in the field you can only deploy one at a time\n try again",
+		"Deploy the barrier to redirect the monster to the left",
+		snd_monsterTutorialMistake,
+		snd_monsterLeft)
         image_xscale = -image_xscale;
     }
 }
@@ -144,23 +90,17 @@ function tutorialMonsterEvolvedCollision(object) {
         while (!place_meeting(x + sign(hsp), y, object)) {
             x += sign(hsp);
         }
-        if (instance_exists(obj_trainer)) {
-            if (instance_exists(obj_swimmerOneMineBarrier) || instance_exists(obj_swimmerOneMonsterBarrier)) {
-                if (obj_options.textToSpeak) {
-                    stopTrainerSounds()
-                    audio_play_sound(snd_evolvedMonsterTutorialMistake, 1, 0)
-                }
-                obj_trainer.textTwo = "Make sure you deploy the barrier in the evolved monster's path\n out in the field you can only deploy one at a time\n try again"
-                instance_destroy(obj_swimmerOneMineBarrier)
-                instance_destroy(obj_swimmerOneMineBarrier)
-            } else {
-                if (obj_options.textToSpeak) {
-                    stopTrainerSounds()
-                    audio_play_sound(snd_monsterEvolvedCollision, 1, 0)
-                }
-                obj_trainer.textTwo = "Deploy the barrier to redirect the evolved monster right and down"
-            }
-        }
+		trainerTutorialNumber = 0;
+		if(room == TutorialMonsterEvolvedOne){
+			trainerTutorialNumber = 6;
+		} else if (room == TutorialMonsterEvolvedTwo){
+			trainerTutorialNumber = 8;
+		}
+		tutorialCollision(trainerTutorialNumber,
+		"Make sure you deploy the barrier in the evolved monster's path\n out in the field you can only deploy one at a time\n try again",
+		"Deploy the barrier to redirect the evolved monster right and down",
+		snd_evolvedMonsterTutorialMistake,
+		snd_monsterEvolvedCollision)
         hsp = -hsp;
         vsp = -vsp;
         image_xscale = -image_xscale;
@@ -172,24 +112,17 @@ function monsterEvolvedCollision(object) {
         while (!place_meeting(x + sign(hsp), y, object)) {
             x += sign(hsp);
         }
-        if (instance_exists(obj_trainer)) {
-            if ((instance_exists(obj_swimmerOneMineBarrier) || instance_exists(obj_swimmerOneMonsterBarrier)) && !obj_trainer.firstBounce) {
-                if (obj_options.textToSpeak) {
-                    stopTrainerSounds()
-                    audio_play_sound(snd_evolvedMonsterTutorialMistake, 1, 0)
-                }
-                obj_trainer.textTwo = "Make sure you deploy the barrier in the evolved monster's path\n out in the field you can only deploy one at a time\n try again"
-                instance_destroy(obj_swimmerOneMineBarrier)
-                instance_destroy(obj_swimmerOneMineBarrier)
-            } else {
-                if (obj_options.textToSpeak) {
-                    stopTrainerSounds()
-                    audio_play_sound(snd_monsterEvolvedTutorialCollision, 1, 0)
-                }
-                obj_trainer.textTwo = "Deploy the barrier to redirect the evolved monster left and up"
-            }
-            obj_trainer.firstBounce = false;
-        }
+		trainerTutorialNumber = 0;
+		if(room == TutorialMonsterEvolvedOne){
+			trainerTutorialNumber = 6;
+		} else if (room == TutorialMonsterEvolvedTwo){
+			trainerTutorialNumber = 8;
+		}
+		tutorialCollision(trainerTutorialNumber,
+		"Make sure you deploy the barrier in the evolved monster's path\n out in the field you can only deploy one at a time\n try again",
+		"Deploy the barrier to redirect the evolved monster left and up",
+		snd_evolvedMonsterTutorialMistake,
+		snd_monsterEvolvedTutorialCollision)
         hsp = -hsp;
         vsp = -vsp;
         image_xscale = -image_xscale;
@@ -206,32 +139,10 @@ function swimmerMonsterBarrierCollision(object) {
         if (obj_options.destroyEnemiesWithBarriers && obj_swimmerOne.isPlaying) {
             numHits--;
         }
-        if (numHits == 0) {
-            instance_destroy(object)
-        }
         image_xscale = -image_xscale;
         instance_destroy(object)
         audio_play_sound(snd_barrierDestruction, 1, 0)
-        if (instance_exists(obj_trainer)) {
-            if (obj_trainer.monsterTutorialActive) {
-                obj_trainer.monsterTutorialTrial = true;
-                obj_trainer.numHits++;
-                if (obj_trainer.monsterTutorialTrial && obj_trainer.numHits == 2) {
-                    if (obj_options.textToSpeak) {
-                        stopTrainerSounds()
-                        audio_play_sound(snd_enemyActive, 1, 0)
-                    }
-                    obj_trainer.textTwo = "Excellent Work, This time the danger is real"
-                    obj_monster.tutorialEnemy = false;
-                }
-                if (obj_trainer.monsterTutorialTrial && obj_trainer.numHits == 3) {
-                    obj_levelTracker.tutorials[1] = true
-					stopGameSounds()
-					audio_play_sound(snd_playerWin,1,0)
-                    room_goto(TutorialClear);
-                }
-            }
-        }
+		changeTutorialStatus(4,5,1,"Excellent Work, This time the danger is real",snd_enemyActive,2)
     }
 }
 
@@ -243,26 +154,7 @@ function swimmerMineBarrierCollision(object) {
         if (obj_options.destroyEnemiesWithBarriers && obj_parSwimmer.isPlaying) {
             numHits--;
         }
-        if (instance_exists(obj_trainer)) {
-            if (obj_trainer.mineTutorialActive) {
-                obj_trainer.numHits++;
-                obj_trainer.mineTutorialTrial = true;
-                if (obj_trainer.mineTutorialTrial && obj_trainer.numHits == 2) {
-                    if (obj_options.textToSpeak) {
-                        stopTrainerSounds()
-                        audio_play_sound(snd_enemyActive, 1, 0)
-                    }
-                    obj_trainer.textTwo = "Excellent Work, This time the danger is real"
-                    obj_mine.tutorialEnemy = false;
-                }
-                if (obj_trainer.mineTutorialTrial && obj_trainer.numHits == 3) {
-                    obj_levelTracker.tutorials[2] = true
-					stopGameSounds()
-					audio_play_sound(snd_playerWin,1,0)
-                    room_goto(TutorialClear);
-                }
-            }
-        }
+		changeTutorialStatus(2,3,2,"Excellent Work, This time the danger is real",snd_enemyActive,2)
         vsp = -vsp;
         instance_destroy(object)
         audio_play_sound(snd_barrierDestruction, 1, 0)
@@ -280,53 +172,13 @@ function monsterEvolvedBarrierCollision(object) {
             numHits--;
         }
         if (object == obj_swimmerOneMineBarrier) {
-            if (instance_exists(obj_trainer)) {
-                if (obj_trainer.evolvedMonsterTutorialOneActive) {
-                    obj_trainer.numHits++;
-                    obj_trainer.evolvedMonsterTutorialTrialOne = true;
-                    if (obj_trainer.evolvedMonsterTutorialTrialOne && obj_trainer.numHits == 2) {
-                        if (obj_options.textToSpeak) {
-                            stopTrainerSounds()
-                            audio_play_sound(snd_enemyActive, 1, 0)
-                        }
-                        obj_trainer.textTwo = "Excellent Work, This time the danger is real"
-                        obj_monsterEvolved.tutorialEnemy = false;
-                    }
-                    if (obj_trainer.evolvedMonsterTutorialTrialOne && obj_trainer.numHits == 3) {
-                        obj_levelTracker.tutorials[3] = true
-						stopGameSounds()
-						audio_play_sound(snd_playerWin,1,0)
-                        room_goto(TutorialClear);
-                    }
-                }
-            }
-            instance_destroy(object)
-            audio_play_sound(snd_barrierDestruction, 1, 0)
+			changeTutorialStatus(6,7,3,"Excellent Work, This time the danger is real",snd_enemyActive,2)
         }
         if (object == obj_swimmerOneMonsterBarrier) {
-            if (instance_exists(obj_trainer)) {
-                if (obj_trainer.evolvedMonsterTutorialTwoActive) {
-                    obj_trainer.numHits++;
-                    obj_trainer.evolvedMonsterTutorialTrialTwo = true;
-                    if (obj_trainer.evolvedMonsterTutorialTrialTwo && obj_trainer.numHits == 2) {
-                        if (obj_options.textToSpeak) {
-                            stopTrainerSounds()
-                            audio_play_sound(snd_enemyActive, 1, 0)
-                        }
-                        obj_trainer.textTwo = "Excellent Work, This time the danger is real"
-                        obj_monsterEvolved.tutorialEnemy = false;
-                    }
-                    if (obj_trainer.evolvedMonsterTutorialTrialTwo && obj_trainer.numHits == 3) {
-						obj_levelTracker.tutorials[4] = true
-						stopGameSounds()
-						audio_play_sound(snd_playerWin,1,0)
-                        room_goto(TutorialClear);
-                    }
-                }
-            }
-            instance_destroy(object)
-            audio_play_sound(snd_barrierDestruction, 1, 0)
+			changeTutorialStatus(8,9,4,"Excellent Work, This time the danger is real",snd_enemyActive,2)
         }
+            instance_destroy(object)
+            audio_play_sound(snd_barrierDestruction, 1, 0)		
         image_xscale = -image_xscale;
     }
 }

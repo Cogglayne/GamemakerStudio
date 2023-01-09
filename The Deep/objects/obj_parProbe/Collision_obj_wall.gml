@@ -1,21 +1,4 @@
-if (instance_exists(obj_trainer)) {
-    if (obj_trainer.probeTutorialActive) {
-        obj_trainer.numHits++;
-        obj_trainer.probeTutorialTrial = true;
-        if (obj_trainer.probeTutorialTrial && obj_trainer.numHits == 2) {
-            if (obj_options.textToSpeak) {
-                audio_play_sound(snd_probeSecondLaunch, 1, 0)
-            }
-            obj_trainer.textTwo = "Excellent Work, Launch another probe"
-        }
-        if (obj_trainer.probeTutorialTrial && obj_trainer.numHits == 3) {
-			stopGameSounds()
-            obj_levelTracker.tutorials[5] = true
-			audio_play_sound(snd_playerWin,1,0)
-            room_goto(TutorialClear)
-        }
-    }
-}
+changeTutorialStatus(10,11,5,"Excellent Work, Launch another probe",snd_probeSecondLaunch,2)
 instance_destroy(self)
 if(swimmer == obj_swimmerOne){
 	obj_swimmerOne.probeExists = false;

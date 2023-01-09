@@ -1,29 +1,21 @@
 instance_create_layer(x, y, "Instances", obj_trainerLight);
+horrorFollowing = false;
+tutorials = 
 // movement tutorial
-movementTutorialActive = false;
-movementTutorialTrial = false;
-shouldBeMovingOne = true;
-shouldBeMovingTwo = false;
-shouldBeMovingThree = false;
-shouldBeSwimmingRight = true;
-shouldBeSwimmingLeft = false;
+[false, false,
 // mine tutorial
-mineTutorialActive = false;
-mineTutorialTrial = false;
+false, false,
 // monster tutorial
-monsterTutorialActive = false;
-monsterTutorialTrial = false;
-// evolved monster tutorial
-evolvedMonsterTutorialOneActive = false;
-evolvedMonsterTutorialTwoActive = false;
-evolvedMonsterTutorialTrialOne = false;
-evolvedMonsterTutorialTrialTwo = false;
+false, false,
+// evolved monster tutorials
+false, false,
+false, false,
 // probe tutorial
-probeTutorialActive = false;
-probeTutorialTrial = false;
+false, false,
 // angler tutorial
-anglerTutorialActive = false;
-anglerTutorialTrial = false;
+false, false];
+// controls how the trainer should be moving during the tutorials
+movementControl = [true, false, false, true, false];
 // tutorial support
 firstBounce = true;
 soundShouldBePlaying = true;

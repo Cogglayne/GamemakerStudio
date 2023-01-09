@@ -1,5 +1,5 @@
 // Only increment when the trainer's light is absent and the trial is not active
-if (anglerTutorialActive && !anglerTutorialTrial && !instance_exists(obj_trainerLight)) {
+if (horrorFollowing && !tutorials[12] && !tutorials[13] && !instance_exists(obj_trainerLight)) {
     timer++;
     // destroys the light and reloactes the trainer
     if (timer == 5) {
@@ -17,8 +17,9 @@ if (anglerTutorialActive && !anglerTutorialTrial && !instance_exists(obj_trainer
             playSound(snd_anglerTutorialTrial)
             x = 4300;
             y = 1700;
+			tutorials[12] = true;
+			horrorFollowing = false;
         }
-        anglerTutorialTrial = true;
     }
 }
 alarm[0] = 60;

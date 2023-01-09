@@ -1,1 +1,1 @@
-evolvedMonsterTutorialOneActive = true;
+tutorials[8] = true;

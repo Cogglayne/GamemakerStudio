@@ -1,1 +1,1 @@
-anglerTutorialActive = true;
+horrorFollowing = true;

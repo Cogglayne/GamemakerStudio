@@ -3,26 +3,7 @@ function toggleLight() {
     if (instance_exists(obj_playerOneLight)) {
         instance_destroy(obj_playerOneLight)
     } else {
-        // angler tutorial
-        if (instance_exists(obj_trainer)) {
-            if (obj_trainer.anglerTutorialTrial) {
-                obj_trainer.numHits++;
-                if (obj_trainer.anglerTutorialTrial && obj_trainer.numHits == 1) {
-                    if (obj_options.textToSpeak) {
-                        stopTrainerSounds();
-                        audio_play_sound(snd_anglerActivated, 1, 0)
-                    }
-                    obj_trainer.textTwo = "Excellent Work, This time the danger is real\n make sure to swim away from the angler when your light is off"
-                    obj_horrorTutorial.tutorialEnemy = false;
-                }
-                if (obj_trainer.anglerTutorialTrial && obj_trainer.numHits == 2) {
-                    obj_levelTracker.tutorials[6] = true
-                    stopGameSounds()
-					audio_play_sound(snd_playerWin,1,0)
-                    room_goto(TutorialClear)
-                }
-            }
-        }
+		changeTutorialStatus(12,13,6,"Excellent Work, This time the danger is real\n make sure to swim away from the angler when your light is off",snd_anglerActivated,1)
         instance_create_layer(obj_swimmerOne.x, obj_swimmerOne.y, "Instances", obj_playerOneLight);
         obj_playerOneLight.xBoundry = obj_levelTracker.lightX;
         obj_playerOneLight.yBoundry = obj_levelTracker.lightY;

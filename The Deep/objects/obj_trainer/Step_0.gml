@@ -2,29 +2,29 @@
 // active and which part of the tutorial is active
 // text to speech if active for trainer tutorials
 // movement tutorial
-if (movementTutorialActive && !movementTutorialTrial) {
-    if (point_distance(x, y, 1280, 736) > 1 && shouldBeMovingOne) {
+if (tutorials[0] && !tutorials[1]) {
+    if (point_distance(x, y, 1280, 736) > 1 && movementControl[0]) {
         sprite_index = spr_blackswimmerSwimmingRight
         x += 5;
     }
     if (point_distance(x, y, 1280, 736) < 1) {
-        shouldBeMovingOne = false;
-        shouldBeMovingTwo = true;
+        movementControl[0] = false;
+        movementControl[1] = true;
     }
-    if (point_distance(x, y, 1280, 416) > 1 && shouldBeMovingTwo) {
+    if (point_distance(x, y, 1280, 416) > 1 && movementControl[1]) {
         sprite_index = spr_blackswimmerSwimmingUpRight
         y -= 5;
     }
     if (point_distance(x, y, 1280, 416) < 1) {
-        shouldBeMovingTwo = false;
-        shouldBeMovingThree = true;
+        movementControl[1] = false;
+        movementControl[2] = true;
     }
-    if (point_distance(x, y, 5000, 416) > 1 && shouldBeMovingThree) {
+    if (point_distance(x, y, 5000, 416) > 1 && movementControl[2]) {
         sprite_index = spr_blackswimmerSwimmingRight
         x += 5;
     }
 }
-if (movementTutorialActive && movementTutorialTrial) {
+if (tutorials[0] && tutorials[1]) {
     sprite_index = spr_blackswimmerIdleRight;
     if (point_distance(x, y, 700, 500) > 1) {
         stopTrainerSounds()
@@ -33,8 +33,29 @@ if (movementTutorialActive && movementTutorialTrial) {
         y = 500;
     }
 }
+// mine tutorial
+if (tutorials[2] && !tutorials[3]) {
+    if (point_distance(x, y, 1024, 1200) > 1) {
+        stopTrainerSounds()
+        playSound(snd_mineTutorialActive)
+        x = 1024;
+        y = 1200;
+    }
+    if (obj_swimmerOne.numMineBarriers < 1) {
+        instance_create_layer(x, y - 140, "Instances", obj_swimmerOneMineBarrier);
+        obj_swimmerOne.numMineBarriers++;
+    }
+}
+if (tutorials[2] && tutorials[3]) {
+    if (point_distance(x, y, 1600, 992) > 1) {
+        stopTrainerSounds()
+        playSound(snd_mineTutorialTrial)
+        x = 1600;
+        y = 992;
+    }
+}
 // monster tutorial
-if (monsterTutorialActive && !monsterTutorialTrial) {
+if (tutorials[4] && !tutorials[5]) {
     if (point_distance(x, y, 500, 992) > 1) {
         stopTrainerSounds()
         playSound(snd_monsterTutorialActive)
@@ -47,7 +68,7 @@ if (monsterTutorialActive && !monsterTutorialTrial) {
     }
 }
 
-if (monsterTutorialActive && monsterTutorialTrial) {
+if (tutorials[4] && tutorials[5]) {
     if (point_distance(x, y, 1024, 300) > 1) {
         stopTrainerSounds()
         playSound(snd_monsterTutorialTrial)
@@ -55,29 +76,8 @@ if (monsterTutorialActive && monsterTutorialTrial) {
         y = 300;
     }
 }
-// mine tutorial
-if (mineTutorialActive && !mineTutorialTrial) {
-    if (point_distance(x, y, 1024, 1200) > 1) {
-        stopTrainerSounds()
-        playSound(snd_mineTutorialActive)
-        x = 1024;
-        y = 1200;
-    }
-    if (obj_swimmerOne.numMineBarriers < 1) {
-        instance_create_layer(x, y - 140, "Instances", obj_swimmerOneMineBarrier);
-        obj_swimmerOne.numMineBarriers++;
-    }
-}
-if (mineTutorialActive && mineTutorialTrial) {
-    if (point_distance(x, y, 1600, 992) > 1) {
-        stopTrainerSounds()
-        playSound(snd_mineTutorialTrial)
-        x = 1600;
-        y = 992;
-    }
-}
 // evolved monster tutorial
-if (evolvedMonsterTutorialOneActive && !evolvedMonsterTutorialTrialOne) {
+if (tutorials[6] && !tutorials[7]) {
     sprite_index = spr_blackswimmerIdleLeft
     if (point_distance(x, y, 1900, 850) > 1) {
         stopTrainerSounds()
@@ -90,7 +90,7 @@ if (evolvedMonsterTutorialOneActive && !evolvedMonsterTutorialTrialOne) {
         obj_swimmerOne.numMineBarriers++;
     }
 }
-if (evolvedMonsterTutorialOneActive && evolvedMonsterTutorialTrialOne) {
+if (tutorials[6] && tutorials[7]) {
     sprite_index = spr_blackswimmerIdleLeft
     if (point_distance(x, y, 1024, 300) > 1) {
         stopTrainerSounds()
@@ -100,7 +100,7 @@ if (evolvedMonsterTutorialOneActive && evolvedMonsterTutorialTrialOne) {
     }
 }
 
-if (evolvedMonsterTutorialTwoActive && !evolvedMonsterTutorialTrialTwo) {
+if (tutorials[8] && !tutorials[9]) {
     sprite_index = spr_blackswimmerIdleLeft
     if (point_distance(x, y, 2000, 700) > 1) {
         stopTrainerSounds()
@@ -114,7 +114,7 @@ if (evolvedMonsterTutorialTwoActive && !evolvedMonsterTutorialTrialTwo) {
     }
 }
 
-if (evolvedMonsterTutorialTwoActive && evolvedMonsterTutorialTrialTwo) {
+if (tutorials[8] && tutorials[9]) {
     sprite_index = spr_blackswimmerIdleLeft
     if (point_distance(x, y, 1024, 300) > 1) {
         stopTrainerSounds()
@@ -124,7 +124,7 @@ if (evolvedMonsterTutorialTwoActive && evolvedMonsterTutorialTrialTwo) {
     }
 }
 // probe tutorial
-if (probeTutorialActive && !probeTutorialTrial) {
+if (tutorials[10] && !tutorials[11]) {
     sprite_index = spr_blackswimmerIdleRight
     if (point_distance(x, y, 1200, 500) > 1) {
         stopTrainerSounds()
@@ -142,7 +142,7 @@ if (probeTutorialActive && !probeTutorialTrial) {
     }
 }
 
-if (probeTutorialActive && probeTutorialTrial) {
+if (tutorials[10] && tutorials[11]) {
     sprite_index = spr_blackswimmerIdleRight
     if (point_distance(x, y, 1024, 800) > 1) {
         stopTrainerSounds()
@@ -153,7 +153,7 @@ if (probeTutorialActive && probeTutorialTrial) {
 }
 
 // angler tutorial
-if (anglerTutorialActive && !anglerTutorialTrial) {
+if (horrorFollowing && !tutorials[12] && !tutorials[13]) {
     sprite_index = spr_blackswimmerIdleLeft
     if (timer <= 0) {
         if (point_distance(x, y, 4300, 1800) > 1) {
@@ -167,7 +167,7 @@ if (anglerTutorialActive && !anglerTutorialTrial) {
         instance_destroy(obj_trainerLight)
     }
 }
-if (anglerTutorialActive && anglerTutorialTrial) {
+if (tutorials[12] && tutorials[13]) {
     sprite_index = spr_blackswimmerIdleLeft
 }
 

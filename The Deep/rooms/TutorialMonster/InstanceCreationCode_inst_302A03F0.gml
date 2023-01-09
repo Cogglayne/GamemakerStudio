@@ -1,1 +1,1 @@
-monsterTutorialActive = true;
+tutorials[4] = true;

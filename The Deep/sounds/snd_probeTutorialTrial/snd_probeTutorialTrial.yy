@@ -15,7 +15,7 @@
     "path": "audiogroups/TrainerSounds",
   },
   "soundFile": "snd_probeTutorialTrial.mp3",
-  "duration": 5.955833,
+  "duration": 6.2955,
   "parent": {
     "name": "Text",
     "path": "folders/Sounds/Trainer Sounds/Text.yy",

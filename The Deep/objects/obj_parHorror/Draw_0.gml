@@ -14,15 +14,14 @@ if (instance_exists(obj_swimmerOne)) {
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 if(tutorialEnemy){
-	if (obj_trainer.anglerTutorialActive && !obj_trainer.anglerTutorialTrial) {
+	if (obj_trainer.horrorFollowing) {
     if (obj_trainer.x < x) {
         sprite_index = spr_horrorLeft
     }
     if (obj_trainer.x > x) {
         sprite_index = spr_horrorRight
     }
-}
-if (obj_trainer.anglerTutorialActive && obj_trainer.anglerTutorialTrial) {
+}else{
     if (obj_swimmerOne.x < x) {
         sprite_index = spr_horrorLeft
     }
@@ -30,15 +29,6 @@ if (obj_trainer.anglerTutorialActive && obj_trainer.anglerTutorialTrial) {
         sprite_index = spr_horrorRight
     }
 }
-if (!obj_trainer.anglerTutorialActive && !obj_trainer.anglerTutorialTrial) {
-    if (obj_trainer.x < x) {
-        sprite_index = spr_horrorLeft
-    }
-    if (obj_trainer.x > x) {
-        sprite_index = spr_horrorRight
-    }
-}
-
 }else{
 	if (obj_swimmerOne.x < x) {
     sprite_index = spr_horrorLeft

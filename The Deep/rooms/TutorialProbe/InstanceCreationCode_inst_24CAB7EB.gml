@@ -1,1 +1,1 @@
-probeTutorialActive = true;
+tutorials[10] = true;

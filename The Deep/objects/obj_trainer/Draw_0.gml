@@ -4,44 +4,44 @@ draw_self()
 if (room == TutorialClear || room == TutorialFailed || room == Tutorial) {
     text = ""
 } else {
-    if (mineTutorialActive) {
-        if (mineTutorialTrial) {
-            text = "Now you try\n remember right click in a mine's direction\n to deploy a barrier to redirect it"
-        } else {
-            text = "Right click in a mine's direction\n to deploy a barrier to redirect it"
-        }
-    } else if (movementTutorialActive) {
-        if (movementTutorialTrial) {
+     if (tutorials[0]) {
+        if (tutorials[1]) {
             text = "Now you try\n remember to use the arrow keys to move from one side\n to the end of the other and make sure to avoid enemies"
         } else {
             text = "Use the arrow keys to move from one side to the end of the other\n and make sure to avoid enemies"
         }
-    } else if (monsterTutorialActive) {
-        if (monsterTutorialTrial) {
+    } else if (tutorials[2]) {
+        if (tutorials[3]) {
+            text = "Now you try\n remember right click in a mine's direction\n to deploy a barrier to redirect it"
+        } else {
+            text = "Right click in a mine's direction\n to deploy a barrier to redirect it"
+        }
+    } else if (tutorials[4]) {
+        if (tutorials[5]) {
             text = "Now you try\n remember left click in a monster's direction\n to deploy a barrier to redirect it"
         } else {
             text = "Left click in a monster's direction\n to deploy a barrier to redirect it"
         }
-    } else if (evolvedMonsterTutorialOneActive) {
-        if (evolvedMonsterTutorialTrialOne) {
+    } else if (tutorials[6]) {
+        if (tutorials[7]) {
             text = "Now you try\n remember right click in an evolved monster's direction\n to deploy a barrier to redirect it"
         } else {
             text = "Right click in an evolved monster's direction\n to deploy a barrier to redirect it"
         }
-    } else if (evolvedMonsterTutorialTwoActive) {
-        if (evolvedMonsterTutorialTrialTwo) {
+    } else if (tutorials[8]) {
+        if (tutorials[9]) {
             text = "Now you try\n remember left click in an evolved monster's direction\n to deploy a barrier to redirect it"
         } else {
             text = "Left click in an evolved monster's direction\n to deploy a barrier to redirect it"
         }
-    } else if (probeTutorialActive) {
-        if (probeTutorialTrial) {
-            text = "Now you try\n remember hit control to spawn the probe\n that will go towards the mouse to give you vision in a direction"
+    } else if (tutorials[10]) {
+        if (tutorials[11]) {
+            text = "Now you try\n remember hit control to spawn a probe\n that will go towards the mouse to give you vision in a direction"
         } else {
             text = "Hit control to spawn a probe that will go toward the mouse to give you vision in a direction\n probes are an integral part of survival down here"
         }
-    } else if (anglerTutorialActive) {
-        if (anglerTutorialTrial) {
+    } else if (horrorFollowing) {
+        if (tutorials[13 ]) {
             text = "Now you try\n remember hit shift to turn off your light and hide"
         } else {
             text = "Hit shift when the angler gets close to turn off your light and hide\n swim away while the angler cannot see you"

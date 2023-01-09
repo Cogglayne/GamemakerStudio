@@ -1,1 +1,1 @@
-mineTutorialActive = true;
+tutorials[2] = true;

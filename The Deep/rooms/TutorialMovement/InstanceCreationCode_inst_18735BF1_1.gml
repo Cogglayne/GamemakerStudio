@@ -1,1 +1,1 @@
-movementTutorialActive = true;
+tutorials[0] = true;

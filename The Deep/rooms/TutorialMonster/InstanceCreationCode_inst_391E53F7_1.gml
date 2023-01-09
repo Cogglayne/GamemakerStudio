@@ -1,2 +1,2 @@
 tutorialEnemy = true;
-hsp = 4;
+hsp = -4;

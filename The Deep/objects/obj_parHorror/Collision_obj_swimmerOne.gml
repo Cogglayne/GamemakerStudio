@@ -6,18 +6,9 @@ if (!obj_microtransactions.extraLife && !obj_swimmerOne.avoidanceTime && !tutori
         room_goto(TutorialFailed)
     }
         if (obj_options.waitTimeInsteadOfDeath) {
-            // layer manipulation
-            instance_create_layer(2400, 0, "Wait", obj_wait)
-            instance_activate_layer("Wait")
-            instance_deactivate_layer("Instances")
-            instance_deactivate_layer("LightInstance")
-            instance_deactivate_layer("AmbientBackground")
+			horrorLayerManipulation("Wait")
         } else {
-            // layer manipulation
-            instance_activate_layer("Extra")
-            instance_deactivate_layer("Instances")
-            instance_deactivate_layer("LightInstance")
-            instance_deactivate_layer("AmbientBackground")
+			horrorLayerManipulation("Extra")
         }
 }
 

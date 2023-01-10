@@ -163,7 +163,7 @@ if (horrorFollowing && !tutorials[12] && !tutorials[13]) {
             y = 1800;
         }
     }
-    if (point_distance(x, y, obj_horrorTutorial.x, obj_horrorTutorial.y) <= 900) {
+    if (point_distance(x, y, obj_parHorror.x, obj_parHorror.y) <= 900) {
         instance_destroy(obj_trainerLight)
     }
 }

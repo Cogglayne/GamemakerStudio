@@ -6,7 +6,8 @@ if (obj_options.changeFontToAriel) {
 }
 if (room == InstructionsPageOne) {
 draw_text_ext(0, 0, 
-@"Mouse and Arrow Key Controls (activated by the Mouse and Arrow Key Controls button in options, deactivates all other control schemes). 
+@"Escape will return you to the main menu at any time.
+Mouse and Arrow Key Controls (activated by the Mouse and Arrow Key Controls button in options, deactivates all other control schemes). 
 Up Arrow Key To Swim Up, Down Arrow Key To Swim Down, Left Arrow Key To Swim Left, Right Arrow Key To Swim Right.
 Left click to the left or right of the swimmer to spawn a barrier that can redirect monsters.
 Right click above or below the swimmer to spawn a barrier that can redirect mines.

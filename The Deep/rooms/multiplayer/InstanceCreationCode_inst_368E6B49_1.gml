@@ -1,3 +1,3 @@
-text = "Coming Soon";
-targetRoom = Levels;
-soundToPlay = snd_comingsoon
+text = "Level Three";
+targetRoom = MultiplayerLevelThree;
+soundToPlay = snd_levelThree

@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "snd_levelOne",
+  "name": "snd_levelTwo",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -14,8 +14,8 @@
     "name": "ButtonSounds",
     "path": "audiogroups/ButtonSounds",
   },
-  "soundFile": "snd_levelOne.mp3",
-  "duration": 0.679167,
+  "soundFile": "snd_levelTwo.mp3",
+  "duration": 0.835833,
   "parent": {
     "name": "Microtransactions",
     "path": "folders/Sounds/Button Sounds/Microtransactions.yy",

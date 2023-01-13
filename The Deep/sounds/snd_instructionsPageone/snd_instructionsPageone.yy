@@ -15,7 +15,7 @@
     "path": "audiogroups/RoomTextSounds",
   },
   "soundFile": "snd_instructionsPageone.mp3",
-  "duration": 53.315834,
+  "duration": 54.804832,
   "parent": {
     "name": "Room Text Sounds",
     "path": "folders/Sounds/Room Text Sounds.yy",

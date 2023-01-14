@@ -1,3 +1,13 @@
+options = 
+[false, false, // WASDControls, arrowKeyControls
+false, false, // mouseAndArrowKeyControls, decreaseReactionTimeRequired
+false, false, // textToSpeak, showNumberOfPollutantsPictorially
+false, false, // objectiveReminder, timeAnnoucements
+false, false, // changeFontToAriel, removeBackgroundNoise
+false, false, // closedCaptioning, sonar
+false, false, // waitTimeInsteadOfDeath, destroyEnemiesWithBarriers
+false, false, // playALevelBackToBack, monsterAvoidanceAbility
+];
 // variables used to deactivate and activate features
 WASDControls = false;
 arrowKeyControls = false;

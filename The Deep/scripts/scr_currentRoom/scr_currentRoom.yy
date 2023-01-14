@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "scr_variable",
+  "name": "scr_currentRoom",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {

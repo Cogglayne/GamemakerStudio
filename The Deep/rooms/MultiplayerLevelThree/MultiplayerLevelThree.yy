@@ -126,7 +126,7 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Multi Player",
-    "path": "folders/Rooms/Multi Player.yy",
+    "name": "LevelThree",
+    "path": "folders/Rooms/Multi Player/LevelThree.yy",
   },
 }

@@ -17,7 +17,7 @@
   "soundFile": "snd_levelOne.mp3",
   "duration": 0.679167,
   "parent": {
-    "name": "Microtransactions",
-    "path": "folders/Sounds/Button Sounds/Microtransactions.yy",
+    "name": "Navigation",
+    "path": "folders/Sounds/Button Sounds/Navigation.yy",
   },
 }

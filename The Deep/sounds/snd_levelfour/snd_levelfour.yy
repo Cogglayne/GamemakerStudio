@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSound",
   "resourceVersion": "1.0",
-  "name": "snd_levelfour",
+  "name": "snd_levelFour",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -14,7 +14,7 @@
     "name": "ButtonSounds",
     "path": "audiogroups/ButtonSounds",
   },
-  "soundFile": "snd_levelfour.mp3",
+  "soundFile": "snd_levelFour.mp3",
   "duration": 1.222289,
   "parent": {
     "name": "Navigation",

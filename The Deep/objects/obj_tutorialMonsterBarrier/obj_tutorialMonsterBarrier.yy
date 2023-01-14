@@ -28,7 +28,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Walls",
-    "path": "folders/Objects/Utility/Walls.yy",
+    "name": "EmptyWalls",
+    "path": "folders/Objects/Utility/Walls/EmptyWalls.yy",
   },
 }

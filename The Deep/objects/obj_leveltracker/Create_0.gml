@@ -30,8 +30,8 @@ audio_group_load(ButtonSounds)
 audio_group_load(RoomTextSounds)
 audio_group_load(TrainerSounds)
 rooms = 
-[0,0,0,
-0,0,0,
+[LevelOneEasy,LevelOneMedium,LevelOneHard,
+LevelTwoEasy,LevelTwoMedium,LevelTwoHard,
 LevelThreeEasy,LevelThreeMedium,LevelThreeHard, 
 LevelFourEasy, LevelFourMedium, LevelFourHard];
 // easy > medium > hard > next level

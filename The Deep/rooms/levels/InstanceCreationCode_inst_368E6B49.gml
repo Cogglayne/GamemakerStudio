@@ -9,4 +9,4 @@ for (i = 6; i<8; i++){
 if(challengeModesCompleted){
 	shouldBeYellow = true;
 }
-soundToPlay = snd_levelfour
+soundToPlay = snd_levelThree

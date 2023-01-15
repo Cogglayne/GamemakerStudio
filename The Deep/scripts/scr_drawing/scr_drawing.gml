@@ -1,6 +1,6 @@
 // shows the player if they have a barrier available to use
 function drawBarriers() {
-    if (obj_options.destroyEnemiesWithBarriers) {
+    if (obj_options.options[13]) {
         if (numMineBarriers == 0 && numMonsterBarriers == 0) {
             draw_sprite_ext(spr_swimmerMineBarrierDestroy, image_index, x, y + 70, .7, .7, image_angle, image_blend, image_alpha);
             draw_sprite_ext(spr_swimmerMonsterBarrierDestroy, image_index, x - 50, y + 120, .7, .7, image_angle, image_blend, image_alpha);

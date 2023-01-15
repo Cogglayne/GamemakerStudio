@@ -52,50 +52,50 @@ function setProbeDirection() {
 }
 
 function arrowAndWASDBarrierCreation() {
-    if ((keyboard_check_released(ord("A")) && obj_options.WASDControls) || (keyboard_check_released(vk_left) && obj_options.arrowKeyControls)) {
+    if ((keyboard_check_released(ord("A")) && obj_options.options[0]) || (keyboard_check_released(vk_left) && obj_options.options[1])) {
         leftArrowDoubleClick = 1;
         rightArrowDoubleClick = 0;
         downArrowDoubleClick = 0;
         UpArrowDoubleClick = 0;
         alarm[3] = 10;
     }
-    if (((keyboard_check_pressed(ord("A")) && obj_options.WASDControls) || (keyboard_check_pressed(vk_left) && obj_options.arrowKeyControls)) && leftArrowDoubleClick == 1 && numMonsterBarriers < 1) {
+    if (((keyboard_check_pressed(ord("A")) && obj_options.options[0]) || (keyboard_check_pressed(vk_left) && obj_options.options[1])) && leftArrowDoubleClick == 1 && numMonsterBarriers < 1) {
         instance_create_layer(x - 95, y, "Instances", obj_swimmerOneMonsterBarrier);
         leftArrowDoubleClick = 0;
         numMonsterBarriers++;
     }
-    if ((keyboard_check_released(ord("D")) && obj_options.WASDControls) || (keyboard_check_released(vk_right) && obj_options.arrowKeyControls)) {
+    if ((keyboard_check_released(ord("D")) && obj_options.options[0]) || (keyboard_check_released(vk_right) && obj_options.options[1])) {
         leftArrowDoubleClick = 0;
         rightArrowDoubleClick = 1;
         downArrowDoubleClick = 0;
         UpArrowDoubleClick = 0;
         alarm[3] = 10;
     }
-    if (((keyboard_check_pressed(ord("D")) && obj_options.WASDControls) || (keyboard_check_pressed(vk_right) && obj_options.arrowKeyControls)) && rightArrowDoubleClick == 1 && numMonsterBarriers < 1) {
+    if (((keyboard_check_pressed(ord("D")) && obj_options.options[0]) || (keyboard_check_pressed(vk_right) && obj_options.options[1])) && rightArrowDoubleClick == 1 && numMonsterBarriers < 1) {
         instance_create_layer(x + 95, y, "Instances", obj_swimmerOneMonsterBarrier);
         rightArrowDoubleClick = 0;
         numMonsterBarriers++;
     }
-    if ((keyboard_check_released(ord("W")) && obj_options.WASDControls) || (keyboard_check_released(vk_up) && obj_options.arrowKeyControls)) {
+    if ((keyboard_check_released(ord("W")) && obj_options.options[0]) || (keyboard_check_released(vk_up) && obj_options.options[1])) {
         leftArrowDoubleClick = 0;
         rightArrowDoubleClick = 0;
         downArrowDoubleClick = 0;
         UpArrowDoubleClick = 1;
         alarm[3] = 10;
     }
-    if (((keyboard_check_pressed(ord("W")) && obj_options.WASDControls) || (keyboard_check_pressed(vk_up) && obj_options.arrowKeyControls)) && UpArrowDoubleClick == 1 && numMineBarriers < 1) {
+    if (((keyboard_check_pressed(ord("W")) && obj_options.options[0]) || (keyboard_check_pressed(vk_up) && obj_options.options[1])) && UpArrowDoubleClick == 1 && numMineBarriers < 1) {
         instance_create_layer(x, y - 110, "Instances", obj_swimmerOneMineBarrier);
         UpArrowDoubleClick = 0;
         numMineBarriers++;
     }
-    if ((keyboard_check_released(ord("S")) && obj_options.WASDControls) || (keyboard_check_released(vk_down) && obj_options.arrowKeyControls)) {
+    if ((keyboard_check_released(ord("S")) && obj_options.options[0]) || (keyboard_check_released(vk_down) && obj_options.options[1])) {
         leftArrowDoubleClick = 0;
         rightArrowDoubleClick = 0;
         downArrowDoubleClick = 1;
         UpArrowDoubleClick = 0;
         alarm[3] = 10;
     }
-    if (((keyboard_check_pressed(ord("S")) && obj_options.WASDControls) || (keyboard_check_pressed(vk_down) && obj_options.arrowKeyControls)) && downArrowDoubleClick == 1 && numMineBarriers < 1) {
+    if (((keyboard_check_pressed(ord("S")) && obj_options.options[0]) || (keyboard_check_pressed(vk_down) && obj_options.options[1])) && downArrowDoubleClick == 1 && numMineBarriers < 1) {
         instance_create_layer(x, y + 110, "Instances", obj_swimmerOneMineBarrier);
         downArrowDoubleClick = 0;
         numMineBarriers++;

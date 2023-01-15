@@ -1,5 +1,5 @@
 function LeftHand() {
-    if (obj_options.WASDControls) {
+    if (obj_options.options[0]) {
 		arrowAndWASDBarrierCreation()
         if (keyboard_check(vk_shift) && !probeExists) {
             instance_create_layer(x, y, "Instances", obj_probe);
@@ -16,7 +16,7 @@ function LeftHand() {
 }
 
 function RightHand() {
-    if (obj_options.arrowKeyControls) {
+    if (obj_options.options[1]) {
 		arrowAndWASDBarrierCreation()
         if (keyboard_check(vk_numpad0) && !probeExists) {
             instance_create_layer(x, y, "Instances", obj_probe);
@@ -30,7 +30,7 @@ function RightHand() {
 }
 
 function Standard() {
-    if (obj_options.mouseAndArrowKeyControls) {
+    if (obj_options.options[2]) {
         if (mouse_check_button_pressed(mb_left) && numMonsterBarriers < 1) {
             if (mouse_x < x) {
                 instance_create_layer(x - 50, y, "Instances", obj_swimmerOneMonsterBarrier);

@@ -1,3 +1,14 @@
+function changeOptionStatus(index){
+	if(obj_options.options[index] == false){
+		obj_options.options[index] = true;
+	} else if (obj_options.options[index] == true){
+		obj_options.options[index] = false;
+	}
+	changeActivated()
+}
+function ChangeMicrotransactionStatus(){
+	
+}
 function changeActivated() {
     if (activated == false) {
         activated = true;
@@ -44,4 +55,12 @@ function changeBackgroundNoiseStatus() {
     } else {
         audio_play_sound(snd_background, 0, 1)
     }
+}
+function changeControlScheme(inst1, inst2, inst3, index1, index2, index3){
+	inst1.activated = true;
+	inst2.activated = false;
+	inst3.activated = false;
+	obj_options.options[index1] = true;
+	obj_options.options[index2] = false;
+	obj_options.options[index3] = false;
 }

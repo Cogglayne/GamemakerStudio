@@ -1,7 +1,7 @@
 // if single player is active and normal controls are active
 // destroys or creates the swimmer's light
 if (singleplayer == true) {
-    if (obj_options.mouseAndArrowKeyControls) {
+    if (obj_options.options[2]) {
         toggleLight()
     }
 }

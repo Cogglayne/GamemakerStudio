@@ -1,5 +1,5 @@
 // movement
-if (obj_microtransactions.enemiesSlowed || obj_options.decreaseReactionTimeRequired) {
+if (obj_microtransactions.enemiesSlowed || obj_options.options[3]) {
     if (hsp != 0) {
         hsp -= 1;
     }

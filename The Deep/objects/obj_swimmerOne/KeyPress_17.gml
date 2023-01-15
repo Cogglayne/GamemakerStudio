@@ -1,5 +1,5 @@
 // avoidance ability for Arrow Key Controls
-if (obj_options.monsterAvoidanceAbility && obj_options.arrowKeyControls && !avoidanceTime && avoidanceCharges > 0) {
+if (obj_options.options[15] && obj_options.options[1] && !avoidanceTime && avoidanceCharges > 0) {
 	useAvoidanceAbility()
 }
 

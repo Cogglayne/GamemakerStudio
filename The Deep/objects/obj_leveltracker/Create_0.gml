@@ -49,7 +49,7 @@ times =
 // 0 is movement, 1 is monster, 2 is mine, 3 is evolved monster one,
 // 4 is evolved monster two, 5 is probe, 6 is angler
 tutorials = [false, false, false, false, false, false, false]
-load();
+
 
 
 

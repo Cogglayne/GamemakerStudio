@@ -28,19 +28,10 @@ if (!obj_microtransactions.extraLife && !tutorialEnemy && !obj_swimmerOne.avoida
         if (room == TutorialMonsterEvolvedOne || room == TutorialMonsterEvolvedTwo  || room == TutorialMine  || room == TutorialMonster || room == TutorialMovement) {
             room_goto(TutorialFailed)
         }
-        if (obj_options.waitTimeInsteadOfDeath) {
-            // layer manipulation
-            instance_create_layer(2400, 0, "Wait", obj_wait)
-            instance_activate_layer("Wait")
-            instance_deactivate_layer("Instances")
-            instance_deactivate_layer("LightInstance")
-            instance_deactivate_layer("AmbientBackground")
+        if (obj_options.options[12]) {
+			enemyLayerManipulation("Wait")
         } else {
-            // layer manipulation
-            instance_activate_layer("Extra")
-            instance_deactivate_layer("Instances")
-            instance_deactivate_layer("LightInstance")
-            instance_deactivate_layer("AmbientBackground")
+			enemyLayerManipulation("Extra")
         }
 }
 }

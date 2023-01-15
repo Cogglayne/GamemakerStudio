@@ -1,7 +1,13 @@
 stopRoomText()
-if (obj_options.textToSpeak) {
+if (obj_options.options[4]) {
     if (room == Levels || room == Multiplayer) {
-        if (!obj_levelTracker.monsterTutorialCleared && !obj_levelTracker.mineTutorialCleared && !obj_levelTracker.probeTutorialCleared && !obj_levelTracker.anglerTutorialCleared && !obj_levelTracker.evolvedMonsterTutorialOneCleared && !obj_levelTracker.evolvedMonsterTutorialTwoCleared) {
+		tutorialCleared = true;
+		for (index = 0; index < array_length(obj_levelTracker.tutorials); index++){
+			if(obj_levelTracker.tutorials[index] == false){
+				tutorialCleared = false;
+			}
+		}
+        if (!tutorialCleared) {
             audio_play_sound(snd_tutorialsRecommended, 1, 0)
         }
     }
@@ -44,7 +50,7 @@ if (obj_options.textToSpeak) {
         audio_play_sound(snd_lostMulti, 1, 0)
     }
 	if(room == LevelFourDifficultySelector){
-		if(obj_options.destroyEnemiesWithBarriers){
+		if(obj_options.options[13]){
 			audio_play_sound(snd_collectOrDestroy,1,0)
 		}else{
 			audio_play_sound(snd_collectPollutants,1,0)

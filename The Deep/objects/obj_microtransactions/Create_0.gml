@@ -8,7 +8,7 @@ enemiesSlowed = false;
 enemiesSlowedBought = false;
 swimmerSkinBought = false;
 lightCosmeticBought = false;
-load();
+
 
 
 

@@ -4,7 +4,7 @@ var mouseY = device_mouse_y_to_gui(0);
 var hove = point_in_rectangle(mouseX, mouseY, x, y, x + width, y + height);
 // text to speak for a button if activated
 if (hove) {
-    if (obj_options.textToSpeak && !soundHasBeenPlayed) {
+    if (obj_options.options[4] && !soundHasBeenPlayed) {
         stopButtonSounds()
         audio_play_sound(soundToPlay, 1, 0)
         soundHasBeenPlayed = true;
@@ -107,32 +107,14 @@ if (click && text = "Quit") {
     }
     // changes control schemes
 } else if (click && text = "WASD Controls") {
-    obj_options.WASDControls = true;
-    obj_options.arrowKeyControls = false;
-    obj_options.mouseAndArrowKeyControls = false;
-    obj_options.decreaseReactionTimeRequired = false;
-    activated = true;
-    inst_303B7AD.activated = false;
-    inst_4229D191.activated = false;
+	changeControlScheme(inst_188A1605,inst_303B7AD,inst_4229D191,0,1,2)
 } else if (click && text = "Arrow Key Controls") {
-    obj_options.WASDControls = false;
-    obj_options.arrowKeyControls = true;
-    obj_options.mouseAndArrowKeyControls = false;
-    obj_options.decreaseReactionTimeRequired = false;
-    activated = true;
-    inst_188A1605.activated = false;
-    inst_303B7AD.activated = false;
+	changeControlScheme(inst_4229D191,inst_303B7AD,inst_188A1605,1,0,2)
 } else if (click && text = "Mouse And Arrow Key Controls") {
-    obj_options.WASDControls = false;
-    obj_options.arrowKeyControls = false;
-    obj_options.mouseAndArrowKeyControls = true;
-    obj_options.decreaseReactionTimeRequired = false;
-    activated = true;
-    inst_188A1605.activated = false;
-    inst_4229D191.activated = false;
+	changeControlScheme(inst_303B7AD,inst_188A1605,inst_4229D191,2,1,0)
 	// activate and deactivate gameplay options
 } else if (click && text = "End Run") {
-	if(obj_options.firstRun && obj_options.playALevelBackToBack){
+	if(obj_options.firstRun && obj_options.options[14]){
 		obj_options.firstRun = false;
 		    instance_deactivate_layer("Instances")
             instance_deactivate_layer("LightInstance")
@@ -145,71 +127,32 @@ if (click && text = "Quit") {
 } else if (click && text = "Begin Second Player Attempt") {
     room_restart();
 } else if (click && text = "Decrease Reaction Time Required") {
-	with(obj_options){
-		decreaseReactionTimeRequired = changeVariableStatus(decreaseReactionTimeRequired)
-	}
-	changeActivated()
+	changeOptionStatus(3)
 } else if (click && text = "Text To Speak") {
-	with(obj_options){
-		textToSpeak = changeVariableStatus(textToSpeak)
-	}
-	changeActivated()
+	changeOptionStatus(4)
 } else if (click && text = "Sonar") {
-	with(obj_options){
-		sonar = changeVariableStatus(sonar)
-	}	
-	changeActivated()
+	changeOptionStatus(11)
 }  else if (click && text = "Closed Captioning") {
-	with(obj_options){
-		closedCaptioning = changeVariableStatus(closedCaptioning)
-	}
-	changeActivated()
+	changeOptionStatus(10)
 } else if (click && text = "Objective Reminder") {
-	with(obj_options){
-		closedCaptioning = changeVariableStatus(closedCaptioning)
-	}
-	changeActivated()
+	changeOptionStatus(6)
 } else if (click && text = "Show Number Of Pollutants Pictorially") {
-	with(obj_options){
-		showNumberOfPollutantsPictorially = changeVariableStatus(showNumberOfPollutantsPictorially)
-	}
-	changeActivated()
+	changeOptionStatus(5)
 } else if (click && text = "Change Font To Ariel") {
-	with(obj_options){
-		changeFontToAriel = changeVariableStatus(changeFontToAriel)
-	}	
-	changeActivated()
+	changeOptionStatus(8)
 } else if (click && text = "Time Announcements") {
-	with(obj_options){
-		timeAnnoucements = changeVariableStatus(timeAnnoucements)
-	}		
-	changeActivated()
+	changeOptionStatus(7)
 } else if (click && text = "Remove Background Noise") {
-	with(obj_options){
-		removeBackgroundNoise = changeVariableStatus(removeBackgroundNoise)
-	}	
+	changeOptionStatus(9)
 	changeBackgroundNoiseStatus()
-	changeActivated()
 } else if (click && text = "Destroy Enemies With Barriers") {
-	with(obj_options){
-		destroyEnemiesWithBarriers = changeVariableStatus(destroyEnemiesWithBarriers)
-	}	
-	changeActivated()
+	changeOptionStatus(13)
 }  else if (click && text = "Monster Avoidance Ability") {
-	with(obj_options){
-		monsterAvoidanceAbility = changeVariableStatus(monsterAvoidanceAbility)
-	}	
-	changeActivated()
+	changeOptionStatus(15)
 } else if (click && text = "Play A Level Back To Back") {
-	with(obj_options){
-		playALevelBackToBack = changeVariableStatus(playALevelBackToBack)
-	}	
-	changeActivated()
+	changeOptionStatus(14)
 } else if (click && text = "Wait Time Instead Of Death") {
-	with(obj_options){
-		waitTimeInsteadOfDeath = changeVariableStatus(waitTimeInsteadOfDeath)
-	}	
-	changeActivated()
+	changeOptionStatus(12)
 } else if (click) {
     room_goto(targetRoom);
 }

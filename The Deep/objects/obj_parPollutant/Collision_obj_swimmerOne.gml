@@ -1,7 +1,7 @@
 audio_play_sound(snd_pickupPollutant, 1, 0)
 obj_swimmerOne.numPollutants--;
 obj_levelTracker.swimmerOneNumPollutants--;
-if (obj_options.textToSpeak) {
+if (obj_options.options[4]) {
     switch (obj_levelTracker.swimmerOneNumPollutants) {
         case 1:
             audio_play_sound(snd_onePollutantRemaining, 1, 0);
@@ -37,7 +37,7 @@ if (obj_levelTracker.swimmerOneSinglePlayer == false) {
     }
 } else if (obj_levelTracker.swimmerOneSinglePlayer == true) {
     if (obj_swimmerOne.numPollutants == 0) {
-        if (obj_options.firstRun && obj_options.playALevelBackToBack) {
+        if (obj_options.firstRun && obj_options.options[14]) {
 			stopGameSounds()
 			obj_options.firstRun = false;
             if (instance_exists(obj_swimmerOne)) {

@@ -5,10 +5,10 @@ if (!obj_microtransactions.extraLife && !obj_swimmerOne.avoidanceTime && !tutori
     if (room == TutorialAngler) {
         room_goto(TutorialFailed)
     }
-        if (obj_options.waitTimeInsteadOfDeath) {
-			horrorLayerManipulation("Wait")
+        if (obj_options.options[12]) {
+			enemyLayerManipulation("Wait")
         } else {
-			horrorLayerManipulation("Extra")
+			enemyLayerManipulation("Extra")
         }
 }
 

@@ -1,5 +1,5 @@
 if (instance_exists(obj_swimmerOne)) {
-    if (obj_swimmerOne.singleplayer && obj_options.sonar) {
+    if (obj_swimmerOne.singleplayer && obj_options.options[11]) {
         if (instance_exists(obj_parHorror)) {
             if (point_distance(obj_swimmerOne.x, obj_swimmerOne.y, obj_parHorror.x, obj_parHorror.y) <= obj_parHorror.audioMaxDistanceToBeHeard) {
                 draw_set_color(#C0c0c0)

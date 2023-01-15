@@ -17,7 +17,7 @@ function swimmerCollisions(object) {
     } else {
         yCollision = false;
     }
-    if ((xCollision == true || yCollision == true) && obj_options.textToSpeak) {
+    if ((xCollision == true || yCollision == true)) {
         if (!audio_is_playing(snd_wall)) {
             audio_play_sound(snd_wall, 1, 0);
         }
@@ -136,7 +136,7 @@ function swimmerMonsterBarrierCollision(object) {
             x += sign(hsp);
         }
         hsp = -hsp;
-        if (obj_options.destroyEnemiesWithBarriers && obj_swimmerOne.isPlaying) {
+        if (obj_options.options[13] && obj_swimmerOne.isPlaying) {
             numHits--;
         }
         image_xscale = -image_xscale;
@@ -151,7 +151,7 @@ function swimmerMineBarrierCollision(object) {
         while (!place_meeting(x, y + sign(vsp), object)) {
             y += sign(vsp);
         }
-        if (obj_options.destroyEnemiesWithBarriers && obj_parSwimmer.isPlaying) {
+        if (obj_options.options[13] && obj_parSwimmer.isPlaying) {
             numHits--;
         }
 		changeTutorialStatus(2,3,2,"Excellent Work, This time the danger is real",snd_enemyActive,2)
@@ -168,7 +168,7 @@ function monsterEvolvedBarrierCollision(object) {
         }
         hsp = -hsp;
         vsp = -vsp;
-        if (obj_options.destroyEnemiesWithBarriers && obj_parSwimmer.isPlaying) {
+        if (obj_options.options[13] && obj_parSwimmer.isPlaying) {
             numHits--;
         }
         if (object == obj_swimmerOneMineBarrier) {

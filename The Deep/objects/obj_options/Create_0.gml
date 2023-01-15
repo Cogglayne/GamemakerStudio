@@ -1,31 +1,13 @@
 options = 
-[false, false, // WASDControls, arrowKeyControls
-false, false, // mouseAndArrowKeyControls, decreaseReactionTimeRequired
-false, false, // textToSpeak, showNumberOfPollutantsPictorially
-false, false, // objectiveReminder, timeAnnoucements
-false, false, // changeFontToAriel, removeBackgroundNoise
-false, false, // closedCaptioning, sonar
-false, false, // waitTimeInsteadOfDeath, destroyEnemiesWithBarriers
-false, false, // playALevelBackToBack, monsterAvoidanceAbility
+[false, false, // WASDControls 0, arrowKeyControls 1
+false, false, // mouseAndArrowKeyControls 2, decreaseReactionTimeRequired 3
+false, false, // textToSpeak 4, showNumberOfPollutantsPictorially 5
+false, false, // objectiveReminder 6, timeAnnoucements 7
+false, false, // changeFontToAriel 8, removeBackgroundNoise 9
+false, false, // closedCaptioning 10, sonar 11
+false, false, // waitTimeInsteadOfDeath 12, destroyEnemiesWithBarriers 13
+false, false, // playALevelBackToBack 14, monsterAvoidanceAbility 15
 ];
-// variables used to deactivate and activate features
-WASDControls = false;
-arrowKeyControls = false;
-mouseAndArrowKeyControls = true;
-decreaseReactionTimeRequired = false;
-textToSpeak = false;
-showNumberOfPollutantsPictorially = false
-objectiveReminder = false;
-timeAnnoucements = false;
-changeFontToAriel = false;
-removeBackgroundNoise = false
-closedCaptioning = false;
-sonar = false;
-waitTimeInsteadOfDeath = false;
-destroyEnemiesWithBarriers = false;
-playALevelBackToBack = false;
-monsterAvoidanceAbility = false;
-
 timer = 200;
 firstRun = true;
 

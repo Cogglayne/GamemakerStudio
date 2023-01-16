@@ -1,9 +1,9 @@
 // Keetps track of the time the swimmer is invulnerable after using an extra life 
 // microtransaction
-if (obj_microtransactions.extraLife) {
+if (obj_microtransactions.microtransactions[4]) {
     extraLifeTime--;
     if (extraLifeTime <= 0) {
-        obj_microtransactions.extraLife = false;
+        obj_microtransactions.microtransactions[4] = false;
         extraLifeTime = 5;
     }
 }

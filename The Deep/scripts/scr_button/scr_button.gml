@@ -6,8 +6,23 @@ function changeOptionStatus(index){
 	}
 	changeActivated()
 }
-function ChangeMicrotransactionStatus(){
-	
+function changeMicrotransactionStatus(index1, index2, toggled){
+	if(toggled){
+		if(obj_microtransactions.microtransactions[index2] == false){
+			obj_microtransactions.microtransactions[index2] = true;
+		} else if (obj_microtransactions.microtransactions[index2] == true){
+			obj_microtransactions.microtransactions[index2] = false;
+		}
+		changeActivated()
+	}else{
+		if (index1 != noone){
+			obj_microtransactions.microtransactions[index1] = true;
+		}
+		if (index2 != noone){
+			obj_microtransactions.microtransactions[index2] = true;
+		}
+		bought = true;
+	}
 }
 function changeActivated() {
     if (activated == false) {
@@ -18,7 +33,7 @@ function changeActivated() {
 }
 
 function activateExtraLifeOrSkipWaitTime(microtransaction) {
-    obj_microtransactions.extraLife = true;
+    obj_microtransactions.microtransactions[4] = true;
     obj_levelTracker.textShouldBeShowing = false;
     instance_activate_layer("AmbientBackground")
     instance_activate_layer("Instances")
@@ -40,15 +55,6 @@ function setDifficulty(difficulty) {
     obj_levelTracker.levelDifficulty = difficulty
     room_goto(targetRoom);
 }
-
-function changeVariableStatus(variable) {
-    if (variable == false) {
-        return true;
-    } else if (variable == true) {
-        return false;
-    }
-}
-
 function changeBackgroundNoiseStatus() {
     if (audio_is_playing(snd_background)) {
         audio_stop_sound(snd_background)

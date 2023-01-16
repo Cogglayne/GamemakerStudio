@@ -12,10 +12,9 @@ function save() {
 	}	
 	for (index = 0; index < array_length_1d(obj_options.options); index++) {
 		ini_write_real("Save1","options"+string(index),obj_options.options[index]);
-	}		
-	ini_write_real("Save1", "swimmerCosmetic", obj_microtransactions.swimmerSkin);
-    ini_write_real("Save1", "lightCosmetic", obj_microtransactions.newLightEffect);
-    ini_write_real("Save1", "swimmerSkinBought", obj_microtransactions.swimmerSkinBought);
-    ini_write_real("Save1", "lightCosmeticBought", obj_microtransactions.lightCosmeticBought);
+	}	
+	for (index = 0; index < 4; index++) {
+		ini_write_real("Save1","microtransactions"+string(index),obj_microtransactions.microtransactions[index]);
+	}	
 	ini_close();
 }

@@ -74,36 +74,24 @@ if (click && text = "Quit") {
     }
     // mictrotransaction control
 } else if (click && text = "Buy a Light Cosmetic for $10") {
-    obj_microtransactions.lightCosmeticBought = true;
-    bought = true;
+	changeMicrotransactionStatus(0,noone,false)
 } else if (click && text = "Buy a Swimmer Cosmetic for $10") {
-    obj_microtransactions.swimmerSkinBought = true;
-    bought = true;
+	changeMicrotransactionStatus(2,noone,false)
 } else if (click && text = "Delay Timer For $1") {
-    obj_microtransactions.timerDelay = true;
-	obj_microtransactions.timerDelayBought = true;
-    activated = true;
+	changeMicrotransactionStatus(6,7,false)
 } else if (click && text = "Slow Down Enemies For $1") {
-    obj_microtransactions.enemiesSlowed = true;
-	obj_microtransactions.enemiesSlowedBought = true;
-    activated = true;
+	changeMicrotransactionStatus(8,9,false)
 } else if (click && text = "Continue level for $.50") {
 	activateExtraLifeOrSkipWaitTime("Extra")
 } else if (click && text = "Skip Wait for $.50") {
 	activateExtraLifeOrSkipWaitTime("Skip")
 } else if (click && text = "Toggle Swimmer Cosmetic") {
-    if (obj_microtransactions.swimmerSkinBought) {
-		with(obj_microtransactions){
-			swimmerSkin = changeVariableStatus(swimmerSkin)
-		}
-		changeActivated()	
+    if (obj_microtransactions.microtransactions[2]) {
+		changeMicrotransactionStatus(noone,3,true)
     }
 } else if (click && text = "Toggle Light Cosmetic") {
-    if (obj_microtransactions.lightCosmeticBought) {
-		with(obj_microtransactions){
-			newLightEffect = changeVariableStatus(newLightEffect)
-		}
-		changeActivated()
+    if (obj_microtransactions.microtransactions[0]) {
+		changeMicrotransactionStatus(noone,1,true)
     }
     // changes control schemes
 } else if (click && text = "WASD Controls") {

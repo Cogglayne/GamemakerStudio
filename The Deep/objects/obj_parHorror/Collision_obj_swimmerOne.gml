@@ -1,4 +1,4 @@
-if (!obj_microtransactions.extraLife && !obj_swimmerOne.avoidanceTime && !tutorialEnemy) {
+if (!obj_microtransactions.microtransactions[4] && !obj_swimmerOne.avoidanceTime && !tutorialEnemy) {
     obj_levelTracker.textShouldBeShowing = true;
     stopGameSounds()
 	audio_play_sound(snd_playerdie, 1, 0)

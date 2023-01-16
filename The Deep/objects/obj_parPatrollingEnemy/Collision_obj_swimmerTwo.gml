@@ -1,4 +1,4 @@
-if(!obj_microtransactions.extraLife2){
+if(!obj_microtransactions.microtransactions[5]){
 // destroys swimmer two and swimmer two objects
 instance_destroy(other)
 instance_destroy(obj_playerTwoLight)

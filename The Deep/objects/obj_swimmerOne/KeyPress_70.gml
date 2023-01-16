@@ -1,5 +1,5 @@
 // avoidance ability for WASD Controls
-if (obj_options.monsterAvoidanceAbility && obj_options.WASDControls && !avoidanceTime && avoidanceCharges > 0) {
+if (obj_options.options[15] && obj_options.options[0] && !avoidanceTime && avoidanceCharges > 0) {
 	useAvoidanceAbility()
 }
 

@@ -24,16 +24,16 @@ obj_levelTracker.swimmerTwoNumPollutants = instance_number(obj_swimmerTwoPolluta
 // text
 text = "";
 // cosmetic skin
-swimmerSkin = obj_microtransactions.swimmerSkin;
+swimmerSkin = obj_microtransactions.microtransactions[3];
 if (swimmerSkin) {
     sprite_index = spr_blackswimmerIdleRight
 }
 // microtransactions
-if (obj_microtransactions.timerDelayBought) {
-    obj_microtransactions.timerDelay = true;
+if (obj_microtransactions.microtransactions[7]) {
+    obj_microtransactions.microtransactions[6] = true;
 }
-if (obj_microtransactions.enemiesSlowedBought) {
-    obj_microtransactions.enemiesSlowed = true;
+if (obj_microtransactions.microtransactions[9]) {
+    obj_microtransactions.microtransactions[8] = true;
 }
 // swimmer object tracking
 numMonsterBarriers = 0;

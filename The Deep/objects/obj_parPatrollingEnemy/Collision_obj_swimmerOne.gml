@@ -1,4 +1,4 @@
-if (!obj_microtransactions.extraLife && !obj_levelTracker.swimmerOneSinglePlayer) {
+if (!obj_microtransactions.microtransactions[4] && !obj_levelTracker.swimmerOneSinglePlayer) {
     // destroys swimmer object
     instance_destroy(other)
     instance_destroy(obj_playerOneLight)
@@ -17,7 +17,7 @@ if (!obj_microtransactions.extraLife && !obj_levelTracker.swimmerOneSinglePlayer
         room_goto(LoseTwoPlayers)
     }
 }else{
-if (!obj_microtransactions.extraLife && !tutorialEnemy && !obj_swimmerOne.avoidanceTime) {
+if (!obj_microtransactions.microtransactions[4] && !tutorialEnemy && !obj_swimmerOne.avoidanceTime) {
     // if the extra life cosmetic life is not active and the evolve
     // monster is not a tutorial enemy
     // shows death text

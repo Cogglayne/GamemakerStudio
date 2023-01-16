@@ -1,10 +1,10 @@
 function setDirectionAndSpeed(target, light) {
     if (instance_exists(light)) {
         direction = point_direction(x, y, target.x, target.y)
-        if (obj_microtransactions.extraLife) {
+        if (obj_microtransactions.microtransactions[4]) {
             speed = 0;
         } else {
-            if (obj_microtransactions.enemiesSlowed || obj_options.options[3]) {
+            if (obj_microtransactions.microtransactions[8] || obj_options.options[3]) {
                 speed = 5;
             } else {
                 speed = 7; //7

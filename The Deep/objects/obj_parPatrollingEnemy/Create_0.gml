@@ -1,11 +1,15 @@
 // movement
-if (obj_microtransactions.enemiesSlowed || obj_options.options[3]) {
-    if (hsp != 0) {
-        hsp -= 1;
-    }
-    if (vsp != 0) {
-        vsp -= 1;
-    }
+if (obj_microtransactions.microtransactions[8] || obj_options.options[3]) {
+    if (hsp < 0) {
+        hsp += 2
+    } else if (hsp > 0){
+		hsp -= 2
+	}
+    if (vsp < 0) {
+        vsp--;
+    } else if (vsp < 0){
+		vsp++
+	}
 }
 // tutorial status
 tutorialEnemy = false;

@@ -30,7 +30,7 @@ Pressing space spawns a probe at the swimmer's location. There can be three prob
 if (room == InstructionsPageThree) {
 draw_text_ext(0, 0, 
 @"WASD Controls (keyboard-only controls) (activated by the WASD Controls button in options, deactivates all other control schemes).
-W To Swim Up, S To Swim Down, A To Swim Left, D To Swim Right.
+W To Swim Up, S To Swim Down, A To Swim Left, D To Swim Right. 
 Double tapping A spawns a barrier to the left of the swimmer and double tapping D spawns a barrier to the right of the swimmer
 that can redirect monsters. Double tapping W spawns a barrier above the swimmer and double tapping S spawns a barrier below
 the swimmer that can redirect mines. The mine and monster barriers can also redirect the evolved monsters that swim diagonally.
@@ -38,6 +38,7 @@ Pressing shift spawns a probe at the swimmer's location that will move at an ang
 180 degrees, 235 degrees, 270 degrees, or 315 degrees depending on the swimmer's direction and movement to give you vision in 
 For the puzzle drag the pollutants to their disposal unit using left click, left click again if the pollutant does not
 automatically stop being dragged when releasing left click. Press F to temporarily avoid monsters.
+Press caps lock to turn your light off and on to hide from the angler.
 ", 125, 7000);
 }
 if (room == InstructionsPageFour) {
